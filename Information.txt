@@ -1,0 +1,12 @@
+			    SDP-2		   	
+		     AUTOMOBILE SYSTEMS
+
+Modules :
+1.Spare parts module
+2.shop for new
+3.repair request
+4.History
+  4.1 Reapir History
+  4.2 Order History
+5.Accessories
+6.chatbot module
