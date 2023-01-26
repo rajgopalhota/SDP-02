@@ -11,12 +11,16 @@ input,
 textarea {
   font-family: "Poppins", sans-serif;
 }
+.ContactCont{
+  background: url("./../Assets/background.jpg") no-repeat center center fixed;
+}
 .contactcomp-container {
+  background-color: rgba(85, 0, 85, 0.699);
+  /* backdrop-filter: blur(2px); */
   position: relative;
   width: 100%;
   min-height: 100vh;
   padding: 2rem;
-  background: url("./../Assets/bg.jpg") no-repeat center center fixed;
   background-size: cover;
   overflow: hidden;
   display: flex;
@@ -286,7 +290,8 @@ textarea.contactcomp-input{
   position: absolute;
   width: 360px;
   height: 360px;
-  background: url("./../Assets/bg.jpg") no-repeat center center fixed;
+  /* background: url("./../Assets/bg.jpg") no-repeat center center fixed; */
+  background-color: rgba(85, 0, 85, 0.699);
   border-radius: 50%;
   top: calc(50% - 180px);
   left: calc(50% - 180px);

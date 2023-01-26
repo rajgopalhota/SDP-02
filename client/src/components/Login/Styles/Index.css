@@ -9,39 +9,14 @@ body,
 input {
   font-family: "Poppins", sans-serif;
 }
-.cursor{
-  position: fixed;
-  width: 50px;
-  height: 50px;
-  border: 2px solid #e38528;
-  border-radius: 50%;
-  left: 0;
-  top: 0;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition: .1s;
-  z-index: 999;
+.LoginMech{
+  background: url('./../Images/background.jpg') no-repeat center center fixed;
 }
-
-.cursor2{
-  position: fixed;
-  width: 8px;
-  height: 8px;
-  background-color: #ea00ff;
-  border-radius: 50%;
-  left: 0;
-  top: 0;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition: .15s;
-  z-index: 999;
-}
-
 .container {
   position: relative;
   width: 100%;
-  /* background-color: #fff; */
-  background: url("./../Images/bg.jpg") no-repeat center center fixed;
+  background-color: rgba(39, 0, 52, 0.82);
+  backdrop-filter: blur(2.5px);
   background-size: cover;
   min-height: 100vh;
   overflow: hidden;
@@ -90,7 +65,7 @@ form.sign-in-form {
 
 .title {
   font-size: 2.2rem;
-  color: #444;
+  color: rgb(255, 255, 255);
   margin-bottom: 10px;
 }
 
@@ -135,6 +110,7 @@ form.sign-in-form {
 }
 
 .social-text {
+  color: white;
   padding: 0.7rem 0;
   font-size: 1rem;
 }

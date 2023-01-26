@@ -12,7 +12,7 @@ export default function Index() {
   }
 
   return (
-    <div>
+    <div className='LoginMech'>
       <div className={ani}>
         <div className="forms-container">
           <div className="signin-signup">

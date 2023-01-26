@@ -10,7 +10,7 @@ export default function Contact() {
     }
 
     return (
-        <>
+        <div className='ContactCont'>
             <div className="contactcomp-container">
                 <span className="big-circle"></span>
                 <img src="img/shape.png" className="contactcomp-square" alt="" />
@@ -87,6 +87,6 @@ export default function Contact() {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
