@@ -2,7 +2,7 @@ import React from 'react'
 import './PageNotFound.css'
 export default function PageNotFound() {
     return (
-        <div>
+        <div className='PageNotFoundComp'>
                 <div>
                     <div className="starsec"></div>
                     <div className="starthird"></div>

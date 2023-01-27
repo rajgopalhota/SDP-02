@@ -1,3 +1,7 @@
+.PageNotFoundComp{
+  z-index: -500;
+}
+
 
 label {
   cursor: pointer;
@@ -149,7 +153,7 @@ button {
 
 .error__message {
   text-align: center;
-  color: #181828;
+  color: #ffffff;
 }
 
 .message__title {
@@ -185,7 +189,7 @@ button {
   width: 170px;
   display: inline-block;
   vertical-align: top;
-  border: 1px solid #212121;
+  border: 1px solid #ffffff;
   padding-left: 10px;
   padding-right: 46px;
 }
@@ -196,7 +200,7 @@ button {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  color: #212121;
+  color: #ffffff;
   -webkit-transition: color .25s ease;
   transition: color .25s ease;
 }
@@ -209,7 +213,7 @@ button {
   vertical-align: top;
   margin: 0 15px;
   border: 1px solid #181828;
-  color: #181828;
+  color: #ffffff;
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
@@ -241,7 +245,7 @@ button {
 }
 
 .e-nav__link:hover {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 .e-nav__link:hover:before {

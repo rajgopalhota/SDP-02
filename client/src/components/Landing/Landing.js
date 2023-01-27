@@ -3,7 +3,7 @@ import './Landing.css'
 // import { Link } from 'react-router-dom'
 export default function Landing() {
     return (
-        <div className='body'>
+        <div className='bodyland'>
             <div class="wrapper">
                 <div><span class="dot"></span></div>
                 <div><span class="dot"></span></div>
@@ -23,7 +23,7 @@ export default function Landing() {
             </div>
             <div className="background-one">
                 <div className="link-container">
-                    <a className="link-one" href="/home"><div className="rjbx">Home</div></a>
+                    <a className="link-one" href="/autobots"><div className="rjbx">Home</div></a>
                 </div>
             </div>
             <div className="background-two link-container">

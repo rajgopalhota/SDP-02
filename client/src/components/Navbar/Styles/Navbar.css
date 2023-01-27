@@ -1,0 +1,47 @@
+
+nav{
+    color: aliceblue;
+    position: fixed;
+    font-family: "Poppins", sans-serif;
+    min-height: 2%;
+    font-weight: 500;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.621);
+    font-size: 24px;
+    box-shadow: 0 0 32px black;
+    background-color: transparent;
+  }
+  .nav-titles{
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .nav-titles li:hover{
+    background:linear-gradient(rgb(255, 174, 124),rgb(161, 255, 247));
+    animation: animate 5s linear infinite;
+    border-radius: 22px;
+    box-shadow: 0 0 3px black;
+  }
+
+  section{
+    mix-blend-mode: overlay;
+    position: fixed;
+    z-index: -998;
+    backdrop-filter: blur(0px);
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(90deg, #04619f57, rgba(68, 171, 255, 0.292));
+    min-width: 100vw;
+    min-height: 100vh;
+    animation: animate linear 1s infinite;
+}
+@keyframes animate{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    50%{
+        filter: hue-rotate(180deg);
+    }
+    100%{
+        filter: hue-rotate(90deg);
+    }
+}
