@@ -4,23 +4,6 @@ import './Landing.css'
 export default function Landing() {
     return (
         <div className='bodyland'>
-            <div class="wrapper">
-                <div><span class="dot"></span></div>
-                <div><span class="dot"></span></div>
-                <div><span class="dot"></span></div>
-                <div><span class="dot"></span></div>
-                <div><span class="dot"></span></div>
-                <div><span class="dot"></span></div>
-                <div><span class="dot"></span></div>
-                <div><span class="dot"></span></div>
-                <div><span class="dot"></span></div>
-                <div><span class="dot"></span></div>
-                <div><span class="dot"></span></div>
-                <div><span class="dot"></span></div>
-                <div><span class="dot"></span></div>
-                <div><span class="dot"></span></div>
-                <div><span class="dot"></span></div>
-            </div>
             <div className="background-one">
                 <div className="link-container">
                     <a className="link-one" href="/autobots"><div className="rjbx">Home</div></a>
