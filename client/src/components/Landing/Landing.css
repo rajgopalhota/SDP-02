@@ -32,7 +32,7 @@
     z-index: 0;
   }
   
-  a {
+  .bodyland a {
     z-index: 999;
     font-family: "Bungee", cursive;
     font-size: 2.9em;

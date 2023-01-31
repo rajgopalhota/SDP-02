@@ -1,6 +1,22 @@
 h1{
     color: white;
     font-weight: 900;
-    font-size: 192px;
-    mix-blend-mode: overlay;
+    font-size: 32px;
+    /* mix-blend-mode: overlay; */
+}
+.home-container p{
+    color: aliceblue;
+    text-align: justify;
+}
+.home-container{
+    backdrop-filter: blur(7px);
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: fit-content;
+    padding: 3%;
+    border-radius: 12px;
+    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.242);
 }
