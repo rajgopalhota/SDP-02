@@ -1,10 +1,8 @@
 import React from 'react'
 import './Styles/Homestyle.css'
-import Navbar from './../Navbar/Navbar'
 export default function Home() {
   return (
     <div>
-      <Navbar />
       <div className="home-container">
         <h1>Welocme to Autobots</h1>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem maiores autem voluptatibus saepe quod illo vitae repellendus ex at inventore deleniti, dolore ducimus, nam libero expedita eius vero sunt odio.

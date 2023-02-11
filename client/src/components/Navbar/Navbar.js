@@ -16,19 +16,19 @@ export default function Navbar(props) {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 nav-titles">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">Home</Link>
+                <Link className="nav-link active" aria-current="page" to="/autobots">Home</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">Products</Link>
+                <Link className="nav-link active" aria-current="page" to="products">Products</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">Services</Link>
+                <Link className="nav-link active" aria-current="page" to="services">Services</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">Spare</Link>
+                <Link className="nav-link active" aria-current="page" to="spare">Spare</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" to="/contact">About</Link>
+                <Link className="nav-link active" to="aboutus">About</Link>
               </li>
             </ul>
             <button className="btn btn-outline-success" type="submit"><Link to="/login">Login</Link></button>
