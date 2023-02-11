@@ -8,9 +8,13 @@ h1{
     color: aliceblue;
     text-align: justify;
 }
+@keyframes floatery {
+    0%{transform: translateY(100%);transition: ease 5s;}
+  }
 .home-container{
+    animation: floatery 1s;
     backdrop-filter: blur(7px);
-    margin-top: 2%;
+    margin-top: 3%;
     margin-left: auto;
     margin-right: auto;
     width: 50%;

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './PageNotFound.css'
 export default function PageNotFound() {
     return (
@@ -19,18 +20,16 @@ export default function PageNotFound() {
                         <div className="light"></div>
                     </div>
                 </div>
-                <section className="error">
+                <div className="error">
                     <div className="error__content">
                         <div className="error__message message">
                             <h1 className="message__title">(404) - Page Not Found</h1>
                             <p className="message__text">We're sorry, the page you were looking for isn't found here. The link you followed may either be broken or no longer exists. Please try again, or take a look at our.</p>
                         </div>
-                        <div className="error__nav e-nav">
-                            <a href="/" target="_blank" className="e-nav__link">Home Page</a>
-                        </div>
+                        
                     </div>
-
-                </section>
+                    <Link to='autobots' className='notfoundbtn'><button className='btn'>Go to Home</button></Link>
+                </div>
         </div>
     )
 }

@@ -10,6 +10,7 @@
     text-align: justify;
 }
 .repair-container{
+    animation: floatery 1s;
     backdrop-filter: blur(7px);
     margin-top: 2%;
     margin-left: auto;

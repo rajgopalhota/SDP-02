@@ -1,23 +1,11 @@
-
+.PageNotFoundComp{
+  position: fixed;
+  min-width: 100vw;
+  backdrop-filter: blur(10px);
+}
 
 label {
   cursor: pointer;
-}
-
-.top-header:before {
-    background-image: url(https://1.bp.blogspot.com/-gxsOcYWghHA/Xp_izTh4sFI/AAAAAAAAU8s/y637Fwg99qAuzW9na_NT_uApny8Vce95gCEwYBhgL/s1600/header-footer-gradient-bg.png);
-}
-.top-header:before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 4px;
-    background-repeat: repeat-x;
-    background-size: contain;
-    position: absolute;
-    top: 0;
-    left: 0;
-  opacity:0.5;
 }
 
 
@@ -103,7 +91,11 @@ button {
 .clearfix {
   zoom: 1;
 }
-
+.notfoundbtn{
+  position: absolute;
+  top: 60%;
+  left: 45%;
+}
 			/* 1. END BODY */
 /***********************************/
 
@@ -121,19 +113,9 @@ button {
   text-align: center;
   margin-top: 70px;
 }
-
-.error__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
 .error__content {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   width: 100%;
   -webkit-transform: translate(-50%, -50%);
@@ -404,6 +386,11 @@ button {
   }
   .error__content {
     top: 55%;
+  }
+  .notfoundbtn{
+    position: absolute;
+    top: 60%;
+    left: 30%;
   }
   }
 @media (max-width: 950px) {
