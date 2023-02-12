@@ -10,3 +10,8 @@ Modules :
   4.2 Order History
 5.Accessories
 6.chatbot module
+
+
+
+
+Note: turn off the overflow hidden in index.css

@@ -2,21 +2,20 @@ h1{
     color: white;
     font-weight: 900;
     font-size: 32px;
-    /* mix-blend-mode: overlay; */
 }
-.home-container p{
+.home-container-portfolio p{
     color: aliceblue;
     text-align: justify;
 }
 @keyframes floatery {
     0%{transform: translateY(100%);transition: ease 5s;}
   }
-.home-container{
+.home-container-portfolio{
+    top: 20%;
+    right: 5%;
+    position: absolute;
     animation: floatery 1s;
     backdrop-filter: blur(7px);
-    margin-top: 3%;
-    margin-left: auto;
-    margin-right: auto;
     width: 50%;
     height: fit-content;
     padding: 3%;

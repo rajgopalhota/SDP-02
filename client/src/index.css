@@ -20,3 +20,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.home-container{
+  animation: floatery 1s;
+  backdrop-filter: blur(7px);
+  margin-top: 3%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: fit-content;
+  padding: 3%;
+  border-radius: 12px;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.242);
+  box-shadow: 10px 25px 30px rgba(0, 136, 134, 0.384);
+
+}
+.home-container p{
+  color: aliceblue;
+  text-align: justify;
+}
