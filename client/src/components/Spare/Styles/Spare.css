@@ -8,7 +8,7 @@
 
 .spare-container{
     animation: floatery 1s;
-    backdrop-filter: blur(7px);
+    /* backdrop-filter: blur(7px); */
     margin-top: 2%;
     margin-left: auto;
     margin-right: auto;
@@ -17,7 +17,7 @@
     /* padding: 3%;
     border-radius: 12px;
     border: 2px solid white; */
-    background-color: rgba(0, 0, 0, 0.242);
+    /* background-color: rgba(0, 0, 0, 0.242); */
     align-items: center;
     text-align: center;
 }
