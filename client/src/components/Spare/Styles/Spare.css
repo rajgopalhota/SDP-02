@@ -1,0 +1,81 @@
+.spare-container h1{
+    color: white;
+    font-weight: 900;
+    font-size: 32px;
+    /* mix-blend-mode: overlay; */
+}
+
+
+.spare-container{
+    animation: floatery 1s;
+    backdrop-filter: blur(7px);
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: fit-content;
+    /* padding: 3%;
+    border-radius: 12px;
+    border: 2px solid white; */
+    background-color: rgba(0, 0, 0, 0.242);
+    align-items: center;
+    text-align: center;
+}
+.spare-container select{
+    width: 150%;
+    outline: none;
+    border: 2px solid #fafafa;
+    background: none;
+    padding: 0.9rem 1.6rem;
+    color: #fff;
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    border-radius: 25px;
+    transition: 0.3s;
+   
+}
+
+.spare-container input{
+    width: 100%;
+    outline: none;
+    border: 2px solid #fafafa;
+    background: none;
+    padding: 0.9rem 1.6rem;
+    color: #fff;
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.spare-container option{
+    background:rgba(26, 25, 25, 0.742) ;
+    
+}
+
+#spare-dropdown *
+{
+    border-radius: 25px;
+}
+.spare-container table{
+margin-left: auto;
+margin-right: auto;
+
+
+}
+.spare-container table td{
+    padding: 0 50px;
+   
+}
+.spare-container button{
+    width: 200px;
+}
+
+.spare-container ::placeholder {
+    color: rgb(254, 252, 252);
+   
+  }
+
+
