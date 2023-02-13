@@ -1,56 +1,58 @@
-
-nav{
-    color: aliceblue;
-    position: fixed;
-    font-family: "Poppins", sans-serif;
-    min-height: 2%;
-    font-weight: 500;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.183);
-    font-size: 24px;
-    box-shadow: 0 0 8px rgb(129, 129, 129);
-    background-color: transparent;
-  }
-  .nav-titles{
-    font-size: 35px;
-    color: white;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .nav-titles li{
-    padding: 0 18px;
-  }
-  .nav-titles li:hover{
-    transition-delay: 0.1s;
-    animation: alternate;
-    text-decoration: underline;
-    box-shadow: 0 0 3px black;
-  }
-
-  section{
-    mix-blend-mode: overlay;
-    position: fixed;
-    z-index: -998;
-    backdrop-filter: blur(0px);
-    padding: 0;
-    margin: 0;
-    background: linear-gradient(90deg, #04619f57, rgba(68, 171, 255, 0.292));
-    min-width: 100vw;
-    min-height: 100vh;
-    animation: animate linear 2s infinite;
-}
-@keyframes animate{
-    0%{
-        filter: hue-rotate(0deg);
-    }
-    50%{
-        filter: hue-rotate(180deg);
-    }
-    100%{
-        filter: hue-rotate(90deg);
-    }
+nav {
+  color: aliceblue;
+  position: fixed;
+  font-family: "Poppins", sans-serif;
+  min-height: 2%;
+  font-weight: 500;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.183);
+  font-size: 24px;
+  box-shadow: 0 0 8px rgb(129, 129, 129);
+  background-color: transparent;
 }
 
-button a{
+.active {
+  backdrop-filter: blur(12px);
+  background-color: rgba(136, 136, 136, 0.365);
+  border-radius: 100px;
+}
+.nav-titles li:hover {
+  text-decoration: underline;
+}
+.nav-titles {
+  font-size: 35px;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nav-titles li {
+  padding: 0 18px;
+}
+
+section {
+  mix-blend-mode: overlay;
+  position: fixed;
+  z-index: -998;
+  backdrop-filter: blur(0px);
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(90deg, #04619f57, rgba(68, 171, 255, 0.292));
+  min-width: 100vw;
+  min-height: 100vh;
+  animation: animate linear 2s infinite;
+}
+@keyframes animate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(180deg);
+  }
+  100% {
+    filter: hue-rotate(90deg);
+  }
+}
+
+button a {
   color: white;
   font-size: 22px;
   text-decoration: none;

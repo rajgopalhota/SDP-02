@@ -9,12 +9,14 @@ import Products from './components/Products/Products';
 import Services from './components/Services/Services';
 import About from './components/About/About';
 import Spare from './components/Spare/Spare';
+import Home from './components/Home/Home';
 function App() {
   return (
     <div className="App">
       <Routes>
         <Route path='' element={<Landing />}></Route>
         <Route path='autobots' element={<Autobot />}>
+          <Route path='home' element={<Home />} />
           <Route path='products' element={<Products />} />
           <Route path='aboutus' element={<About />} />
           <Route path='spare' element={<Spare />} />

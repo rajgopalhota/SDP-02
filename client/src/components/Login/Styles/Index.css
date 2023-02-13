@@ -9,8 +9,8 @@ body,
 input {
   font-family: "Poppins", sans-serif;
 }
-.LoginMech{
-  background: url('./../Images/background.jpg') no-repeat center center fixed;
+.LoginMech {
+  background: url("./../Images/background.jpg") no-repeat center center fixed;
 }
 .container {
   position: relative;
@@ -82,7 +82,7 @@ form.sign-in-form {
   position: relative;
 }
 
-.input-field:hover{
+.input-field:hover {
   box-shadow: 0 0 12px #4481eb;
 }
 

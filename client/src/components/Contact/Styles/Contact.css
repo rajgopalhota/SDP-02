@@ -11,7 +11,7 @@ input,
 textarea {
   font-family: "Poppins", sans-serif;
 }
-.ContactCont{
+.ContactCont {
   background: url("./../Assets/background.jpg") no-repeat center center fixed;
 }
 .contactcomp-container {
@@ -96,7 +96,7 @@ textarea {
   margin: 1rem 0;
 }
 
-.contactcomp-input{
+.contactcomp-input {
   width: 100%;
   outline: none;
   border: 2px solid #fafafa;
@@ -110,7 +110,7 @@ textarea {
   transition: 0.3s;
 }
 
-textarea.contactcomp-input{
+textarea.contactcomp-input {
   padding: 0.8rem 1.2rem;
   min-height: 150px;
   border-radius: 22px;
@@ -383,7 +383,7 @@ textarea.contactcomp-input{
     width: 23px;
   }
 
-  .contactcomp-input{
+  .contactcomp-input {
     padding: 0.45rem 1.2rem;
   }
 

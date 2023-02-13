@@ -12,7 +12,7 @@ export default function Autobot() {
     <div>
       <Navbar />
       <Routes>
-        <Route path='' element={<Home />}></Route>
+        <Route path='home' element={<Home />}></Route>
         <Route path='products' element={<Products />}></Route>
         <Route path='aboutus' element={<About />}></Route>
         <Route path='spare' element={<Spare />}></Route>

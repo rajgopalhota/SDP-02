@@ -7,15 +7,15 @@ import suv from './Gallery/suv.jpg'
 export default function Slider() {
   return (
     <div className='image-slider-cont'>
-    <h1>Autobots Gallery</h1>
+      <h1>Autobots Gallery</h1>
       <div className="gallery-container">
         <div className="gallery-wrapper">
-            <img src={thar} alt=''/>
-            <img src={mercedes} alt='' />
-            <img src={suv} alt='' />
-            <img src={bugati} alt='' />
+          <img src={thar} alt='' />
+          <img src={mercedes} alt='' />
+          <img src={suv} alt='' />
+          <img src={bugati} alt='' />
         </div>
-    </div>
+      </div>
     </div>
   )
 }

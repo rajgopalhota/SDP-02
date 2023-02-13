@@ -1,62 +1,65 @@
-.repair-container h1{
-    color: white;
-    font-weight: 900;
-    font-size: 32px;
-    /* mix-blend-mode: overlay; */
+.repair-container h1 {
+  color: white;
+  font-weight: 900;
+  font-size: 32px;
+  /* mix-blend-mode: overlay; */
 }
 
-.repair-container p,label{
-    color: aliceblue;
-    text-align: justify;
+.repair-container p,
+label {
+  color: aliceblue;
+  text-align: justify;
 }
-.repair-container{
-    animation: floatery 1s;
-    backdrop-filter: blur(7px);
-    margin-top: 2%;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    height: fit-content;
-    padding: 3%;
-    border-radius: 12px;
-    border: 2px solid white;
-    background-color: rgba(0, 0, 0, 0.242);
-    align-items: center;
-    text-align: center;
+.repair-container {
+  animation: floatery 1s;
+  backdrop-filter: blur(7px);
+  margin-top: 2%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: fit-content;
+  padding: 3%;
+  border-radius: 12px;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.242);
+  align-items: center;
+  text-align: center;
 }
-.repair-container input{
-    width: 115%;
-    outline: none;
-    border: 2px solid #fafafa;
-    background: none;
-    padding: 0.6rem 1.2rem;
-    color: #fff;
-    font-weight: 500;
-    font-size: 0.95rem;
-    letter-spacing: 0.5px;
-    border-radius: 25px;
-    transition: 0.3s;
-}
-
-
-.repair-container table{
-margin-left: auto;
-margin-right: auto;
-
-}
-.repair-container table td{
-    padding: 10px;
-}
-.repair-container label{
-
-    font-weight: bold;
-    font-size: 18px;
+.repair-container input {
+  width: 115%;
+  outline: none;
+  border: 2px solid #fafafa;
+  background: none;
+  padding: 0.6rem 1.2rem;
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  border-radius: 25px;
+  transition: 0.3s;
 }
 
-.repair-container button{
-    margin-top: 20px;
-
-
+.repair-container table {
+  margin-left: auto;
+  margin-right: auto;
+}
+.repair-container table td {
+  padding: 10px;
+}
+.repair-container label {
+  font-weight: bold;
+  font-size: 18px;
 }
 
+.repair-container button {
+  margin-top: 20px;
+}
 
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}

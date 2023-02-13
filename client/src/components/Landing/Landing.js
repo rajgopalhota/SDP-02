@@ -1,19 +1,19 @@
 import React from 'react'
 import './Landing.css'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 export default function Landing() {
     return (
         <div className='bodyland'>
             <div className="background-one">
                 <div className="link-container">
-                    <a className="link-one" href="/autobots"><div className="rjbx">Home</div></a>
+                    <Link className="link-one" to="/autobots/home"><div className="rjbx">Home</div></Link>
                 </div>
             </div>
             <div className="background-two link-container">
-                <a className="link-two" href="/contact"><div className="rjbx">Support</div></a>
+                <Link className="link-two" to="/contact"><div className="rjbx">Support</div></Link>
             </div>
             <div className="background-three link-container">
-                <a className="link-three" href="/login"><div className="rjbx">Login</div></a>
+                <Link className="link-three" to="/login"><div className="rjbx">Login</div></Link>
             </div>
         </div>
     )

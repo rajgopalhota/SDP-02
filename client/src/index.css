@@ -17,11 +17,11 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-.home-container{
+.home-container {
   animation: floatery 1s;
   backdrop-filter: blur(7px);
   margin-top: 3%;
@@ -34,14 +34,8 @@ code {
   border: 2px solid white;
   background-color: rgba(0, 0, 0, 0.242);
   box-shadow: 10px 25px 30px rgba(0, 136, 134, 0.384);
-
 }
-.home-container p{
+.home-container p {
   color: aliceblue;
   text-align: justify;
-}
-
-
-.active{
-  color: red;
 }
