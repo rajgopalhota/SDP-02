@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './Style.css'
 import rajpic from './images/my pic.jpg'
-import gopalpic from "./images/gopal1.jpg"
+import gopalpic from "./images/gopalpic.jpg"
 import manojpic from "./images/manoj.jpg"
 export default function About() {
   return (
