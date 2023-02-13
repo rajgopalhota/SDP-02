@@ -1,9 +1,14 @@
 .ProductsPage{
-    margin-top: 4%;
+    margin-top: 2%;
     display: flex;
     justify-content: center;
     /* align-items: center; */
     min-height: 100vh;
+}
+.Autobot-catalog h1{
+    mix-blend-mode: overlay;
+    text-transform: uppercase;
+    font-size: 72px;
 }
 .product-container{
     position: relative;
@@ -156,15 +161,15 @@
 }
 
 .product-container .product-card .product-contentBx .product-color span:nth-child(2) {
-     background: #1BBFE9;
+     background: #ffffff;
 }
 
 .product-container .product-card .product-contentBx .product-color span:nth-child(3) {
-     background: #1B2FE9;
+     background: #e91b1b;
 }
 
 .product-container .product-card .product-contentBx .product-color span:nth-child(4) {
-     background: #080481;
+     background: #0000ff;
 }
 
 .product-container .product-card .product-contentBx a {

@@ -1,140 +1,350 @@
 import React from 'react'
 import './Styles/Style.css'
-import seat from './Assets/seat.png'
-import inmirror from './Assets/inmirror.png'
-import windmirror from './Assets/windmirror.jpg'
-import redhead from './Assets/redhead.jpg'
-import bluehead from './Assets/bluehead.jpg'
+import nexon from './Assets/nexon.png'
+import thar from './Assets/thar.png'
+import xuv from './Assets/xuv.png'
+import altroz from './Assets/altroz.png'
+import audia8 from './Assets/audia8.png'
+import brezza from './Assets/brezza.png'
+import harrier from './Assets/harrier.png'
+import hyundai from './Assets/hyundai.png'
+import safari from './Assets/safari.png'
+import scorpio from './Assets/scorpio.png'
+import sonata from './Assets/sonata.png'
+import sclass from './Assets/sclass.png'
 export default function Products() {
     return (
-        <div className='ProductsPage'>
-            <div className="product-container">
-                {/* Card -1 */}
-                <div className="product-card">
-                    <div className="product-imgBx">
-                        <img src={seat} alt="Seat" />
-                    </div>
-                    <div className="product-contentBx">
-                        <h2>Nexa Seat</h2>
-                        <div className="product-size">
-                            <h3>Size :</h3>
-                            <span>7</span>
-                            <span>8</span>
-                            <span>9</span>
-                            <span>10</span>
+        <div className='Autobot-catalog'>
+            <h1>Autobots Catalog</h1>
+            <div className='ProductsPage'>
+                <div className="product-container">
+                    {/* Card -1 */}
+                    <div className="product-card">
+                        <div className="product-imgBx">
+                            <img src={thar} alt="Seat" />
                         </div>
-                        <div className="product-color">
-                            <h3>Color :</h3>
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                        <div className="product-contentBx">
+                            <h2>Thar</h2>
+                            <div className="product-size">
+                                <h3>Size :</h3>
+                                <span>7</span>
+                                <span>8</span>
+                                <span>9</span>
+                                <span>10</span>
+                            </div>
+                            <div className="product-color">
+                                <h3>Color :</h3>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <a href="/">Buy Now</a>
                         </div>
-                        <a href="/">Buy Now</a>
+
                     </div>
+                    {/* Card one ends */}
+                    {/* Card -1 */}
+                    <div className="product-card">
+                        <div className="product-imgBx">
+                            <img src={nexon} alt="Seat" />
+                        </div>
+                        <div className="product-contentBx">
+                            <h2>Nexon</h2>
+                            <div className="product-size">
+                                <h3>Size :</h3>
+                                <span>7</span>
+                                <span>8</span>
+                                <span>9</span>
+                                <span>10</span>
+                            </div>
+                            <div className="product-color">
+                                <h3>Color :</h3>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <a href="/">Buy Now</a>
+                        </div>
+
+                    </div>
+                    {/* Card one ends */}
+                    {/* Card -1 */}
+                    <div className="product-card">
+                        <div className="product-imgBx">
+                            <img src={audia8} alt="Seat" />
+                        </div>
+                        <div className="product-contentBx">
+                            <h2>Audi A8</h2>
+                            <div className="product-size">
+                                <h3>Size :</h3>
+                                <span>7</span>
+                                <span>8</span>
+                                <span>9</span>
+                                <span>10</span>
+                            </div>
+                            <div className="product-color">
+                                <h3>Color :</h3>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <a href="/">Buy Now</a>
+                        </div>
+
+                    </div>
+                    {/* Card one ends */}
+                    {/* Card -1 */}
+                    <div className="product-card">
+                        <div className="product-imgBx">
+                            <img src={sclass} alt="Seat" />
+                        </div>
+                        <div className="product-contentBx">
+                            <h2>Benz S Class</h2>
+                            <div className="product-size">
+                                <h3>Size :</h3>
+                                <span>7</span>
+                                <span>8</span>
+                                <span>9</span>
+                                <span>10</span>
+                            </div>
+                            <div className="product-color">
+                                <h3>Color :</h3>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <a href="/">Buy Now</a>
+                        </div>
+
+                    </div>
+                    {/* Card one ends */}
+                    {/* Card -1 */}
+                    <div className="product-card">
+                        <div className="product-imgBx">
+                            <img src={scorpio} alt="Seat" />
+                        </div>
+                        <div className="product-contentBx">
+                            <h2>Mahindra Scorpio</h2>
+                            <div className="product-size">
+                                <h3>Size :</h3>
+                                <span>7</span>
+                                <span>8</span>
+                                <span>9</span>
+                                <span>10</span>
+                            </div>
+                            <div className="product-color">
+                                <h3>Color :</h3>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <a href="/">Buy Now</a>
+                        </div>
+
+                    </div>
+                    {/* Card one ends */}
+                    {/* Card -1 */}
+                    <div className="product-card">
+                        <div className="product-imgBx">
+                            <img src={sonata} alt="Seat" />
+                        </div>
+                        <div className="product-contentBx">
+                            <h2>Hyundai Sonata</h2>
+                            <div className="product-size">
+                                <h3>Size :</h3>
+                                <span>7</span>
+                                <span>8</span>
+                                <span>9</span>
+                                <span>10</span>
+                            </div>
+                            <div className="product-color">
+                                <h3>Color :</h3>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <a href="/">Buy Now</a>
+                        </div>
+
+                    </div>
+                    {/* Card one ends */}
+                    {/* Card -1 */}
+                    <div className="product-card">
+                        <div className="product-imgBx">
+                            <img src={safari} alt="Seat" />
+                        </div>
+                        <div className="product-contentBx">
+                            <h2>Safari</h2>
+                            <div className="product-size">
+                                <h3>Size :</h3>
+                                <span>7</span>
+                                <span>8</span>
+                                <span>9</span>
+                                <span>10</span>
+                            </div>
+                            <div className="product-color">
+                                <h3>Color :</h3>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <a href="/">Buy Now</a>
+                        </div>
+
+                    </div>
+                    {/* Card one ends */}
+                    {/* Card -1 */}
+                    <div className="product-card">
+                        <div className="product-imgBx">
+                            <img src={xuv} alt="Seat" />
+                        </div>
+                        <div className="product-contentBx">
+                            <h2>XUV 700</h2>
+                            <div className="product-size">
+                                <h3>Size :</h3>
+                                <span>7</span>
+                                <span>8</span>
+                                <span>9</span>
+                                <span>10</span>
+                            </div>
+                            <div className="product-color">
+                                <h3>Color :</h3>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <a href="/">Buy Now</a>
+                        </div>
+
+                    </div>
+                    {/* Card one ends */}
+                    {/* Card -1 */}
+                    <div className="product-card">
+                        <div className="product-imgBx">
+                            <img src={altroz} alt="Seat" />
+                        </div>
+                        <div className="product-contentBx">
+                            <h2>Altroz</h2>
+                            <div className="product-size">
+                                <h3>Size :</h3>
+                                <span>7</span>
+                                <span>8</span>
+                                <span>9</span>
+                                <span>10</span>
+                            </div>
+                            <div className="product-color">
+                                <h3>Color :</h3>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <a href="/">Buy Now</a>
+                        </div>
+
+                    </div>
+                    {/* Card one ends */}
+                    {/* Card -1 */}
+                    <div className="product-card">
+                        <div className="product-imgBx">
+                            <img src={harrier} alt="Seat" />
+                        </div>
+                        <div className="product-contentBx">
+                            <h2>Harrier</h2>
+                            <div className="product-size">
+                                <h3>Size :</h3>
+                                <span>7</span>
+                                <span>8</span>
+                                <span>9</span>
+                                <span>10</span>
+                            </div>
+                            <div className="product-color">
+                                <h3>Color :</h3>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <a href="/">Buy Now</a>
+                        </div>
+
+                    </div>
+                    {/* Card one ends */}
+                    {/* Card -1 */}
+                    <div className="product-card">
+                        <div className="product-imgBx">
+                            <img src={hyundai} alt="Seat" />
+                        </div>
+                        <div className="product-contentBx">
+                            <h2>Hyundai</h2>
+                            <div className="product-size">
+                                <h3>Size :</h3>
+                                <span>7</span>
+                                <span>8</span>
+                                <span>9</span>
+                                <span>10</span>
+                            </div>
+                            <div className="product-color">
+                                <h3>Color :</h3>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <a href="/">Buy Now</a>
+                        </div>
+
+                    </div>
+                    {/* Card one ends */}
+                    {/* Card -1 */}
+                    <div className="product-card">
+                        <div className="product-imgBx">
+                            <img src={brezza} alt="Seat" />
+                        </div>
+                        <div className="product-contentBx">
+                            <h2>Brezza</h2>
+                            <div className="product-size">
+                                <h3>Size :</h3>
+                                <span>7</span>
+                                <span>8</span>
+                                <span>9</span>
+                                <span>10</span>
+                            </div>
+                            <div className="product-color">
+                                <h3>Color :</h3>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <a href="/">Buy Now</a>
+                        </div>
+
+                    </div>
+                    {/* Card one ends */}
+                    {/* Card -1 */}
+                    <div className="product-card">
+                        <div className="product-imgBx">
+                            <img src={nexon} alt="Seat" />
+                        </div>
+                        <div className="product-contentBx">
+                            <h2>Tata </h2>
+                            <div className="product-size">
+                                <h3>Size :</h3>
+                                <span>7</span>
+                                <span>8</span>
+                                <span>9</span>
+                                <span>10</span>
+                            </div>
+                            <div className="product-color">
+                                <h3>Color :</h3>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <a href="/">Buy Now</a>
+                        </div>
+
+                    </div>
+                    {/* Card one ends */}
 
                 </div>
-                {/* Card one ends */}
-                {/* Card -1 */}
-                <div className="product-card">
-                    <div className="product-imgBx">
-                        <img src={inmirror} alt="Seat" />
-                    </div>
-                    <div className="product-contentBx">
-                        <h2>Nexa Mirror</h2>
-                        <div className="product-size">
-                            <h3>Size :</h3>
-                            <span>7</span>
-                            <span>8</span>
-                            <span>9</span>
-                            <span>10</span>
-                        </div>
-                        <div className="product-color">
-                            <h3>Color :</h3>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <a href="/">Buy Now</a>
-                    </div>
-
-                </div>
-                {/* Card one ends */}
-                {/* Card -1 */}
-                <div className="product-card">
-                    <div className="product-imgBx">
-                        <img src={windmirror} alt="Seat" />
-                    </div>
-                    <div className="product-contentBx">
-                        <h2>Side Mirror</h2>
-                        <div className="product-size">
-                            <h3>Size :</h3>
-                            <span>7</span>
-                            <span>8</span>
-                            <span>9</span>
-                            <span>10</span>
-                        </div>
-                        <div className="product-color">
-                            <h3>Color :</h3>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <a href="/">Buy Now</a>
-                    </div>
-
-                </div>
-                {/* Card one ends */}
-                {/* Card -1 */}
-                <div className="product-card">
-                    <div className="product-imgBx">
-                        <img src={redhead} alt="Seat" />
-                    </div>
-                    <div className="product-contentBx">
-                        <h2>Red Headlight</h2>
-                        <div className="product-size">
-                            <h3>Size :</h3>
-                            <span>7</span>
-                            <span>8</span>
-                            <span>9</span>
-                            <span>10</span>
-                        </div>
-                        <div className="product-color">
-                            <h3>Color :</h3>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <a href="/">Buy Now</a>
-                    </div>
-
-                </div>
-                {/* Card one ends */}
-                {/* Card -1 */}
-                <div className="product-card">
-                    <div className="product-imgBx">
-                        <img src={bluehead} alt="Seat" />
-                    </div>
-                    <div className="product-contentBx">
-                        <h2>Blue Headlight</h2>
-                        <div className="product-size">
-                            <h3>Size :</h3>
-                            <span>7</span>
-                            <span>8</span>
-                            <span>9</span>
-                            <span>10</span>
-                        </div>
-                        <div className="product-color">
-                            <h3>Color :</h3>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <a href="/">Buy Now</a>
-                    </div>
-
-                </div>
-                {/* Card one ends */}
-                
             </div>
         </div>
     )

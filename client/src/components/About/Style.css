@@ -1,115 +1,112 @@
-.abt-container{
-    padding: 22px;
-    position: fixed;
-    animation: abtfloaterx 1s;
-    margin-left: 5%;
-    /* margin-top: 3%; */
-    backdrop-filter: blur(10px);
-    width: 42%;
-    border: 1px solid white;
-border-radius: 12px;
-box-shadow: 10px 25px 30px rgba(0, 136, 134, 0.384);
+.abt-container {
+  padding: 22px;
+  position: fixed;
+  animation: abtfloaterx 1s;
+  margin-left: 5%;
+  /* margin-top: 3%; */
+  backdrop-filter: blur(10px);
+  width: 42%;
+  border: 1px solid white;
+  border-radius: 12px;
+  box-shadow: 10px 25px 30px rgba(0, 136, 134, 0.384);
 }
 @keyframes abtfloaterx {
-    0%{transform: translateX(-100%);transition: ease 5s;}
+  0% {
+    transform: translateX(-100%);
+    transition: ease 5s;
+  }
 }
 @keyframes abtfloaterxr {
-    0%{transform: translateX(100%);transition: ease 5s;}
+  0% {
+    transform: translateX(100%);
+    transition: ease 5s;
+  }
 }
 @keyframes abtfloatery {
-    0%{transform: translateY(100%);transition: ease 5s;}
+  0% {
+    transform: translateY(100%);
+    transition: ease 5s;
+  }
 }
 
-.abt-container1 img{
-border-radius: 100%;
-width: 22%;
-height: 70%;
-position: absolute;
-left: 2%;
-top: 16%;
-box-shadow: 10px 15px 15px rgba(255, 255, 255, 0.233);
+.abt-container1 img {
+  border-radius: 100%;
+  width: 22%;
+  position: absolute;
+  left: 2%;
+  top: 16%;
+  box-shadow: 0px 0px 15px rgb(0, 221, 255);
 }
-.abt-container2 img{
-    border-radius: 100%;
-    width: 22%;
-    height: 70%;
-    position: absolute;
-    left: 2%;
-    top: 16%;
-    box-shadow: 10px 15px 15px rgba(255, 255, 255, 0.233);
-    }
-
-.abt-container img{
-    border-radius: 100%;
-    width: 22%;
-    height: 70%;
-    position: absolute;
-    left: 2%;
-    top: 16%;
-    box-shadow: 10px 15px 15px rgba(255, 255, 255, 0.233);
+.abt-container2 img {
+  border-radius: 100%;
+  width: 22%;
+  position: absolute;
+  left: 2%;
+  top: 16%;
+  box-shadow: 0px 0px 15px rgb(0, 221, 255);
 }
 
-
-
-
-.abt-container1{
-    padding: 22px;
-    position: fixed;
-    animation: abtfloaterxr 1s;
-    position: relative;
-    margin-left: auto;
-    margin-right: 5%;
-    margin-top: 4%;
-    backdrop-filter: blur(10px);
-    width: 42%;
-    border: 1px solid white;
-    border-radius: 12px;
-   box-shadow: 10px 25px 30px rgba(0, 136, 134, 0.384);
-}
-.abt-container2{
-    padding: 22px;
-    animation: abtfloatery 1s;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5%;
-    backdrop-filter: blur(10px);
-    width: 42%;
-    border: 1px solid white;
-    border-radius: 12px;
-   box-shadow: 10px 25px 30px rgba(0, 136, 134, 0.384);
+.abt-container img {
+  border-radius: 100%;
+  width: 22%;
+  position: absolute;
+  left: 2%;
+  top: 16%;
+  box-shadow: 0px 0px 15px rgb(0, 221, 255);
 }
 
-.abt-container1 p{
-    color: aliceblue;
-   padding-left: 25%;
-   text-align: justify;
+.abt-container1 {
+  padding: 22px;
+  position: fixed;
+  animation: abtfloaterxr 1s;
+  position: relative;
+  margin-left: auto;
+  margin-right: 5%;
+  margin-top: 4%;
+  backdrop-filter: blur(10px);
+  width: 42%;
+  border: 1px solid white;
+  border-radius: 12px;
+  box-shadow: 10px 25px 30px rgba(0, 136, 134, 0.384);
 }
-.abt-container p{
-    color: aliceblue;
-   padding-left: 25%;
-   text-align: justify;
-}
-.abt-container2 p{
-    color: aliceblue;
-   padding-left: 25%;
-   text-align: justify;
+.abt-container2 {
+  padding: 22px;
+  animation: abtfloatery 1s;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  backdrop-filter: blur(10px);
+  width: 42%;
+  border: 1px solid white;
+  border-radius: 12px;
+  box-shadow: 10px 25px 30px rgba(0, 136, 134, 0.384);
 }
 
-
-.abt-container1 a{
-    text-decoration: none;
-    color:aqua;
-    font-size: 200%;
+.abt-container1 p {
+  color: aliceblue;
+  padding-left: 25%;
+  text-align: justify;
 }
-.abt-container a{
-    text-decoration: none;
-    color:aqua;
-    font-size: 200%;
+.abt-container p {
+  color: aliceblue;
+  padding-left: 25%;
+  text-align: justify;
 }
-.abt-container2 a{
-    text-decoration: none;
-    color:aqua;
-    font-size: 200%;
-   padding-left: 18%;
+.abt-container2 p {
+  color: aliceblue;
+  padding-left: 25%;
+  text-align: justify;
+}
 
+.Aboutani a {
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+  text-decoration: none;
+  color: aqua;
+  font-size: 200%;
+  font-weight: 900;
+}
+.abt-container2 a {
+  padding-left: 22%;
 }
