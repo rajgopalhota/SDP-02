@@ -30,6 +30,7 @@ export default function Products() {
                                 <span>3</span>
                                 <span>0</span>
                                 <span>0</span>
+                                <span>0</span>
                                 <span>K</span>
                             </div>
                             <div className="product-color">
@@ -54,6 +55,7 @@ export default function Products() {
                                 <h3>Price :</h3>
                                 <span>7</span>
                                 <span>8</span>
+                                <span>8</span>
                                 <span>9</span>
                                 <span>K</span>
                             </div>
@@ -77,6 +79,7 @@ export default function Products() {
                             <h2>Audi A8</h2>
                             <div className="product-size">
                                 <h3>Price :</h3>
+                                <span>7</span>
                                 <span>7</span>
                                 <span>8</span>
                                 <span>9</span>
@@ -104,6 +107,7 @@ export default function Products() {
                                 <h3>Price :</h3>
                                 <span>7</span>
                                 <span>8</span>
+                                <span>8</span>
                                 <span>9</span>
                                 <span>K</span>
                             </div>
@@ -130,6 +134,7 @@ export default function Products() {
                                 <span>7</span>
                                 <span>8</span>
                                 <span>9</span>
+                                <span>9</span>
                                 <span>K</span>
                             </div>
                             <div className="product-color">
@@ -152,6 +157,7 @@ export default function Products() {
                             <h2>Hyundai Sonata</h2>
                             <div className="product-size">
                                 <h3>Price :</h3>
+                                <span>7</span>
                                 <span>7</span>
                                 <span>8</span>
                                 <span>9</span>
@@ -179,6 +185,7 @@ export default function Products() {
                                 <h3>Price :</h3>
                                 <span>7</span>
                                 <span>8</span>
+                                <span>8</span>
                                 <span>9</span>
                                 <span>K</span>
                             </div>
@@ -203,6 +210,7 @@ export default function Products() {
                             <div className="product-size">
                                 <h3>Price :</h3>
                                 <span>7</span>
+                                <span>8</span>
                                 <span>8</span>
                                 <span>9</span>
                                 <span>K</span>
@@ -229,6 +237,7 @@ export default function Products() {
                                 <h3>Price :</h3>
                                 <span>7</span>
                                 <span>8</span>
+                                <span>8</span>
                                 <span>9</span>
                                 <span>K</span>
                             </div>
@@ -252,6 +261,7 @@ export default function Products() {
                             <h2>Harrier</h2>
                             <div className="product-size">
                                 <h3>Price :</h3>
+                                <span>7</span>
                                 <span>7</span>
                                 <span>8</span>
                                 <span>9</span>
@@ -280,6 +290,7 @@ export default function Products() {
                                 <span>7</span>
                                 <span>8</span>
                                 <span>9</span>
+                                <span>9</span>
                                 <span>K</span>
                             </div>
                             <div className="product-color">
@@ -304,6 +315,7 @@ export default function Products() {
                                 <h3>Price :</h3>
                                 <span>7</span>
                                 <span>8</span>
+                                <span>8</span>
                                 <span>9</span>
                                 <span>K</span>
                             </div>
@@ -327,6 +339,7 @@ export default function Products() {
                             <h2>Tata </h2>
                             <div className="product-size">
                                 <h3>Price :</h3>
+                                <span>7</span>
                                 <span>7</span>
                                 <span>8</span>
                                 <span>9</span>
