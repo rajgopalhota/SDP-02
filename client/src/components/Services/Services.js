@@ -1,6 +1,13 @@
 import React from "react";
 import "./Styles/repair.css";
 export default function Repair() {
+  const disablePastDate = () => {
+    const today = new Date();
+    const dd = String(today.getDate()+1).padStart(2, "0");
+    const mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+    const yyyy = today.getFullYear();
+    return yyyy + "-" + mm + "-" + dd;
+  };
   return (
     <div>
       <div className="repair-container">
@@ -39,7 +46,7 @@ export default function Repair() {
                 <label>Date of request:</label>
               </td>
               <td>
-                <input type="date" name='date' />
+                <input type="date" name='date' min={disablePastDate()} />
               </td>
             </tr>
 

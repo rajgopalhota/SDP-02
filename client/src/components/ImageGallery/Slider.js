@@ -4,6 +4,7 @@ import thar from './Gallery/thar.jpg'
 import mercedes from './Gallery/mercedes.jpg'
 import bugati from './Gallery/bugati.jpg'
 import suv from './Gallery/suv.jpg'
+import { NavLink } from 'react-router-dom'
 export default function Slider() {
   return (
     <div className='image-slider-cont'>
@@ -16,6 +17,24 @@ export default function Slider() {
           <img src={bugati} alt='' />
         </div>
       </div>
+      <div className="slider-neon-btn">
+        <NavLink to="/contact" >
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Contact us
+        </NavLink>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <NavLink to="/autobots/products" >
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          What's new
+        </NavLink>
+      </div>
+
     </div>
   )
 }
