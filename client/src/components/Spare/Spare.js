@@ -42,11 +42,11 @@ export default function Spare() {
               <div className="product-contentBx">
                 <h2>Nexa Seat</h2>
                 <div className="product-size">
-                  <h3>Size :</h3>
+                  <h3>Price :</h3>
                   <span>7</span>
                   <span>8</span>
-                  <span>9</span>
-                  <span>10</span>
+                  {/* <span>9</span> */}
+                  <span>K</span>
                 </div>
                 <div className="product-color">
                   <h3>Color :</h3>
@@ -67,11 +67,11 @@ export default function Spare() {
               <div className="product-contentBx">
                 <h2>Nexa Mirror</h2>
                 <div className="product-size">
-                  <h3>Size :</h3>
+                  <h3>Price :</h3>
                   <span>7</span>
                   <span>8</span>
-                  <span>9</span>
-                  <span>10</span>
+                  {/* <span>9</span> */}
+                  <span>K</span>
                 </div>
                 <div className="product-color">
                   <h3>Color :</h3>
@@ -92,11 +92,11 @@ export default function Spare() {
               <div className="product-contentBx">
                 <h2>Side Mirror</h2>
                 <div className="product-size">
-                  <h3>Size :</h3>
+                  <h3>Price :</h3>
                   <span>7</span>
                   <span>8</span>
-                  <span>9</span>
-                  <span>10</span>
+                  {/* <span>9</span> */}
+                  <span>K</span>
                 </div>
                 <div className="product-color">
                   <h3>Color :</h3>
@@ -117,11 +117,11 @@ export default function Spare() {
               <div className="product-contentBx">
                 <h2>Red Headlight</h2>
                 <div className="product-size">
-                  <h3>Size :</h3>
+                  <h3>Price :</h3>
                   <span>7</span>
-                  <span>8</span>
+                  {/* <span>8</span> */}
                   <span>9</span>
-                  <span>10</span>
+                  <span>K</span>
                 </div>
                 <div className="product-color">
                   <h3>Color :</h3>
@@ -142,11 +142,11 @@ export default function Spare() {
               <div className="product-contentBx">
                 <h2>Blue Headlight</h2>
                 <div className="product-size">
-                  <h3>Size :</h3>
-                  <span>7</span>
+                  <h3>Price :</h3>
+                  {/* <span>7</span> */}
                   <span>8</span>
                   <span>9</span>
-                  <span>10</span>
+                  <span>K</span>
                 </div>
                 <div className="product-color">
                   <h3>Color :</h3>

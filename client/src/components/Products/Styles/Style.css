@@ -143,11 +143,11 @@
   line-height: 26px;
   font-size: 14px;
   display: inline-block;
-  color: #111;
-  background: #fff;
-  margin: 0 5px;
+  color: #fefefe;
+  /* background: #fff; 
+  /* margin: 0 5px; */
   transition: 0.5s;
-  color: #111;
+  color: #ffe2e2;
   border-radius: 4px;
   cursor: pointer;
 }

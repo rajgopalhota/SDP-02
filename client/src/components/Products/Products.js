@@ -26,11 +26,11 @@ export default function Products() {
                         <div className="product-contentBx">
                             <h2>Thar</h2>
                             <div className="product-size">
-                                <h3>Size :</h3>
-                                <span>7</span>
-                                <span>8</span>
-                                <span>9</span>
-                                <span>10</span>
+                                <h3>Price :</h3>
+                                <span>3</span>
+                                <span>0</span>
+                                <span>0</span>
+                                <span>K</span>
                             </div>
                             <div className="product-color">
                                 <h3>Color :</h3>
@@ -51,11 +51,11 @@ export default function Products() {
                         <div className="product-contentBx">
                             <h2>Nexon</h2>
                             <div className="product-size">
-                                <h3>Size :</h3>
+                                <h3>Price :</h3>
                                 <span>7</span>
                                 <span>8</span>
                                 <span>9</span>
-                                <span>10</span>
+                                <span>K</span>
                             </div>
                             <div className="product-color">
                                 <h3>Color :</h3>
@@ -76,11 +76,11 @@ export default function Products() {
                         <div className="product-contentBx">
                             <h2>Audi A8</h2>
                             <div className="product-size">
-                                <h3>Size :</h3>
+                                <h3>Price :</h3>
                                 <span>7</span>
                                 <span>8</span>
                                 <span>9</span>
-                                <span>10</span>
+                                <span>K</span>
                             </div>
                             <div className="product-color">
                                 <h3>Color :</h3>
@@ -101,11 +101,11 @@ export default function Products() {
                         <div className="product-contentBx">
                             <h2>Benz S Class</h2>
                             <div className="product-size">
-                                <h3>Size :</h3>
+                                <h3>Price :</h3>
                                 <span>7</span>
                                 <span>8</span>
                                 <span>9</span>
-                                <span>10</span>
+                                <span>K</span>
                             </div>
                             <div className="product-color">
                                 <h3>Color :</h3>
@@ -126,11 +126,11 @@ export default function Products() {
                         <div className="product-contentBx">
                             <h2>Mahindra Scorpio</h2>
                             <div className="product-size">
-                                <h3>Size :</h3>
+                                <h3>Price :</h3>
                                 <span>7</span>
                                 <span>8</span>
                                 <span>9</span>
-                                <span>10</span>
+                                <span>K</span>
                             </div>
                             <div className="product-color">
                                 <h3>Color :</h3>
@@ -151,11 +151,11 @@ export default function Products() {
                         <div className="product-contentBx">
                             <h2>Hyundai Sonata</h2>
                             <div className="product-size">
-                                <h3>Size :</h3>
+                                <h3>Price :</h3>
                                 <span>7</span>
                                 <span>8</span>
                                 <span>9</span>
-                                <span>10</span>
+                                <span>K</span>
                             </div>
                             <div className="product-color">
                                 <h3>Color :</h3>
@@ -176,11 +176,11 @@ export default function Products() {
                         <div className="product-contentBx">
                             <h2>Safari</h2>
                             <div className="product-size">
-                                <h3>Size :</h3>
+                                <h3>Price :</h3>
                                 <span>7</span>
                                 <span>8</span>
                                 <span>9</span>
-                                <span>10</span>
+                                <span>K</span>
                             </div>
                             <div className="product-color">
                                 <h3>Color :</h3>
@@ -201,11 +201,11 @@ export default function Products() {
                         <div className="product-contentBx">
                             <h2>XUV 700</h2>
                             <div className="product-size">
-                                <h3>Size :</h3>
+                                <h3>Price :</h3>
                                 <span>7</span>
                                 <span>8</span>
                                 <span>9</span>
-                                <span>10</span>
+                                <span>K</span>
                             </div>
                             <div className="product-color">
                                 <h3>Color :</h3>
@@ -226,11 +226,11 @@ export default function Products() {
                         <div className="product-contentBx">
                             <h2>Altroz</h2>
                             <div className="product-size">
-                                <h3>Size :</h3>
+                                <h3>Price :</h3>
                                 <span>7</span>
                                 <span>8</span>
                                 <span>9</span>
-                                <span>10</span>
+                                <span>K</span>
                             </div>
                             <div className="product-color">
                                 <h3>Color :</h3>
@@ -251,11 +251,11 @@ export default function Products() {
                         <div className="product-contentBx">
                             <h2>Harrier</h2>
                             <div className="product-size">
-                                <h3>Size :</h3>
+                                <h3>Price :</h3>
                                 <span>7</span>
                                 <span>8</span>
                                 <span>9</span>
-                                <span>10</span>
+                                <span>K</span>
                             </div>
                             <div className="product-color">
                                 <h3>Color :</h3>
@@ -276,11 +276,11 @@ export default function Products() {
                         <div className="product-contentBx">
                             <h2>Hyundai</h2>
                             <div className="product-size">
-                                <h3>Size :</h3>
+                                <h3>Price :</h3>
                                 <span>7</span>
                                 <span>8</span>
                                 <span>9</span>
-                                <span>10</span>
+                                <span>K</span>
                             </div>
                             <div className="product-color">
                                 <h3>Color :</h3>
@@ -301,11 +301,11 @@ export default function Products() {
                         <div className="product-contentBx">
                             <h2>Brezza</h2>
                             <div className="product-size">
-                                <h3>Size :</h3>
+                                <h3>Price :</h3>
                                 <span>7</span>
                                 <span>8</span>
                                 <span>9</span>
-                                <span>10</span>
+                                <span>K</span>
                             </div>
                             <div className="product-color">
                                 <h3>Color :</h3>
@@ -326,11 +326,11 @@ export default function Products() {
                         <div className="product-contentBx">
                             <h2>Tata </h2>
                             <div className="product-size">
-                                <h3>Size :</h3>
+                                <h3>Price :</h3>
                                 <span>7</span>
                                 <span>8</span>
                                 <span>9</span>
-                                <span>10</span>
+                                <span>K</span>
                             </div>
                             <div className="product-color">
                                 <h3>Color :</h3>
