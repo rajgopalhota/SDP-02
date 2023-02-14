@@ -10,6 +10,7 @@ import Services from './components/Services/Services';
 import About from './components/About/About';
 import Spare from './components/Spare/Spare';
 import Home from './components/Home/Home';
+import Cart from './components/Cart/Cart';
 function App() {
   return (
     <div className="App">
@@ -21,6 +22,7 @@ function App() {
           <Route path='aboutus' element={<About />} />
           <Route path='spare' element={<Spare />} />
           <Route path='services' element={<Services />} />
+          <Route path='cart' element={<Cart />} />
         </Route>
         <Route path='products' element={<Autobot />}></Route>
         <Route path='login' element={<Login />}></Route>

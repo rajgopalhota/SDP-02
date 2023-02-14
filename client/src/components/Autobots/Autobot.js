@@ -7,6 +7,7 @@ import Products from '../Products/Products';
 import About from '../About/About';
 import Services from '../Services/Services';
 import Spare from '../Spare/Spare';
+import Cart from '../Cart/Cart';
 export default function Autobot() {
   return (
     <div>
@@ -17,6 +18,7 @@ export default function Autobot() {
         <Route path='aboutus' element={<About />}></Route>
         <Route path='spare' element={<Spare />}></Route>
         <Route path='services' element={<Services />}></Route>
+        <Route path='cart' element={<Cart />}></Route>
       </Routes>
     </div>
   )

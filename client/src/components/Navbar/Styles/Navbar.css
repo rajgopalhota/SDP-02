@@ -8,6 +8,22 @@ nav {
   box-shadow: 0 0 8px rgb(129, 129, 129);
   background-color: transparent;
 }
+.navcart{
+  display: inline-block;
+  margin-right: 2%;
+}
+.navcart span{
+  font-size: 0;
+}
+.navcart .active{
+  background-color: transparent;
+}
+.active span{
+  transition: all ease-in 0.5s;
+  display: inline-block;
+  font-size: 18px;
+  transition: all ease-out 0.5s;
+}
 .navbar {
   background-color: black;
   z-index: 999;

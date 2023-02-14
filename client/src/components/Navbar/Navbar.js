@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink, Link } from 'react-router-dom';
 import logo from './Assets/NavLogo.jpg';
+import cartlogo from './Assets/carts.png';
 import './Styles/Navbar.css'
 
 export default function Navbar(props) {
@@ -31,6 +32,10 @@ export default function Navbar(props) {
                 <NavLink className="nav-link" to="aboutus">About</NavLink>
               </li>
             </ul>
+            <div className="navcart">
+            <NavLink className="nav-link" to="cart"><img src={cartlogo} alt='' width={42}></img><span>&nbsp;Cart</span></NavLink>
+            {/*  */}
+            </div>
             <NavLink to="/login"><button className="btn btn-outline-success" type="submit">Login</button></NavLink>
           </div>
         </div>
