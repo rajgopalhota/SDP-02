@@ -122,32 +122,6 @@
 }
 
 .link-one:hover::after {
-  /*
-    clip-path: polygon(
-      20% 45%,
-      10% 40%,
-      30% 30%,
-      40% 35%,
-      60% 35%,
-      70% 30%,
-      90% 40%,
-      80% 45%,
-      60% 35%,
-      40% 35%,
-      20% 45%,
-      20% 55%,
-      10% 60%,
-      30% 70%,
-      40% 65%,
-      60% 65%,
-      70% 70%,
-      90% 60%,
-      80% 55%,
-      60% 65%,
-      40% 65%,
-      20% 55%
-    );
-    */
   clip-path: polygon(
     40% 10%,
     60% 10%,
@@ -295,15 +269,9 @@
   .bodyland {
     background: url(./bg1.jpg) no-repeat center center fixed;
   }
-  .link-container {
-    font-size: 10px;
-  }
 }
 @media (max-width: 800px) {
   .bodyland {
     background: url(./bg1.jpg) no-repeat center center fixed;
-  }
-  .link-container {
-    font-size: 12px;
   }
 }

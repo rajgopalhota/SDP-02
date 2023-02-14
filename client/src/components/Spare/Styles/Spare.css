@@ -4,10 +4,12 @@
   font-size: 32px;
   /* mix-blend-mode: overlay; */
 }
+.spareboxpro{
+  overflow-x: hidden;
 
+}
 .spare-container {
   animation: abtfloaterxr 1.5s;
-  /* backdrop-filter: blur(7px); */
   margin-top: 8%;
   margin-left: auto;
   margin-right: auto;

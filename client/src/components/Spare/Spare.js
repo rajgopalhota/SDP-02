@@ -7,7 +7,7 @@ import bluehead from './Assets/bluehead.jpg'
 import "./Styles/Spare.css"
 export default function Spare() {
   return (
-    <div>
+    <div className='spareboxpro'>
       <div className="spare-container">
         {/* <h1>Welocme to Autobots Repair Services</h1> */}
         <form action="" method="post">
