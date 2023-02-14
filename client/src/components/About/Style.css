@@ -1,6 +1,6 @@
 .abt-container {
   padding: 22px;
-  position: fixed;
+  position: absolute;
   animation: abtfloaterx 1s;
   margin-left: 5%;
   /* margin-top: 3%; */
@@ -10,6 +10,10 @@
   border-radius: 12px;
   box-shadow: 10px 25px 30px rgba(0, 136, 134, 0.384);
 }
+.Aboutani{
+  margin-top: 7%;
+}
+
 @keyframes abtfloaterx {
   0% {
     transform: translateX(-100%);
@@ -74,7 +78,7 @@
   animation: abtfloatery 1s;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5%;
+  margin-top: 3%;
   backdrop-filter: blur(10px);
   width: 42%;
   border: 1px solid white;

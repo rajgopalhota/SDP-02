@@ -292,12 +292,18 @@
   transform: translate(0%, 0%) scaleY(1);
 }
 @media (max-width: 570px) {
-  .body {
+  .bodyland {
     background: url(./bg1.jpg) no-repeat center center fixed;
   }
+  .link-container {
+    font-size: 10px;
+  }
 }
-@media (max-width: 870px) {
-  .body {
+@media (max-width: 800px) {
+  .bodyland {
     background: url(./bg1.jpg) no-repeat center center fixed;
+  }
+  .link-container {
+    font-size: 12px;
   }
 }

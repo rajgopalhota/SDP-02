@@ -1,6 +1,5 @@
 nav {
   color: aliceblue;
-  position: fixed;
   font-family: "Poppins", sans-serif;
   min-height: 2%;
   font-weight: 500;
@@ -9,14 +8,24 @@ nav {
   box-shadow: 0 0 8px rgb(129, 129, 129);
   background-color: transparent;
 }
-
+.navbar {
+  background-color: black;
+  z-index: 999;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 10%;
+}
 .active {
+  transition: all ease-in-out 0.5s;
   backdrop-filter: blur(12px);
   background-color: rgba(136, 136, 136, 0.365);
-  border-radius: 100px;
+  border-radius: 70px;
 }
 .nav-titles li:hover {
-  text-decoration: underline;
+  /* text-decoration: underline; */
+  border-bottom: 12px soid white;
 }
 .nav-titles {
   font-size: 35px;
@@ -56,4 +65,24 @@ button a {
   color: white;
   font-size: 22px;
   text-decoration: none;
+}
+
+
+@media screen and (max-width: 400px) {
+  .navbar {
+    height: auto;
+  }
+  section {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  section {
+    display: none;
+  }
+  .navbar {
+    height: auto;
+  }
+  
 }

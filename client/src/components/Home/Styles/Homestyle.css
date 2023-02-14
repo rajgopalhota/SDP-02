@@ -14,9 +14,10 @@ h1 {
   }
 }
 .home-container-portfolio {
-  top: 20%;
-  right: 5%;
-  position: absolute;
+  margin-top: 10%;
+  margin-right: 5%;
+  margin-left: auto;
+  /* position: absolute; */
   animation: floatery 1s;
   backdrop-filter: blur(7px);
   width: 50%;

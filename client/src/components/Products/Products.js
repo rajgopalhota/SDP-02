@@ -15,7 +15,7 @@ import sclass from './Assets/sclass.png'
 export default function Products() {
     return (
         <div className='Autobot-catalog'>
-            <h1>Autobots Catalog</h1>
+            <h1><marquee scrollamount="50">Autobots Catalog</marquee></h1>
             <div className='ProductsPage'>
                 <div className="product-container">
                     {/* Card -1 */}

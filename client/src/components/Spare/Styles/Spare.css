@@ -6,9 +6,9 @@
 }
 
 .spare-container {
-  animation: floatery 1s;
+  animation: abtfloaterxr 1.5s;
   /* backdrop-filter: blur(7px); */
-  margin-top: 2%;
+  margin-top: 8%;
   margin-left: auto;
   margin-right: auto;
   width: 70%;
@@ -67,5 +67,6 @@
 }
 
 .spare-container ::placeholder {
+  text-align: center;
   color: rgb(254, 252, 252);
 }
