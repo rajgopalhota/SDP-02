@@ -11,6 +11,12 @@ import Cart from '../Cart/Cart';
 export default function Autobot() {
   return (
     <div>
+      <div>
+        <div className="starsec"></div>
+        <div className="starthird"></div>
+        <div className="starfourth"></div>
+        <div className="starfifth"></div>
+      </div>
       <Navbar />
       <Routes>
         <Route path='home' element={<Home />}></Route>

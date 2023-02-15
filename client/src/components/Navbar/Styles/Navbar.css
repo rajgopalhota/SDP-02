@@ -25,7 +25,8 @@ nav {
   transition: all ease-out 0.5s;
 }
 .navbar {
-  background-color: black;
+  background-color: rgb(0, 0, 0);
+  backdrop-filter: blur(12px);
   z-index: 999;
   overflow: hidden;
   position: fixed;
