@@ -153,41 +153,13 @@
 }
 
 .box {
-	border: 0.35rem solid;
+	border: 0.25rem solid;
 	border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
 	animation: borderRotate var(--d) linear infinite forwards;
-}
-
-.box:nth-child(2) {
-	border-image: radial-gradient(ellipse at var(--gradX) var(--gradY), var(--c1), var(--c1) 10%, var(--c2) 40%) 30;
-	animation: borderRadial var(--d) linear infinite forwards;
 }
 
 @keyframes borderRotate {
 	100% {
 		--angle: 420deg;
-	}
-}
-
-@keyframes borderRadial {
-	20% {
-		--gradX: 100%;
-		--gradY: 50%;
-	}
-	40% {
-		--gradX: 100%;
-		--gradY: 100%;
-	}
-	60% {
-		--gradX: 50%;
-		--gradY: 100%;
-	}
-	80% {
-		--gradX: 0%;
-		--gradY: 50%;
-	}
-	100% {
-		--gradX: 50%;
-		--gradY: 0%;
 	}
 }
