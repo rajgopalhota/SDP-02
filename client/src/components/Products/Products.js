@@ -15,7 +15,7 @@ import sclass from './Assets/sclass.png'
 export default function Products() {
     return (
         <div className='Autobot-catalog'>
-            <h1><marquee scrollamount="50">Autobots Catalog</marquee></h1>
+            <h1>Autobots Trend</h1>
             <div className='ProductsPage'>
                 <div className="product-container">
                     {/* Card -1 */}
@@ -39,7 +39,7 @@ export default function Products() {
                                 <span></span>
                                 <span></span>
                             </div>
-                            <a href="/">Buy Now</a>
+                            <a href="/">Test Ride</a>
                         </div>
 
                     </div>
@@ -65,7 +65,7 @@ export default function Products() {
                                 <span></span>
                                 <span></span>
                             </div>
-                            <a href="/">Buy Now</a>
+                            <a href="/">Test Ride</a>
                         </div>
 
                     </div>
@@ -91,7 +91,7 @@ export default function Products() {
                                 <span></span>
                                 <span></span>
                             </div>
-                            <a href="/">Buy Now</a>
+                            <a href="/">Test Ride</a>
                         </div>
 
                     </div>
@@ -117,7 +117,7 @@ export default function Products() {
                                 <span></span>
                                 <span></span>
                             </div>
-                            <a href="/">Buy Now</a>
+                            <a href="/">Test Ride</a>
                         </div>
 
                     </div>
@@ -143,7 +143,7 @@ export default function Products() {
                                 <span></span>
                                 <span></span>
                             </div>
-                            <a href="/">Buy Now</a>
+                            <a href="/">Test Ride</a>
                         </div>
 
                     </div>
@@ -169,7 +169,7 @@ export default function Products() {
                                 <span></span>
                                 <span></span>
                             </div>
-                            <a href="/">Buy Now</a>
+                            <a href="/">Test Ride</a>
                         </div>
 
                     </div>
@@ -195,7 +195,7 @@ export default function Products() {
                                 <span></span>
                                 <span></span>
                             </div>
-                            <a href="/">Buy Now</a>
+                            <a href="/">Test Ride</a>
                         </div>
 
                     </div>
@@ -221,7 +221,7 @@ export default function Products() {
                                 <span></span>
                                 <span></span>
                             </div>
-                            <a href="/">Buy Now</a>
+                            <a href="/">Test Ride</a>
                         </div>
 
                     </div>
@@ -247,7 +247,7 @@ export default function Products() {
                                 <span></span>
                                 <span></span>
                             </div>
-                            <a href="/">Buy Now</a>
+                            <a href="/">Test Ride</a>
                         </div>
 
                     </div>
@@ -273,7 +273,7 @@ export default function Products() {
                                 <span></span>
                                 <span></span>
                             </div>
-                            <a href="/">Buy Now</a>
+                            <a href="/">Test Ride</a>
                         </div>
 
                     </div>
@@ -299,7 +299,7 @@ export default function Products() {
                                 <span></span>
                                 <span></span>
                             </div>
-                            <a href="/">Buy Now</a>
+                            <a href="/">Test Ride</a>
                         </div>
 
                     </div>
@@ -325,7 +325,7 @@ export default function Products() {
                                 <span></span>
                                 <span></span>
                             </div>
-                            <a href="/">Buy Now</a>
+                            <a href="/">Test Ride</a>
                         </div>
 
                     </div>
@@ -351,7 +351,7 @@ export default function Products() {
                                 <span></span>
                                 <span></span>
                             </div>
-                            <a href="/">Buy Now</a>
+                            <a href="/">Test Ride</a>
                         </div>
 
                     </div>
