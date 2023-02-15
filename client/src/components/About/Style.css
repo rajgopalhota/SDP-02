@@ -1,7 +1,6 @@
 .abt-container {
   padding: 22px;
   position: absolute;
-  animation: abtfloaterx 1s;
   margin-left: 5%;
   /* margin-top: 3%; */
   backdrop-filter: blur(10px);
@@ -13,7 +12,15 @@
   margin-top: 7%;
   overflow: hidden;
 }
-
+.aboutmove1{
+  animation: abtfloaterx 1.5s;
+}
+.aboutmove2{
+  animation: abtfloaterxr 1.5s;
+}
+.aboutmove3{
+  animation: abtfloatery 1.5s;
+}
 @keyframes abtfloaterx {
   0% {
     transform: translateX(-100%);
@@ -144,8 +151,8 @@
 	--angle: 90deg;
 	--gradX: 100%;
 	--gradY: 50%;
-	--c1: rgba(168, 239, 255, 1);
-	--c2: rgba(168, 239, 255, 0.1);
+	--c1: rgba(77, 0, 148, 0.658);
+	--c2: rgba(255, 255, 255, 0.263);
 }
 
 .wrapper {

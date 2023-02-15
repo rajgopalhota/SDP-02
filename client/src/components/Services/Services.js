@@ -10,7 +10,7 @@ export default function Repair() {
   };
   return (
     <div>
-      <div className="repair-container">
+      <div className="repair-container ">
         <h1>Welocme to Autobots Repair Services</h1>
         <form action="" method="post">
           <table>
