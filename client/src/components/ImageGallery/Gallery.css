@@ -63,8 +63,10 @@
   font-family: consolas;
 }
 .slider-neon-btn a {
-  border: 1px solid white;
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
   border-radius: 12px;
+  box-shadow: 2px 4px 12px rgba(0, 108, 202, 0.612);
   display: inline-block;
   position: relative;
   padding: 15px 30px;
@@ -74,8 +76,8 @@
   text-decoration: none;
   font-size: 24px;
   overflow: hidden;
-  transition: 0.2s;
-  backdrop-filter: blur(0.5em);
+  transition: 1s;
+  backdrop-filter: blur(0.7em);
 }
 
 .slider-neon-btn a:hover {
