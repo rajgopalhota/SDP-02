@@ -12,6 +12,13 @@ import Spare from './components/Spare/Spare';
 import Home from './components/Home/Home';
 import Cart from './components/Cart/Cart';
 function App() {
+  let dc = document.title;
+  window.addEventListener("blur", ()=>{
+    document.title = "Come back please! 😭";
+  })
+  window.addEventListener("focus", ()=>{
+    document.title = dc;
+  })
   return (
     <div className="App">
       <Routes>
