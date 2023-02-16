@@ -17,6 +17,9 @@ import radiatorflush from './Assets/radiatorflush.png'
 import silencer from './Assets/silencer.png'
 import speaker from './Assets/speaker.png'
 import wipermotor from './Assets/wipermotor.png'
+import seatcover from './Assets/seatcover.png'
+import charger from './Assets/charger.png'
+import freshner from './Assets/freshner.png'
 
 const spareList = [
     {
@@ -176,6 +179,33 @@ const spareList = [
         img: bluehead,
         amount: 1,
         type: "light"
+
+      },
+      {
+        id: 20,
+        title: "Air Freshner",
+        price: 490,
+        img: freshner,
+        amount: 1,
+        type: "accessories"
+
+      },
+      {
+        id: 21,
+        title: "Seat cover",
+        price: 2490,
+        img: seatcover,
+        amount: 1,
+        type: "accessories"
+
+      },
+      {
+        id: 22,
+        title: "Car Charger",
+        price: 1490,
+        img: charger,
+        amount: 1,
+        type: "accessories"
 
       },
 ]

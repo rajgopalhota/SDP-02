@@ -1,4 +1,5 @@
 .cart-container{
+    animation: abtfloaterx 1s;
     display: inline-block;
     background-color: rgba(0, 0, 0, 0.247);
     margin-top: 8%;
@@ -7,4 +8,26 @@
     border-radius: 12px;
     backdrop-filter: blur(12px);
     min-width: 85%;
+}
+.close-cart{
+    position: absolute;
+    right: 15px;
+    top: 5px;
+}
+.close-cart span{
+    font-size: 12px;
+}
+.close-cart a :hover{
+    transition: all ease-in 0.3s;
+    font-size: 20px;
+}
+.close-cart a{
+    display: inline-block;
+    font-size: 24px;
+    text-decoration: none;
+    color: red;
+}
+.close-cart a:hover{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
 }

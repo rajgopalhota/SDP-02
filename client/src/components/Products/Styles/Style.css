@@ -33,11 +33,7 @@
 .product-card:hover{
   cursor: pointer;
   transition:all ease-in-out 0.4s;
-  transform: scale(1.04);
-}
-.product-card:hover img{
-  transition:all ease-in 0.4s;
-  transform: scale(1.90);
+  transform: scale(1.02);
 }
 
 .container .card:before {
