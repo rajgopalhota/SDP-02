@@ -37,6 +37,7 @@
 }
 
 .spare-container input {
+  text-align: center;
   width: 100%;
   outline: none;
   border: 2px solid #fafafa;
@@ -51,6 +52,7 @@
 }
 
 .spare-container option {
+  text-align: center;
   background: rgba(26, 25, 25, 0.742);
 }
 

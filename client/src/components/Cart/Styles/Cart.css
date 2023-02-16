@@ -1,0 +1,10 @@
+.cart-container{
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.247);
+    margin-top: 8%;
+    border: 2px solid white;
+    padding: 16px;
+    border-radius: 12px;
+    backdrop-filter: blur(12px);
+    min-width: 85%;
+}

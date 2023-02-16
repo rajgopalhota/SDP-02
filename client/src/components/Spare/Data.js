@@ -14,7 +14,7 @@ import engineoil from './Assets/engineoil.png'
 import exhaust from './Assets/exhaust.png'
 import foglamp from './Assets/foglamp.png'
 import radiatorflush from './Assets/radiatorflush.png'
- import silencer from './Assets/silencer.png'
+import silencer from './Assets/silencer.png'
 import speaker from './Assets/speaker.png'
 import wipermotor from './Assets/wipermotor.png'
 
@@ -25,6 +25,7 @@ const spareList = [
         price: 1000,
         img: wipermotor,
         amount: 1,
+        type: "parts"
       },
       {
         id: 2,
@@ -32,13 +33,15 @@ const spareList = [
         price: 8500,
         img: silencer,
         amount: 1,
+        type: "parts"
       },
       {
         id: 3,
-        title: "Radiator Flush",
-        price: 7100,
-        img: radiatorflush,
+        title: "Children Seat",
+        price: 9490,
+        img: seat,
         amount: 1,
+        type: "accessories"
       },
       {
         id: 4,
@@ -46,6 +49,7 @@ const spareList = [
         price: 6500,
         img: foglamp,
         amount: 1,
+        type: "light"
       },
       {
         id: 5,
@@ -53,6 +57,7 @@ const spareList = [
         price: 2300,
         img: speaker,
         amount: 1,
+        type: "parts"
       },
       {
         id: 6,
@@ -60,6 +65,7 @@ const spareList = [
         price: 5700,
         img: exhaust,
         amount: 1,
+        type: "parts"
       },
       {
         id: 7,
@@ -67,6 +73,7 @@ const spareList = [
         price: 2100,
         img: engineoil,
         amount: 1,
+        type: "oil"
       },
       {
         id: 8,
@@ -74,6 +81,7 @@ const spareList = [
         price: 2140,
         img: coolant,
         amount: 1,
+        type: "oil"
       },
       {
         id: 9,
@@ -81,6 +89,7 @@ const spareList = [
         price: 3680,
         img: condensor,
         amount: 1,
+        type: "parts"
       },
       {
         id: 10,
@@ -88,6 +97,7 @@ const spareList = [
         price: 4780,
         img: compressor,
         amount: 1,
+        type: "parts"
       },
       {
         id: 11,
@@ -95,6 +105,7 @@ const spareList = [
         price: 800,
         img: clock,
         amount: 1,
+        type: "accessories"
       },
       {
         id: 12,
@@ -102,6 +113,7 @@ const spareList = [
         price: 2300,
         img: brakefluid,
         amount: 1,
+        type: "oil"
       },
       {
         id: 13,
@@ -109,6 +121,8 @@ const spareList = [
         price: 3490,
         img: airvent,
         amount: 1,
+        type: "parts"
+
       },
       {
         id: 14,
@@ -116,13 +130,17 @@ const spareList = [
         price: 3490,
         img: ackkit,
         amount: 1,
+        type: "parts"
+
       },
       {
         id: 15,
-        title: "Nexa Seat",
-        price: 9490,
-        img: seat,
+        title: "Radiator Flush",
+        price: 7100,
+        img: radiatorflush,
         amount: 1,
+        type: "oil"
+
       },
       {
         id: 16,
@@ -130,6 +148,8 @@ const spareList = [
         price: 3490,
         img: inmirror,
         amount: 1,
+        type: "mirror"
+
       },
       {
         id: 17,
@@ -137,6 +157,8 @@ const spareList = [
         price: 3090,
         img: windmirror,
         amount: 1,
+        type: "mirror"
+
       },
       {
         id: 18,
@@ -144,6 +166,8 @@ const spareList = [
         price: 5490,
         img: redhead,
         amount: 1,
+        type: "light"
+
       },
       {
         id: 19,
@@ -151,6 +175,8 @@ const spareList = [
         price: 9490,
         img: bluehead,
         amount: 1,
+        type: "light"
+
       },
 ]
 

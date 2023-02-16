@@ -1,6 +1,6 @@
 .ProductsPage {
   overflow-x: hidden;
-  margin-top: 2%;
+  margin-top: 1%;
   display: flex;
   justify-content: center;
   /* align-items: center; */
@@ -30,6 +30,15 @@
   border: 1px solid white;
   box-shadow: 0 0 10px rgba(139, 182, 255, 0.886);
 }
+.product-card:hover{
+  cursor: pointer;
+  transition:all ease-in-out 0.4s;
+  transform: scale(1.04);
+}
+.product-card:hover img{
+  transition:all ease-in 0.4s;
+  transform: scale(1.90);
+}
 
 .container .card:before {
   content: "";
@@ -48,14 +57,18 @@
 }
 
 .product-container .product-card:after {
-  content: "Autobot";
+  content: "Autobots";
+  /* text-decoration: underline; */
+  border-top: 20px solid rgba(0, 0, 255, 0.201);
+  border-bottom: 20px solid rgba(255, 0, 0, 0.201);
   position: absolute;
   top: 30%;
   left: -20%;
-  font-size: 7em;
+  font-size: 6.5em;
   font-weight: 800;
   font-style: italic;
-  color: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.116);
+  rotate: 315deg;
 }
 
 .product-container .product-card .product-imgBx {
