@@ -28,7 +28,7 @@ export default function Products() {
                     <span></span>
                     <span></span>
                   </div>
-                  <a href="/">Add to cart</a>
+                  <a href="/">Test Ride</a>
                 </div>
               </div>
             ))}
