@@ -15,7 +15,7 @@ export default function Home() {
       </div>
 
 
-      <div class="home-container-portfolio faqsautobot" id='faqsautobot'>
+      <div class="home-container-portfolio-faqsautobot" id='faqsautobot'>
         <h1>Frequently Asked Questions</h1>
         <div class="faq-question">
           <input id="q1" type="checkbox" class="panel" />
