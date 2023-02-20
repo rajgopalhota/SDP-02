@@ -13,7 +13,7 @@ import Home from './components/Home/Home';
 import Cart from './components/Cart/Cart';
 import { useState } from 'react';
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const toggleDarkMode = () => setDarkMode(darkMode ? false : true);
   let dc = document.title;
   window.addEventListener("blur", () => {

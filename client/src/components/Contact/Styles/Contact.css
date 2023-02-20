@@ -15,7 +15,9 @@ textarea {
   background: url("./../Assets/background.jpg") no-repeat center center fixed;
 } */
 .contactcomp-container {
-  margin-top: 2%;
+  z-index: 100;
+  animation: floatery 1s;
+  margin-top: 3%;
   background: transparent;
   position: relative;
   width: 100%;
@@ -185,8 +187,8 @@ textarea.contactcomp-input {
   transform: translateY(-50%);
 }
 .main-body-dark .contactcomp-input-container span:before,
-.contactcomp-input-container span:after{
-  background: linear-gradient(45deg, rgb(0, 41, 92),rgb(91, 0, 125));
+.main-body-dark .contactcomp-input-container span:after{
+  background-color: rgb(0, 41, 92);
 }
 .contactcomp-input-container span:before {
   left: 50%;
