@@ -11,20 +11,10 @@ import About from './components/About/About';
 import Spare from './components/Spare/Spare';
 import Home from './components/Home/Home';
 import Cart from './components/Cart/Cart';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 function App() {
-  useEffect(() => {
-    console.log(`Is in dark mode? ${darkMode}`);
-  }, [darkMode]);
-  const [dark, setDark] = useState("main-body-light")
-  const handleDarkMode = () => {
-    if (dark === "main-body-light") {
-      setDark("main-body-dark")
-    }
-    else{
-      setDark("main-body-light")
-    }
-  }
+  const [darkMode, setDarkMode] = useState(false);
+  const toggleDarkMode = () => setDarkMode(darkMode ? false : true);
   let dc = document.title;
   window.addEventListener("blur", () => {
     document.title = "Come back please! 😭";
@@ -33,11 +23,11 @@ function App() {
     document.title = dc;
   })
   return (
-    <div className={dark}>
+    <div className={darkMode ? "main-body-dark" : "main-body-light"}>
       <div className="App">
         <div className="darkmode">
           <label class="switch">
-            <input type="checkbox" onClick={handleDarkMode} />
+            <input type="checkbox" onClick={toggleDarkMode} />
             <span class="slider"></span>
           </label>
         </div>
