@@ -11,12 +11,12 @@ input,
 textarea {
   font-family: "Poppins", sans-serif;
 }
-.ContactCont {
+/* .ContactCont {
   background: url("./../Assets/background.jpg") no-repeat center center fixed;
-}
+} */
 .contactcomp-container {
-  background-color: rgba(85, 0, 85, 0.699);
-  /* backdrop-filter: blur(2px); */
+  margin-top: 2%;
+  background: transparent;
   position: relative;
   width: 100%;
   min-height: 100vh;
@@ -27,8 +27,8 @@ textarea {
   align-items: center;
   justify-content: center;
 }
-
 .contactcomp-form {
+  border: 2px solid black;
   width: 100%;
   max-width: 820px;
   background-color: #fff;
@@ -39,12 +39,16 @@ textarea {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-
+.main-body-dark .contactcomp-form{
+  border: 2px solid white;
+}
 .contactcomp-contact-form {
   background-color: #ff7824;
   position: relative;
 }
-
+.main-body-dark .contactcomp-contact-form{
+  background: linear-gradient(45deg, rgb(0, 41, 92),rgb(91, 0, 125));
+}
 .circle {
   border-radius: 50%;
   background: linear-gradient(135deg, transparent 20%, #ff6200);
@@ -97,7 +101,7 @@ textarea {
 }
 
 .contactcomp-input {
-  width: 100%;
+  width: 120%;
   outline: none;
   border: 2px solid #fafafa;
   background: none;
@@ -180,7 +184,10 @@ textarea.contactcomp-input {
   top: 50%;
   transform: translateY(-50%);
 }
-
+.main-body-dark .contactcomp-input-container span:before,
+.contactcomp-input-container span:after{
+  background: linear-gradient(45deg, rgb(0, 41, 92),rgb(91, 0, 125));
+}
 .contactcomp-input-container span:before {
   left: 50%;
 }
@@ -206,7 +213,10 @@ textarea.contactcomp-input {
   padding: 2.3rem 2.2rem;
   position: relative;
 }
-
+.main-body-dark .contactcomp-contact-info{
+  background-color: #333;
+  color: #fafafa;
+}
 .contactcomp-contact-info .contactcomp-title {
   color: #ff6200;
 }
@@ -215,7 +225,9 @@ textarea.contactcomp-input {
   color: #333;
   margin: 1.5rem 0 2rem 0;
 }
-
+.main-body-dark .contactcomp-text{
+  color: white;
+}
 .contactcomp-information {
   display: flex;
   color: #555;
@@ -223,7 +235,9 @@ textarea.contactcomp-input {
   align-items: center;
   font-size: 0.95rem;
 }
-
+.main-body-dark .contactcomp-information{
+  color: #fafafa;
+}
 .contactcomp-icon {
   width: 28px;
   margin-right: 0.7rem;
@@ -240,10 +254,13 @@ textarea.contactcomp-input {
   text-align: left;
   color: #333;
 }
-
+.main-body-dark .contactcomp-social-media p{
+  color: white;
+}
 .contactcomp-social-icons {
   display: flex;
   margin-top: 0.5rem;
+  margin-left: 3.8rem;
 }
 
 .contactcomp-social-icons a {
@@ -257,9 +274,12 @@ textarea.contactcomp-input {
   margin-right: 0.5rem;
   transition: 0.3s;
 }
+.main-body-dark .contactcomp-social-icons a{
+  background: linear-gradient(45deg, rgb(0, 41, 92),rgb(91, 0, 125));
 
+}
 .contactcomp-social-icons a:hover {
-  transform: scale(1.05);
+  transform: scale(1.07);
 }
 
 .contactcomp-contact-info:before {
@@ -307,6 +327,9 @@ textarea.contactcomp-input {
 }
 
 @media (max-width: 850px) {
+  .contactcomp-input{
+    width: 100%;
+  }
   .contactcomp-form {
     grid-template-columns: 1fr;
   }
@@ -345,6 +368,9 @@ textarea.contactcomp-input {
 }
 
 @media (max-width: 480px) {
+  .contactcomp-input{
+    width: 100%;
+  }
   .contactcomp-container {
     padding: 1.5rem;
   }

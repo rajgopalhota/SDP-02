@@ -18,7 +18,7 @@ export default function Slider() {
         </div>
       </div>
       <div className="slider-neon-btn">
-        <NavLink to="/contact" >
+        <NavLink to="/autobots/contact" >
           <span></span>
           <span></span>
           <span></span>

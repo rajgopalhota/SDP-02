@@ -40,10 +40,10 @@ function App() {
             <Route path='spare' element={<Spare />} />
             <Route path='services' element={<Services />} />
             <Route path='cart' element={<Cart />} />
+            <Route path='contact' element={<Contact />}></Route>
           </Route>
           <Route path='products' element={<Autobot />}></Route>
           <Route path='login' element={<Login />}></Route>
-          <Route path='contact' element={<Contact />}></Route>
           <Route path='*' element={<PageNotFound />}></Route>
         </Routes>
       </div>

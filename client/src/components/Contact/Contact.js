@@ -12,7 +12,6 @@ export default function Contact() {
     return (
         <div className='ContactCont'>
             <div className="contactcomp-container">
-                <span className="big-circle"></span>
                 <img src="img/shape.png" className="contactcomp-square" alt="" />
                 <div className="contactcomp-form">
                     <div className="contactcomp-contact-info">

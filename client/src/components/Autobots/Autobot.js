@@ -8,6 +8,7 @@ import About from '../About/About';
 import Services from '../Services/Services';
 import Spare from '../Spare/Spare';
 import Cart from '../Cart/Cart';
+import Contact from '../Contact/Contact';
 export default function Autobot() {
   return (
     <div>
@@ -25,6 +26,8 @@ export default function Autobot() {
         <Route path='spare' element={<Spare />}></Route>
         <Route path='services' element={<Services />}></Route>
         <Route path='cart' element={<Cart />}></Route>
+        <Route path='contact' element={<Contact />}></Route>
+        
       </Routes>
     </div>
   )
