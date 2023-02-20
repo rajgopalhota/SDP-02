@@ -13,29 +13,31 @@ import Home from './components/Home/Home';
 import Cart from './components/Cart/Cart';
 function App() {
   let dc = document.title;
-  window.addEventListener("blur", ()=>{
+  window.addEventListener("blur", () => {
     document.title = "Come back please! 😭";
   })
-  window.addEventListener("focus", ()=>{
+  window.addEventListener("focus", () => {
     document.title = dc;
   })
   return (
-    <div className="App">
-      <Routes>
-        <Route path='' element={<Landing />}></Route>
-        <Route path='autobots' element={<Autobot />}>
-          <Route path='home' element={<Home />} />
-          <Route path='products' element={<Products />} />
-          <Route path='aboutus' element={<About />} />
-          <Route path='spare' element={<Spare />} />
-          <Route path='services' element={<Services />} />
-          <Route path='cart' element={<Cart />} />
-        </Route>
-        <Route path='products' element={<Autobot />}></Route>
-        <Route path='login' element={<Login />}></Route>
-        <Route path='contact' element={<Contact />}></Route>
-        <Route path='*' element={<PageNotFound />}></Route>
-      </Routes>
+    <div className="main-body-light">
+      <div className="App">
+        <Routes>
+          <Route path='' element={<Landing />}></Route>
+          <Route path='autobots' element={<Autobot />}>
+            <Route path='home' element={<Home />} />
+            <Route path='products' element={<Products />} />
+            <Route path='aboutus' element={<About />} />
+            <Route path='spare' element={<Spare />} />
+            <Route path='services' element={<Services />} />
+            <Route path='cart' element={<Cart />} />
+          </Route>
+          <Route path='products' element={<Autobot />}></Route>
+          <Route path='login' element={<Login />}></Route>
+          <Route path='contact' element={<Contact />}></Route>
+          <Route path='*' element={<PageNotFound />}></Route>
+        </Routes>
+      </div>
     </div>
   );
 }

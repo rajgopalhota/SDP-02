@@ -10,9 +10,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <div className="main-body-dark">
         <App />
-      </div>
     </BrowserRouter>
   </React.StrictMode>
 );
