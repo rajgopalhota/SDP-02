@@ -27,6 +27,19 @@ h1 {
   border: 2px solid white;
   background-color: rgba(0, 0, 0, 0.242);
 }
+.home-container-portfolio-faqsautobot {
+  margin-top: 5%;
+  margin-right: 5%;
+  margin-left: auto;
+  animation: floatery 1s;
+  backdrop-filter: blur(7px);
+  width: 50%;
+  height: fit-content;
+  padding: 3%;
+  border-radius: 12px;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.242);
+}
 .main-body-light .home-container-portfolio{
   border: 2px solid rgb(0, 0, 0);
 
