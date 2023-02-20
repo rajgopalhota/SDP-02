@@ -12,6 +12,7 @@ import Spare from './components/Spare/Spare';
 import Home from './components/Home/Home';
 import Cart from './components/Cart/Cart';
 import { useState } from 'react';
+import Community from './components/Community/Community';
 function App() {
   const [darkMode, setDarkMode] = useState(true);
   const toggleDarkMode = () => setDarkMode(darkMode ? false : true);
@@ -42,7 +43,7 @@ function App() {
             <Route path='cart' element={<Cart />} />
             <Route path='contact' element={<Contact />}></Route>
           </Route>
-          <Route path='products' element={<Autobot />}></Route>
+          <Route path='community' element={<Community />}></Route>
           <Route path='login' element={<Login />}></Route>
           <Route path='*' element={<PageNotFound />}></Route>
         </Routes>

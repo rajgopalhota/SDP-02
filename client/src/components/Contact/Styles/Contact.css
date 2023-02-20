@@ -224,6 +224,7 @@ textarea.contactcomp-input {
 }
 
 .contactcomp-text {
+  text-align: justify;
   color: #333;
   margin: 1.5rem 0 2rem 0;
 }
@@ -253,10 +254,12 @@ textarea.contactcomp-input {
 }
 
 .contactcomp-social-media p {
+  text-align: justify;
   text-align: left;
   color: #333;
 }
 .main-body-dark .contactcomp-social-media p{
+  text-align: justify;
   color: white;
 }
 .contactcomp-social-icons {

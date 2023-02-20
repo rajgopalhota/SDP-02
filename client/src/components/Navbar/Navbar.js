@@ -48,7 +48,7 @@ export default function Navbar(props) {
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="aboutus">
-                  Dev's
+                  Team
                 </NavLink>
               </li>
             </ul>

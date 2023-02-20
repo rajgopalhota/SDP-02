@@ -6,7 +6,7 @@ export default function Home() {
     <div>
       <Slider />
       <div className="home-container-portfolio">
-        <h1>Welocme to Autobots</h1>
+        <h1>Welcome to Autobots</h1>
         <p>
         Welcome to Autobots, where we are passionate about crafting the best vehicles possible.
          As a leading automobile company, we are dedicated to providing our customers with high-quality, reliable, 

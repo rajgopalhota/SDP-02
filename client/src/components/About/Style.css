@@ -9,6 +9,7 @@
   box-shadow: 10px 25px 30px rgba(0, 136, 134, 0.384);
 }
 .Aboutani{
+  min-height: 100vh;
   margin-top: 7%;
   overflow: hidden;
 }

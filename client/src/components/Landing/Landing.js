@@ -10,7 +10,7 @@ export default function Landing() {
                 </div>
             </div>
             <div className="background-two link-container">
-                <Link className="link-two" to="/contact"><div className="rjbx">Support</div></Link>
+                <Link className="link-two" to="/community"><div className="rjbx">Support</div></Link>
             </div>
             <div className="background-three link-container">
                 <Link className="link-three" to="/login"><div className="rjbx">Login</div></Link>

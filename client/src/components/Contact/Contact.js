@@ -17,8 +17,7 @@ export default function Contact() {
                     <div className="contactcomp-contact-info">
                         <h3 className="contactcomp-title">Let's get in touch</h3>
                         <p className="contactcomp-text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-                            dolorum adipisci recusandae praesentium dicta!
+                        Thank you for choosing Autobot as your go-to destination for all your automobile and spare parts needs. We look forward to serving you and providing you with the best products and services in the industry.
                         </p>
 
                         <div className="contactcomp-info">

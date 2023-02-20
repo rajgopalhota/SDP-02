@@ -4,12 +4,12 @@ import log from './Images/log.svg'
 import register from './Images/register.svg'
 import './Styles/Index.css';
 export default function Index() {
-  const [ani, setAni] = useState("container")
+  const [ani, setAni] = useState("login-container")
   const handleonsignup = () => {
-    setAni("container");
+    setAni("login-container");
   }
   const handleonsignin = () => {
-    setAni("container sign-up-mode");
+    setAni("login-container sign-up-mode");
   }
   window.addEventListener("focus", () => {
     document.title = "Login";
