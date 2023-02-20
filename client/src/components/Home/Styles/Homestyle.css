@@ -166,7 +166,7 @@ color: #ffffff;
   border-bottom: 1px dotted #ccc;
 }
 
-.panel-title {
+.faqpanel-title {
   font-weight: 500;
   font-size: 21px;
   width: 100%;
@@ -177,7 +177,7 @@ color: #ffffff;
   cursor: pointer;
 }
 
-.panel-content {
+.faqpanel-content {
   color: white;
   border: 2px solid white;
   border-radius: 12px;
@@ -198,7 +198,7 @@ color: #ffffff;
   transition: .4s ease;
 }
 
-.panel:checked ~ .panel-content{
+.faqpanel:checked ~ .faqpanel-content{
   height: auto;
   opacity: 1;
   padding: 14px;
@@ -227,13 +227,13 @@ color: #ffffff;
 .main-body-light .plus{
   background-color: rgb(255, 106, 42);
 }
-.panel:checked ~ .plus {
+.faqpanel:checked ~ .plus {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-.panel {
+.faqpanel {
   display: none;
 }
