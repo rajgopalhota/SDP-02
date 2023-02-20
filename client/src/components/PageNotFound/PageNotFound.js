@@ -28,7 +28,7 @@ export default function PageNotFound() {
                         </div>
                         
                     </div>
-                    <Link to='autobots' className='notfoundbtn'><button className='btn'>Go to Home</button></Link>
+                    <Link to='autobots/home' className='notfoundbtn'><button className='btn'>Go to Home</button></Link>
                 </div>
         </div>
     )

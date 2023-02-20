@@ -10,7 +10,9 @@ export default function Index() {
   const handleonsignin = () => {
     setAni("container sign-up-mode");
   }
-
+  window.addEventListener("focus", () => {
+    document.title = "Login";
+  })
   return (
     <div className='LoginMech'>
       <div className={ani}>

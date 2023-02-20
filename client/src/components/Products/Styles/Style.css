@@ -30,6 +30,11 @@
   border: 1px solid white;
   box-shadow: 0 0 10px rgba(139, 182, 255, 0.886);
 }
+.main-body-light .product-container .product-card{
+  background: #ff6a0097;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.886);
+}
 .product-card:hover{
   cursor: pointer;
   transition:all ease-in-out 0.4s;
@@ -66,7 +71,6 @@
   color: rgba(255, 255, 255, 0.116);
   rotate: 315deg;
 }
-
 .product-container .product-card .product-imgBx {
   position: absolute;
   top: 50%;

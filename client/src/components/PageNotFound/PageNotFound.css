@@ -252,7 +252,9 @@ button {
   text-align: center;
   color: #ffffff;
 }
-
+.main-body-light .error__message{
+  color: black;
+}
 .message__title {
   font-family: "Montserrat", sans-serif;
   font-weight: 900;

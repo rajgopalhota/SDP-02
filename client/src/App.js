@@ -11,8 +11,11 @@ import About from './components/About/About';
 import Spare from './components/Spare/Spare';
 import Home from './components/Home/Home';
 import Cart from './components/Cart/Cart';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 function App() {
+  useEffect(() => {
+    console.log(`Is in dark mode? ${darkMode}`);
+  }, [darkMode]);
   const [dark, setDark] = useState("main-body-light")
   const handleDarkMode = () => {
     if (dark === "main-body-light") {
