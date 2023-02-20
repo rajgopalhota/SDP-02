@@ -33,7 +33,7 @@ h1 {
 
 
 .wrapper{
-  margin-top: 3%;
+  margin-top: 0%;
   margin-left: auto;
   margin-right: auto;
   width: 60%;
@@ -133,4 +133,93 @@ color: #ffffff;
 .wrapper .youtube:hover .tooltip::before {
 background-color: #de463b;
 color: #ffffff;
+}
+
+
+/* FAQ's */
+
+.faqsautobot{
+  overflow-x: hidden;
+}
+
+
+.faq-content {
+  margin: 0 auto;
+}
+
+.faq-question {
+  padding: 20px 0;
+  border-bottom: 1px dotted #ccc;
+}
+
+.panel-title {
+  font-weight: 500;
+  font-size: 21px;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0px 10px 0 58px;
+  display: block;
+  cursor: pointer;
+}
+
+.panel-content {
+  color: white;
+  border: 2px solid white;
+  border-radius: 12px;
+  background-color: #33333391;
+  backdrop-filter: blur(12px);
+  text-align: justify;
+  font-size: 20px;
+  padding: 0px 14px;
+  margin: 0 40px;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  position: relative;
+  opacity: 0;
+  -webkit-transition: .4s ease;
+  -moz-transition: .4s ease;
+  -o-transition: .4s ease;
+  transition: .4s ease;
+}
+
+.panel:checked ~ .panel-content{
+  height: auto;
+  opacity: 1;
+  padding: 14px;
+}
+
+.plus {
+  background-color: rgb(0, 163, 155);
+  border-radius: 42px;
+  color: white;
+  position: absolute;
+  margin-left: 20px;
+  margin-top: 4px;
+  z-index: 5;
+  font-size: 42px;
+  line-height: 65%;
+  -webkit-user-select: none;    
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-transition: .2s ease;
+  -moz-transition: .2s ease;
+  -o-transition: .2s ease;
+  transition: .2s ease;
+}
+.main-body-light .plus{
+  background-color: rgb(255, 106, 42);
+}
+.panel:checked ~ .plus {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.panel {
+  display: none;
 }
