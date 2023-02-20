@@ -52,12 +52,6 @@ export default function Navbar(props) {
                 </NavLink>
               </li>
             </ul>
-            <div className="darkmode">
-              <label class="switch">
-                <input type="checkbox" />
-                <span class="slider"></span>
-              </label>
-            </div>
             <div className="navcart">
               <NavLink className="nav-link" to="cart">
                 <img src={cartlogo} alt="" width={42}></img>

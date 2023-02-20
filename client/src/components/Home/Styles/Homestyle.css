@@ -27,3 +27,7 @@ h1 {
   border: 2px solid white;
   background-color: rgba(0, 0, 0, 0.242);
 }
+.main-body-light .home-container-portfolio{
+  border: 2px solid rgb(0, 0, 0);
+
+}

@@ -1,13 +1,10 @@
 .repair-container h1 {
-  /* color: white; */
   font-weight: 900;
   font-size: 32px;
-  /* mix-blend-mode: overlay; */
 }
 
 .repair-container p,
 label {
-  /* color: aliceblue; */
   text-align: justify;
 }
 .repair-container {
@@ -24,6 +21,10 @@ label {
   background-color: rgba(0, 0, 0, 0.242);
   align-items: center;
   text-align: center;
+}
+.main-body-light .repair-container{
+  border: 2px solid rgb(0, 0, 0);
+
 }
 .repair-container input {
   width: 115%;

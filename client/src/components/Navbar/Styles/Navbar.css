@@ -105,14 +105,16 @@ button a {
 }
 /* The switch - the box around the slider */
 .darkmode .switch {
-  margin-top: auto;
-  margin-bottom: auto;
+  z-index: 999;
+  /* margin-top: auto; */
+  bottom: 1em;
+  right: 0.1em;
   margin-right: 1.5em;
   font-size: 17px;
-  position: relative;
+  position: fixed;
   display: inline-block;
-  width: 3em;
-  height: 1.5em;
+  width: 3.5em;
+  height: 2em;
 }
 
 /* Hide default HTML checkbox */
@@ -134,13 +136,15 @@ button a {
   background-color: var(--background);
   transition: .5s;
   border-radius: 30px;
+  border: 2px solid white;
+  box-shadow: 0 0 12px black;
 }
 
 .darkmode .slider:before {
   position: absolute;
   content: "";
-  height: 1.2em;
-  width: 1.2em;
+  height: 1.4em;
+  width: 1.4em;
   border-radius: 50%;
   left: 10%;
   bottom: 15%;

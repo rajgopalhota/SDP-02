@@ -10,12 +10,19 @@
 .image-slider-cont h1 {
   color: rgb(170, 224, 255);
 }
+.main-body-light .image-slider-cont h1{
+  color: rgb(0, 0, 0);
+
+}
 .gallery-container {
   overflow: hidden;
 
   border: 2px solid #ffffff;
   border-radius: 12px;
   box-shadow: 10px 25px 30px rgba(0, 136, 134, 0.384);
+}
+.main-body-light .gallery-container{
+  border: 2px solid #000000;
 }
 .gallery-wrapper {
   width: 100%;

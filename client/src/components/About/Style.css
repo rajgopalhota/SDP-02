@@ -123,7 +123,10 @@
   padding-left: 4%;
 }
 
+.main-body-light .Aboutani a{
+  color: rgb(0, 0, 0);
 
+}
 
 
 @property --angle {
@@ -152,7 +155,9 @@
 	--gradX: 100%;
 	--gradY: 50%;
 	--c1: rgba(77, 0, 148, 0.658);
-	--c2: rgba(255, 255, 255, 0.263);
+	--c2: rgba(227, 227, 227, 0.735);
+	--c3: rgba(79, 79, 79, 0.724);
+	--c4: rgba(85, 255, 0, 0.724);
 }
 
 .wrapper {
@@ -162,6 +167,11 @@
 .box {
 	border: 0.25rem solid;
 	border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+	animation: borderRotate var(--d) linear infinite forwards;
+}
+.main-body-light .box{
+  border: 0.25rem solid;
+	border-image: conic-gradient(from var(--angle), var(--c3), var(--c4) 0.1turn, var(--c4) 0.15turn, var(--c3) 0.25turn) 30;
 	animation: borderRotate var(--d) linear infinite forwards;
 }
 

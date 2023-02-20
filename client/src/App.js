@@ -11,7 +11,17 @@ import About from './components/About/About';
 import Spare from './components/Spare/Spare';
 import Home from './components/Home/Home';
 import Cart from './components/Cart/Cart';
+import { useState } from 'react';
 function App() {
+  const [dark, setDark] = useState("main-body-light")
+  const handleDarkMode = () => {
+    if (dark === "main-body-light") {
+      setDark("main-body-dark")
+    }
+    else{
+      setDark("main-body-light")
+    }
+  }
   let dc = document.title;
   window.addEventListener("blur", () => {
     document.title = "Come back please! 😭";
@@ -20,8 +30,14 @@ function App() {
     document.title = dc;
   })
   return (
-    <div className="main-body-light">
+    <div className={dark}>
       <div className="App">
+        <div className="darkmode">
+          <label class="switch">
+            <input type="checkbox" onClick={handleDarkMode} />
+            <span class="slider"></span>
+          </label>
+        </div>
         <Routes>
           <Route path='' element={<Landing />}></Route>
           <Route path='autobots' element={<Autobot />}>
