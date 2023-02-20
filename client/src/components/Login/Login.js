@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom';
 import log from './Images/log.svg'
 import register from './Images/register.svg'
 import './Styles/Index.css';
@@ -15,6 +16,7 @@ export default function Index() {
   })
   return (
     <div className='LoginMech'>
+      <NavLink to="/autobots/home" ><div className="navigatetohome"><i class="fa fa-home" aria-hidden="true"></i></div></NavLink>
       <div className={ani}>
         <div className="forms-container">
           <div className="signin-signup">
