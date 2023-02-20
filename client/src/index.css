@@ -7,15 +7,44 @@
 }
 
 body {
+  /* color: aliceblue; */
   /* overflow: hidden; */
   z-index: -999;
   margin: 0;
   font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url(./autobot.jpg) no-repeat center center fixed;
 }
+.main-body-dark{
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100%;
+  min-width: 100%;
+  background: url(./autobot.jpg) no-repeat center center fixed;
+  color: aliceblue;
 
+}
+.main-body-light{
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100%;
+  min-width: 100%;
+  background: url(./liteauto.jpeg) no-repeat center center fixed;
+  color: rgb(0, 0, 0);
+
+}
+.main-body-light section{
+  mix-blend-mode: normal;
+  display: none;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -36,6 +65,6 @@ code {
   box-shadow: 10px 25px 30px rgba(0, 136, 134, 0.384);
 }
 .home-container p {
-  color: aliceblue;
+  /* color: aliceblue; */
   text-align: justify;
 }

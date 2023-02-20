@@ -1,5 +1,5 @@
 .spare-container h1 {
-  color: white;
+  /* color: white; */
   font-weight: 900;
   font-size: 32px;
   /* mix-blend-mode: overlay; */
@@ -25,7 +25,7 @@
 .spare-container select {
   width: 150%;
   outline: none;
-  border: 2px solid #fafafa;
+  border: 2px solid #7e7e7e;
   background: none;
   padding: 0.9rem 1.6rem;
   color: #fff;

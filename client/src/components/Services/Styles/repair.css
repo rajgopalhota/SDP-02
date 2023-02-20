@@ -1,5 +1,5 @@
 .repair-container h1 {
-  color: white;
+  /* color: white; */
   font-weight: 900;
   font-size: 32px;
   /* mix-blend-mode: overlay; */
@@ -7,7 +7,7 @@
 
 .repair-container p,
 label {
-  color: aliceblue;
+  /* color: aliceblue; */
   text-align: justify;
 }
 .repair-container {
@@ -31,7 +31,7 @@ label {
   border: 2px solid #fafafa;
   background: none;
   padding: 0.6rem 1.2rem;
-  color: #fff;
+  /* color: #fff; */
   font-weight: 500;
   font-size: 0.95rem;
   letter-spacing: 0.5px;

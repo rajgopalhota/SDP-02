@@ -105,9 +105,6 @@ button a {
 }
 /* The switch - the box around the slider */
 .darkmode .switch {
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-right: 1.5em;
   font-size: 17px;
   position: relative;
   display: inline-block;

@@ -1,10 +1,10 @@
 h1 {
-  color: white;
+  /* color: white; */
   font-weight: 900;
   font-size: 32px;
 }
 .home-container-portfolio p {
-  color: aliceblue;
+  /* color: aliceblue; */
   text-align: justify;
 }
 @keyframes floatery {
