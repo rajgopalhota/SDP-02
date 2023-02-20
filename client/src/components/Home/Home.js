@@ -7,10 +7,16 @@ export default function Home() {
       <Slider />
       <div className="home-container-portfolio">
         <h1>Welocme to Autobots</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem maiores autem voluptatibus saepe quod illo vitae repellendus ex at inventore deleniti, dolore ducimus, nam libero expedita eius vero sunt odio.
-          Tenetur ducimus doloribus, totam deleniti temporibus voluptas, laudantium eos maiores dolore nesciunt, beatae impedit iure labore eligendi laborum consequuntur quaerat ullam veritatis. Error deserunt quas temporibus dolorum dolores incidunt in.
-          Ipsa rem explicabo optio corporis incidunt voluptates neque animi, nam sint, rerum nulla minima distinctio pariatur voluptate minus quae commodi consequatur error quibusdam totam fugit. Blanditiis, doloribus. Ab, suscipit a.
-          Enim velit soluta saepe cumque, provident illum ducimus tempore voluptatum, nisi molestias minima cupiditate omnis temporibus, dignissimos tenetur voluptates dolorum ab adipisci blanditiis nam ipsa possimus amet. Laudantium, eum dolorem.
+        <p>
+        Welcome to Autobots, where we are passionate about crafting the best vehicles possible.
+         As a leading automobile company, we are dedicated to providing our customers with high-quality, reliable, 
+         and cutting-edge vehicles that are designed to meet their unique needs and preferences.<br/><br/>
+        At Autobots, we understand that a vehicle is not just a means of transportation; it is an extension of one's personality and lifestyle. 
+        <br/><br/>
+        Thank you for choosing Autobot as your go-to destination for all your automobile and spare parts needs. We look forward to serving you and providing you with the best products and services in the industry.
+        <br/><br/>
+        <li>Autobots is a leading automobile company that is passionate about crafting the best vehicles possible.</li>
+        <li>Autobots combines top-notch engineering with state-of-the-art technology to create vehicles that not only look great but also provide a smooth and safe driving experience.</li>
         </p>
       </div>
 
