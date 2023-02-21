@@ -1,0 +1,41 @@
+.community-voteContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f4f9;
+    height: 110px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.community-incrementButton, .community-decrementButton {
+    width: 40px;    
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    opacity: .4;
+}
+
+.community-incrementButton:hover, .community-decrementButton:hover {
+    opacity: 1;
+}
+
+.community-votesNumber {
+    margin: 6px 0;
+}
+
+@media (max-width: 800px) {
+    .community-voteContainer {
+        flex-direction: row;
+        height: 50px;
+        width: 120px;
+        justify-content: space-between;
+        order: 2;
+        margin-top: 10px;
+    }
+}

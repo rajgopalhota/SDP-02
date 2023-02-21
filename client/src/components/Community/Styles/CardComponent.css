@@ -1,0 +1,41 @@
+.community-card {
+    display: flex;
+    max-width: 800px;
+    width: 90%;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+}
+
+.community-cardReply {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 800px;
+    width: 90%;
+    margin: auto;
+}
+
+.community-replyContainer {
+    border-left: 3px solid rgb(167, 167, 167);
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.community-verticalLine {
+    width: 60px;
+}
+
+@media (max-width: 800px) {
+    .community-verticalLine {
+        display: none;
+    }
+
+    .community-replyContainer {
+        border-left: none;
+    }
+}

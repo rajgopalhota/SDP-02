@@ -1,158 +1,157 @@
-import React from 'react'
-import './Styles/community.css'
+import React,{useState} from 'react'
+import CardComponent from './CardComponent';
+import CommentSection from './CommentSection';
+import data from './data.json';
+import DeleteMessageBox from './DeleteMessage';
+
+const saveToLocalStorage = (data) => {
+    localStorage.setItem("data", JSON.stringify(data))
+  }
+  
+  // fetch data from local storage or local data file 
+  data = JSON.parse(localStorage.getItem("data")) || data;
+
+
 export default function Community() {
-    return (
-        <div>
-            <div className="container mb-5 mt-5">
-                <div className="card">
-                    <div className="row">
-                        <div className="col-md-12">
-                            <h3 className="text-center mb-5">
-                                Nested comment section
-                            </h3>
-                            <div className="row">
-                                <div className="col-md-12">
-                                    <div className="media">
-                                        <img className="mr-3 rounded-circle" alt="Bootstrap Media Preview" src="https://i.imgur.com/stD0Q19.jpg" />
-                                        <div className="media-body">
-                                            <div className="row">
-                                                <div className="col-8 d-flex">
-                                                    <h5>Maria Smantha</h5>
-                                                    <span>- 2 hours ago</span>
-                                                </div>
+    const [database, setdatabase] = useState(data);
+  const {username, image: {webp}} = data.currentUser;
+  const [showDialog, setShowDialog] = useState(false);
+  const [deleleteItemId, setDeleteItemId] = useState(null)
 
-                                                <div className="col-4">
+  const handleAddComment = (comment) => {
+    const obj = {
+      "id": Math.floor(Math.random() * 99999999999),
+      "content": comment,
+      "createdAt": "1 month ago",
+      "score": 0,
+      "user": {
+        "image": {
+          "webp": webp
+        }, 
+        "username": username
+      },
+      "replies": []
+    }
 
-                                                    <div className="pull-right reply">
+    setdatabase((prevdata) => {
+      const database = {...prevdata};
+      database.comments.push(obj);
+      saveToLocalStorage(database);
+      return database;
+    })
 
-                                                        <a href="/"><span><i className="fa fa-reply"></i> reply</span></a>
+  };
 
-                                                    </div>
+  const handleAddReply = (replyto, reply, replyUnder) => {
+    const obj = {
+      "id": Math.floor(Math.random() * 9999999999999),
+      "content": reply,
+      "createdAt": "2 week ago",
+      "score": 0,
+      "replyingTo": replyUnder || replyto,
+      "user": {
+        "image": {
+          "webp": webp
+        },
+        "username": username
+      }
+    }
+    setdatabase((prevdata) => {
+      const database = {...prevdata};
+      database.comments.forEach((item) => {
+        if (item.user.username === replyto || (item.user.username === replyUnder)){
+          item.replies.push(obj)
+        }
+      })
+      saveToLocalStorage(database);
+      return database;
+    })
+  };
 
-                                                </div>
-                                            </div>
+  const handleVote = (id , voteType) => {
+    setdatabase(prevdata => {
 
-                                            It is a long established fact that a reader will be distracted by the readable content of a page.
+      // make a deep copy 
+      const database =JSON.parse(JSON.stringify(prevdata));
+      let userdata = database.comments.filter(item => item.id === id)
+      if (userdata.length === 0) {
+        database.comments.forEach(item => {  
+          userdata = item.replies.filter(item => item.id === id)
+        })
+      }
 
-                                            <div className="media mt-4">
-                                                <a className="pr-3" href="/"><img className="rounded-circle" alt="Bootstrap Media Another Preview" src="https://i.imgur.com/xELPaag.jpg" /></a>
-                                                <div className="media-body">
+      let score = Number(userdata[0].score);
+      if (voteType === "up") {
+        score++;
+      }
 
-                                                    <div className="row">
-                                                        <div className="col-12 d-flex">
-                                                            <h5>Simona Disa</h5>
-                                                            <span>- 3 hours ago</span>
-                                                        </div>
+      if (voteType === "down") {
+        score--;
+      }
+      userdata[0].score = score;
+      saveToLocalStorage(database);
+      return database;
+    })
+  };
 
+  const handleDelete = (id) => {
+    setShowDialog(true)
+    setDeleteItemId(id)
+  }
 
-                                                    </div>
+  const handleDeleteCard = () => {
+    const id = deleleteItemId
+    setdatabase(prevdata => {
+      const database =JSON.parse(JSON.stringify(prevdata));
+      database.comments = database.comments.filter(item => item.id !== id);
 
-                                                    letters, as opposed to using 'Content here, content here', making it look like readable English.
-                                                </div>
-                                            </div>
+      if (database.comments.length === prevdata.comments.length) {
+        database.comments.forEach((item, idx) => {
+          item.replies = item.replies.filter(item => item.id !== id)
+        })
+      }
 
-                                            <div className="media mt-3">
-                                                <a className="pr-3" href="/"><img className="rounded-circle" alt="Bootstrap Media Another Preview" src="https://i.imgur.com/nAcoHRf.jpg" /></a>
-                                                <div className="media-body">
-                                                    <div className="row">
-                                                        <div className="col-12 d-flex">
-                                                            <h5>John Smith</h5>
-                                                            <span>- 4 hours ago</span>
-                                                        </div>
+      setShowDialog(false);
+      saveToLocalStorage(database);
+      return database;
+    })
+  }
 
+  const handleUpdata = (id, message) => {
+    setdatabase(prevdata => {
+      const database =JSON.parse(JSON.stringify(prevdata));
+      let userdata = database.comments.filter(item => item.id === id)
+      if (userdata.length === 0) {
+        database.comments.forEach(item => {  
+          userdata = item.replies.filter(item => item.id === id)
+        })
+      }
+      userdata[0].content = message;
+      saveToLocalStorage(database);
+      return database;
+    })
+  }
+  return (
+    <div className="App">
+      {database && database.comments.map(item => 
+        <CardComponent 
+          cardata={item} 
+          key={item.id} 
+          currentUser={[username, webp]} 
+          onReply={handleAddReply}
+          onVoteChange={handleVote}
+          onDelete={handleDelete}
+          onUpdate={handleUpdata}/>
+      )}
+      
+      <CommentSection 
+        currentUser={username} 
+        currentUserProfilePic={webp} 
+        onComment={handleAddComment}
+      />
 
-                                                    </div>
-
-                                                    the majority have suffered alteration in some form, by injected humour, or randomised words.
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-
-
-                                    <div className="media mt-4">
-                                        <img className="mr-3 rounded-circle" alt="Bootstrap Media Preview" src="https://i.imgur.com/xELPaag.jpg" />
-                                        <div className="media-body">
-                                            <div className="row">
-                                                <div className="col-8 d-flex">
-                                                    <h5>Shad f</h5>
-                                                    <span>- 2 hours ago</span>
-                                                </div>
-
-                                                <div className="col-4">
-
-                                                    <div className="pull-right reply">
-
-                                                        <a href="/"><span><i className="fa fa-reply"></i> reply</span></a>
-
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-                                            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33.
-                                            <div className="media mt-4">
-                                                <a className="pr-3" href="/"><img className="rounded-circle" alt="Bootstrap Media Another Preview" src="https://i.imgur.com/nUNhspp.jpg" /></a>
-                                                <div className="media-body">
-
-                                                    <div className="row">
-                                                        <div className="col-12 d-flex">
-                                                            <h5>Andy flowe</h5>
-                                                            <span>- 5 hours ago</span>
-                                                        </div>
-
-
-                                                    </div>
-
-                                                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-                                                </div>
-                                            </div>
-
-                                            <div className="media mt-3">
-                                                <a className="pr-3" href="/"><img className="rounded-circle" alt="Bootstrap Media Another Preview" src="https://i.imgur.com/HjKTNkG.jpg" /></a>
-                                                <div className="media-body">
-                                                    <div className="row">
-                                                        <div className="col-12 d-flex">
-                                                            <h5>Simp f</h5>
-                                                            <span>- 5 hours ago</span>
-                                                        </div>
-
-
-                                                    </div>
-
-                                                    a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur
-                                                </div>
-                                            </div>
-
-
-                                            <div className="media mt-3">
-                                                <a className="pr-3" href="/"><img className="rounded-circle" alt="Bootstrap Media Another Preview" src="https://i.imgur.com/nAcoHRf.jpg" /></a>
-                                                <div className="media-body">
-                                                    <div className="row">
-                                                        <div className="col-12 d-flex">
-                                                            <h5>John Smith</h5>
-                                                            <span>- 4 hours ago</span>
-                                                        </div>
-
-
-                                                    </div>
-
-                                                    the majority have suffered alteration in some form, by injected humour, or randomised words.
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
+      <DeleteMessageBox showDialog={showDialog} onDeleteBoxCancel={() => {
+        setShowDialog(false)}} confirmDelete={handleDeleteCard}/>
+    </div>
+  )
 }

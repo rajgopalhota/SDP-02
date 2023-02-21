@@ -1,0 +1,65 @@
+.community-form {
+    display: flex;
+    max-width: 800px;
+    width: 90%;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    position: relative;
+}
+
+.community-profilePic {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 1em 1.5em;
+    font-size: 15px;
+}
+
+textarea::placeholder {
+    font-size: 15px;
+}
+
+.community-btn {
+    padding: .5em 1.5em;
+    align-self: flex-start;
+    margin-left: 10px;
+    background-color: #5358b4;
+    font-weight: 700;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.community-btn:hover {
+    background-color: #c3c6f0;
+}
+
+@media (max-width: 800px) {
+    .community-form {
+        flex-direction: column;
+    }
+
+    .community-btn {
+        align-self: flex-end;
+        margin-top: 10px;
+    }
+
+    .community-profilePic {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30px;
+        height: 30px;
+    }
+}
