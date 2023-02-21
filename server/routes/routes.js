@@ -14,8 +14,9 @@ router.post('/register',async (req,res)=>{
     const saltpwd = await bcrypt.genSalt(10);
     const securepassword = await bcrypt.hash(req.body.password,saltpwd);
     const signupuser = new signuptemp({
-        fullname:req.body.fullname,
+        username:req.body.username,
         email:req.body.email,
+        phone:req.body.phone,
         password:securepassword
     })
     signupuser.save()
@@ -94,7 +95,7 @@ router.get('/feedbacks',async(req,res)=>{
 
 
 router.post('/login',async (req,res)=>{
-    signuptemp.findOne({ email: req.body.email })
+    signuptemp.findOne({ username: req.body.username })
     // if email exists
     .then((user) => {
       // compare the password entered and the hashed password found
@@ -114,7 +115,7 @@ router.post('/login',async (req,res)=>{
           const token = jwt.sign(
             {
               userId: user._id,
-              userEmail: user.email,
+              userName: user.username,
               userRole:user.role
             },
             "RANDOM-TOKEN",
@@ -124,7 +125,7 @@ router.post('/login',async (req,res)=>{
           //   return success response
           res.status(200).send({
             message: "Login Successful",
-            email: user.email,
+            username: user.username,
             role:user.role,
             token,
           });

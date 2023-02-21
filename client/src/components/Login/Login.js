@@ -1,25 +1,49 @@
 import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import log from './Images/log.svg'
 import register from './Images/register.svg'
 import './Styles/Index.css';
 import axios from 'axios';
+
 export default function Index() {
-
+  const navigate = useNavigate(false);
+  // const [regData, set]
   // Sending data
-  function signupdata(){
-    const registerdata={
-      fullname:name,
-      email:mail,
-      password:pwd
-    }
-    console.log(registerdata);
-    axios.post("http://localhost:2000/api/register",registerdata)
-    .then(response=> {
-      navigate('/login')
+  const handleRegister = (e) => {
+    e.preventDefault();
+    const data = new FormData(e.currentTarget);
+    axios.post("http://localhost:2003/api/register", {
+      username: data.get('reguser'),
+      email: data.get('regemail'),
+      phone: data.get('regphone'),
+      password: data.get('regpassword')
+    }).then(response => {
+      window.location.reload();
+    }).catch(err => {
+      console.log(err)
     })
-    .catch(e=>console.log(e))
+  }
 
+  // Login Handler
+  const loginAction = (e) => {
+    e.preventDefault();
+    const data = new FormData(e.currentTarget);
+    axios.post("http://localhost:2003/api/login", {
+      username: data.get('loginuser'),
+      password: data.get('loginpassword')
+    })
+      .then(response => {
+        console.log(response)
+        if (response.status === 200) {
+          if (response.data.role === "Customer") {
+            navigate('/autobots/home')
+          }
+        }
+        else {
+          navigate('/autobots/contact')
+        }
+      })
+      .catch(e => console.log(e))
   }
 
 
@@ -40,15 +64,15 @@ export default function Index() {
       <div className={ani}>
         <div className="forms-container">
           <div className="signin-signup">
-            <form action="#" className="sign-in-form">
+            <form onSubmit={loginAction} className="sign-in-form">
               <h2 className="title">SIGN IN</h2>
               <div className="input-field">
                 <i className="fas fa-user"></i>
-                <input type="text" placeholder="Username" />
+                <input type="text" placeholder="Username" name='loginuser' />
               </div>
               <div className="input-field">
                 <i className="fas fa-lock"></i>
-                <input type="password" placeholder="Password" />
+                <input type="password" placeholder="Password" name='loginpassword' />
               </div>
               <input type="submit" value="Login" className="btn solid" />
               <p className="social-text">Or Sign in with social platforms</p>
@@ -68,23 +92,23 @@ export default function Index() {
               </div>
             </form>
             {/* Signup form........... */}
-            <form action="#" className="sign-up-form">
+            <form onSubmit={handleRegister} className="sign-up-form">
               <h2 className="title">SIGN UP</h2>
               <div className="input-field">
                 <i className="fas fa-user"></i>
-                <input type="text" placeholder="Username" />
+                <input type="text" placeholder="Username" name='reguser' />
               </div>
               <div className="input-field">
                 <i className="fas fa-envelope"></i>
-                <input type="email" placeholder="Email" />
+                <input type="email" placeholder="Email" name='regemail' />
               </div>
               <div className="input-field">
                 <i className="fas fa-phone"></i>
-                <input type="number" placeholder=" Phone number" />
+                <input type="number" placeholder=" Phone number" name='regphone' />
               </div>
               <div className="input-field">
                 <i className="fas fa-lock"></i>
-                <input type="password" placeholder="Password" />
+                <input type="password" placeholder="Password" name='regpassword' />
               </div>
               <input type="submit" className="btn" value="Sign up" />
               <p className="social-text">Or Sign up with social platforms</p>

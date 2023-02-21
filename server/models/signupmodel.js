@@ -8,7 +8,7 @@ const signuptemplate = new mongoose.Schema({
         type:String,
         required:true
     },
-    phno:{
+    phone:{
         type:String,
         required:true
     },
