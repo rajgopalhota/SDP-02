@@ -1,4 +1,5 @@
 import React from "react";
+import Mapslider from "../Mapslider/Mapslider";
 import "./Styles/repair.css";
 export default function Repair() {
   const disablePastDate = () => {
@@ -10,6 +11,7 @@ export default function Repair() {
   };
   return (
     <div>
+      <Mapslider/>
       <div className="repair-container ">
         <h1>Welocme to Autobots Repair Services</h1>
         <form action="" method="post">
