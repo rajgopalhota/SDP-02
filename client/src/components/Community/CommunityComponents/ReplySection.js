@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import './Styles/CommentSection.css';
+import './../Styles/CommentSection.css';
 export default function ReplySection({currentUser, currentUserProfilePic, onReply, replyto, replyUnder}) {
   const [reply, setReply] = useState("");
 

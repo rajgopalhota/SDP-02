@@ -1,8 +1,8 @@
 import React,{useState} from 'react'
-import CardComponent from './CardComponent';
-import CommentSection from './CommentSection';
+import CardComponent from './CommunityComponents/CardComponent';
+import CommentSection from './CommunityComponents/CommentSection';
 import data from './data.json';
-import DeleteMessageBox from './DeleteMessage';
+import DeleteMessageBox from './CommunityComponents/DeleteMessage';
 
 const saveToLocalStorage = (data) => {
     localStorage.setItem("data", JSON.stringify(data))

@@ -1,5 +1,5 @@
 import React from 'react'
-import './Styles/Vote.css';
+import './../Styles/Vote.css';
 
 export default function Vote(props) {
   const {score, id, onVoteChange} = props;

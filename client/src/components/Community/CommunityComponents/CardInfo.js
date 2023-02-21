@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import './Styles/CardInfo.css';
+import './../Styles/CardInfo.css';
 
 export default function CardInfo({cardata, currentUser, onReply, onDelete, onUpdate}) {
 

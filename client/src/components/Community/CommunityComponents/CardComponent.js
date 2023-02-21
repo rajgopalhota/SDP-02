@@ -1,6 +1,6 @@
 import React from 'react'
 import Card from './Card';
-import './Styles/CardComponent.css';
+import './../Styles/CardComponent.css';
 
 export default function CardComponent({cardata, currentUser, onReply, onVoteChange, onDelete, onUpdate}) {
   const {replies} = cardata;

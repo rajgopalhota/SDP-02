@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import './Styles/CommentSection.css';
+import './../Styles/CommentSection.css';
 export default function CommentSection({currentUser, currentUserProfilePic, onComment}) {
   const [comment, setComment] = useState("");
 

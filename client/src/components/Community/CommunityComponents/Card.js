@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import './Styles/Card.css';
+import './../Styles/Card.css';
 import CardInfo from './CardInfo';
 import Vote from './Vote';
 import ReplySection from './ReplySection';

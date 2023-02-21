@@ -1,5 +1,5 @@
 import React from 'react'
-import './Styles/DeleteMessage.css';
+import './../Styles/DeleteMessage.css';
 export default function DeleteMessage(props) {
   const display = {
     true: "block",
