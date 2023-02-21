@@ -1,5 +1,6 @@
 import React from "react";
 import Mapslider from "../Mapslider/Mapslider";
+import Rating from "../Rating/Rating";
 import "./Styles/repair.css";
 export default function Repair() {
   const disablePastDate = () => {
@@ -75,6 +76,7 @@ export default function Repair() {
           <button className="btn">Book</button>
         </form>
       </div>
+      <Rating />
     </div>
   );
 }
