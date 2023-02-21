@@ -1,0 +1,24 @@
+.no-box-shadow {
+  box-shadow: none;
+}
+.no-box-shadow:focus {
+  box-shadow: none;
+}
+.day {
+  font-size: 9px;
+}
+.heart {
+  border: 1px soild green !important;
+  border-color: green !important;
+  border-radius: 22px;
+}
+.heart-icon {
+  color: green;
+}
+.comment-text {
+  font-size: 12px;
+}
+.delete {
+  font-size: 13px;
+  cursor: pointer;
+}

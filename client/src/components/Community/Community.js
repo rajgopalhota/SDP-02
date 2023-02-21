@@ -1,157 +1,41 @@
-import React,{useState} from 'react'
-import CardComponent from './CommunityComponents/CardComponent';
-import CommentSection from './CommunityComponents/CommentSection';
-import data from './data.json';
-import DeleteMessageBox from './CommunityComponents/DeleteMessage';
-
-const saveToLocalStorage = (data) => {
-    localStorage.setItem("data", JSON.stringify(data))
-  }
-  
-  // fetch data from local storage or local data file 
-  data = JSON.parse(localStorage.getItem("data")) || data;
-
-
+import React from 'react'
+import './Community.css'
 export default function Community() {
-    const [database, setdatabase] = useState(data);
-  const {username, image: {webp}} = data.currentUser;
-  const [showDialog, setShowDialog] = useState(false);
-  const [deleleteItemId, setDeleteItemId] = useState(null)
-
-  const handleAddComment = (comment) => {
-    const obj = {
-      "id": Math.floor(Math.random() * 99999999999),
-      "content": comment,
-      "createdAt": "1 month ago",
-      "score": 0,
-      "user": {
-        "image": {
-          "webp": webp
-        }, 
-        "username": username
-      },
-      "replies": []
-    }
-
-    setdatabase((prevdata) => {
-      const database = {...prevdata};
-      database.comments.push(obj);
-      saveToLocalStorage(database);
-      return database;
-    })
-
-  };
-
-  const handleAddReply = (replyto, reply, replyUnder) => {
-    const obj = {
-      "id": Math.floor(Math.random() * 9999999999999),
-      "content": reply,
-      "createdAt": "2 week ago",
-      "score": 0,
-      "replyingTo": replyUnder || replyto,
-      "user": {
-        "image": {
-          "webp": webp
-        },
-        "username": username
-      }
-    }
-    setdatabase((prevdata) => {
-      const database = {...prevdata};
-      database.comments.forEach((item) => {
-        if (item.user.username === replyto || (item.user.username === replyUnder)){
-          item.replies.push(obj)
-        }
-      })
-      saveToLocalStorage(database);
-      return database;
-    })
-  };
-
-  const handleVote = (id , voteType) => {
-    setdatabase(prevdata => {
-
-      // make a deep copy 
-      const database =JSON.parse(JSON.stringify(prevdata));
-      let userdata = database.comments.filter(item => item.id === id)
-      if (userdata.length === 0) {
-        database.comments.forEach(item => {  
-          userdata = item.replies.filter(item => item.id === id)
-        })
-      }
-
-      let score = Number(userdata[0].score);
-      if (voteType === "up") {
-        score++;
-      }
-
-      if (voteType === "down") {
-        score--;
-      }
-      userdata[0].score = score;
-      saveToLocalStorage(database);
-      return database;
-    })
-  };
-
-  const handleDelete = (id) => {
-    setShowDialog(true)
-    setDeleteItemId(id)
-  }
-
-  const handleDeleteCard = () => {
-    const id = deleleteItemId
-    setdatabase(prevdata => {
-      const database =JSON.parse(JSON.stringify(prevdata));
-      database.comments = database.comments.filter(item => item.id !== id);
-
-      if (database.comments.length === prevdata.comments.length) {
-        database.comments.forEach((item, idx) => {
-          item.replies = item.replies.filter(item => item.id !== id)
-        })
-      }
-
-      setShowDialog(false);
-      saveToLocalStorage(database);
-      return database;
-    })
-  }
-
-  const handleUpdata = (id, message) => {
-    setdatabase(prevdata => {
-      const database =JSON.parse(JSON.stringify(prevdata));
-      let userdata = database.comments.filter(item => item.id === id)
-      if (userdata.length === 0) {
-        database.comments.forEach(item => {  
-          userdata = item.replies.filter(item => item.id === id)
-        })
-      }
-      userdata[0].content = message;
-      saveToLocalStorage(database);
-      return database;
-    })
-  }
-  return (
-    <div className="App">
-      {database && database.comments.map(item => 
-        <CardComponent 
-          cardata={item} 
-          key={item.id} 
-          currentUser={[username, webp]} 
-          onReply={handleAddReply}
-          onVoteChange={handleVote}
-          onDelete={handleDelete}
-          onUpdate={handleUpdata}/>
-      )}
-      
-      <CommentSection 
-        currentUser={username} 
-        currentUserProfilePic={webp} 
-        onComment={handleAddComment}
-      />
-
-      <DeleteMessageBox showDialog={showDialog} onDeleteBoxCancel={() => {
-        setShowDialog(false)}} confirmDelete={handleDeleteCard}/>
-    </div>
-  )
+    return (
+        <div>
+            <div className="container mt-5 mb-5">
+                <div className="d-flex justify-content-center row">
+                    <div className="col-md-8">
+                        <div className="d-flex flex-row align-items-center add-comment p-2 bg-white rounded"><img className="rounded-circle" src="https://i.imgur.com/QvDFBCC.jpg" width="40" alt='' /><input type="text" className="form-control border-0 no-box-shadow ml-1" placeholder="Leave a constructive comment..." /></div>
+                        <div className="p-3 bg-white mt-2 rounded">
+                            <div className="d-flex justify-content-between">
+                                <div className="d-flex flex-row user"><img className="rounded-circle img-fluid img-responsive" alt='' src="https://i.imgur.com/Yxje2El.jpg" width="40" />
+                                    <div className="d-flex flex-column ml-2"><span className="font-weight-bold">@Nick</span><span className="day">1 day ago</span></div>
+                                </div>
+                                <div className="d-flex align-items-center px-3 heart border"><i className="fa fa-heart heart-icon"></i><span className="ml-2">35</span></div>
+                            </div>
+                            <div className="comment-text text-justify mt-2">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            </div>
+                        </div>
+                        <div className="p-3 bg-white mt-2 rounded">
+                            <div className="d-flex justify-content-between">
+                                <div className="d-flex flex-row user"><img className="rounded-circle img-fluid img-responsive" alt='' src="https://i.imgur.com/JXZLwEY.jpg" width={40} />
+                                    <div className="d-flex flex-column ml-2"><span className="font-weight-bold">@Samantha</span><span className="day">2 days ago</span></div>
+                                </div>
+                                <div className="d-flex align-items-center px-3 heart border"><i className="fa fa-heart-o heart-icon"></i><span className="ml-2">35</span></div>
+                            </div>
+                            <div className="comment-text text-justify mt-2">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            </div>
+                            <div className="d-flex justify-content-end align-items-center comment-buttons mt-2 text-right"><span className="mr-3 delete">Delete</span><button className="btn btn-success btn-sm border-0 px-3" type="button">Edit</button></div>
+                        </div>
+                        <div className="p-3 bg-white mt-2 rounded text-center">
+                            <h5>Join the community to comment</h5><button className="btn btn-success btn-sm px-3" type="button">Signup</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
 }
