@@ -19,7 +19,7 @@ h1 {
   margin-right: 5%;
   margin-left: auto;
   animation: floatery 1s;
-  backdrop-filter: blur(7px);
+  backdrop-filter: blur(17px);
   width: 50%;
   height: fit-content;
   padding: 3%;

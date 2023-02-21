@@ -5,8 +5,8 @@
   width: 40%;
   height: 60%;
   overflow: hidden;
-  position: absolute;
-  margin-top: 4%;
+  position: fixed;
+  margin-top: 5%;
   margin-left: 2%;
   z-index: 10;
 }
@@ -48,7 +48,7 @@
 }
 
 .map {
-  animation: displaymaps 10s infinite;
+  animation: displaymaps 20s infinite;
   opacity: 0;
   width: 625px;
   height: 446px;
@@ -57,15 +57,15 @@
 }
 
 .map:nth-child(2) {
-  animation-delay: 2s;
+  animation-delay: 4s;
 }
 
 .map:nth-child(3) {
-  animation-delay: 4s;
+  animation-delay: 8s;
 }
 .map:nth-child(4) {
-  animation-delay: 6s;
+  animation-delay: 12s;
 }
 .map:nth-child(5) {
-  animation-delay: 8s;
+  animation-delay: 16s;
 }

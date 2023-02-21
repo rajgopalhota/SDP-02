@@ -27,6 +27,7 @@ body {
 }
 
 .main-body-dark{
+  transition: all ease-in-out 1s;
   position: absolute;
   top: 0;
   left: 0;
@@ -37,6 +38,7 @@ body {
   min-width: 100%;
   background: url(./autobot.jpg) no-repeat center center fixed;
   color: aliceblue;
+  transition: all ease-in-out 1s;
 
 }
 .main-body-light{
@@ -50,6 +52,7 @@ body {
   min-width: 100%;
   background: url(./lit2.png) no-repeat center center fixed;
   color: rgb(0, 0, 0);
+  transition: all ease-in-out 1s;
 
 }
 .main-body-light section{
