@@ -1,64 +1,64 @@
-.map-conatiner{
-width: 84vmin;
-height: 450px;
-border: 2px solid;
-position: absolute;
-top:23%;
-border-radius: 12px;
-margin-top: 5px;
-
+.map-conatiner {
+  border-radius: 16px;
+  border: solid 1px #999;
+  width: 40%;
+  height: 61%;
+  overflow: hidden;
+  position: absolute;
+  margin-top: 4%;
+  margin-left: 2%;
+  z-index: 10;
 }
-@keyframes display {
-0%{
-transform: translateX(200px);
-opacity:0 ;
+.map-conatiner iframe{
+    position:absolute;
+    left:50%;
+    margin-left:-320px; 
+    z-index:9;
 }
+@keyframes displaymaps {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
 
-10%{
+  10% {
     transform: translateX(0);
-    opacity:1 ;
-    }
+    opacity: 1;
+  }
 
-20%{
- transform: translateX(0);
-  opacity:1 ;
- }
- 30%{
- transform: translateX(-200px);
- opacity:0 ;
- }
- 100%{
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  30% {
     transform: translateX(-200px);
-     opacity:0 ;
-   }
-
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
 }
 
-
-.map{
-animation: display 10s infinite;
-opacity: 0;
-width: 625px;
-height: 446px;
-position: absolute;
-border: none;
+.map {
+  animation: displaymaps 10s infinite;
+  opacity: 0;
+  width: 625px;
+  height: 446px;
+  position: absolute;
+  border: none;
 }
 
-
-
-.map:nth-child(2){
-    animation-delay: 2s;
+.map:nth-child(2) {
+  animation-delay: 2s;
 }
 
-.map:nth-child(3){
-    animation-delay: 4s;
+.map:nth-child(3) {
+  animation-delay: 4s;
 }
-.map:nth-child(4){
-    animation-delay: 6s;
+.map:nth-child(4) {
+  animation-delay: 6s;
 }
-.map:nth-child(5){
-    animation-delay: 8s;
+.map:nth-child(5) {
+  animation-delay: 8s;
 }
-
-
-
