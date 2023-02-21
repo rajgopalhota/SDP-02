@@ -1,10 +1,14 @@
 const mongoose = require('mongoose');
 const signuptemplate = new mongoose.Schema({
-    fullname:{
+    username:{
         type:String,
         required:true
     },
     email:{
+        type:String,
+        required:true
+    },
+    phno:{
         type:String,
         required:true
     },
@@ -18,7 +22,7 @@ const signuptemplate = new mongoose.Schema({
     },
     role:{
         type:String,
-        default:"Farmer"
+        default:"Customer"
     }
 })
 

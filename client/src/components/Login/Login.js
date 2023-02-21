@@ -3,7 +3,27 @@ import { NavLink } from 'react-router-dom';
 import log from './Images/log.svg'
 import register from './Images/register.svg'
 import './Styles/Index.css';
+import axios from 'axios';
 export default function Index() {
+
+  // Sending data
+  function signupdata(){
+    const registerdata={
+      fullname:name,
+      email:mail,
+      password:pwd
+    }
+    console.log(registerdata);
+    axios.post("http://localhost:2000/api/register",registerdata)
+    .then(response=> {
+      navigate('/login')
+    })
+    .catch(e=>console.log(e))
+
+  }
+
+
+
   const [ani, setAni] = useState("login-container")
   const handleonsignup = () => {
     setAni("login-container");
@@ -47,6 +67,7 @@ export default function Index() {
                 </a>
               </div>
             </form>
+            {/* Signup form........... */}
             <form action="#" className="sign-up-form">
               <h2 className="title">SIGN UP</h2>
               <div className="input-field">
