@@ -1,6 +1,7 @@
 .map-conatiner {
   border-radius: 16px;
-  border: solid 1px #999;
+  border: solid 2px #000000;
+  box-shadow: 0 0 12px black;
   width: 40%;
   height: 61%;
   overflow: hidden;
@@ -9,7 +10,13 @@
   margin-left: 2%;
   z-index: 10;
 }
+.main-body-dark .map-conatiner{
+  border: solid 2px #ffffff;
+  box-shadow: 0 0 12px rgb(255, 255, 255);
+}
 .map-conatiner iframe{
+    width: 100%;
+    height: 100%;
     position:absolute;
     left:50%;
     margin-left:-320px; 
