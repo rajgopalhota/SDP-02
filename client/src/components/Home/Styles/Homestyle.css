@@ -1,5 +1,6 @@
 h1 {
-  text-decoration: underline;
+  /* text-decoration: underline; */
+  text-transform: capitalize;
   /* color: white; */
   font-weight: 900;
   font-size: 32px;

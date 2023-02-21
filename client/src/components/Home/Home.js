@@ -1,12 +1,21 @@
 import React from 'react'
 import Slider from '../ImageGallery/Slider'
+import { useAuth } from '../auth'
 import './Styles/Homestyle.css'
 export default function Home() {
+  const auth = useAuth();
   return (
     <div>
       <Slider />
       <div className="home-container-portfolio">
-        <h1>Welcome to Autobots</h1>
+        {
+          !auth.user &&
+          <h1>Welcome to Autobots</h1>
+        }
+        {
+          !(!auth.user) &&
+          <h1>Welcome {auth.user}</h1>
+        }
         <p>
           Welcome to Autobots, where we are passionate about crafting the best vehicles possible.
           As a leading automobile company, we are dedicated to providing our customers with high-quality, reliable,

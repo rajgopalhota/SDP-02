@@ -1,66 +1,77 @@
-import React, { useState } from 'react'
-import { NavLink, useNavigate } from 'react-router-dom';
-import log from './Images/log.svg'
-import register from './Images/register.svg'
-import './Styles/Index.css';
-import axios from 'axios';
+import React, { useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
+import log from "./Images/log.svg";
+import {useAuth} from '././../auth';
+import register from "./Images/register.svg";
+import "./Styles/Index.css";
+import axios from "axios";
 
 export default function Index() {
-  const navigate = useNavigate(false);
-  // const [regData, set]
-  // Sending data
+  const auth = useAuth();
+  const navigate = useNavigate();
+
+
   const handleRegister = (e) => {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
-    axios.post("http://localhost:2003/api/register", {
-      username: data.get('reguser'),
-      email: data.get('regemail'),
-      phone: data.get('regphone'),
-      password: data.get('regpassword')
-    }).then(response => {
-      window.location.reload();
-    }).catch(err => {
-      console.log(err)
-    })
-  }
+    axios
+      .post("http://localhost:2003/api/register", {
+        username: data.get("reguser"),
+        email: data.get("regemail"),
+        phone: data.get("regphone"),
+        password: data.get("regpassword"),
+      })
+      .then((response) => {
+        window.location.reload();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   // Login Handler
   const loginAction = (e) => {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
-    axios.post("http://localhost:2003/api/login", {
-      username: data.get('loginuser'),
-      password: data.get('loginpassword')
-    })
-      .then(response => {
-        console.log(response)
+    axios
+      .post("http://localhost:2003/api/login", {
+        username: data.get("loginuser"),
+        password: data.get("loginpassword"),
+      })
+      .then((response) => {
+        console.log(response);
         if (response.status === 200) {
           if (response.data.role === "Customer") {
-            navigate('/autobots/home')
+            const username = response.data.username
+            console.log(username);
+            auth.login(username);
+            navigate('/autobots/home');
           }
-        }
-        else {
-          navigate('/autobots/contact')
+        } else {
+          navigate("/autobots/contact");
         }
       })
-      .catch(e => console.log(e))
-  }
+      .catch((e) => console.log(e));
 
+  };
 
-
-  const [ani, setAni] = useState("login-container")
+  const [ani, setAni] = useState("login-container");
   const handleonsignup = () => {
     setAni("login-container");
-  }
+  };
   const handleonsignin = () => {
     setAni("login-container sign-up-mode");
-  }
+  };
   window.addEventListener("focus", () => {
     document.title = "Login";
-  })
+  });
   return (
-    <div className='LoginMech'>
-      <NavLink to="/autobots/home" ><div className="navigatetohome"><i class="fa fa-home" aria-hidden="true"></i></div></NavLink>
+    <div className="LoginMech">
+      <NavLink to="/autobots/home">
+        <div className="navigatetohome">
+          <i class="fa fa-home" aria-hidden="true"></i>
+        </div>
+      </NavLink>
       <div className={ani}>
         <div className="forms-container">
           <div className="signin-signup">
@@ -68,11 +79,15 @@ export default function Index() {
               <h2 className="title">SIGN IN</h2>
               <div className="input-field">
                 <i className="fas fa-user"></i>
-                <input type="text" placeholder="Username" name='loginuser' />
+                <input type="text" placeholder="Username" name="loginuser" />
               </div>
               <div className="input-field">
                 <i className="fas fa-lock"></i>
-                <input type="password" placeholder="Password" name='loginpassword' />
+                <input
+                  type="password"
+                  placeholder="Password"
+                  name="loginpassword"
+                />
               </div>
               <input type="submit" value="Login" className="btn solid" />
               <p className="social-text">Or Sign in with social platforms</p>
@@ -96,19 +111,27 @@ export default function Index() {
               <h2 className="title">SIGN UP</h2>
               <div className="input-field">
                 <i className="fas fa-user"></i>
-                <input type="text" placeholder="Username" name='reguser' />
+                <input type="text" placeholder="Username" name="reguser" />
               </div>
               <div className="input-field">
                 <i className="fas fa-envelope"></i>
-                <input type="email" placeholder="Email" name='regemail' />
+                <input type="email" placeholder="Email" name="regemail" />
               </div>
               <div className="input-field">
                 <i className="fas fa-phone"></i>
-                <input type="number" placeholder=" Phone number" name='regphone' />
+                <input
+                  type="number"
+                  placeholder=" Phone number"
+                  name="regphone"
+                />
               </div>
               <div className="input-field">
                 <i className="fas fa-lock"></i>
-                <input type="password" placeholder="Password" name='regpassword' />
+                <input
+                  type="password"
+                  placeholder="Password"
+                  name="regpassword"
+                />
               </div>
               <input type="submit" className="btn" value="Sign up" />
               <p className="social-text">Or Sign up with social platforms</p>
@@ -135,10 +158,14 @@ export default function Index() {
             <div className="content">
               <h3>New here ?</h3>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
-                ex ratione. Aliquid!
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Debitis, ex ratione. Aliquid!
               </p>
-              <button className="btn transparent" id="sign-up-btn" onClick={handleonsignin}>
+              <button
+                className="btn transparent"
+                id="sign-up-btn"
+                onClick={handleonsignin}
+              >
                 Sign up
               </button>
             </div>
@@ -151,7 +178,11 @@ export default function Index() {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
                 laboriosam ad deleniti.
               </p>
-              <button className="btn transparent" id="sign-in-btn" onClick={handleonsignup}>
+              <button
+                className="btn transparent"
+                id="sign-in-btn"
+                onClick={handleonsignup}
+              >
                 Sign in
               </button>
             </div>
@@ -159,7 +190,6 @@ export default function Index() {
           </div>
         </div>
       </div>
-
     </div>
-  )
+  );
 }

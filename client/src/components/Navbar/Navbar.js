@@ -1,10 +1,18 @@
 import React from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import logo from "./Assets/NavLogo.jpg";
 import cartlogo from "./Assets/carts.png";
 import "./Styles/Navbar.css";
+import { useAuth } from "../auth";
 
 export default function Navbar(props) {
+
+  const auth = useAuth();
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    auth.logout();
+    navigate('/autobots/home')
+  };
   return (
     <div>
       <section></section>
@@ -59,11 +67,19 @@ export default function Navbar(props) {
               </NavLink>
               {/*  */}
             </div>
-            <NavLink to="/login">
-              <button className="btn btn-outline-success" type="submit">
-                Login
-              </button>
-            </NavLink>
+
+            {!auth.user && (
+              <NavLink to="/login">
+                <button className="btn btn-outline-success" type="submit">
+                  Login
+                </button>
+              </NavLink>
+            )}
+            {!!auth.user && (
+                <button className="btn btn-outline-success" type="submit" onClick={handleLogout}>
+                  Logout
+                </button>
+            )}
           </div>
         </div>
       </nav>
