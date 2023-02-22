@@ -49,9 +49,9 @@ function App() {
           </label>
         </div>
         <AuthProvider>
-        <div className="toastmessage">
+        
         <ToastContainer/>
-        </div>
+       
           <Routes>
             <Route path="" element={<Landing />}></Route>
             <Route path="autobots" element={<Autobot showAlert={showAlert} alert={alert} />}>
