@@ -82,3 +82,7 @@ code {
   /* color: aliceblue; */
   text-align: justify;
 }
+
+.alert{
+  z-index: 999;
+}

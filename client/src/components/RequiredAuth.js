@@ -1,14 +1,12 @@
-import React from "react";
-import { Navigate, useLocation } from "react-router-dom";
-import { useAuth } from "./auth";
-
-export default function RequiredAuth({ children }) {
+import { Outlet, Navigate } from 'react-router-dom'
+import {useAuth} from './auth'
+const RequiredAuth = () => {
   const auth = useAuth();
-  const location = useLocation();
-  if (!auth.user) {
-    return <Navigate to="/login" state={{ path: location.pathname }} />;
-  }
-  return children;
+    // let auth = {'token':false}
+    return(
+        (auth.user) ? <Outlet/> : <Navigate to="/login"/>
+    )
 }
 
+export default RequiredAuth
 

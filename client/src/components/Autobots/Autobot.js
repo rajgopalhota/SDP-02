@@ -9,7 +9,8 @@ import Services from '../Services/Services';
 import Spare from '../Spare/Spare';
 import Cart from '../Cart/Cart';
 import Contact from '../Contact/Contact';
-export default function Autobot() {
+import Alert from '../Alert';
+export default function Autobot(props) {
   return (
     <div>
       <div>
@@ -19,12 +20,13 @@ export default function Autobot() {
         <div className="starfifth"></div>
       </div>
       <Navbar />
+      <Alert alert={props.alert} />
       <Routes>
         <Route path='home' element={<Home />}></Route>
         <Route path='products' element={<Products />}></Route>
         <Route path='aboutus' element={<About />}></Route>
         <Route path='spare' element={<Spare />}></Route>
-        <Route path='services' element={<Services />}></Route>
+        <Route path='services' element={<Services showAlert={props.showAlert} />}></Route>
         <Route path='cart' element={<Cart />}></Route>
         <Route path='contact' element={<Contact />}></Route>
         

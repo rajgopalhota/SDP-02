@@ -17,6 +17,16 @@ import RequiredAuth from "./components/RequiredAuth";
 // import Community from './components/Community/Community';
 import Community from "./components/Community/Community";
 function App() {
+
+  const [alert, setAlert] = useState(null);
+  const showAlert = (message, type) => {
+    setAlert({
+      msg: message,
+      Type: type
+    })
+  }
+
+
   const [darkMode, setDarkMode] = useState(true);
   const toggleDarkMode = () => setDarkMode(darkMode ? false : true);
   let dc = document.title;
@@ -38,11 +48,13 @@ function App() {
         <AuthProvider>
           <Routes>
             <Route path="" element={<Landing />}></Route>
-            <Route path="autobots" element={<Autobot />}>
+            <Route path="autobots" element={<Autobot showAlert={showAlert} alert={alert} />}>
               <Route path="home" element={<Home />} />
               <Route path="products" element={<Products />} />
               <Route path="aboutus" element={<About />} />
-              <Route path="spare" element={<RequiredAuth><Spare /></RequiredAuth>} />
+              <Route element={<RequiredAuth />}>
+                <Route path="spare" element={<Spare />} />
+              </Route>
               <Route path="services" element={<Services />} />
               <Route path="cart" element={<Cart />} />
               <Route path="contact" element={<Contact />}></Route>

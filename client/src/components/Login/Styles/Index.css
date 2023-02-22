@@ -174,7 +174,7 @@ form.sign-in-form {
   background-color: #4d84e2;
   box-shadow: 0 0 12px aliceblue;
 }
-button {
+.LoginMech button {
   width: 150px;
   background-color: #ff6200;
   cursor: pointer;

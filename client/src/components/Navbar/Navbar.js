@@ -16,7 +16,7 @@ export default function Navbar(props) {
   return (
     <div>
       <section></section>
-      <nav className="navbar navbar-expand-lg navbar-dark">
+      <nav className="navbar navbar-custom navbar-expand-lg navbar-dark">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/autobots/home">
             <img src={logo} alt="" width={65}></img>
