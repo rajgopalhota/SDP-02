@@ -15,3 +15,14 @@ Modules :
 
 
 Note: turn off the overflow hidden in index.css
+
+
+
+
+toast.info(response.data, {
+            position: "bottom-right",
+            theme: "dark",
+          });
+          
+         {success,info,error,warning}
+

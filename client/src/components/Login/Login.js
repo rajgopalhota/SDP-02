@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import log from "./Images/log.svg";
-import {useAuth} from '././../auth';
+import { useAuth } from "././../auth";
 import register from "./Images/register.svg";
 import "./Styles/Index.css";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 export default function Index() {
   const auth = useAuth();
   const navigate = useNavigate();
-
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -23,6 +23,10 @@ export default function Index() {
       })
       .then((response) => {
         window.location.reload();
+        toast.info("Registration Successfull", {
+          position: "bottom-right",
+          theme: "dark",
+        });
       })
       .catch((err) => {
         console.log(err);
@@ -42,17 +46,20 @@ export default function Index() {
         console.log(response);
         if (response.status === 200) {
           if (response.data.role === "Customer") {
-            const username = response.data.username
+            const username = response.data.username;
             console.log(username);
             auth.login(username);
-            navigate('/autobots/home');
+            navigate("/autobots/home");
+            toast.success("Login Successfull", {
+              position: "bottom-right",
+              theme: "dark",
+            });
           }
         } else {
           navigate("/autobots/contact");
         }
       })
       .catch((e) => console.log(e));
-
   };
 
   const [ani, setAni] = useState("login-container");

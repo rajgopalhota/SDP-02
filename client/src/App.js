@@ -15,6 +15,9 @@ import { AuthProvider } from "./components/auth";
 import { useState } from "react";
 import RequiredAuth from "./components/RequiredAuth";
 // import Community from './components/Community/Community';
+import {  ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
+
 import Community from "./components/Community/Community";
 function App() {
 
@@ -46,6 +49,7 @@ function App() {
           </label>
         </div>
         <AuthProvider>
+        <ToastContainer/>
           <Routes>
             <Route path="" element={<Landing />}></Route>
             <Route path="autobots" element={<Autobot showAlert={showAlert} alert={alert} />}>

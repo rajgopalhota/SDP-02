@@ -4,7 +4,7 @@ import logo from "./Assets/NavLogo.jpg";
 import cartlogo from "./Assets/carts.png";
 import "./Styles/Navbar.css";
 import { useAuth } from "../auth";
-
+import { toast } from "react-toastify";
 export default function Navbar(props) {
 
   const auth = useAuth();
@@ -12,6 +12,10 @@ export default function Navbar(props) {
   const handleLogout = () => {
     auth.logout();
     navigate('/autobots/home')
+    toast.info("Logged out successfully", {
+      position: "bottom-right",
+      theme: "dark",
+    });
   };
   return (
     <div>

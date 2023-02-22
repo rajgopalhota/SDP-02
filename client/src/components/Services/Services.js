@@ -3,9 +3,9 @@ import Mapslider from "../Mapslider/Mapslider";
 import Rating from "../Rating/Rating";
 import "./Styles/repair.css";
 import axios from "axios";
-import {  useNavigate } from "react-router-dom";
-import { useAuth } from '../auth'
-
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../auth";
+import { toast } from "react-toastify";
 
 export default function Repair(props) {
   const auth = useAuth();
@@ -24,27 +24,40 @@ export default function Repair(props) {
     const data = new FormData(e.currentTarget);
     axios
       .post("http://localhost:2003/api/repair", {
-        username: (auth.user),
+        username: auth.user,
         name: data.get("name"),
         phone: data.get("phone"),
         carname: data.get("carname"),
-        date:data.get("date"),
-        time:data.get("time"),
-        city:data.get("city")
+        date: data.get("date"),
+        time: data.get("time"),
+        city: data.get("city"),
       })
       .then((response) => {
         console.log(response);
-        navigate('/autobots/home');
-        props.showAlert("Form Submitted","success");
+        if (response.data === "success") {
+          props.showAlert("Form Submitted", "success");
+          navigate("/autobots/home");
+          toast.success("Success", {
+            position: "bottom-right",
+            theme: "dark",
+          });
+        } else {
+          toast.info(response.data, {
+            position: "bottom-right",
+            theme: "dark",
+          });
+        }
       })
       .catch((err) => {
         console.log(err);
+        toast.error(err);
       });
   };
 
   return (
     <div>
       <Mapslider />
+
       <div className="repair-container ">
         <h1>Welocme to Autobots Repair Services</h1>
         <form onSubmit={handleRepair}>
