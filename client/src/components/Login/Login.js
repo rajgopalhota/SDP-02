@@ -64,23 +64,39 @@ export default function Index() {
       })
       .then((response) => {
         console.log(response);
-        if (response.status === 200) {
-          if (response.data.role === "Customer") {
-            const username = response.data.username;
-            console.log(username);
-            auth.login(username);
-            navigate("/autobots/home");
-            toast.success("Login Successfull", {
-              position: "bottom-right",
-              theme: "dark",
-            });
-          }
-        }
-        else {
-          toast.error("Login error", {
+        if (response.data === "newuser") {
+          toast.error("Please register to Autobots", {
             position: "bottom-right",
             theme: "dark",
           });
+        }
+        else if(response.data === "invalid"){
+          toast.info("Enter correct password", {
+            position: "bottom-right",
+            theme: "dark",
+          });
+        }
+        else {
+          if (response.status === 200) {
+            if (response.data.role === "Customer") {
+              const username = response.data.username;
+              console.log(username);
+              auth.login(username);
+              navigate("/autobots/home");
+              toast.success("Login Successfull", {
+                position: "bottom-right",
+                theme: "dark",
+              });
+            }
+          }
+          else if (response.data === "invalid") {
+            if (response.data.message === "unsuccess") {
+              toast.error("Login error", {
+                position: "bottom-right",
+                theme: "dark",
+              });
+            }
+          }
         }
       })
       .catch((e) => console.log(e));
