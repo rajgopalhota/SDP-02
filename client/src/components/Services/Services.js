@@ -2,20 +2,46 @@ import React from "react";
 import Mapslider from "../Mapslider/Mapslider";
 import Rating from "../Rating/Rating";
 import "./Styles/repair.css";
+import axios from "axios";
+import { useAuth } from '../auth'
+
 export default function Repair() {
+  const auth = useAuth();
+
   const disablePastDate = () => {
     const today = new Date();
-    const dd = String(today.getDate()+1).padStart(2, "0");
+    const dd = String(today.getDate() + 1).padStart(2, "0");
     const mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
     const yyyy = today.getFullYear();
     return yyyy + "-" + mm + "-" + dd;
   };
+  const handleRepair = (e) => {
+    e.preventDefault();
+    const data = new FormData(e.currentTarget);
+    axios
+      .post("http://localhost:2003/api/repair", {
+        username: (auth.user),
+        name: data.get("name"),
+        phone: data.get("phone"),
+        carname: data.get("carname"),
+        date:data.get("date"),
+        time:data.get("time"),
+        city:data.get("city")
+      })
+      .then((response) => {
+        alert("request send");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <div>
-      <Mapslider/>
+      <Mapslider />
       <div className="repair-container ">
         <h1>Welocme to Autobots Repair Services</h1>
-        <form action="" method="post">
+        <form onSubmit={handleRepair}>
           <table>
             <tr>
               <td>
@@ -49,7 +75,7 @@ export default function Repair() {
                 <label>Date of request:</label>
               </td>
               <td>
-                <input type="date" name='date' min={disablePastDate()} />
+                <input type="date" name="date" min={disablePastDate()} />
               </td>
             </tr>
 
@@ -70,8 +96,6 @@ export default function Repair() {
                 <input type="text" name="city" />
               </td>
             </tr>
-
-
           </table>
           <button className="btn">Book</button>
         </form>
