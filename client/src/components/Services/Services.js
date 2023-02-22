@@ -67,7 +67,7 @@ export default function Repair(props) {
                 <label>Name:</label>
               </td>
               <td>
-                <input type="text" name="name" required/>
+                <input type="text" name="name" />
               </td>
             </tr>
 
@@ -76,7 +76,7 @@ export default function Repair(props) {
                 <label>PhoneNumber:</label>
               </td>
               <td>
-                <input type="number" name="phone" required/>
+                <input type="number" name="phone" />
               </td>
             </tr>
 
@@ -85,7 +85,7 @@ export default function Repair(props) {
                 <label>CarName:</label>
               </td>
               <td>
-                <input type="text" name="carname" required/>
+                <input type="text" name="carname" />
               </td>
             </tr>
 
@@ -94,7 +94,7 @@ export default function Repair(props) {
                 <label>Date of request:</label>
               </td>
               <td>
-                <input type="date" name="date" min={disablePastDate()} required />
+                <input type="date" name="date" min={disablePastDate()}  />
               </td>
             </tr>
 
@@ -103,7 +103,7 @@ export default function Repair(props) {
                 <label>Time :</label>
               </td>
               <td>
-                <input type="time" name="time" required />
+                <input type="time" name="time"  />
               </td>
             </tr>
 
@@ -112,7 +112,7 @@ export default function Repair(props) {
                 <label>City :</label>
               </td>
               <td>
-                <input type="text" name="city" required/>
+                <input type="text" name="city" />
               </td>
             </tr>
           </table>
