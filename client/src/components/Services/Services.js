@@ -7,7 +7,7 @@ import {  useNavigate } from "react-router-dom";
 import { useAuth } from '../auth'
 
 
-export default function Repair() {
+export default function Repair(props) {
   const auth = useAuth();
   const navigate = useNavigate();
 
@@ -35,6 +35,7 @@ export default function Repair() {
       .then((response) => {
         console.log(response);
         navigate('/autobots/home');
+        props.showAlert("Form Submitted","success");
       })
       .catch((err) => {
         console.log(err);
