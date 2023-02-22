@@ -173,7 +173,7 @@ router.post("/login", async (req, res) => {
       res.send("invalid");
     } else {
       signuptemp
-        .findOne({ email: req.body.email })
+        .findOne({ username: req.body.username })
         // if email exists
         .then((user) => {
           // compare the password entered and the hashed password found
