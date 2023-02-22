@@ -22,11 +22,31 @@ export default function Index() {
         password: data.get("regpassword"),
       })
       .then((response) => {
-        window.location.reload();
-        toast.info("Registration Successfull", {
-          position: "bottom-right",
-          theme: "dark",
-        });
+        if (response.data === "userexist") {
+          toast.error("Username taken", {
+            position: "bottom-right",
+            theme: "dark",
+          });
+        }
+        else if (response.data === "phoneexist") {
+          toast.error("Phone number already is in use", {
+            position: "bottom-right",
+            theme: "dark",
+          });
+        }
+        else if (response.data === "emailexist") {
+          toast.error("Email already taken", {
+            position: "bottom-right",
+            theme: "dark",
+          });
+        }
+        else {
+          window.location.reload();
+          toast.info("Registration Successfull", {
+            position: "bottom-right",
+            theme: "dark",
+          });
+        }
       })
       .catch((err) => {
         console.log(err);
@@ -55,8 +75,12 @@ export default function Index() {
               theme: "dark",
             });
           }
-        } else {
-          navigate("/autobots/contact");
+        }
+        else {
+          toast.error("Login error", {
+            position: "bottom-right",
+            theme: "dark",
+          });
         }
       })
       .catch((e) => console.log(e));

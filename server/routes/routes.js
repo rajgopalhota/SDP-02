@@ -11,22 +11,36 @@ const productmodel = require("../models/product");
 const signupmodel = require("../models/signupmodel");
 const repairmodel = require("../models/repair");
 router.post("/register", async (req, res) => {
-  const saltpwd = await bcrypt.genSalt(10);
-  const securepassword = await bcrypt.hash(req.body.password, saltpwd);
-  const signupuser = new signuptemp({
-    username: req.body.username,
-    email: req.body.email,
-    phone: req.body.phone,
-    password: securepassword,
-  });
-  signupuser
-    .save()
-    .then((data) => {
-      res.json(data);
-    })
-    .catch((e) => {
-      res.json(e);
+  const usercheck = await signuptemp.findOne({ username: req.body.username })
+  const emailcheck = await signuptemp.findOne({ email: req.body.email })
+  const phonecheck = await signuptemp.findOne({ phone: req.body.phone })
+  if (usercheck == null && emailcheck == null && phonecheck==null) {
+    const saltpwd = await bcrypt.genSalt(10);
+    const securepassword = await bcrypt.hash(req.body.password, saltpwd);
+    const signupuser = new signuptemp({
+      username: req.body.username,
+      email: req.body.email,
+      phone: req.body.phone,
+      password: securepassword,
     });
+    signupuser
+      .save()
+      .then((data) => {
+        res.send(data);
+      })
+      .catch((e) => {
+        res.json(e);
+      });
+  }
+  else if(usercheck != null){
+    res.send("userexist")
+  }
+  else if(emailcheck != null){
+    res.send("emailexist")
+  }
+  else if(phonecheck != null){
+    res.send("phoneexist")
+  }
 });
 
 router.get("/users", async (req, res) => {
