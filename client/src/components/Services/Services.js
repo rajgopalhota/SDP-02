@@ -33,6 +33,7 @@ export default function Repair() {
         city:data.get("city")
       })
       .then((response) => {
+        console.log(response);
         navigate('/autobots/home');
       })
       .catch((err) => {
