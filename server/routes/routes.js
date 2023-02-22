@@ -202,7 +202,7 @@ router.post("/login", async (req, res) => {
               //   return success response
               res.status(200).send({
                 message: "Login Successful",
-                email: user.email,
+                username: user.username,
                 role: user.role,
                 token,
               });
