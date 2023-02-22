@@ -3,10 +3,13 @@ import Mapslider from "../Mapslider/Mapslider";
 import Rating from "../Rating/Rating";
 import "./Styles/repair.css";
 import axios from "axios";
+import {  useNavigate } from "react-router-dom";
 import { useAuth } from '../auth'
+
 
 export default function Repair() {
   const auth = useAuth();
+  const navigate = useNavigate();
 
   const disablePastDate = () => {
     const today = new Date();
@@ -15,6 +18,7 @@ export default function Repair() {
     const yyyy = today.getFullYear();
     return yyyy + "-" + mm + "-" + dd;
   };
+  //service handler
   const handleRepair = (e) => {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
@@ -29,7 +33,7 @@ export default function Repair() {
         city:data.get("city")
       })
       .then((response) => {
-        alert("request send");
+        navigate('/autobots/home');
       })
       .catch((err) => {
         console.log(err);
