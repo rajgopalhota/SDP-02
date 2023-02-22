@@ -126,7 +126,7 @@ export default function Index() {
               <h2 className="title">SIGN IN</h2>
               <div className="input-field">
                 <i className="fas fa-user"></i>
-                <input type="text" placeholder="Username" name="loginuser" />
+                <input type="text" placeholder="Username" name="loginuser"  required/>
               </div>
               <div className="input-field">
                 <i className="fas fa-lock"></i>
@@ -134,6 +134,7 @@ export default function Index() {
                   type="password"
                   placeholder="Password"
                   name="loginpassword"
+                  required
                 />
               </div>
               <input type="submit" value="Login" className="btn solid" />
@@ -158,11 +159,11 @@ export default function Index() {
               <h2 className="title">SIGN UP</h2>
               <div className="input-field">
                 <i className="fas fa-user"></i>
-                <input type="text" placeholder="Username" name="reguser" />
+                <input type="text" placeholder="Username" name="reguser"  required/>
               </div>
               <div className="input-field">
                 <i className="fas fa-envelope"></i>
-                <input type="email" placeholder="Email" name="regemail" />
+                <input type="email" placeholder="Email" name="regemail" required/>
               </div>
               <div className="input-field">
                 <i className="fas fa-phone"></i>
@@ -170,6 +171,7 @@ export default function Index() {
                   type="number"
                   placeholder=" Phone number"
                   name="regphone"
+                  required
                 />
               </div>
               <div className="input-field">
@@ -178,6 +180,7 @@ export default function Index() {
                   type="password"
                   placeholder="Password"
                   name="regpassword"
+                  required
                 />
               </div>
               <input type="submit" className="btn" value="Sign up" />
