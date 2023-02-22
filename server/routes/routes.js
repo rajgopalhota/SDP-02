@@ -9,7 +9,7 @@ const feedback = require("../models/feedback");
 const feedbackmodel = require("../models/feedback");
 const productmodel= require("../models/product");
 const signupmodel=require("../models/signupmodel")
-
+const repairmodel = require("../models/repair");
 router.post('/register',async (req,res)=>{
     const saltpwd = await bcrypt.genSalt(10);
     const securepassword = await bcrypt.hash(req.body.password,saltpwd);
@@ -45,6 +45,28 @@ productmodel.find({},(err,result)=>{
 res.json(result);
 });
 });
+
+//repair backend module
+router.post('/repair',async(req,res)=>{
+  const username=req.body.username;
+  const name=req.body.name;
+  const phone = req.body.phone;
+  const carname = req.body.carname;
+  const date= req.body.date;
+  const time = req.body.time;
+  const city = req.body.city;
+  const repair = new repairmodel({username:username, name:name, phone:phone, carname:carname, date:date, time:time, city:city});
+  try{
+    await repair.save();
+    res.send("Saved Succesfully");
+  }
+    catch(err){
+      console.log(err);
+      res.send("Not saved");
+
+    }
+  }
+);
 
 router.post('/send',async(req,res)=>{
   const prname=req.body.pname;
