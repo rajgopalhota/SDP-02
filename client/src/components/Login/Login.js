@@ -23,33 +23,32 @@ export default function Index() {
       })
       .then((response) => {
         if (response.data === "userexist") {
-          toast.error("Username taken", {
+          toast.info("Username taken", {
             position: "bottom-right",
-            theme: "dark",
           });
         }
         else if (response.data === "phoneexist") {
-          toast.error("Phone number already is in use", {
+          toast.info("Phone number already is in use", {
             position: "bottom-right",
-            theme: "dark",
           });
         }
         else if (response.data === "emailexist") {
-          toast.error("Email already taken", {
+          toast.info("Email already taken", {
             position: "bottom-right",
-            theme: "dark",
           });
         }
         else {
           window.location.reload();
           toast.info("Registration Successfull", {
             position: "bottom-right",
-            theme: "dark",
           });
         }
       })
       .catch((err) => {
         console.log(err);
+        toast.error("Server not started, Please wait", {
+          position: "bottom-right",
+        })
       });
   };
 
@@ -67,13 +66,11 @@ export default function Index() {
         if (response.data === "newuser") {
           toast.error("Please register to Autobots", {
             position: "bottom-right",
-            theme: "dark",
           });
         }
-        else if(response.data === "invalid"){
+        else if (response.data === "invalid") {
           toast.info("Enter correct password", {
             position: "bottom-right",
-            theme: "dark",
           });
         }
         else {
@@ -99,7 +96,10 @@ export default function Index() {
           }
         }
       })
-      .catch((e) => console.log(e));
+      .catch((e) => console.log(e),
+        toast.error("Server not started, Please wait", {
+          position: "bottom-right",
+        }));
   };
 
   const [ani, setAni] = useState("login-container");
@@ -126,7 +126,7 @@ export default function Index() {
               <h2 className="title">SIGN IN</h2>
               <div className="input-field">
                 <i className="fas fa-user"></i>
-                <input type="text" placeholder="Username" name="loginuser" required/>
+                <input type="text" placeholder="Username" name="loginuser" required />
               </div>
               <div className="input-field">
                 <i className="fas fa-lock"></i>
@@ -159,11 +159,11 @@ export default function Index() {
               <h2 className="title">SIGN UP</h2>
               <div className="input-field">
                 <i className="fas fa-user"></i>
-                <input type="text" placeholder="Username" name="reguser" required/>
+                <input type="text" placeholder="Username" name="reguser" required />
               </div>
               <div className="input-field">
                 <i className="fas fa-envelope"></i>
-                <input type="email" placeholder="Email" name="regemail" required/>
+                <input type="email" placeholder="Email" name="regemail" required />
               </div>
               <div className="input-field">
                 <i className="fas fa-phone"></i>
