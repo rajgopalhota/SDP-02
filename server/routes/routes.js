@@ -154,16 +154,14 @@ router.post("/contact", async (req, res) => {
   const email = req.body.email;
   const phone = req.body.phone;
   const msg = req.body.message;
-  const usercheck = await signuptemp.findOne({ username: name});
+  const usercheck = await signuptemp.findOne({ username: name });
   if (usercheck == null) {
     res.send("notvalidname");
   } else if (usercheck.email != email) {
     res.send("notvalidemail");
-  } 
-  else if (phone=="") {
+  } else if (phone == "") {
     res.send("nophone");
-  } 
-  else if (msg=="") {
+  } else if (msg == "") {
     res.send("nomsg");
   } else {
     const contact = new contactmodel({
@@ -182,18 +180,16 @@ router.post("/contact", async (req, res) => {
   }
 });
 
-
-
 // community
-router.get('/community', async (req, res) => {
+router.get("/community", async (req, res) => {
   try {
-      const notes = await repairmodel.find();
-      console.log(notes)
-      res.json(notes)
+    const notes = await repairmodel.find();
+    console.log(notes);
+    res.json(notes);
   } catch (error) {
-      console.error(error.message);
-      res.status(500).send("Internal Server Error");
+    console.error(error.message);
+    res.status(500).send("Internal Server Error");
   }
-})
+});
 
 module.exports = router;
