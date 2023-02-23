@@ -5,7 +5,18 @@ import email from "./Assets/email.png";
 import phone from "./Assets/phone.png";
 import { toast } from "react-toastify";
 import axios from "axios";
+import { useForm } from "react-hook-form";
+
 export default function Contact() {
+
+  const {
+    register,
+    formState: { errors },
+  } = useForm({
+    mode: "all",
+  });
+
+
   const [sub, setSub] = useState("contactcomp-input-container");
   const handleonsignin = () => {
     setSub("contactcomp-input-container focus");
@@ -14,6 +25,7 @@ export default function Contact() {
   const handlecontact = (e) => {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
+    console.log(data.get("name"),"dhfcgyuhy890iughui90i")
     axios
       .post("http://localhost:2003/api/contact", {
         username: data.get("name"),
@@ -105,7 +117,7 @@ export default function Contact() {
             <span className="circle two"></span>
 
             <form
-              onSubmit={handlecontact}
+            onSubmit={handlecontact}
               autocomplete="off"
               className="contactcomp-formtag"
             >
@@ -117,16 +129,26 @@ export default function Contact() {
                   className="contactcomp-input"
                   onClickCapture={handleonsignin}
                 />
+
                 <label for="">Username</label>
                 <span>Username</span>
               </div>
               <div className={sub}>
                 <input
-                  type="email"
+                  type="text"
                   name="email"
                   className="contactcomp-input"
                   onClickCapture={handleonsignin}
+                  {...register("email", {
+                    required: "Email is Required...",
+                    pattern: {
+                      value:
+                        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                      message: "Email must be valid",
+                    },
+                  })}
                 />
+                <p id="kliu">{errors.email?.message}</p>
                 <label for="">Email</label>
                 <span>Email</span>
               </div>
@@ -136,7 +158,16 @@ export default function Contact() {
                   name="phone"
                   className="contactcomp-input"
                   onClickCapture={handleonsignin}
+                  {...register("phone", {
+                    required: "phone is Required...",
+                    pattern: {
+                      value: /^\d{10}$/,
+                      message: "Must be valid",
+                    },
+                  })}
                 />
+                <p id="kliu">{errors.phone?.message}</p>
+
                 <label for="">Phone</label>
                 <span>Phone</span>
               </div>
@@ -145,7 +176,20 @@ export default function Contact() {
                   name="message"
                   className="contactcomp-input"
                   onClickCapture={handleonsignin}
+                  {...register("text", {
+                    required: "message is required",
+                    minLength: {
+                      value: 15,
+                      message: "message must be atleast 15 characters long...",
+                    },
+                    maxLength: {
+                      value: 40,
+                      message: "message must be atmost 30 characters long...",
+                    },
+                  })}
                 ></textarea>
+                <p id="kliu">{errors.text?.message}</p>
+
                 <label for="">Message</label>
                 <span>Message</span>
               </div>
