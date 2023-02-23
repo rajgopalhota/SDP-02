@@ -6,6 +6,13 @@
   box-sizing: border-box;
 }
 
+#kliu{
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0.5rem;
+  color: red;
+  font-size: 12px;
+}
 body,
 input,
 textarea {
@@ -126,7 +133,7 @@ textarea.contactcomp-input {
 
 .contactcomp-input-container label {
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 15px;
   transform: translateY(-50%);
   padding: 0 0.4rem;
