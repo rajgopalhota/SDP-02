@@ -86,11 +86,3 @@ code {
 .alert{
   z-index: 999;
 }
-
-
-.toastmessage{
-  z-index: 999;
-  border: 2px solid white;
-  display: block;
-  width: 100%;
-}

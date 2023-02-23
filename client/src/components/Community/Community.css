@@ -1,12 +1,21 @@
-
+.postingcomments{
+  background-color: #1a660058;
+  padding: 2%;
+  border: 1px solid white;
+  border-radius: 14px;
+}
+.main-body-light .postingcomments{
+  border: 1px solid rgb(0, 0, 0);
+}
 .comment-section{
+  backdrop-filter: blur(8px);
+  border-radius: 14px;
   list-style: none;
-  max-width: 90%;
+  max-width: 100%;
   width: 100%;
-  margin: 50px auto;
+  margin: 5px auto;
   padding: 10px;
 }
-
 .comment{
   display: flex;
   border-radius: 3px;
@@ -15,11 +24,15 @@
 }
 
 .comment.user-comment{
-  color:  #ff0000;
+  color:  #000000;
+  font-weight: bold;
+  font-size: 1.2em;
 }
 
 .comment.author-comment{
-  color:  #009dff;
+  font-size: 1.2em;
+  font-weight: 500;
+  color:  #000000;
   justify-content: flex-end;
 }
 
@@ -40,21 +53,30 @@
 
 
 .comment .info a{	/* User name */
+  font-size: 1.2em;
   display: block;
   text-decoration: none;
-  color: #656c71;
+  color: #ffffff;
   font-weight: bold;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   padding: 10px 0 3px 0;
 }
+.main-body-light .comment .info a{
+  transition: all ease-in-out 1s;
+  color: #000000;
 
+}
 .comment .info span{	/* Time */
-  font-size: 11px;
+  font-size: 1em;
+  font-weight: 700;
   color:  #9ca7af;
 }
-
+.main-body-light .comment .info span{
+  transition: all ease-in-out 1s;
+  color: #740086;
+}
 
 /* The user avatar */
 
@@ -98,14 +120,27 @@
 }
 
 .comment.user-comment p{
+  border-radius: 14px;
   background-color:  #f3f3f3;
+}
+.main-body-light .comment.user-comment p{
+  transition: all ease-in-out 2s;
+  background-color:  #520089;
+  color: white;
 }
 
 .comment.author-comment p{
-  background-color:  #e2f8ff;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 14px;
+  background-color:  #ffffffc1;
   order: 1;
 }
-
+.main-body-light .comment.author-comment p{
+  border: 2px solid rgb(0, 0, 0);
+  transition: all ease-in-out 2s;
+  background-color:  #1e003bb1;
+  color: rgb(255, 255, 255);
+}
 .user-comment p:after{
   content: '';
   position: absolute;
@@ -136,7 +171,7 @@
 /* Comment form */
 
 .write-new{
-  margin: 80px auto 0;
+  margin: 0px auto 80px;
   width: 50%;
 }
 
