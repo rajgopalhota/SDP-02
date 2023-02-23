@@ -128,8 +128,19 @@ export default function Contact() {
                   name="name"
                   className="contactcomp-input"
                   onClickCapture={handleonsignin}
+                  {...register("name", {
+                                    required: "username is required",
+                                    minLength: {
+                                      value: 3,
+                                     message: "Username must be atleast 3 characters long...",
+                                    },
+                                    maxLength: {
+                                      value: 30,
+                                      message: "Username must be atmost 30 characters long...",
+                                    },
+                                  })}
                 />
-
+              <p id="kliu">{errors.name?.message}</p>
                 <label for="">Username</label>
                 <span>Username</span>
               </div>
