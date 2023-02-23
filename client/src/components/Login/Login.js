@@ -50,6 +50,10 @@ export default function Index() {
       })
       .catch((err) => {
         console.log(err);
+        toast.error("Server not started, Please wait", {
+          position: "bottom-right",
+          theme: "light",
+        })
       });
   };
 
@@ -70,7 +74,7 @@ export default function Index() {
             theme: "dark",
           });
         }
-        else if(response.data === "invalid"){
+        else if (response.data === "invalid") {
           toast.info("Enter correct password", {
             position: "bottom-right",
             theme: "dark",
@@ -99,7 +103,11 @@ export default function Index() {
           }
         }
       })
-      .catch((e) => console.log(e));
+      .catch((e) => console.log(e),
+        toast.error("Server not started, Please wait", {
+          position: "bottom-right",
+          theme: "light",
+        }));
   };
 
   const [ani, setAni] = useState("login-container");
@@ -126,7 +134,7 @@ export default function Index() {
               <h2 className="title">SIGN IN</h2>
               <div className="input-field">
                 <i className="fas fa-user"></i>
-                <input type="text" placeholder="Username" name="loginuser" required/>
+                <input type="text" placeholder="Username" name="loginuser" required />
               </div>
               <div className="input-field">
                 <i className="fas fa-lock"></i>
@@ -159,11 +167,11 @@ export default function Index() {
               <h2 className="title">SIGN UP</h2>
               <div className="input-field">
                 <i className="fas fa-user"></i>
-                <input type="text" placeholder="Username" name="reguser" required/>
+                <input type="text" placeholder="Username" name="reguser" required />
               </div>
               <div className="input-field">
                 <i className="fas fa-envelope"></i>
-                <input type="email" placeholder="Email" name="regemail" required/>
+                <input type="email" placeholder="Email" name="regemail" required />
               </div>
               <div className="input-field">
                 <i className="fas fa-phone"></i>

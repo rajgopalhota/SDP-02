@@ -50,7 +50,7 @@ export default function Repair(props) {
       })
       .catch((err) => {
         console.log(err);
-        toast.error(err);
+        toast.error("Server error");
       });
   };
 
