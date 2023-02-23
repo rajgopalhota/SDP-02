@@ -5,7 +5,7 @@ const signuptemp = require("../models/signupmodel");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const repairmodel = require("../models/repair");
-
+const contactmodel = require("../models/contact");
 
 //register
 router.post("/register", async (req, res) => {
@@ -37,7 +37,6 @@ router.post("/register", async (req, res) => {
     res.send("phoneexist");
   }
 });
-
 
 //repair backend module
 router.post("/repair", async (req, res) => {
@@ -82,9 +81,7 @@ router.post("/repair", async (req, res) => {
   }
 });
 
-
-
-//login 
+//login
 router.post("/login", async (req, res) => {
   const usercheck = await signuptemp.findOne({ username: req.body.username });
   if (usercheck == null) {
@@ -151,14 +148,52 @@ router.post("/login", async (req, res) => {
   }
 });
 
-// contact 
+// contact
+router.post("/contact", async (req, res) => {
+  const name = req.body.username;
+  const email = req.body.email;
+  const phone = req.body.phone;
+  const msg = req.body.message;
+  const usercheck = await signuptemp.findOne({ username: name});
+  if (usercheck == null) {
+    res.send("notvalidname");
+  } else if (usercheck.email != email) {
+    res.send("notvalidemail");
+  } 
+  else if (phone=="") {
+    res.send("nophone");
+  } 
+  else if (msg=="") {
+    res.send("nomsg");
+  } else {
+    const contact = new contactmodel({
+      username: name,
+      email: email,
+      phone: phone,
+      message: msg,
+    });
+    try {
+      await contact.save();
+      res.send("message sent");
+    } catch (err) {
+      console.log(err);
+      res.send("Not saved");
+    }
+  }
+});
 
 
 
-
-
-
-
-
+// community
+router.get('/community', async (req, res) => {
+  try {
+      const notes = await repairmodel.find();
+      console.log(notes)
+      res.json(notes)
+  } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Internal Server Error");
+  }
+})
 
 module.exports = router;
