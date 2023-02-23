@@ -183,7 +183,7 @@ router.post("/contact", async (req, res) => {
 // community
 router.get("/community", async (req, res) => {
   try {
-    const notes = await repairmodel.find();
+    const notes = await communitymodel.find();
     console.log(notes);
     res.json(notes);
   } catch (error) {
@@ -194,19 +194,27 @@ router.get("/community", async (req, res) => {
 
 //comment
 router.post("/comment", async (req, res) => {
-const username=req.body.username;
-const msg = req.body.message;
-const comment=new communitymodel({
-username:username,
-message:msg,
-});
-try {
-  await comment.save();
-  res.send("success");
-} catch (err) {
-  console.log(err);
-  res.send("fail");
-}
+  const username = req.body.username;
+  const msg = req.body.message;
+  let comment;
+  if (username != null) {
+    comment = new communitymodel({
+      username: username,
+      message: msg,
+    });
+  }
+  else{
+     comment = new communitymodel({
+      message: msg,
+    });
+  }
+  try {
+    await comment.save();
+    res.send("success");
+  } catch (err) {
+    console.log(err);
+    res.send("fail");
+  }
 });
 
 module.exports = router;

@@ -15,7 +15,7 @@ import { AuthProvider } from "./components/auth";
 import { useState } from "react";
 import RequiredAuth from "./components/RequiredAuth";
 // import Community from './components/Community/Community';
-import {  ToastContainer } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
 
 import Community from "./components/Community/Community";
@@ -41,6 +41,12 @@ function App() {
   });
   return (
     <div className={darkMode ? "main-body-dark" : "main-body-light"}>
+      <div>
+        <div className="starsec"></div>
+        <div className="starthird"></div>
+        <div className="starfourth"></div>
+        <div className="starfifth"></div>
+      </div>
       <div className="App">
         <div className="darkmode">
           <label class="switch">
@@ -49,9 +55,9 @@ function App() {
           </label>
         </div>
         <AuthProvider>
-        
-        <ToastContainer/>
-       
+
+          <ToastContainer />
+
           <Routes>
             <Route path="" element={<Landing />}></Route>
             <Route path="autobots" element={<Autobot showAlert={showAlert} alert={alert} />}>

@@ -13,12 +13,7 @@ import Alert from '../Alert';
 export default function Autobot(props) {
   return (
     <div>
-      <div>
-        <div className="starsec"></div>
-        <div className="starthird"></div>
-        <div className="starfourth"></div>
-        <div className="starfifth"></div>
-      </div>
+      
       <Navbar />
       <Alert alert={props.alert} />
       <Routes>
