@@ -6,7 +6,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const repairmodel = require("../models/repair");
 const contactmodel = require("../models/contact");
-
+const communitymodel = require("../models/community");
 //register
 router.post("/register", async (req, res) => {
   const usercheck = await signuptemp.findOne({ username: req.body.username });
@@ -190,6 +190,24 @@ router.get("/community", async (req, res) => {
     console.error(error.message);
     res.status(500).send("Internal Server Error");
   }
+});
+
+//comment
+router.post("/comment", async (req, res) => {
+const username=req.body.username;
+const msg = req.body.message;
+const comment=new communitymodel({
+username:username,
+message:msg,
+});
+try {
+  await comment.save();
+  res.send("success");
+} catch (err) {
+  console.log(err);
+  res.send("fail");
+}
+
 });
 
 module.exports = router;
