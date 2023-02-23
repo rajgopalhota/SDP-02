@@ -23,28 +23,24 @@ export default function Index() {
       })
       .then((response) => {
         if (response.data === "userexist") {
-          toast.error("Username taken", {
+          toast.info("Username taken", {
             position: "bottom-right",
-            theme: "dark",
           });
         }
         else if (response.data === "phoneexist") {
-          toast.error("Phone number already is in use", {
+          toast.info("Phone number already is in use", {
             position: "bottom-right",
-            theme: "dark",
           });
         }
         else if (response.data === "emailexist") {
-          toast.error("Email already taken", {
+          toast.info("Email already taken", {
             position: "bottom-right",
-            theme: "dark",
           });
         }
         else {
           window.location.reload();
           toast.info("Registration Successfull", {
             position: "bottom-right",
-            theme: "dark",
           });
         }
       })
@@ -52,7 +48,6 @@ export default function Index() {
         console.log(err);
         toast.error("Server not started, Please wait", {
           position: "bottom-right",
-          theme: "light",
         })
       });
   };
@@ -71,13 +66,11 @@ export default function Index() {
         if (response.data === "newuser") {
           toast.error("Please register to Autobots", {
             position: "bottom-right",
-            theme: "dark",
           });
         }
         else if (response.data === "invalid") {
           toast.info("Enter correct password", {
             position: "bottom-right",
-            theme: "dark",
           });
         }
         else {
@@ -106,7 +99,6 @@ export default function Index() {
       .catch((e) => console.log(e),
         toast.error("Server not started, Please wait", {
           position: "bottom-right",
-          theme: "light",
         }));
   };
 
