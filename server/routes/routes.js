@@ -182,4 +182,18 @@ router.post("/contact", async (req, res) => {
   }
 });
 
+
+
+// community
+router.get('/community', async (req, res) => {
+  try {
+      const notes = await repairmodel.find();
+      console.log(notes)
+      res.json(notes)
+  } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Internal Server Error");
+  }
+})
+
 module.exports = router;
