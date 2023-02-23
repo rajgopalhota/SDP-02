@@ -4,12 +4,10 @@ const router = express.Router();
 const signuptemp = require("../models/signupmodel");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const product = require("../models/product");
-const feedback = require("../models/feedback");
-const feedbackmodel = require("../models/feedback");
-const productmodel = require("../models/product");
-const signupmodel = require("../models/signupmodel");
 const repairmodel = require("../models/repair");
+
+
+//register
 router.post("/register", async (req, res) => {
   const usercheck = await signuptemp.findOne({ username: req.body.username });
   const emailcheck = await signuptemp.findOne({ email: req.body.email });
@@ -40,23 +38,6 @@ router.post("/register", async (req, res) => {
   }
 });
 
-router.get("/users", async (req, res) => {
-  signupmodel.find({}, (err, result) => {
-    if (err) {
-      res.send(err);
-    }
-    res.json(result);
-  });
-});
-
-router.get("/products", async (req, res) => {
-  productmodel.find({}, (err, result) => {
-    if (err) {
-      res.send(err);
-    }
-    res.json(result);
-  });
-});
 
 //repair backend module
 router.post("/repair", async (req, res) => {
@@ -101,65 +82,9 @@ router.post("/repair", async (req, res) => {
   }
 });
 
-router.post("/send", async (req, res) => {
-  const prname = req.body.pname;
-  const qua = req.body.quantity;
-  const cat = req.body.category;
-  const pri = req.body.price;
-  const qual = req.body.quality;
-  const deli = req.body.deliverable;
-  const des = req.body.description;
-  const ph = req.body.phno;
-  const fadd = req.body.faddress;
-  const product = new productmodel({
-    pname: prname,
-    quantity: qua,
-    category: cat,
-    price: pri,
-    fname: qual,
-    deliverable: deli,
-    description: des,
-    phno: ph,
-    faddress: fadd,
-  });
-  try {
-    await product.save();
-    res.send("Inserted Values");
-  } catch (err) {
-    console.log(err);
-  }
-});
 
-router.post("/sendfeedback", async (req, res) => {
-  const pname = req.body.name;
-  const elemail = req.body.email;
-  const phonenumber = req.body.phone;
-  const msg = req.body.message;
-  const rat = req.body.rating;
-  const feedback = new feedbackmodel({
-    name: pname,
-    email: elemail,
-    phone: phonenumber,
-    message: msg,
-    rating: rat,
-  });
-  try {
-    await feedback.save();
-    res.send("Inserted Values");
-  } catch (err) {
-    console.log(err);
-  }
-});
 
-router.get("/feedbacks", async (req, res) => {
-  feedbackmodel.find({}, (err, result) => {
-    if (err) {
-      res.send(err);
-    }
-    res.json(result);
-  });
-});
-
+//login 
 router.post("/login", async (req, res) => {
   const usercheck = await signuptemp.findOne({ username: req.body.username });
   if (usercheck == null) {
@@ -226,23 +151,14 @@ router.post("/login", async (req, res) => {
   }
 });
 
-router.put("/upuser", async (req, res) => {
-  const upname = req.body.upName;
-  const id = req.body.id;
+// contact 
 
-  try {
-    await signupmodel.findById(id, (err, upUser) => {
-      upUser.name = upname;
-      upUser.save();
-      res.json(signupmodel);
-    });
-  } catch (err) {
-    console.log(err);
-  }
-});
 
-router.delete("/deluser/:id", async (req, res) => {
-  const id = req.params.id;
-  await signupmodel.findByIdAndRemove(id);
-});
+
+
+
+
+
+
+
 module.exports = router;
