@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import log from "./Images/log.svg";
+import log from "./Images/audi.png";
+import register from "./Images/mercedes.png";
 import { useAuth } from "././../auth";
-import register from "./Images/register.svg";
 import "./Styles/Index.css";
 import axios from "axios";
 import { toast } from "react-toastify";
@@ -208,8 +208,8 @@ export default function Index() {
             <div className="content">
               <h3>New here ?</h3>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Debitis, ex ratione. Aliquid!
+              Thank you for choosing Autobot as your go-to destination for all your automobile and spare parts needs.
+
               </p>
               <button
                 className="btn transparent"
@@ -219,14 +219,13 @@ export default function Index() {
                 Sign up
               </button>
             </div>
-            <img src={log} className="image" alt="" />
+            <img src={log} className="image logimg" alt="" />
           </div>
           <div className="panel right-panel">
             <div className="content">
               <h3>One of us ?</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-                laboriosam ad deleniti.
+              We are pleased to invite you to register with Autobots, the leading automobile company in the industry.
               </p>
               <button
                 className="btn transparent"
