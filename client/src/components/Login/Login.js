@@ -77,7 +77,9 @@ export default function Index() {
           if (response.status === 200) {
             if (response.data.role === "Customer") {
               const username = response.data.username;
-              console.log(username);
+              const authtoken = response.data.token;
+              console.log(response.data)
+              window.localStorage.setItem('user', response.data)
               auth.login(username);
               navigate("/autobots/home");
               toast.success("Login Successfull", {

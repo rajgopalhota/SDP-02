@@ -83,7 +83,7 @@ export default function Community() {
                     // !!auth.user && (
                     <li className="write-new postingcomments">
                         <form onSubmit={handleComment}>
-                            <textarea placeholder="Write your comment here" name="comment"></textarea>
+                            <textarea placeholder="Write your comment here" name="comment" required></textarea>
                             <div>
                                 <img src={rabbit} width="35" alt="Profile" title={auth.user} />
                                 <button type="submit">Submit</button>

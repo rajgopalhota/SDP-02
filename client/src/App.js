@@ -20,9 +20,7 @@ import 'react-toastify/dist/ReactToastify.css'
 
 import Community from "./components/Community/Community";
 function App() {
-  window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-  };
+  
   const [alert, setAlert] = useState(null);
   const showAlert = (message, type) => {
     setAlert({
