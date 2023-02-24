@@ -11,6 +11,7 @@ export default function Navbar(props) {
   const navigate = useNavigate();
   const handleLogout = () => {
     auth.logout();
+    localStorage.clear();
     navigate('/autobots/home')
     toast.info("Logged out successfully", {
       position: "bottom-right",
