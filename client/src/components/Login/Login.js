@@ -77,7 +77,7 @@ export default function Index() {
           if (response.status === 200) {
             if (response.data.role === "Customer") {
               const username = response.data.username;
-              const authtoken = response.data.token;
+              // const authtoken = response.data.token;
               console.log(response.data)
               localStorage.setItem('user', response.data.username);
               // console.log(localStorage.getItem('user'));
@@ -99,10 +99,7 @@ export default function Index() {
           }
         }
       })
-      .catch((e) => console.log(e),
-        toast.error("Server not started, Please wait", {
-          position: "bottom-right",
-        }));
+      .catch((e) => console.log(e));
   };
 
   const [ani, setAni] = useState("login-container");

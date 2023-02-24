@@ -56,7 +56,6 @@ export default function Community() {
 
     return (
 
-        <div className='Community-content'>
             <ul className="comment-section">
                 <div>
                     <div className="starsec"></div>
@@ -72,7 +71,7 @@ export default function Community() {
                     <a className="avatar" href="/">
                         <img src={admin} width="35" alt="Profile Avatar" title="Autobot Admin" />
                     </a>
-                    <p>Please maintain dicipline and be polite</p>
+                    <p className='box'>Certainly, we will do our best to maintain discipline in the comment section.<br></br> It's important to keep the discussion civil and respectful towards others' opinions and beliefs. Thank you.</p>
                 </li>
                 {/* Authentication */}
                 {/* {
@@ -109,6 +108,5 @@ export default function Community() {
                 }
 
             </ul>
-        </div>
     )
 }

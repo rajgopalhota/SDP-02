@@ -1,6 +1,6 @@
 .postingcomments{
   background-color: #1a660058;
-  padding: 2%;
+  padding: 1%;
   border: 1px solid white;
   border-radius: 14px;
 }
@@ -13,7 +13,7 @@
   list-style: none;
   max-width: 100%;
   width: 100%;
-  margin: 5px auto;
+  margin: 0px auto;
   padding: 10px;
 }
 .comment{
@@ -120,16 +120,20 @@
 }
 
 .comment.user-comment p{
+  font-weight: normal;
+  text-align: justify;
   border-radius: 14px;
-  background-color:  #f3f3f3;
+  background-color:  #00526e5b;
+  color: white;
 }
 .main-body-light .comment.user-comment p{
   transition: all ease-in-out 2s;
   background-color:  #520089;
-  color: white;
 }
 
 .comment.author-comment p{
+  font-weight: normal;
+  text-align: justify;
   border: 2px solid rgb(255, 255, 255);
   border-radius: 14px;
   background-color:  #ffffffc1;
@@ -328,4 +332,28 @@ footer a.tz:after{
 
 @media (max-width: 1024px) {
   footer{ display:none;}
+}
+
+
+.postingcomments textarea{
+  color: #520089;
+  width: 100%;
+  background-color: transparent;
+  font-size: 1.1em;
+  border: none;
+  border-bottom: 2px solid white;
+  margin-bottom: 1em;
+}
+.postingcomments button{
+  border-radius: 24px;
+  margin: 13px;
+  margin-left: 3em;
+  background-color: #740086;
+  color: white;
+}
+.main-body-dark .postingcomments textarea{
+  color: white;
+}
+.main-body-dark .postingcomments button{
+  background-color: #eb5200;
 }
