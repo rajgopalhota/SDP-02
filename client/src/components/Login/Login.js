@@ -116,7 +116,7 @@ export default function Index() {
     <div className="LoginMech">
       <NavLink to="/autobots/home">
         <div className="navigatetohome">
-          <i class="fa fa-home" aria-hidden="true"></i>
+          <i className="fa fa-home" aria-hidden="true"></i>
         </div>
       </NavLink>
       <div className={ani}>

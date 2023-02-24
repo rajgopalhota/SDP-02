@@ -25,7 +25,6 @@ export default function Contact() {
   const handlecontact = (e) => {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
-    console.log(data.get("name"),"dhfcgyuhy890iughui90i")
     axios
       .post("http://localhost:2003/api/contact", {
         username: data.get("name"),
@@ -117,8 +116,8 @@ export default function Contact() {
             <span className="circle two"></span>
 
             <form
-            onSubmit={handlecontact}
-              autocomplete="off"
+              onSubmit={handlecontact}
+              autoComplete="off"
               className="contactcomp-formtag"
             >
               <h3 className="contactcomp-title">Contact us</h3>
@@ -129,19 +128,19 @@ export default function Contact() {
                   className="contactcomp-input"
                   onClickCapture={handleonsignin}
                   {...register("name", {
-                                    required: "username is required",
-                                    minLength: {
-                                      value: 3,
-                                     message: "Username must be atleast 3 characters long...",
-                                    },
-                                    maxLength: {
-                                      value: 30,
-                                      message: "Username must be atmost 30 characters long...",
-                                    },
-                                  })}
+                    required: "username is required",
+                    minLength: {
+                      value: 3,
+                      message: "Username must be atleast 3 characters long...",
+                    },
+                    maxLength: {
+                      value: 30,
+                      message: "Username must be atmost 30 characters long...",
+                    },
+                  })}
                 />
-              <p id="kliu">{errors.name?.message}</p>
-                <label for="">Username</label>
+                <p id="kliu">{errors.name?.message}</p>
+                <label htmlFor="">Username</label>
                 <span>Username</span>
               </div>
               <div className={sub}>
@@ -160,7 +159,7 @@ export default function Contact() {
                   })}
                 />
                 <p id="kliu">{errors.email?.message}</p>
-                <label for="">Email</label>
+                <label htmlFor="">Email</label>
                 <span>Email</span>
               </div>
               <div className={sub}>
@@ -179,10 +178,10 @@ export default function Contact() {
                 />
                 <p id="kliu">{errors.phone?.message}</p>
 
-                <label for="">Phone</label>
+                <label htmlFor="">Phone</label>
                 <span>Phone</span>
               </div>
-              <div className={sub} textarea>
+              <div className={sub}>
                 <textarea
                   name="message"
                   className="contactcomp-input"
@@ -201,7 +200,7 @@ export default function Contact() {
                 ></textarea>
                 <p id="kliu">{errors.text?.message}</p>
 
-                <label for="">Message</label>
+                <label htmlFor="">Message</label>
                 <span>Message</span>
               </div>
               <input type="submit" value="Send" className="btn" />

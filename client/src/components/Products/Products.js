@@ -9,15 +9,15 @@ export default function Products() {
             <div className='ProductsPage'>
           <div className="product-container">
             {carList.map(item => (
-              <div className="product-card">
+              <div className="product-card" key={item.id}>
                 <div className="product-imgBx">
-                  <img key={item.id} alt="" src={item.img}></img> 
+                  <img  alt="" src={item.img}></img> 
                 </div>
                 <div className="product-contentBx">
-                  <h2 key={item.id}>{item.title}</h2> 
+                  <h2>{item.title}</h2> 
                   <div className="product-size">
                     <h3>Price :</h3>
-                    <span key={item.id}>{item.price}</span> 
+                    <span>{item.price}</span> 
                     <span>Lakhs</span>
                     <span></span>
                     <span></span>

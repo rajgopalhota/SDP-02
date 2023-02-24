@@ -24,21 +24,23 @@ export default function Spare() {
         {/* <h1>Welocme to Autobots Repair Services</h1> */}
         <form action="" method="">
           <table>
-            <tr>
-              <td>
-                <select name="dropdown" id='spare-dropdown' onChange={handleOnChange}>
-                  <option value="category" selected>All</option>
-                  <option value="accessories">Accessories</option>
-                  <option value="light">Lights</option>
-                  <option value="parts">Parts</option>
-                  <option value="oil">Oils</option>
-                  <option value="mirror">Mirrors</option>
-                </select>
-              </td>
-              <td>
-                <button className="btn" onClick={handlePro}>GO</button>
-              </td>
-            </tr>
+            <tbody>
+              <tr>
+                <td>
+                  <select name="dropdown" id='spare-dropdown' onChange={handleOnChange}>
+                    <option value="category">All</option>
+                    <option value="accessories">Accessories</option>
+                    <option value="light">Lights</option>
+                    <option value="parts">Parts</option>
+                    <option value="oil">Oils</option>
+                    <option value="mirror">Mirrors</option>
+                  </select>
+                </td>
+                <td>
+                  <button className="btn" onClick={handlePro}>GO</button>
+                </td>
+              </tr>
+            </tbody>
           </table>
         </form>
 
@@ -47,15 +49,15 @@ export default function Spare() {
           <div className="product-container">
             {
               filterList.map(item => (
-                <div className="product-card">
+                <div className="product-card" key={item.id} >
                   <div className="product-imgBx">
-                    <img key={item.id} alt="" src={item.img}></img>
+                    <img alt="" src={item.img}></img>
                   </div>
                   <div className="product-contentBx">
-                    <h2 key={item.id}>{item.title}</h2>
+                    <h2>{item.title}</h2>
                     <div className="product-size">
                       <h3>Price :</h3>
-                      <span key={item.id}>{item.price}&nbsp;</span>
+                      <span>{item.price}&nbsp;</span>
                       <span></span>
                       <span>RS</span>
                       <span></span>

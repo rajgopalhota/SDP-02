@@ -62,59 +62,61 @@ export default function Repair(props) {
         <h1>Welocme to Autobots Repair Services</h1>
         <form onSubmit={handleRepair}>
           <table>
-            <tr>
-              <td>
-                <label>Name:</label>
-              </td>
-              <td>
-                <input type="text" name="name" />
-              </td>
-            </tr>
+            <tbody>
+              <tr>
+                <td>
+                  <label>Name:</label>
+                </td>
+                <td>
+                  <input type="text" name="name" />
+                </td>
+              </tr>
 
-            <tr>
-              <td>
-                <label>PhoneNumber:</label>
-              </td>
-              <td>
-                <input type="number" name="phone" />
-              </td>
-            </tr>
+              <tr>
+                <td>
+                  <label>PhoneNumber:</label>
+                </td>
+                <td>
+                  <input type="number" name="phone" />
+                </td>
+              </tr>
 
-            <tr>
-              <td>
-                <label>CarName:</label>
-              </td>
-              <td>
-                <input type="text" name="carname" />
-              </td>
-            </tr>
+              <tr>
+                <td>
+                  <label>CarName:</label>
+                </td>
+                <td>
+                  <input type="text" name="carname" />
+                </td>
+              </tr>
 
-            <tr>
-              <td>
-                <label>Date of request:</label>
-              </td>
-              <td>
-                <input type="date" name="date" min={disablePastDate()}  />
-              </td>
-            </tr>
+              <tr>
+                <td>
+                  <label>Date of request:</label>
+                </td>
+                <td>
+                  <input type="date" name="date" min={disablePastDate()} />
+                </td>
+              </tr>
 
-            <tr>
-              <td>
-                <label>Time :</label>
-              </td>
-              <td>
-                <input type="time" name="time"  />
-              </td>
-            </tr>
+              <tr>
+                <td>
+                  <label>Time :</label>
+                </td>
+                <td>
+                  <input type="time" name="time" />
+                </td>
+              </tr>
 
-            <tr>
-              <td>
-                <label>City :</label>
-              </td>
-              <td>
-                <input type="text" name="city" />
-              </td>
-            </tr>
+              <tr>
+                <td>
+                  <label>City :</label>
+                </td>
+                <td>
+                  <input type="text" name="city" />
+                </td>
+              </tr>
+            </tbody>
           </table>
           <button className="btn">Book</button>
         </form>

@@ -51,9 +51,9 @@ function App() {
       </div>
       <div className="App">
         <div className="darkmode">
-          <label class="switch">
+          <label className="switch">
             <input type="checkbox" onClick={toggleDarkMode} />
-            <span class="slider"></span>
+            <span className="slider"></span>
           </label>
         </div>
         <AuthProvider>
@@ -62,7 +62,7 @@ function App() {
 
           <Routes>
             <Route path="" element={<Landing />}></Route>
-            <Route path="autobots" element={<Autobot showAlert={showAlert} alert={alert} />}>
+            <Route path="autobots/*" element={<Autobot showAlert={showAlert} alert={alert} />}>
               <Route path="home" element={<Home />} />
               <Route path="products" element={<Products />} />
               <Route path="aboutus" element={<About />} />

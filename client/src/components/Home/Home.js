@@ -30,55 +30,55 @@ export default function Home() {
       </div>
 
 
-      <div class="home-container-portfolio-faqsautobot" id='faqsautobot'>
+      <div className="home-container-portfolio-faqsautobot" id='faqsautobot'>
         <h1>Frequently Asked Questions</h1>
-        <div class="faq-question">
-          <input id="q1" type="checkbox" class="faqpanel" />
-          <div class="plus">+</div>
-          <label for="q1" class="faqpanel-title">Will I get an appointment at my preferred date & time?</label>
-          <div class="faqpanel-content">Our workshops are resuming operations in line with regional advisories.
+        <div className="faq-question">
+          <input id="q1" type="checkbox" className="faqpanel" />
+          <div className="plus">+</div>
+          <label htmlFor="q1" className="faqpanel-title">Will I get an appointment at my preferred date & time?</label>
+          <div className="faqpanel-content">Our workshops are resuming operations in line with regional advisories.
             We'll be doing our best to attend to all vehicles, although with reduced staff on duty to
             ensure physical distancing. We would request you to check appointment slots availability on
             the With You Hamesha app or get in touch with your dealership to set up an appointment.</div>
         </div>
 
-        <div class="faq-question">
-          <input id="q2" type="checkbox" class="faqpanel" />
-          <div class="plus">+</div>
-          <label for="q2" class="faqpanel-title">How does Autobots handle customer feedback?</label>
-          <div class="faqpanel-content">Autobots has always been a customer-centric company. We value your feedback and strive to address your concerns and feedback with speed and empathy and in a fair and transparent manner.</div>
+        <div className="faq-question">
+          <input id="q2" type="checkbox" className="faqpanel" />
+          <div className="plus">+</div>
+          <label htmlFor="q2" className="faqpanel-title">How does Autobots handle customer feedback?</label>
+          <div className="faqpanel-content">Autobots has always been a customer-centric company. We value your feedback and strive to address your concerns and feedback with speed and empathy and in a fair and transparent manner.</div>
         </div>
 
-        <div class="faq-question">
-          <input id="q3" type="checkbox" class="faqpanel" />
-          <div class="plus">+</div>
-          <label for="q3" class="faqpanel-title">How can I send feedback on my experience with a dealer or an individual ?</label>
-          <div class="faqpanel-content">You can send your feedback through telephone or email or through the Queries & Feedback
+        <div className="faq-question">
+          <input id="q3" type="checkbox" className="faqpanel" />
+          <div className="plus">+</div>
+          <label htmlFor="q3" className="faqpanel-title">How can I send feedback on my experience with a dealer or an individual ?</label>
+          <div className="faqpanel-content">You can send your feedback through telephone or email or through the Queries & Feedback
             Section of this website or through a feedback form available at all our dealer showrooms and workshops.</div>
         </div>
 
-        <div class="faq-question">
-          <input id="q4" type="checkbox" class="faqpanel" />
-          <div class="plus">+</div>
-          <label for="q4" class="faqpanel-title">
+        <div className="faq-question">
+          <input id="q4" type="checkbox" className="faqpanel" />
+          <div className="plus">+</div>
+          <label htmlFor="q4" className="faqpanel-title">
             How long will it take for my communication to be responded to ?</label>
-          <div class="faqpanel-content">Our Customer Care team shall endeavor to reply to you within 1 working day.</div>
+          <div className="faqpanel-content">Our Customer Care team shall endeavor to reply to you within 1 working day.</div>
         </div>
 
-        <div class="faq-question">
-          <input id="q5" type="checkbox" class="faqpanel" />
-          <div class="plus">+</div>
-          <label for="q5" class="faqpanel-title">Returns and Refunds</label>
-          <div class="faqpanel-content">Autobots provides you easy option of return and refund if you are not satisfied with your order.
+        <div className="faq-question">
+          <input id="q5" type="checkbox" className="faqpanel" />
+          <div className="plus">+</div>
+          <label htmlFor="q5" className="faqpanel-title">Returns and Refunds</label>
+          <div className="faqpanel-content">Autobots provides you easy option of return and refund if you are not satisfied with your order.
             Below are some useful links to get more information on the common issues around return.
             Please note, items can only be returned during the return period.</div>
         </div>
 
-        <div class="faq-question">
-          <input id="q6" type="checkbox" class="faqpanel" />
-          <div class="plus">+</div>
-          <label for="q6" class="faqpanel-title">What does a Autobots warranty cover?</label>
-          <div class="faqpanel-content"> The costs of repairing or replacing the factory fitted mechanical & electrical
+        <div className="faq-question">
+          <input id="q6" type="checkbox" className="faqpanel" />
+          <div className="plus">+</div>
+          <label htmlFor="q6" className="faqpanel-title">What does a Autobots warranty cover?</label>
+          <div className="faqpanel-content"> The costs of repairing or replacing the factory fitted mechanical & electrical
             components of your vehicle that have suffered sudden failure (including as a result of water ingress of a covered part)
             during the period of cover.</div>
         </div>
