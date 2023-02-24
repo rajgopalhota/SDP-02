@@ -79,8 +79,8 @@ export default function Index() {
               const username = response.data.username;
               const authtoken = response.data.token;
               console.log(response.data)
-              localStorage.setItem('token', response.data.token);
-              console.log(localStorage.getItem('token'));
+              localStorage.setItem('user', response.data.username);
+              // console.log(localStorage.getItem('user'));
               auth.login(username);
               navigate("/autobots/home");
               toast.success("Login Successfull", {

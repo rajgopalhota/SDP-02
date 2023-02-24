@@ -20,7 +20,16 @@ import 'react-toastify/dist/ReactToastify.css'
 
 import Community from "./components/Community/Community";
 function App() {
-  
+  // const auth = useAuth();
+  // useEffect(() => {
+  //   const loggedInUser = localStorage.getItem('user');
+  //   console.log(loggedInUser)
+  //   if (loggedInUser) {
+  //     auth.login(loggedInUser);
+  //   }
+  // },[auth]);
+
+
   const [alert, setAlert] = useState(null);
   const showAlert = (message, type) => {
     setAlert({
