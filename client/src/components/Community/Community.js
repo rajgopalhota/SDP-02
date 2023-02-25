@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import './Community.css'
 import admin from './Assets/profilepic.png'
-import rabbit from './Assets/rabbit.png'
+import rabbit from './Assets/typo.gif'
 import Male from './Assets/man.png'
 import Female from './Assets/woman.png'
 import { useState } from 'react';
