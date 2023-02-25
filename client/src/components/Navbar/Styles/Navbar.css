@@ -57,16 +57,6 @@ nav {
   padding: 0 18px;
 }
 
-section {
-  mix-blend-mode: overlay;
-  position: fixed;
-  padding: 0;
-  margin: 0;
-  background: linear-gradient(90deg, #13669e, rgb(0, 2, 122));
-  min-width: 100vw;
-  min-height: 100vh;
-  animation: animate linear 2s infinite;
-}
 @keyframes animate {
   0% {
     filter: hue-rotate(0deg);
