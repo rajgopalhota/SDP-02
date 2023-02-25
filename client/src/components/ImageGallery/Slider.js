@@ -26,12 +26,12 @@ export default function Slider() {
           Contact us
         </NavLink>
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <NavLink to="/autobots/products" >
+        <NavLink to="/community" >
           <span></span>
           <span></span>
           <span></span>
           <span></span>
-          What's new
+          Community
         </NavLink>
       </div>
 

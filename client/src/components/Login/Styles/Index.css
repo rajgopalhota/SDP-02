@@ -207,7 +207,22 @@ form.sign-in-form {
   border-radius: 50%;
   z-index: 6;
 }
-
+.input-field-radio{
+  accent-color: rgb(172, 49, 0);
+}
+.input-field-radio input{
+  display: inline-block;
+  margin: 0 1rem;
+}
+.input-field-radio label{
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+.input-field-radio span{
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: rgb(138, 232, 255);
+}
 .image {
   width: 100%;
   transition: transform 1.1s ease-in-out;

@@ -16,6 +16,10 @@ const signuptemplate = new mongoose.Schema({
     type: String,
     required: true,
   },
+  gender: {
+    type: String,
+    required: true,
+  },
   date: {
     type: Date,
     default: Date.now,

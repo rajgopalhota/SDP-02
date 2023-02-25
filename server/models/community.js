@@ -25,6 +25,10 @@ const community = new mongoose.Schema({
     type: String,
     default: currentDate,
   },
+  gender: {
+    type: String,
+    default: "Male",
+  },
 });
 
 module.exports = mongoose.model("Community", community);

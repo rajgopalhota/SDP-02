@@ -1,10 +1,15 @@
 .bodyland {
+  transition: all ease-in-out 1s;
   background: url(./bg.jpg) no-repeat center center fixed;
   margin: 0;
   height: 100vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
+}
+.main-body-light .bodyland{
+  transition: all ease-in-out 1s;
+  background: url(./litebg.jpg) no-repeat center center fixed;
 }
 
 .background-one {

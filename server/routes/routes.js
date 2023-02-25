@@ -20,6 +20,7 @@ router.post("/register", async (req, res) => {
       email: req.body.email,
       phone: req.body.phone,
       password: securepassword,
+      gender: req.body.gender,
     });
     signupuser
       .save()
@@ -196,16 +197,21 @@ router.get("/community", async (req, res) => {
 router.post("/comment", async (req, res) => {
   const username = req.body.username;
   const msg = req.body.message;
+  const time = req.body.date;
+  const usercheck = await signuptemp.findOne({ username: username });
   let comment;
   if (username != null) {
     comment = new communitymodel({
       username: username,
       message: msg,
+      date: time,
+      gender: usercheck.gender,
     });
   }
   else{
      comment = new communitymodel({
       message: msg,
+      date: time,
     });
   }
   try {

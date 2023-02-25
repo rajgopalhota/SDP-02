@@ -20,6 +20,7 @@ export default function Index() {
         email: data.get("regemail"),
         phone: data.get("regphone"),
         password: data.get("regpassword"),
+        gender: data.get("gender"),
       })
       .then((response) => {
         if (response.data === "userexist") {
@@ -38,10 +39,10 @@ export default function Index() {
           });
         }
         else {
-          window.location.reload();
           toast.info("Registration Successfull", {
             position: "bottom-right",
           });
+          window.location.reload();
         }
       })
       .catch((err) => {
@@ -183,6 +184,13 @@ export default function Index() {
                   required
                 />
               </div>
+              <div className="input-field-radio">
+                <span>Gender</span>
+                <input type="radio" id="html" name="gender" value="Male" />
+                <label htmlFor="html">Male</label>
+                <input type="radio" id="css" name="gender" value="Female" />
+                <label htmlFor="css">Female</label>
+              </div>
               <input type="submit" className="btn" value="Sign up" />
               <p className="social-text">Or Sign up with social platforms</p>
               <div className="social-media">
@@ -208,7 +216,7 @@ export default function Index() {
             <div className="content">
               <h3>New here ?</h3>
               <p>
-              Thank you for choosing Autobot as your go-to destination for all your automobile and spare parts needs.
+                Thank you for choosing Autobot as your go-to destination for all your automobile and spare parts needs.
 
               </p>
               <button
@@ -225,7 +233,7 @@ export default function Index() {
             <div className="content">
               <h3>One of us ?</h3>
               <p>
-              We are pleased to invite you to register with Autobots, the leading automobile company in the industry.
+                We are pleased to invite you to register with Autobots, the leading automobile company in the industry.
               </p>
               <button
                 className="btn transparent"
