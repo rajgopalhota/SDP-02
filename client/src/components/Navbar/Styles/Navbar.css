@@ -1,27 +1,25 @@
 nav {
   color: aliceblue;
   font-family: "Poppins", sans-serif;
-
-  height: 1%;
   font-weight: 500;
   border-bottom: 2px solid rgba(255, 255, 255, 0.183);
   font-size: 24px;
   box-shadow: 0 0 8px rgb(129, 129, 129);
   background-color: transparent;
 }
-.navcart{
+.navcart {
   display: inline-block;
   margin-right: 27px;
 }
-.navcart span{
+.navcart span {
   margin-right: 25px;
   font-size: 0;
 }
-.navcart .active{
+.navcart .active {
   font-weight: 900;
   background-color: transparent;
 }
-.active span{
+.active span {
   transition: all ease-in 0.5s;
   display: inline-block;
   font-size: 18px;
@@ -34,8 +32,7 @@ nav {
   z-index: 999;
   overflow: hidden;
   top: 0;
-  width: 100%;
-  height: 3em;
+  height: 2.6em;
 }
 .active {
   transition: all ease-in-out 0.5s;
@@ -71,37 +68,10 @@ nav {
 
 nav button a {
   color: white;
-  font-size: 22px;
+  font-size: 12px;
   text-decoration: none;
 }
 
-
-@media screen and (max-width: 400px) {
-  .navbar {
-    height: auto;
-  }
-  section {
-    display: none;
-  }
-}
-@media screen and (max-width: 1200px) {
-  .navbar {
-    height: auto;
-  }
-  section {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  section {
-    display: none;
-  }
-  .navbar {
-    height: auto;
-  }
-  
-}
 /* The switch - the box around the slider */
 .darkmode .switch {
   z-index: 999;
@@ -133,7 +103,7 @@ nav button a {
   right: 0;
   bottom: 0;
   background-color: var(--background);
-  transition: .5s;
+  transition: 0.5s;
   border-radius: 30px;
   border: 2px solid white;
   box-shadow: 0 0 12px black;
@@ -149,7 +119,7 @@ nav button a {
   bottom: 15%;
   box-shadow: inset 8px -4px 0px 0px #fff000;
   background: var(--background);
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .darkmode input:checked + .slider {
@@ -159,4 +129,22 @@ nav button a {
 .darkmode input:checked + .slider:before {
   transform: translateX(100%);
   box-shadow: inset 15px -4px 0px 15px #fff000;
+}
+
+@media screen and (max-width: 400px) {
+  .navbar {
+    height: auto;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .navbar {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .navbar {
+    background: rgb(0, 0, 29);
+    height: auto;
+  }
 }

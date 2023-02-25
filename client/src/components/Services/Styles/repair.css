@@ -2,7 +2,9 @@
   font-weight: 900;
   font-size: 32px;
 }
-
+.wholerepaircont{
+  overflow-x: hidden;
+}
 .repair-container p,
 label {
   text-align: justify;
@@ -65,4 +67,39 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 input[type="time"]::-webkit-calendar-picker-indicator {
   filter: invert(1);
   cursor: pointer;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .repair-container {
+    margin: 18px 0;
+    width: 100%;
+    height: fit-content;
+    padding: 3%;
+    border-radius: 6px;
+  }
+  .repair-container input {
+    width: 100%;
+    font-weight: 300;
+    font-size: 0.75rem;
+    transition: 0.3s;
+  }
+  .repair-container table td {
+    padding: 5px;
+  }
+  .repair-container label {
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+  }
+  .repair-container h1{
+    font-weight: 600;
+    font-size: 16px;
+  }
+  .repair-container button {
+    width: 30%;
+    height: 40px;
+    margin-top: 5px;
+    font-size: 12px;
+  }
 }

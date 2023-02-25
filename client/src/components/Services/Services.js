@@ -56,9 +56,9 @@ export default function Repair(props) {
   };
 
   return (
-    <div>
+    <div className="wholerepaircont">
+      
       <Mapslider />
-
       <div className="repair-container ">
         <h1>Welocme to Autobots Repair Services</h1>
         <form onSubmit={handleRepair}>

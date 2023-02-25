@@ -41,3 +41,9 @@
 .rating:hover > input:checked ~ label:before {
   opacity: 0.4;
 }
+@media only screen and (max-width: 600px) {
+  .Rating-container {
+    margin: 12px 8px;
+    width: 100%;
+  }
+}

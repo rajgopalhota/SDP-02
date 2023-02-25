@@ -69,3 +69,10 @@
 .map:nth-child(5) {
   animation-delay: 16s;
 }
+
+
+@media only screen and (max-width: 600px) {
+  .map-conatiner {
+    display: none;
+  }
+}

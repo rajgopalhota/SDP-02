@@ -3,7 +3,6 @@
   margin-top: 1%;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   min-height: 100vh;
 }
 .Autobot-catalog h1 {
@@ -221,4 +220,15 @@
   opacity: 1;
   transform: translateY(0px);
   transition-delay: 0.7s;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  .Autobot-catalog h1 {
+    margin:12px 3px;
+    mix-blend-mode: overlay;
+    text-transform: uppercase;
+    font-size: 35px;
+  }
 }
