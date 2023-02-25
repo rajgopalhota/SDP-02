@@ -2,7 +2,6 @@
   padding: 22px;
   position: absolute;
   margin-left: 5%;
-  /* margin-top: 3%; */
   backdrop-filter: blur(10px);
   width: 42%;
   border-radius: 12px;
@@ -10,7 +9,7 @@
 }
 .Aboutani{
   min-height: 100vh;
-  margin-top: 7%;
+  margin-top: 5%;
   overflow: hidden;
 }
 .aboutmove1{
@@ -96,17 +95,14 @@
 }
 
 .abt-container1 p {
-  /* color: aliceblue; */
   padding-left: 25%;
   text-align: justify;
 }
 .abt-container p {
-  /* color: aliceblue; */
   padding-left: 25%;
   text-align: justify;
 }
 .abt-container2 p {
-  /* color: aliceblue; */
   padding-left: 25%;
   text-align: justify;
 }
@@ -180,4 +176,33 @@
 	100% {
 		--angle: 420deg;
 	}
+}
+
+
+
+/* Responsive */
+@media only screen and (max-width: 600px) {
+  .abt-container1,.abt-container2, .abt-container {
+    margin-top: 0;
+    padding: 22px;
+    position: static;
+    margin-left: 0%;
+    margin: 10px 2px;
+    width: 99%;
+  }
+  .abt-container img, .abt-container1 img, .abt-container2 img{
+    border-radius: 100%;
+    width: 42%;
+    position: static;
+    margin: auto;
+  }
+  .abt-container p, .abt-container1 p, .abt-container2 p {
+    margin-top: 10px;
+    padding-left: 0%;
+    text-align: justify;
+  }
+  .abt-container2 a{
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
 }

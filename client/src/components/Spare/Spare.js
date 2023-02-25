@@ -21,7 +21,7 @@ export default function Spare() {
   return (
     <div className='spareboxpro'>
       <div className="spare-container">
-        {/* <h1>Welocme to Autobots Repair Services</h1> */}
+        <h1>Welocme to Autobots Repair Services</h1>
         <form action="" method="">
           <table>
             <tbody>

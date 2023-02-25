@@ -1,12 +1,9 @@
 .spare-container h1 {
-  /* color: white; */
   font-weight: 900;
   font-size: 32px;
-  /* mix-blend-mode: overlay; */
 }
 .spareboxpro{
   overflow-x: hidden;
-
 }
 .spare-container {
   animation: abtfloaterxr 1.5s;
@@ -15,10 +12,6 @@
   margin-right: auto;
   width: 70%;
   height: fit-content;
-  /* padding: 3%;
-    border-radius: 12px;
-    border: 2px solid white; */
-  /* background-color: rgba(0, 0, 0, 0.242); */
   align-items: center;
   text-align: center;
 }
@@ -36,29 +29,12 @@
   transition: 0.3s;
 }
 
-.spare-container input {
-  text-align: center;
-  width: 100%;
-  outline: none;
-  border: 2px solid #fafafa;
-  background: none;
-  padding: 0.9rem 1.6rem;
-  color: #fff;
-  font-weight: 500;
-  font-size: 0.95rem;
-  letter-spacing: 0.5px;
-  border-radius: 25px;
-  transition: 0.3s;
-}
 
 .spare-container option {
   text-align: center;
   background: rgba(26, 25, 25, 0.742);
 }
 
-#spare-dropdown * {
-  border-radius: 25px;
-}
 .spare-container table {
   margin-left: auto;
   margin-right: auto;
@@ -73,4 +49,40 @@
 .spare-container ::placeholder {
   text-align: center;
   color: rgb(254, 252, 252);
+}
+
+
+@media only screen and (max-width: 600px) {
+  .spare-container h1 {
+    font-weight: 600;
+    font-size: 12px;
+  }
+  .spare-container {
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+    text-align: center;
+  }
+  .spare-container table {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .spare-container table td {
+    padding: 0 0;
+  }
+  .spare-container button {
+    height: 35px;
+    width: 60px;
+    margin-left: 5px;
+  }
+  .spare-container select {
+    width: 100px;
+    padding: 8px 8px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 12px;
+  }
 }

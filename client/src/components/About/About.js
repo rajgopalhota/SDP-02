@@ -8,19 +8,20 @@ export default function About() {
     <div className="Aboutani">
       <div className="aboutmove1">
         <div className="abt-container box">
-          <a
-            href="https://www.instagram.com/raja.2k3/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={gopalpic} alt=""></img>
-          </a>
+          
           <a
             href="https://www.linkedin.com/in/rajgopalhota/"
             target="_blank"
             rel="noreferrer"
           >
             RAJGOPAL HOTA
+          </a>
+          <a
+            href="https://www.instagram.com/raja.2k3/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={gopalpic} alt=""></img>
           </a>
           <p>
             <li>Animation effects</li>
@@ -33,19 +34,20 @@ export default function About() {
       </div>
       <div className="aboutmove2">
         <div className="abt-container1 box">
-          <a
-            href="https://www.instagram.com/raja_.rajendra_/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={rajpic} alt=""></img>
-          </a>
+
           <a
             href="https://www.linkedin.com/in/raja-esha-hari-shanmuka-rajendra-772689248/"
             target="_blank"
             rel="noreferrer"
           >
             RAJA RAJENDRA
+          </a>
+          <a
+            href="https://www.instagram.com/raja_.rajendra_/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={rajpic} alt=""></img>
           </a>
 
           <p>
@@ -59,19 +61,20 @@ export default function About() {
       </div>
       <div className="aboutmove3">
         <div className="abt-container2 box">
-          <a
-            href="https://www.instagram.com/_mn.2k4_/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={manojpic} alt=""></img>
-          </a>
+          
           <a
             href="https://www.linkedin.com/in/manojnaraharisetti/"
             target="_blank"
             rel="noreferrer"
           >
             NARAHARISETTI MANOJ
+          </a>
+          <a
+            href="https://www.instagram.com/_mn.2k4_/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={manojpic} alt=""></img>
           </a>
           <p>
             <li>Cart page</li>
