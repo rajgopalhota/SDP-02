@@ -6,13 +6,14 @@ import Male from './Assets/man.png'
 import Female from './Assets/woman.png'
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom'
+import Loader from './../Loader/Loader'
 import axios from 'axios'
 import { useAuth } from "../../Middleware/auth";
 import { toast } from "react-toastify";
-import {AutobotBackend} from './../../Middleware/Helper'
+import { AutobotBackend } from './../../Middleware/Helper'
 
 export default function Community() {
-
+    const [submitting, setSubmitting] = useState(true)
     function currentDateTime() {
         const today = new Date();
         const dd = String(today.getDate()).padStart(2, "0");
@@ -33,6 +34,7 @@ export default function Community() {
     const [result, setResult] = useState([]);
     const handleComment = (e) => {
         e.preventDefault();
+        setSubmitting(false)
         const data = new FormData(e.currentTarget);
         axios
             .post(`${AutobotBackend}/api/comment`, {
@@ -103,6 +105,7 @@ export default function Community() {
                         <h1>You need to Login to post comments</h1>
                     )}
                 {
+                    submitting?(
                     !!auth.user && (
                         <li className="write-new postingcomments">
                             <form onSubmit={handleComment}>
@@ -113,22 +116,24 @@ export default function Community() {
                                 </div>
                             </form>
                         </li>
-                    )
+                    )):<Loader />
                 }
                 {/* User comments */}
                 {
-                    result.map((obj, key) => (
-                        <li className="comment author-comment" key={key} >
-                            <div className="info">
-                                <a href="/">@{obj.username}</a>
-                                <span>{obj.date}</span>
-                            </div>
-                            <a className="avatar" href="/">
-                                <img src={obj.gender==="Male"?Male:Female} width="35" alt="Profile Avatar" title={obj.username} />
-                            </a>
-                            <p>{obj.message}</p>
-                        </li>
-                    ))
+                    result.length ? (
+                        result.map((obj, key) => (
+                            <li className="comment author-comment" key={key} >
+                                <div className="info">
+                                    <a href="/">@{obj.username}</a>
+                                    <span>{obj.date}</span>
+                                </div>
+                                <a className="avatar" href="/">
+                                    <img src={obj.gender === "Male" ? Male : Female} width="35" alt="Profile Avatar" title={obj.username} />
+                                </a>
+                                <p>{obj.message}</p>
+                            </li>
+                        ))
+                    ) : <Loader />
                 }
 
             </ul>

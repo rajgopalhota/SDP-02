@@ -21,7 +21,7 @@ input {
   border-radius: 100px;
   border: 2px solid white;
   position: fixed;
-  z-index: 999;
+  z-index: 5;
 }
 .login-container {
   position: relative;
