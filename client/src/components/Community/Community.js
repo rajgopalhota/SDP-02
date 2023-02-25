@@ -7,8 +7,9 @@ import Female from './Assets/woman.png'
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom'
 import axios from 'axios'
-import { useAuth } from "../auth";
+import { useAuth } from "../../Middleware/auth";
 import { toast } from "react-toastify";
+import {AutobotBackend} from './../../Middleware/Helper'
 
 export default function Community() {
 
@@ -34,7 +35,7 @@ export default function Community() {
         e.preventDefault();
         const data = new FormData(e.currentTarget);
         axios
-            .post("http://localhost:2003/api/comment", {
+            .post(`${AutobotBackend}/api/comment`, {
                 username: auth.user,
                 message: data.get("comment"),
                 date: currentDateTime()
@@ -60,7 +61,7 @@ export default function Community() {
             });
     };
     useEffect(() => {
-        axios.get("http://localhost:2003/api/community", {
+        axios.get(`${AutobotBackend}/api/community`, {
             params: {}
         }).then((response) => {
             console.log(response.data);
