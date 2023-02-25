@@ -4,7 +4,8 @@ import Rating from "../Rating/Rating";
 import "./Styles/repair.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../auth";
+import { useAuth } from "../../Middleware/auth";
+import {AutobotBackend} from './../../Middleware/Helper'
 import { toast } from "react-toastify";
 
 export default function Repair(props) {
@@ -23,7 +24,7 @@ export default function Repair(props) {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
     axios
-      .post("http://localhost:2003/api/repair", {
+      .post(`${AutobotBackend}/api/repair`, {
         username: auth.user,
         name: data.get("name"),
         phone: data.get("phone"),

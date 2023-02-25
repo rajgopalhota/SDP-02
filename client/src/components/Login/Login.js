@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import log from "./Images/audi.png";
 import register from "./Images/mercedes.png";
-import { useAuth } from "././../auth";
+import { useAuth } from "../../Middleware/auth";
 import "./Styles/Index.css";
 import axios from "axios";
+import {AutobotBackend} from './../../Middleware/Helper'
 import { toast } from "react-toastify";
 
 export default function Index() {
@@ -15,7 +16,7 @@ export default function Index() {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
     axios
-      .post("http://localhost:2003/api/register", {
+      .post(`${AutobotBackend}/api/register`, {
         username: data.get("reguser"),
         email: data.get("regemail"),
         phone: data.get("regphone"),
@@ -58,7 +59,7 @@ export default function Index() {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
     axios
-      .post("http://localhost:2003/api/login", {
+      .post(`${AutobotBackend}/api/login`, {
         username: data.get("loginuser"),
         password: data.get("loginpassword"),
       })

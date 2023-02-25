@@ -11,9 +11,9 @@ import About from "./components/About/About";
 import Spare from "./components/Spare/Spare";
 import Home from "./components/Home/Home";
 import Cart from "./components/Cart/Cart";
-import { AuthProvider } from "./components/auth";
+import { AuthProvider } from "./Middleware/auth";
 import { useState } from "react";
-import RequiredAuth from "./components/RequiredAuth";
+import RequiredAuth from "./Middleware/RequiredAuth";
 import Community from './components/Community/Community';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'

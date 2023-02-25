@@ -6,6 +6,7 @@ import phone from "./Assets/phone.png";
 import { toast } from "react-toastify";
 import axios from "axios";
 import { useForm } from "react-hook-form";
+import {AutobotBackend} from './../../Middleware/Helper'
 
 export default function Contact() {
 
@@ -26,7 +27,7 @@ export default function Contact() {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
     axios
-      .post("http://localhost:2003/api/contact", {
+      .post(`${AutobotBackend}/api/contact`, {
         username: data.get("name"),
         email: data.get("email"),
         phone: data.get("phone"),

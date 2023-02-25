@@ -3,7 +3,7 @@ import { NavLink, Link, useNavigate } from "react-router-dom";
 import logo from "./Assets/NavLogo.jpg";
 import cartlogo from "./Assets/carts.png";
 import "./Styles/Navbar.css";
-import { useAuth } from "../auth";
+import { useAuth } from "../../Middleware/auth";
 import { toast } from "react-toastify";
 export default function Navbar(props) {
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import Slider from '../ImageGallery/Slider'
-import { useAuth } from '../auth'
+import { useAuth } from '../../Middleware/auth'
 import './Styles/Homestyle.css'
 export default function Home() {
   const auth = useAuth();
