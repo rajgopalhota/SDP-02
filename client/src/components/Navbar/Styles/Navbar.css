@@ -60,11 +60,9 @@ nav {
 section {
   mix-blend-mode: overlay;
   position: fixed;
-  z-index: -998;
-  backdrop-filter: blur(0px);
   padding: 0;
   margin: 0;
-  background: linear-gradient(90deg, #04619f57, rgba(68, 171, 255, 0.292));
+  background: linear-gradient(90deg, #13669e, rgb(0, 2, 122));
   min-width: 100vw;
   min-height: 100vh;
   animation: animate linear 2s infinite;
