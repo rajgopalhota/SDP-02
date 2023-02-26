@@ -31,7 +31,7 @@ export default function Community() {
         window.scrollTo(0, 0);
     };
     const auth = useAuth();
-    const [result, setResult] = useState([]);
+    const [result, setResult] = useState(null);
     const handleComment = (e) => {
         e.preventDefault();
         setSubmitting(false)
@@ -120,7 +120,7 @@ export default function Community() {
                 }
                 {/* User comments */}
                 {
-                    result.length ? (
+                    result ? (
                         result.map((obj, key) => (
                             <li className="comment author-comment" key={key} >
                                 <div className="info">
