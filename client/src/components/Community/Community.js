@@ -13,7 +13,6 @@ import { toast } from "react-toastify";
 import { AutobotBackend } from './../../Middleware/Helper'
 
 export default function Community() {
-    const [submitting, setSubmitting] = useState(true)
     function currentDateTime() {
         const today = new Date();
         const dd = String(today.getDate()).padStart(2, "0");
@@ -34,8 +33,8 @@ export default function Community() {
     const [result, setResult] = useState(null);
     const handleComment = (e) => {
         e.preventDefault();
-        setSubmitting(false)
         const data = new FormData(e.currentTarget);
+        e.target.reset();
         axios
             .post(`${AutobotBackend}/api/comment`, {
                 username: auth.user,
@@ -49,7 +48,6 @@ export default function Community() {
                         position: "bottom-right",
                         theme: "dark",
                     });
-                    window.location.reload();
                 } else {
                     toast.info(response.data, {
                         position: "bottom-right",
@@ -72,7 +70,7 @@ export default function Community() {
             console.log(error)
         })
     },
-        []
+        [result]
     );
 
     return (
@@ -105,7 +103,6 @@ export default function Community() {
                         <h1>You need to Login to post comments</h1>
                     )}
                 {
-                    submitting?(
                     !!auth.user && (
                         <li className="write-new postingcomments">
                             <form onSubmit={handleComment}>
@@ -116,7 +113,7 @@ export default function Community() {
                                 </div>
                             </form>
                         </li>
-                    )):<Loader />
+                    )
                 }
                 {/* User comments */}
                 {
