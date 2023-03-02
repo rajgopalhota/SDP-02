@@ -7,6 +7,18 @@ nav {
   box-shadow: 0 0 8px rgb(129, 129, 129);
   background-color: transparent;
 }
+
+nav h3{
+  text-transform: uppercase;
+  margin: auto;
+  letter-spacing: 5px;
+}
+.navbar-brand span{
+  font-size: 36px;
+  font-weight: 500;
+  color: rgb(240, 200, 20);
+  text-shadow: 3px 3px 7px rgb(255, 166, 32);
+}
 .navcart {
   display: inline-block;
   margin-right: 27px;
@@ -135,10 +147,32 @@ nav button a {
   .navbar {
     height: auto;
   }
+  nav h3{
+    text-transform: uppercase;
+    margin: auto;
+    letter-spacing: 2px;
+  }
+  .navbar-brand span{
+    font-size: 26px;
+    font-weight: 500;
+    color: rgb(240, 200, 20);
+    text-shadow: 3px 3px 7px rgb(255, 166, 32);
+  }
 }
 @media screen and (max-width: 1200px) {
   .navbar {
     height: auto;
+  }
+  nav h3{
+    text-transform: uppercase;
+    margin: auto;
+    letter-spacing: 2px;
+  }
+  .navbar-brand span{
+    font-size: 26px;
+    font-weight: 500;
+    color: rgb(240, 200, 20);
+    text-shadow: 3px 3px 7px rgb(255, 166, 32);
   }
 }
 
@@ -147,4 +181,16 @@ nav button a {
     background: rgb(0, 0, 29);
     height: auto;
   }
+  nav h3{
+    text-transform: uppercase;
+    margin: auto;
+    letter-spacing: 2px;
+  }
+  .navbar-brand span{
+    font-size: 26px;
+    font-weight: 500;
+    color: rgb(240, 200, 20);
+    text-shadow: 3px 3px 7px rgb(255, 166, 32);
+  }
 }
+

@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink, Link, useNavigate } from "react-router-dom";
-import logo from "./Assets/NavLogo.jpg";
 import cartlogo from "./Assets/carts.png";
 import "./Styles/Navbar.css";
 import { useAuth } from "../../Middleware/auth";
@@ -24,7 +23,7 @@ export default function Navbar(props) {
       <nav className="navbar navbar-custom navbar-expand-lg navbar-dark">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/autobots/home">
-            <img src={logo} alt="" width={65}></img>
+            <h3><span>A</span>utobots⚡</h3>
           </Link>
           <button
             className="navbar-toggler"
