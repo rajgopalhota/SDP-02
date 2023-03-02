@@ -39,12 +39,15 @@ nav h3{
 }
 
 .navbar {
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(73, 8, 129, 0.158);
   backdrop-filter: blur(12px);
   z-index: 999;
   overflow: hidden;
   top: 0;
   height: 2.6em;
+}
+.main-body-light .navbar{
+  background-color: rgb(9, 0, 75);
 }
 .active {
   transition: all ease-in-out 0.5s;
@@ -58,10 +61,10 @@ nav h3{
 }
 .nav-titles {
   font-size: 25px;
-  color: white;
   margin-left: auto;
   margin-right: auto;
 }
+
 .nav-titles li {
   padding: 0 18px;
 }
@@ -178,7 +181,6 @@ nav button a {
 
 @media screen and (max-width: 800px) {
   .navbar {
-    background: rgb(0, 0, 29);
     height: auto;
   }
   nav h3{
