@@ -23,7 +23,7 @@ export default function Navbar(props) {
       <nav className="navbar navbar-custom navbar-expand-lg navbar-dark">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/autobots/home">
-            <h3><span>A</span>utobots⚡</h3>
+            <h3><p><span>A</span>utobots⚡</p></h3>
           </Link>
           <button
             className="navbar-toggler"

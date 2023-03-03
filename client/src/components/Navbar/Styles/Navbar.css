@@ -9,9 +9,32 @@ nav {
 }
 
 nav h3{
+  width: auto;
+  display: inline-block;
   text-transform: uppercase;
   margin: auto;
   letter-spacing: 5px;
+}
+
+.navbar-brand p{
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: paraAni 2s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes paraAni {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
 }
 .navbar-brand span{
   font-size: 36px;

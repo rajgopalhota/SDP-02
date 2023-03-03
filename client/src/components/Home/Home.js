@@ -14,7 +14,9 @@ export default function Home() {
         }
         {
           !(!auth.user) &&
-          <h1>Welcome {auth.user}</h1>
+            <div class="sign">
+              <h1><span class="fast-flicker">W</span>el<span class="flicker">come</span>&nbsp;{auth.user}</h1>
+            </div>
         }
         <p>
           Welcome to Autobots, where we are passionate about crafting the best vehicles possible.
