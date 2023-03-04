@@ -37,7 +37,7 @@ export default function Spare() {
                   </select>
                 </td>
                 <td>
-                  <button className="btn" onClick={handlePro}>GO</button>
+                  <button className="login-btn" onClick={handlePro}>GO</button>
                 </td>
               </tr>
             </tbody>

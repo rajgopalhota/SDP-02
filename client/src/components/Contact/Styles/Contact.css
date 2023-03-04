@@ -151,7 +151,7 @@ textarea.contactcomp-input {
   transform: translateY(0);
 }
 
-.btn {
+.contact-btn {
   padding: 0.6rem 1.3rem;
   background-color: #fff;
   border: 2px solid #fafafa;
@@ -165,7 +165,7 @@ textarea.contactcomp-input {
   margin: 0;
 }
 
-.btn:hover {
+.contact-btn:hover {
   background-color: transparent;
   color: #fff;
 }
@@ -426,7 +426,7 @@ textarea.contactcomp-input {
     padding: 0.45rem 1.2rem;
   }
 
-  .btn {
+  .contact-btn {
     padding: 0.45rem 1.2rem;
   }
 }

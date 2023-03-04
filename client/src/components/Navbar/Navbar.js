@@ -4,6 +4,7 @@ import cartlogo from "./Assets/carts.png";
 import "./Styles/Navbar.css";
 import { useAuth } from "../../Middleware/auth";
 import { toast } from "react-toastify";
+import Cart from "../Cart/Cart";
 export default function Navbar(props) {
 
   const auth = useAuth();
@@ -64,29 +65,30 @@ export default function Navbar(props) {
                 </NavLink>
               </li>
             </ul>
-            <div className="navcart">
-              <NavLink className="nav-link" to="cart">
+            <div className="navcart" >
+              <button type="button" className="cartbtn" data-bs-toggle="modal" data-bs-target="#cartModal">
                 <img src={cartlogo} alt="" width={42}></img>
                 <span>&nbsp;Cart</span>
-              </NavLink>
+              </button>
               {/*  */}
             </div>
 
             {!auth.user && (
               <NavLink to="/login">
-                <button className="btn btn-outline-success" type="submit">
+                <button className="login-btn btn-outline-success" type="submit">
                   Login
                 </button>
               </NavLink>
             )}
             {!!auth.user && (
-                <button className="btn btn-outline-success" type="submit" onClick={handleLogout}>
+                <button className="login-btn btn-outline-success" type="submit" onClick={handleLogout}>
                   Logout
                 </button>
             )}
           </div>
         </div>
       </nav>
+      <Cart />
     </div>
   );
 }

@@ -1,33 +1,34 @@
-.cart-container{
-    animation: abtfloaterx 1s;
-    display: inline-block;
-    background-color: rgba(0, 0, 0, 0.247);
-    margin-top: 8%;
-    border: 2px solid white;
-    padding: 16px;
-    border-radius: 12px;
+
+
+.cartbtn{
+    background: transparent;
+    border: none;
+}
+.Cart h4{
+    text-transform: capitalize;
+}
+.modal-body{
+    background-color: transparent;
+}
+.modal-content{
+    background-color: rgba(0, 0, 74, 0.404);
     backdrop-filter: blur(12px);
-    min-width: 85%;
+    color: white;
 }
-.close-cart{
-    position: absolute;
-    right: 15px;
-    top: 5px;
+.card{
+    /* background-color: rgba(174, 47, 193, 0.233); */
+    background: linear-gradient(45deg,rgba(0, 255, 17, 0.413),rgba(255, 119, 0, 0.518));
+    backdrop-filter: blur(4px);
+    margin-bottom: 2%;
+    border: 1px solid white;
 }
-.close-cart span{
-    font-size: 12px;
+.main-body-light .modal-content{
+    background-color: rgba(81, 0, 106, 0.61);
 }
-.close-cart a :hover{
-    transition: all ease-in 0.3s;
-    font-size: 20px;
+.btn-close{
+    background-color: aliceblue;
 }
-.close-cart a{
-    display: inline-block;
-    font-size: 24px;
-    text-decoration: none;
-    color: red;
-}
-.close-cart a:hover{
-    text-decoration: none;
-    color: rgb(255, 255, 255);
+.card img{
+    margin: auto;
+    width: 200px;
 }

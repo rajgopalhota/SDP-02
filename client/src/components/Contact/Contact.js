@@ -204,7 +204,7 @@ export default function Contact() {
                 <label htmlFor="">Message</label>
                 <span>Message</span>
               </div>
-              <input type="submit" value="Send" className="btn" />
+              <input type="submit" value="Send" className="contact-btn" />
             </form>
           </div>
         </div>

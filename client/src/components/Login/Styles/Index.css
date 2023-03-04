@@ -154,7 +154,7 @@ form.sign-in-form {
   box-shadow: 0 0 12px #ffffff;
 }
 
-.btn {
+.login-btn {
   width: 150px;
   background-color: #ff6200;
   border: none;
@@ -169,7 +169,7 @@ form.sign-in-form {
   transition: 0.5s;
 }
 
-.btn:hover {
+.login-btn:hover {
   border: 2px solid black;
   background-color: #4d84e2;
   box-shadow: 0 0 12px aliceblue;
@@ -268,7 +268,7 @@ form.sign-in-form {
   padding: 0.7rem 0;
 }
 
-.btn.transparent {
+.login-btn.transparent {
   margin: 0;
   background: none;
   border: 2px solid #fff;
@@ -381,7 +381,7 @@ form.sign-in-form {
     padding: 0.5rem 0;
   }
 
-  .btn.transparent {
+  .login-btn.transparent {
     width: 110px;
     height: 35px;
     font-size: 0.7rem;

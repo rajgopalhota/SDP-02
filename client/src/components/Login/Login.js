@@ -139,7 +139,7 @@ export default function Index() {
                   required
                 />
               </div>
-              <input type="submit" value="Login" className="btn solid" />
+              <input type="submit" value="Login" className="login-btn solid" />
               <p className="social-text">Or Sign in with social platforms</p>
               <div className="social-media">
                 <a href="/" className="social-icon">
@@ -192,7 +192,7 @@ export default function Index() {
                 <input type="radio" id="css" name="gender" value="Female" />
                 <label htmlFor="css">Female</label>
               </div>
-              <input type="submit" className="btn" value="Sign up" />
+              <input type="submit" className="login-btn" value="Sign up" />
               <p className="social-text">Or Sign up with social platforms</p>
               <div className="social-media">
                 <a href="/" className="social-icon">
@@ -221,8 +221,8 @@ export default function Index() {
 
               </p>
               <button
-                className="btn transparent"
-                id="sign-up-btn"
+                className="login-btn transparent"
+                id="sign-up-login-btn"
                 onClick={handleonsignin}
               >
                 Sign up
@@ -237,8 +237,8 @@ export default function Index() {
                 We are pleased to invite you to register with Autobots, the leading automobile company in the industry.
               </p>
               <button
-                className="btn transparent"
-                id="sign-in-btn"
+                className="login-btn transparent"
+                id="sign-in-login-btn"
                 onClick={handleonsignup}
               >
                 Sign in
