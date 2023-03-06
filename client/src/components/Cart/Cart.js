@@ -4,20 +4,20 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { AutobotBackend } from '../../Middleware/Helper';
 import './Styles/Cart.css'
+// import spareList from '../Spare/Data';
 export default function Cart() {
-  const [cart,setCart] = useState(null);
+  const [cartList,setCartList] = useState(null);
   const auth = useAuth();
   useEffect(() => {
     axios.get(`${AutobotBackend}/api/cart`, {
       params: {}
     }).then((response) => {
-      console.log(response.data);
-      setCart(response.data.reverse());
+      setCartList(response.data.reverse());
     }).catch((error) => {
       console.log(error)
     })
   },
-    [cart]
+    [cartList]
   );
   return (
     <div className='Cart'>
@@ -30,8 +30,9 @@ export default function Cart() {
             </div>
             <div className="modal-body row">
               {
-                cart.map((obj, key) => (
-                  <div className="card col-sm-4" key={key}>
+                cartList ? (
+                cartList.map((obj, key) => (
+                  <div className="card col-sm-4" key= {key}>
                     <img src={obj.image} className="card-img-top" alt="..." />
                     <div className="card-body">
                       <h5 className="card-title">{obj.title}</h5>
@@ -39,6 +40,7 @@ export default function Cart() {
                     <a href="/" className="btn btn-sm btn-outline-danger">REMOVE</a>
                   </div>
                 ))
+                ):<h1>Your cart is empty</h1>
               }
             </div>
             <div className="modal-footer">
