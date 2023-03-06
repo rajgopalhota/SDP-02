@@ -13,9 +13,9 @@ const cart = new mongoose.Schema({
     required: true,
   },
   price:{
-    type: mongoose.Types.Decimal128,
+    type: String,
     required: true,
   },
 });
 
-module.exports = mongoose.model("cart", cart);
+module.exports = mongoose.model("Cart", cart);

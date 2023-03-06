@@ -11,16 +11,22 @@
     background-color: transparent;
 }
 .modal-content{
-    background-color: rgba(0, 0, 74, 0.404);
+    background-color: rgba(112, 170, 208, 0.651);
     backdrop-filter: blur(12px);
     color: white;
 }
 .card{
     /* background-color: rgba(174, 47, 193, 0.233); */
-    background: linear-gradient(45deg,rgba(0, 255, 17, 0.413),rgba(255, 119, 0, 0.518));
+    background: linear-gradient(45deg,rgba(0, 19, 71, 0.733),rgba(1, 112, 108, 0.801));
     backdrop-filter: blur(4px);
     margin-bottom: 2%;
     border: 1px solid white;
+}
+.card a{
+    margin: auto;
+    width: fit-content;
+    margin-top: auto;
+    margin-bottom: 10px;
 }
 .main-body-light .modal-content{
     background-color: rgba(81, 0, 106, 0.61);
@@ -30,5 +36,4 @@
 }
 .card img{
     margin: auto;
-    width: 200px;
 }

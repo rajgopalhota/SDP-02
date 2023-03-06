@@ -1,8 +1,14 @@
 import React, { useState } from 'react'
 import "./Styles/Spare.css"
 import spareList from './Data'
+import { Link } from 'react-router-dom';
+import { toast } from "react-toastify";
+import axios from 'axios'
+import { useAuth } from "../../Middleware/auth";
+import { AutobotBackend } from '../../Middleware/Helper';
 
 export default function Spare() {
+  const auth = useAuth();
   const [prod, setProd] = useState("");
   const [filterList, setFilterList] = useState(spareList);
   const handlePro = (e) => {
@@ -18,6 +24,33 @@ export default function Spare() {
     setProd(event.target.value);
   }
 
+  const handleCart = (data,e) => {
+    e.preventDefault();
+    const img = data.img
+    const title = data.title
+    const price = data.price
+    axios
+      .post(`${AutobotBackend}/api/cartpost`, {
+        username: auth.user,
+        image: img,
+        name: title,
+        price: price
+      })
+      .then((response) => {
+        console.log(response);
+        if (response.data === "success") {
+          toast.success("Added to cart", {
+            position: "bottom-right",
+            theme: "light",
+          });
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+        toast.error("Server error");
+      });
+
+  }
   return (
     <div className='spareboxpro'>
       <div className="spare-container">
@@ -68,7 +101,7 @@ export default function Spare() {
                       <span></span>
                       <span></span>
                     </div>
-                    <a href="/">Add to cart</a>
+                    <Link onClick={(e) => handleCart(item,e)}>Add to cart</Link>
                   </div>
 
                 </div>

@@ -7,7 +7,7 @@ const jwt = require("jsonwebtoken");
 const repairmodel = require("../models/repair");
 const contactmodel = require("../models/contact");
 const communitymodel = require("../models/community");
-const cart = require("../models/cart");
+const cartmodel = require("../models/cart");
 //register
 router.post("/register", async (req, res) => {
   const usercheck = await signuptemp.findOne({ username: req.body.username });
@@ -209,8 +209,8 @@ router.post("/comment", async (req, res) => {
       gender: usercheck.gender,
     });
   }
-  else{
-     comment = new communitymodel({
+  else {
+    comment = new communitymodel({
       message: msg,
       date: time,
     });
@@ -232,14 +232,15 @@ router.post("/cartpost", async (req, res) => {
   const image = req.body.image;
   const name = req.body.name;
   const price = req.body.price;
-  const cart = new communitymodel({
+  let cartpost = new cartmodel({
     username: username,
-    img: image,
+    image: image,
     name: name,
     price: price,
   });
+  console.log(cartpost)
   try {
-    await cart.save();
+    await cartpost.save();
     res.send("success");
   } catch (err) {
     console.log(err);
@@ -249,7 +250,7 @@ router.post("/cartpost", async (req, res) => {
 
 router.get("/cart", async (req, res) => {
   try {
-    const items = await cart.find();
+    const items = await cartmodel.find();
     console.log(items);
     res.json(items);
   } catch (error) {
