@@ -251,7 +251,6 @@ router.post("/cartpost", async (req, res) => {
 router.get("/cart", async (req, res) => {
   try {
     const items = await cartmodel.find();
-    console.log(items);
     res.json(items);
   } catch (error) {
     console.error(error.message);
@@ -264,7 +263,6 @@ router.get("/cart", async (req, res) => {
 router.delete('/delete/:id', async (req, res) => {
   const pid = req.params.id;
   const result = await cartmodel.deleteOne({ _id: pid });
-  console.log(result);
   res.send(result);
 })
 

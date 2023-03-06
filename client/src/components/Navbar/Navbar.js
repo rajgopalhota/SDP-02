@@ -25,11 +25,12 @@ export default function Navbar(props) {
 
   const [cartList, setCartList] = useState(null);
   const [items, setItems] = useState();
+  const user = auth.user
   useEffect(() => {
     axios.get(`${AutobotBackend}/api/cart`, {
-      params: {}
+
     }).then((response) => {
-      setCartList(response.data.reverse());
+      setCartList(response.data.reverse().filter((obj, key) => obj.username === user));
         let size = 0, key;
         for (key in cartList) {
           if (cartList.hasOwnProperty(key)) {
@@ -41,7 +42,7 @@ export default function Navbar(props) {
       console.log(error)
     })
   },
-    [cartList]
+    [cartList, user]
   );
 
   return (
@@ -94,10 +95,10 @@ export default function Navbar(props) {
             <div className="navcart" >
               <button type="button" className="cartbtn" data-bs-toggle="modal" data-bs-target="#cartModal">
                 <img src={cartlogo} alt="" width={42}></img>
-                <span class="start-100 translate-middle badge rounded-pill">
+                <span className="start-100 translate-middle badge rounded-pill">
                   {items}
                 </span>
-                <span class="visually-hidden">unread messages</span>
+                <span className="visually-hidden">unread messages</span>
               </button>
               {/*  */}
             </div>

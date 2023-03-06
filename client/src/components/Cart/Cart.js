@@ -39,7 +39,8 @@ export default function Cart(props) {
                     <div className="card col-sm-4" key={key}>
                       <img src={obj.image} className="card-img-top" alt="..." />
                       <div className="card-body">
-                        <h5 className="card-title">{obj.title}</h5>
+                        <h5 className="card-title">{obj.name}</h5>
+                        <h5 className="card-info">Rs. {obj.price}</h5>
                       </div>
                       <Link className="btn btn-sm btn-outline-danger" onClick={() => deleteProduct(obj._id)}>REMOVE</Link>
                     </div>
