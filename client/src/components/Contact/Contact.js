@@ -187,7 +187,7 @@ export default function Contact() {
                   name="message"
                   className="contactcomp-input"
                   onClickCapture={handleonsignin}
-                  {...register("text", {
+                  {...register("message", {
                     required: "message is required",
                     minLength: {
                       value: 15,
@@ -199,7 +199,7 @@ export default function Contact() {
                     },
                   })}
                 ></textarea>
-                <p id="kliu">{errors.text?.message}</p>
+                <p id="kliu">{errors.message?.message}</p>
 
                 <label htmlFor="">Message</label>
                 <span>Message</span>
