@@ -1,24 +1,28 @@
 import React from 'react'
-import { useAuth } from '../../Middleware/auth'
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-import { AutobotBackend } from '../../Middleware/Helper';
 import './Styles/Cart.css'
-// import spareList from '../Spare/Data';
-export default function Cart() {
-  const [cartList,setCartList] = useState(null);
+import { useAuth } from '../../Middleware/auth'
+import { toast } from "react-toastify";
+import axios from "axios";
+import { AutobotBackend } from '../../Middleware/Helper';
+import { Link } from 'react-router-dom';
+
+
+export default function Cart(props) {
   const auth = useAuth();
-  useEffect(() => {
-    axios.get(`${AutobotBackend}/api/cart`, {
-      params: {}
-    }).then((response) => {
-      setCartList(response.data.reverse());
-    }).catch((error) => {
-      console.log(error)
-    })
-  },
-    [cartList]
-  );
+  const cartList = props.cartList;
+  function deleteProduct(id) {
+    axios.delete(`${AutobotBackend}/api/delete/${id}`,
+      {
+        params: {}
+      }).then((response) => {
+        toast.info("Removed successfully", {
+          position: "top-left",
+          theme: "dark",
+        });
+      }).catch((error) => {
+        console.log(error);
+      })
+  }
   return (
     <div className='Cart'>
       <div className="modal fade modal-lg" id="cartModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -31,16 +35,16 @@ export default function Cart() {
             <div className="modal-body row">
               {
                 cartList ? (
-                cartList.map((obj, key) => (
-                  <div className="card col-sm-4" key= {key}>
-                    <img src={obj.image} className="card-img-top" alt="..." />
-                    <div className="card-body">
-                      <h5 className="card-title">{obj.title}</h5>
+                  cartList.map((obj, key) => (
+                    <div className="card col-sm-4" key={key}>
+                      <img src={obj.image} className="card-img-top" alt="..." />
+                      <div className="card-body">
+                        <h5 className="card-title">{obj.title}</h5>
+                      </div>
+                      <Link className="btn btn-sm btn-outline-danger" onClick={() => deleteProduct(obj._id)}>REMOVE</Link>
                     </div>
-                    <a href="/" className="btn btn-sm btn-outline-danger">REMOVE</a>
-                  </div>
-                ))
-                ):<h1>Your cart is empty</h1>
+                  ))
+                ) : <h1>Your cart is empty</h1>
               }
             </div>
             <div className="modal-footer">

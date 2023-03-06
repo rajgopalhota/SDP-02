@@ -36,29 +36,18 @@ nav h3{
     background-position: 500%;
   }
 }
-.navbar-brand span{
-  font-size: 36px;
-  font-weight: 500;
-  color: rgb(240, 200, 20);
-  text-shadow: 3px 3px 7px rgb(255, 166, 32);
+.badge{
+  font-size: 12px;
+  background-color: rgb(241, 69, 22);
 }
 .navcart {
   display: inline-block;
   margin-right: 27px;
 }
-.navcart span {
-  margin-right: 25px;
-  font-size: 0;
-}
+
 .navcart .active {
   font-weight: 900;
   background-color: transparent;
-}
-.active span {
-  transition: all ease-in 0.5s;
-  display: inline-block;
-  font-size: 18px;
-  transition: all ease-out 0.5s;
 }
 
 .navbar {
@@ -178,12 +167,6 @@ nav button a {
     margin: auto;
     letter-spacing: 2px;
   }
-  .navbar-brand span{
-    font-size: 26px;
-    font-weight: 500;
-    color: rgb(240, 200, 20);
-    text-shadow: 3px 3px 7px rgb(255, 166, 32);
-  }
 }
 @media screen and (max-width: 1200px) {
   .navbar {
@@ -193,12 +176,6 @@ nav button a {
     text-transform: uppercase;
     margin: auto;
     letter-spacing: 2px;
-  }
-  .navbar-brand span{
-    font-size: 26px;
-    font-weight: 500;
-    color: rgb(240, 200, 20);
-    text-shadow: 3px 3px 7px rgb(255, 166, 32);
   }
 }
 
@@ -210,12 +187,6 @@ nav button a {
     text-transform: uppercase;
     margin: auto;
     letter-spacing: 2px;
-  }
-  .navbar-brand span{
-    font-size: 26px;
-    font-weight: 500;
-    color: rgb(240, 200, 20);
-    text-shadow: 3px 3px 7px rgb(255, 166, 32);
   }
 }
 

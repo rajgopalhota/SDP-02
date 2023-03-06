@@ -5,8 +5,11 @@ import "./Styles/Navbar.css";
 import { useAuth } from "../../Middleware/auth";
 import { toast } from "react-toastify";
 import Cart from "../Cart/Cart";
-export default function Navbar(props) {
+import { useEffect, useState } from 'react';
+import axios from "axios";
+import { AutobotBackend } from '../../Middleware/Helper';
 
+export default function Navbar(props) {
   const auth = useAuth();
   const navigate = useNavigate();
   const handleLogout = () => {
@@ -18,6 +21,29 @@ export default function Navbar(props) {
       theme: "dark",
     });
   };
+
+
+  const [cartList, setCartList] = useState(null);
+  const [items, setItems] = useState();
+  useEffect(() => {
+    axios.get(`${AutobotBackend}/api/cart`, {
+      params: {}
+    }).then((response) => {
+      setCartList(response.data.reverse());
+        let size = 0, key;
+        for (key in cartList) {
+          if (cartList.hasOwnProperty(key)) {
+            size++
+          };
+        };
+        setItems(size)
+    }).catch((error) => {
+      console.log(error)
+    })
+  },
+    [cartList]
+  );
+
   return (
     <div>
       <section></section>
@@ -68,7 +94,10 @@ export default function Navbar(props) {
             <div className="navcart" >
               <button type="button" className="cartbtn" data-bs-toggle="modal" data-bs-target="#cartModal">
                 <img src={cartlogo} alt="" width={42}></img>
-                <span>&nbsp;Cart</span>
+                <span class="start-100 translate-middle badge rounded-pill">
+                  {items}
+                </span>
+                <span class="visually-hidden">unread messages</span>
               </button>
               {/*  */}
             </div>
@@ -81,14 +110,14 @@ export default function Navbar(props) {
               </NavLink>
             )}
             {!!auth.user && (
-                <button className="login-btn btn-outline-success" type="submit" onClick={handleLogout}>
-                  Logout
-                </button>
+              <button className="login-btn btn-outline-success" type="submit" onClick={handleLogout}>
+                Logout
+              </button>
             )}
           </div>
         </div>
       </nav>
-      <Cart />
+      <Cart cartList={cartList} />
     </div>
   );
 }

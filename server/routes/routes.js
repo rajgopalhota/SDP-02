@@ -260,4 +260,12 @@ router.get("/cart", async (req, res) => {
 });
 
 
+// Deleting cart
+router.delete('/delete/:id', async (req, res) => {
+  const pid = req.params.id;
+  const result = await cartmodel.deleteOne({ _id: pid });
+  console.log(result);
+  res.send(result);
+})
+
 module.exports = router;
