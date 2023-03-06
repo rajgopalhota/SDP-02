@@ -7,6 +7,7 @@ const jwt = require("jsonwebtoken");
 const repairmodel = require("../models/repair");
 const contactmodel = require("../models/contact");
 const communitymodel = require("../models/community");
+const cart = require("../models/cart");
 //register
 router.post("/register", async (req, res) => {
   const usercheck = await signuptemp.findOne({ username: req.body.username });
@@ -222,5 +223,40 @@ router.post("/comment", async (req, res) => {
     res.send("fail");
   }
 });
+
+//cart
+
+
+router.post("/cartpost", async (req, res) => {
+  const username = req.body.username;
+  const image = req.body.image;
+  const name = req.body.name;
+  const price = req.body.price;
+  const cart = new communitymodel({
+    username: username,
+    img: image,
+    name: name,
+    price: price,
+  });
+  try {
+    await cart.save();
+    res.send("success");
+  } catch (err) {
+    console.log(err);
+    res.send("fail");
+  }
+});
+
+router.get("/cart", async (req, res) => {
+  try {
+    const items = await cart.find();
+    console.log(items);
+    res.json(items);
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).send("Internal Server Error");
+  }
+});
+
 
 module.exports = router;
