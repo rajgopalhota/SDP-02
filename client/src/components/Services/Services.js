@@ -119,7 +119,7 @@ export default function Repair(props) {
               </tr>
             </tbody>
           </table>
-          <button className="btn">Book</button>
+          <button className="login-btn">Book</button>
         </form>
       </div>
       <Rating />
