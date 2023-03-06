@@ -34,6 +34,10 @@ export default function Cart(props) {
             </div>
             <div className="modal-body row">
               {
+                props.item===0 && 
+                <h1>Your cart is empty just like your wallet</h1>
+              }
+              {
                 cartList ? (
                   cartList.map((obj, key) => (
                     <div className="card col-sm-4" key={key}>

@@ -96,7 +96,7 @@ export default function Navbar(props) {
               <button type="button" className="cartbtn" data-bs-toggle="modal" data-bs-target="#cartModal">
                 <img src={cartlogo} alt="" width={42}></img>
                 <span className="start-100 translate-middle badge rounded-pill">
-                  {items}
+                  {(items!==0)?items:null}
                 </span>
                 <span className="visually-hidden">unread messages</span>
               </button>
@@ -118,7 +118,7 @@ export default function Navbar(props) {
           </div>
         </div>
       </nav>
-      <Cart cartList={cartList} />
+      <Cart cartList={cartList} item = {items} />
     </div>
   );
 }
