@@ -23,7 +23,7 @@ nav h3{
   background: linear-gradient(90deg, #000, #fff, #000);
   background-repeat: no-repeat;
   background-size: 80%;
-  animation: paraAni 2s linear infinite;
+  animation: paraAni 4s linear infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }
