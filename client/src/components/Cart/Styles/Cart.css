@@ -1,39 +1,57 @@
-
-
-.cartbtn{
-    background: transparent;
-    border: none;
+.cartPic {
+  margin: auto;
+  width: 100px;
+  animation: float 2s ease-in-out infinite;
 }
-.Cart h4{
-    text-transform: capitalize;
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
 }
-.modal-body{
-    background-color: transparent;
+.cartbtn {
+  background: transparent;
+  border: none;
 }
-.modal-content{
-    background-color: rgba(112, 170, 208, 0.651);
-    backdrop-filter: blur(12px);
-    color: white;
+.Cart h4 {
+  text-transform: capitalize;
 }
-.card{
-    /* background-color: rgba(174, 47, 193, 0.233); */
-    background: linear-gradient(45deg,rgba(0, 19, 71, 0.733),rgba(1, 112, 108, 0.801));
-    backdrop-filter: blur(4px);
-    margin-bottom: 2%;
-    border: 1px solid white;
+.modal-body {
+  background-color: transparent;
 }
-.card a{
-    margin: auto;
-    width: fit-content;
-    margin-top: auto;
-    margin-bottom: 10px;
+.modal-content {
+  background-color: rgba(112, 170, 208, 0.651);
+  backdrop-filter: blur(12px);
+  color: white;
 }
-.main-body-light .modal-content{
-    background-color: rgba(81, 0, 106, 0.61);
+.card {
+  /* background-color: rgba(174, 47, 193, 0.233); */
+  background: linear-gradient(
+    45deg,
+    rgba(0, 19, 71, 0.733),
+    rgba(1, 112, 108, 0.801)
+  );
+  backdrop-filter: blur(4px);
+  margin-bottom: 2%;
+  border: 1px solid white;
 }
-.btn-close{
-    background-color: aliceblue;
+.card a {
+  margin: auto;
+  width: fit-content;
+  margin-top: auto;
+  margin-bottom: 10px;
 }
-.card img{
-    margin: auto;
+.main-body-light .modal-content {
+  background-color: rgba(81, 0, 106, 0.61);
+}
+.btn-close {
+  background-color: aliceblue;
+}
+.card img {
+  margin: auto;
 }

@@ -27,7 +27,7 @@ export default function Navbar(props) {
   const [items, setItems] = useState();
   const user = auth.user
   useEffect(() => {
-    axios.get(`${AutobotBackend}/api/cart`, {
+    axios.get(`${AutobotBackend}/items/cart`, {
 
     }).then((response) => {
       setCartList(response.data.reverse().filter((obj, key) => obj.username === user));
@@ -118,7 +118,7 @@ export default function Navbar(props) {
           </div>
         </div>
       </nav>
-      <Cart cartList={cartList} item = {items} />
+      <Cart cartList={cartList} item = {items} logo= {cartlogo} />
     </div>
   );
 }

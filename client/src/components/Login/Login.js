@@ -16,7 +16,7 @@ export default function Index() {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
     axios
-      .post(`${AutobotBackend}/api/register`, {
+      .post(`${AutobotBackend}/auth/register`, {
         username: data.get("reguser"),
         email: data.get("regemail"),
         phone: data.get("regphone"),
@@ -59,7 +59,7 @@ export default function Index() {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
     axios
-      .post(`${AutobotBackend}/api/login`, {
+      .post(`${AutobotBackend}/auth/login`, {
         username: data.get("loginuser"),
         password: data.get("loginpassword"),
       })

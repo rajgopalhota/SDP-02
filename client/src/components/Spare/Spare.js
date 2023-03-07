@@ -30,7 +30,7 @@ export default function Spare() {
     const title = data.title
     const price = data.price
     axios
-      .post(`${AutobotBackend}/api/cartpost`, {
+      .post(`${AutobotBackend}/items/cartpost`, {
         username: auth.user,
         image: img,
         name: title,

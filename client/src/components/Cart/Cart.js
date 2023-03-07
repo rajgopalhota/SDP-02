@@ -11,7 +11,7 @@ export default function Cart(props) {
   const auth = useAuth();
   const cartList = props.cartList;
   function deleteProduct(id) {
-    axios.delete(`${AutobotBackend}/api/delete/${id}`,
+    axios.delete(`${AutobotBackend}/items/delete/${id}`,
       {
         params: {}
       }).then((response) => {
@@ -34,8 +34,11 @@ export default function Cart(props) {
             </div>
             <div className="modal-body row">
               {
-                props.item===0 && 
-                <h1>Your cart is empty just like your wallet</h1>
+                props.item === 0 &&
+                <>
+                  <img className='cartPic' src={props.logo} alt='...'></img>
+                  <h1>Your cart is empty just like your wallet</h1>
+                </>
               }
               {
                 cartList ? (
