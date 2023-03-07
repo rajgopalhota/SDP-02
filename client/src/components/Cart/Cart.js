@@ -56,6 +56,7 @@ export default function Cart(props) {
               }
             </div>
             <div className="modal-footer">
+              <h5 className="card-title">Sub Total: {props.total}&nbsp;</h5>
               <button type="button" className="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
               <button type="button" className="btn btn-outline-warning">Checkout</button>
             </div>

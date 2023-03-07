@@ -64,7 +64,6 @@ export default function Community() {
         axios.get(`${AutobotBackend}/api/community`, {
             params: {}
         }).then((response) => {
-            console.log(response.data);
             setResult(response.data.reverse());
         }).catch((error) => {
             console.log(error)

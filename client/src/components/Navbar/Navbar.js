@@ -11,6 +11,7 @@ import { AutobotBackend } from '../../Middleware/Helper';
 
 export default function Navbar(props) {
   const auth = useAuth();
+  const [price, setPrice] = useState();
   const navigate = useNavigate();
   const handleLogout = () => {
     auth.logout();
@@ -23,7 +24,7 @@ export default function Navbar(props) {
   };
 
 
-  const [cartList, setCartList] = useState(null);
+  const [cartList, setCartList] = useState([]);
   const [items, setItems] = useState();
   const user = auth.user
   useEffect(() => {
@@ -31,18 +32,25 @@ export default function Navbar(props) {
 
     }).then((response) => {
       setCartList(response.data.reverse().filter((obj, key) => obj.username === user));
-        let size = 0, key;
-        for (key in cartList) {
-          if (cartList.hasOwnProperty(key)) {
-            size++
-          };
+      let size = 0, key;
+      for (key in cartList) {
+        if (cartList.hasOwnProperty(key)) {
+          size++
         };
-        setItems(size)
+      };
+      setItems(size)
+      if (items !== 0) {
+        const totalPrice = cartList.reduce((acc, curr) => { //calculate total
+          let cur = curr.price.match(/\d./g).join('') //parse string to integer(cost)
+          return acc + Number(cur);
+        }, 0)
+        setPrice(totalPrice);
+      }
     }).catch((error) => {
       console.log(error)
     })
   },
-    [cartList, user]
+    [cartList, user, items]
   );
 
   return (
@@ -96,7 +104,7 @@ export default function Navbar(props) {
               <button type="button" className="cartbtn" data-bs-toggle="modal" data-bs-target="#cartModal">
                 <img src={cartlogo} alt="" width={42}></img>
                 <span className="start-100 translate-middle badge rounded-pill">
-                  {(items!==0)?items:null}
+                  {(items !== 0) ? items : null}
                 </span>
                 <span className="visually-hidden">unread messages</span>
               </button>
@@ -118,7 +126,7 @@ export default function Navbar(props) {
           </div>
         </div>
       </nav>
-      <Cart cartList={cartList} item = {items} logo= {cartlogo} />
+      <Cart cartList={cartList} item={items} logo={cartlogo} total={price} />
     </div>
   );
 }
