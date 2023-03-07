@@ -37,7 +37,7 @@ export default function Cart(props) {
                 props.item === 0 &&
                 <>
                   <img className='cartPic' src={props.logo} alt='...'></img>
-                  <h1>Your cart is empty just like your wallet</h1>
+                  <h1>Your cart is empty just like our negativity</h1>
                 </>
               }
               {
