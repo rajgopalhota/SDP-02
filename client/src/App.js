@@ -66,7 +66,7 @@ function App() {
               <Route path="products" element={<Products />} />
               <Route path="aboutus" element={<About />} />
               <Route element={<RequiredAuth />}>
-                <Route path="services" element={<Services />} />
+                <Route path="services" element={<Services showAlert={showAlert} alert={alert} />} />
               </Route>
               <Route path="spare" element={<Spare />} />
               <Route path="cart" element={<Cart />} />

@@ -9,6 +9,13 @@ export default function Testride(props) {
     const auth = useAuth();
     const pic = props.pic;
     const name = props.name;
+    const disablePastDate = () => {
+        const today = new Date();
+        const dd = String(today.getDate() + 1).padStart(2, "0");
+        const mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+        const yyyy = today.getFullYear();
+        return yyyy + "-" + mm + "-" + dd;
+      };
     const submitTestRide = (e) => {
         e.preventDefault();
         const data = new FormData(e.currentTarget);
@@ -65,7 +72,7 @@ export default function Testride(props) {
                         <form onSubmit={submitTestRide}>
                             <input type="email" placeholder="Enter Your Email " name='email' required />
                             <input type="tel" placeholder="Enter Your Mobile" name='phone' required />
-                            <input type="date" required name='date' />
+                            <input type="date" required name='date' min={disablePastDate()}/>
                             <input type="time" required name='time' />
                             <button type='submit' className='canvasbtn'>BOOK A RIDE</button>
                         </form>
