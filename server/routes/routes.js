@@ -5,6 +5,7 @@ const signuptemp = require("../models/signupmodel");
 const repairmodel = require("../models/repair");
 const contactmodel = require("../models/contact");
 const communitymodel = require("../models/community");
+const testridemodel = require("../models/testride");
 
 //repair backend module
 router.post("/repair", async (req, res) => {
@@ -80,6 +81,30 @@ router.post("/contact", async (req, res) => {
             res.send("Not saved");
         }
     }
+});
+
+//testride
+router.post("/testride", async (req, res) => {
+    const name = req.body.username;
+    const email = req.body.email;
+    const phone = req.body.phone;
+    const date = req.body.date;
+    const time = req.body.time;
+        const testride = new testridemodel({
+            username: name,
+            email: email,
+            phone: phone,
+            date: date,
+            time:time
+        });
+        try {
+            await testride.save();
+            res.send("message sent");
+        } catch (err) {
+            console.log(err);
+            res.send("Not saved");
+        }
+    
 });
 
 // community
