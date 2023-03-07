@@ -90,12 +90,14 @@ router.post("/testride", async (req, res) => {
     const phone = req.body.phone;
     const date = req.body.date;
     const time = req.body.time;
+    const cartype=req.body.cartype
         const testride = new testridemodel({
             username: name,
             email: email,
             phone: phone,
             date: date,
-            time:time
+            time:time,
+            cartype:cartype
         });
         try {
             await testride.save();

@@ -20,6 +20,10 @@ const testride = new mongoose.Schema({
     type: String,
     required: true,
   },
+  cartype: {
+    type: String,
+    required: true,
+  },
 });
 
 module.exports = mongoose.model("Testride", testride);
