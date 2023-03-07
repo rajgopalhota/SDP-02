@@ -4,6 +4,11 @@
     backdrop-filter: blur(22px);
     box-shadow: 0 0 12px rgb(0, 1, 64);
 }
+.offcanvas-body h1{
+    color: white;
+    font-size: 52px;
+    text-shadow: 0 0 12px rgb(255, 153, 0);
+}
 .offcanvas-title{
     margin: auto;
     font-size: 28px;

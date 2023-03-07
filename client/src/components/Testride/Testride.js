@@ -1,7 +1,7 @@
 import React from 'react'
 import './Testride.css'
 import { useAuth } from '../../Middleware/auth';
-import {AutobotBackend} from './../../Middleware/Helper'
+import { AutobotBackend } from './../../Middleware/Helper'
 import { toast } from "react-toastify";
 import axios from 'axios';
 
@@ -12,33 +12,41 @@ export default function Testride(props) {
     const submitTestRide = (e) => {
         e.preventDefault();
         const data = new FormData(e.currentTarget);
-        axios
-            .post(`${AutobotBackend}/api/testride`, {
-                username: auth.user,
-                phone: data.get("phone"),
-                date: data.get("date"),
-                time: data.get("time"),
-                email: data.get("email"),
-                cartype: name
-            })
-            .then((response) => {
-                console.log(response);
-                if (response.data === "message sent") {
-                    toast.success("Success", {
-                        position: "bottom-right",
-                        theme: "dark",
-                    });
-                } else {
-                    toast.info(response.data, {
-                        position: "bottom-right",
-                        theme: "dark",
-                    });
-                }
-            })
-            .catch((err) => {
-                console.log(err);
-                toast.error("Server error");
+        if (auth.user) {
+            axios
+                .post(`${AutobotBackend}/api/testride`, {
+                    username: auth.user,
+                    phone: data.get("phone"),
+                    date: data.get("date"),
+                    time: data.get("time"),
+                    email: data.get("email"),
+                    cartype: name
+                })
+                .then((response) => {
+                    console.log(response);
+                    if (response.data === "message sent") {
+                        toast.success("Success", {
+                            position: "bottom-right",
+                            theme: "dark",
+                        });
+                    } else {
+                        toast.info(response.data, {
+                            position: "bottom-right",
+                            theme: "dark",
+                        });
+                    }
+                })
+                .catch((err) => {
+                    console.log(err);
+                    toast.error("Server error");
+                });
+        }
+        else {
+            toast.error("Please Login", {
+                position: "bottom-right",
+                theme: "dark",
             });
+        }
     };
     return (
         <div>
@@ -49,13 +57,19 @@ export default function Testride(props) {
                 </div>
                 <div className="offcanvas-body" >
                     <img src={pic} class="img-fluid" alt="..." />
-                    <form onSubmit={submitTestRide}>
-                        <input type="email" placeholder="Enter Your Email " name='email' required />
-                        <input type="tel" placeholder="Enter Your Mobile" name='phone' required />
-                        <input type="date" required name='date' />
-                        <input type="time" required name='time' />
-                        <button type='submit' className='canvasbtn'>BOOK A RIDE</button>
-                    </form>
+                    {
+                        !auth.user &&
+                        <h1>Please Login to fill form</h1>
+                    }
+                    {   auth.user &&
+                        <form onSubmit={submitTestRide}>
+                            <input type="email" placeholder="Enter Your Email " name='email' required />
+                            <input type="tel" placeholder="Enter Your Mobile" name='phone' required />
+                            <input type="date" required name='date' />
+                            <input type="time" required name='time' />
+                            <button type='submit' className='canvasbtn'>BOOK A RIDE</button>
+                        </form>
+                    }
                 </div>
             </div>
         </div>

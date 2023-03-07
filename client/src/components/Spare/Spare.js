@@ -24,31 +24,39 @@ export default function Spare() {
     setProd(event.target.value);
   }
 
-  const handleCart = (data,e) => {
+  const handleCart = (data, e) => {
     e.preventDefault();
     const img = data.img
     const title = data.title
     const price = data.price
-    axios
-      .post(`${AutobotBackend}/items/cartpost`, {
-        username: auth.user,
-        image: img,
-        name: title,
-        price: price
-      })
-      .then((response) => {
-        console.log(response);
-        if (response.data === "success") {
-          toast.success("Added to cart", {
-            position: "bottom-right",
-            theme: "light",
-          });
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-        toast.error("Server error");
+    if (auth.user) {
+      axios
+        .post(`${AutobotBackend}/items/cartpost`, {
+          username: auth.user,
+          image: img,
+          name: title,
+          price: price
+        })
+        .then((response) => {
+          console.log(response);
+          if (response.data === "success") {
+            toast.success("Added to cart", {
+              position: "bottom-right",
+              theme: "light",
+            });
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+          toast.error("Server error");
+        });
+    }
+    else{
+      toast.error("Please Login", {
+        position: "bottom-right",
+        theme: "light",
       });
+    }
 
   }
   return (
@@ -101,7 +109,7 @@ export default function Spare() {
                       <span></span>
                       <span></span>
                     </div>
-                    <Link onClick={(e) => handleCart(item,e)}>Add to cart</Link>
+                    <Link onClick={(e) => handleCart(item, e)}>Add to cart</Link>
                   </div>
 
                 </div>

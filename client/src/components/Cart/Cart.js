@@ -34,7 +34,14 @@ export default function Cart(props) {
             </div>
             <div className="modal-body row">
               {
-                props.item === 0 &&
+                !auth.user &&
+                <>
+                  <img className='cartPic' src={props.logo} alt='...'></img>
+                  <h1>Please Login to check your cart</h1>
+                </>
+              }
+              {
+                auth.user && props.item === 0 &&
                 <>
                   <img className='cartPic' src={props.logo} alt='...'></img>
                   <h1>Your cart is empty just like our negativity</h1>
