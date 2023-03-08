@@ -25,8 +25,8 @@ export default function Cart(props) {
   }
 
   const checkoutHandler = async (amount) => {
-    const { data: { key } } = await axios.get("http://www.localhost:2003/payment/getkey")
-    const { data: { order } } = await axios.post("http://localhost:2003/payment/checkout", {
+    const { data: { key } } = await axios.get(`${AutobotBackend}/payment/getkey`)
+    const { data: { order } } = await axios.post(`${AutobotBackend}/payment/checkout`, {
       amount
     })
     const options = {
@@ -37,7 +37,7 @@ export default function Cart(props) {
       description: "Payment for your parts",
       image: "https://th.bing.com/th/id/OIP.i1ZELPy8F52bVZTE9lJGHgHaHa?pid=ImgDet&rs=1",
       order_id: order.id,
-      callback_url: "http://localhost:2003/payment/paymentverification",
+      callback_url: `${AutobotBackend}/payment/paymentverification`,
       prefill: {
         name: auth.user,
       },
@@ -94,7 +94,7 @@ export default function Cart(props) {
             <div className="modal-footer">
               <h5 className="card-title">Sub Total: {props.total}&nbsp;</h5>
               <button type="button" className="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
-              { props.total!==0 &&
+              {props.total !== 0 &&
                 <button type="button" className="btn btn-outline-warning" onClick={() => checkoutHandler(props.total)}>Checkout</button>
               }
             </div>

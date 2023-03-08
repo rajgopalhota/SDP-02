@@ -1,3 +1,5 @@
-Im manu
-Iam Raji
-Iam Raja
+DATABASE_ACCESS=""
+
+RAZORPAY_API_KEY= "underscoredones"
+
+RAZORPAY_APT_SECRET=""
