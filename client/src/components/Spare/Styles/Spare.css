@@ -29,6 +29,15 @@
   transition: 0.3s;
 }
 
+.main-body-light .spare-container select {
+  text-align: center;
+  color: black;
+}
+.main-body-light .spare-container option {
+  text-align: center;
+  color: black;
+  background: rgba(255, 255, 255, 0.416);
+}
 
 .spare-container option {
   text-align: center;

@@ -16,7 +16,6 @@ router.post("/cartpost", async (req, res) => {
         name: name,
         price: price,
     });
-    console.log(cartpost)
     try {
         await cartpost.save();
         res.send("success");

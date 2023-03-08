@@ -113,7 +113,6 @@ router.post("/testride", async (req, res) => {
 router.get("/community", async (req, res) => {
     try {
         const notes = await communitymodel.find();
-        console.log(notes);
         res.json(notes);
     } catch (error) {
         console.error(error.message);
