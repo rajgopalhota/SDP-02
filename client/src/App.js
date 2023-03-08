@@ -9,6 +9,7 @@ import Products from "./components/Products/Products";
 import Services from "./components/Services/Services";
 import About from "./components/About/About";
 import Spare from "./components/Spare/Spare";
+import PaymentSuccess from "./Payments/PaymentSuccess";
 import Home from "./components/Home/Home";
 import Cart from "./components/Cart/Cart";
 import { AuthProvider } from "./Middleware/auth";
@@ -74,6 +75,7 @@ function App() {
             </Route>
             <Route path="community" element={<Community />}></Route>
             <Route path="login" element={<Login />}></Route>
+            <Route path="/paymentsuccess" element={<PaymentSuccess />} />
             <Route path="*" element={<PageNotFound />}></Route>
           </Routes>
         </AuthProvider>
