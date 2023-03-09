@@ -25,7 +25,7 @@ textarea {
 .contactcomp-container {
   z-index: 100;
   animation: floatery 1s;
-  margin-top: 3%;
+  margin-top: 0%;
   background: transparent;
   position: relative;
   width: 100%;
