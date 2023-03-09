@@ -1,7 +1,7 @@
 .image-slider-cont {
   position: fixed;
   animation: abtfloaterx 1s;
-  margin-top: 16%;
+  margin-top: 15%;
   margin-left: 23%;
   margin-right: auto;
   width: 84vmin;
@@ -68,14 +68,14 @@
   font-family: consolas;
 }
 .slider-neon-btn a {
-  border-bottom: 1px solid white;
+  border-bottom: 3px solid white;
   border-left: 1px solid white;
-  border-radius: 12px;
+  border-radius: 42px;
   box-shadow: 2px 4px 12px rgba(0, 108, 202, 0.612);
   display: inline-block;
   position: relative;
   padding: 15px 30px;
-  color: #2196f3;
+  color: #319df5;
   text-transform: uppercase;
   letter-spacing: 2px;
   text-decoration: none;
@@ -160,6 +160,7 @@
     position: static;
     margin: 5% 0;
     width: 100%;
+    margin-top: 22%;
     transform: translate(0%, 0%);
   }
   .slider-neon-btn {

@@ -41,6 +41,13 @@ body {
   transition: all ease-in-out 1s;
   background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
 }
+.main-body-light .nav-link{
+  color: rgb(0, 0, 0);
+}
+.main-body-light .navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
+  font-weight: 600;
+  color: black;
+}
 .main-body-light{
   position: absolute;
   top: 0;
@@ -99,5 +106,8 @@ code {
     overflow-x: hidden;
     max-width: 100vw;
   }
+  
 
 }
+
+

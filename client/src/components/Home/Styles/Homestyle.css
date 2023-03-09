@@ -201,7 +201,7 @@ h1 {
   }
 }
 .home-container-portfolio {
-  margin-top: 5%;
+  margin-top: 10%;
   margin-right: 5%;
   margin-left: auto;
   animation: floatery 1s;
@@ -427,6 +427,7 @@ h1 {
     font-size: 22px;
   }
   .home-container-portfolio {
+    margin-top: 0;
     margin-right: 0;
     margin-left: 0;
     width: 100%;
