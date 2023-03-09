@@ -51,7 +51,7 @@ nav h3{
 }
 
 .navbar {
-  background-color: rgba(73, 8, 129, 0.158);
+  background-color: rgba(40, 2, 73, 0.852);
   backdrop-filter: blur(12px);
   z-index: 999;
   overflow: hidden;
@@ -59,6 +59,8 @@ nav h3{
   height: 2.6em;
 }
 .main-body-light .navbar{
+  color: black;
+  backdrop-filter: blur(12px);
   background-color: rgb(9, 0, 75);
 }
 .active {
