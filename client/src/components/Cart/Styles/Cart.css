@@ -25,7 +25,7 @@
   background-color: transparent;
 }
 .modal-content {
-  background-color: rgba(112, 170, 208, 0.651);
+  background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
   backdrop-filter: blur(12px);
   color: white;
 }
@@ -47,7 +47,8 @@
   margin-bottom: 10px;
 }
 .main-body-light .modal-content {
-  background-color: rgba(81, 0, 106, 0.61);
+  background-image: linear-gradient(to top, #df89b5 0%, #bfd9fe 100%);
+  color: black;
 }
 .btn-close {
   background-color: aliceblue;
