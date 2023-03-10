@@ -18,6 +18,7 @@ import RequiredAuth from "./Middleware/RequiredAuth";
 import Community from './components/Community/Community';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
+import Profile from "./components/Profile/Profile";
 
 
 function App() {
@@ -70,6 +71,7 @@ function App() {
                 <Route path="services" element={<Services showAlert={showAlert} alert={alert} />} />
               </Route>
               <Route path="spare" element={<Spare />} />
+              <Route path="profile" element={<Profile/>} />
               <Route path="cart" element={<Cart />} />
               <Route path="contact" element={<Contact />}></Route>
             </Route>
