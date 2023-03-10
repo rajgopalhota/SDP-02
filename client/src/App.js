@@ -15,23 +15,21 @@ import Cart from "./components/Cart/Cart";
 import { AuthProvider } from "./Middleware/auth";
 import { useState } from "react";
 import RequiredAuth from "./Middleware/RequiredAuth";
-import Community from './components/Community/Community';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'
+import Community from "./components/Community/Community";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import RepairHistory from "./components/RepairHistory/HistoryRepair";
 
-
+import Admin from "./Admin/Navbar/Admin";
 
 function App() {
-
-
   const [alert, setAlert] = useState(null);
   const showAlert = (message, type) => {
     setAlert({
       msg: message,
-      Type: type
-    })
-  }
-
+      Type: type,
+    });
+  };
 
   const [darkMode, setDarkMode] = useState(true);
   const toggleDarkMode = () => setDarkMode(darkMode ? false : true);
@@ -58,26 +56,32 @@ function App() {
           </label>
         </div>
         <AuthProvider>
-
           <ToastContainer />
 
           <Routes>
             <Route path="" element={<Landing />}></Route>
-            <Route path="autobots/*" element={<Autobot showAlert={showAlert} alert={alert} />}>
+            <Route
+              path="autobots/*"
+              element={<Autobot showAlert={showAlert} alert={alert} />}
+            >
               <Route path="home" element={<Home />} />
               <Route path="products" element={<Products />} />
               <Route path="aboutus" element={<About />} />
               <Route element={<RequiredAuth />}>
-                <Route path="services" element={<Services showAlert={showAlert} alert={alert} />} />
+                <Route
+                  path="services"
+                  element={<Services showAlert={showAlert} alert={alert} />}
+                />
               </Route>
               <Route path="spare" element={<Spare />} />
-              
+              <Route path="repairhistory" element={<RepairHistory />} />
               <Route path="cart" element={<Cart />} />
               <Route path="contact" element={<Contact />}></Route>
             </Route>
             <Route path="community" element={<Community />}></Route>
             <Route path="login" element={<Login />}></Route>
             <Route path="/paymentsuccess" element={<PaymentSuccess />} />
+            <Route path="admin" element={<Admin />} />
             <Route path="*" element={<PageNotFound />}></Route>
           </Routes>
         </AuthProvider>
