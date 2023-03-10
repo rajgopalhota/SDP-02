@@ -63,7 +63,7 @@ export default function Testride(props) {
                     <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div className="offcanvas-body" >
-                    <img src={pic} class="img-fluid" alt="..." />
+                    <img src={pic} className="img-fluid" alt="..." />
                     {
                         !auth.user &&
                         <h1>Please Login to fill form</h1>

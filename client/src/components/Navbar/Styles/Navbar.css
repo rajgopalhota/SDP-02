@@ -1,4 +1,7 @@
 nav {
+  position: absolute;
+  top: 0;
+  left: 0;
   color: aliceblue;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
@@ -17,7 +20,8 @@ nav h3{
 }
 
 .navbar-brand p{
-  margin: auto;
+  font-weight: 700;
+  margin:0 auto;
   position: relative;
   overflow: hidden;
   background: linear-gradient(90deg, #000, #fff, #000);
@@ -27,7 +31,6 @@ nav h3{
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }
-
 @keyframes paraAni {
   0% {
     background-position: -500%;
@@ -51,15 +54,18 @@ nav h3{
 }
 
 .navbar {
-  background-color: rgba(73, 8, 129, 0.158);
+  background-color: rgba(40, 2, 73, 0.505);
   backdrop-filter: blur(12px);
   z-index: 999;
   overflow: hidden;
+  position: fixed;
   top: 0;
   height: 2.6em;
+  min-width: 100%;
 }
 .main-body-light .navbar{
-  background-color: rgb(9, 0, 75);
+  backdrop-filter: blur(32px);
+  background-color: rgba(177, 175, 165, 0.21);
 }
 .active {
   transition: all ease-in-out 0.5s;

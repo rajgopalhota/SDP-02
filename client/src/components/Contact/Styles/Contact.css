@@ -25,7 +25,7 @@ textarea {
 .contactcomp-container {
   z-index: 100;
   animation: floatery 1s;
-  margin-top: 3%;
+  margin-top: 2%;
   background: transparent;
   position: relative;
   width: 100%;
@@ -340,6 +340,9 @@ textarea.contactcomp-input {
 }
 
 @media (max-width: 850px) {
+  .contactcomp-container {
+    margin-top: 20%;
+  }
   .contactcomp-input{
     width: 100%;
   }
@@ -381,6 +384,9 @@ textarea.contactcomp-input {
 }
 
 @media (max-width: 480px) {
+  .contactcomp-container {
+    margin-top: 20%;
+  }
   .contactcomp-input{
     width: 100%;
   }

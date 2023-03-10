@@ -9,7 +9,7 @@
 }
 .Aboutani{
   min-height: 100vh;
-  margin-top: 5%;
+  margin-top: 8%;
   overflow: hidden;
 }
 .aboutmove1{
@@ -204,5 +204,8 @@
   .abt-container2 a{
     font-size: 22px;
     margin-bottom: 10px;
+  }
+  .Aboutani{
+    margin-top: 20%;
   }
 }
