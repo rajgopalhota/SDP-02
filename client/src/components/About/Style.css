@@ -7,6 +7,10 @@
   border-radius: 12px;
   box-shadow: 10px 25px 30px rgba(0, 136, 134, 0.384);
 }
+.main-body-light .abt-container,.main-body-light .abt-container1,.main-body-light .abt-container2{
+  background-image: linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%);
+  
+}
 .Aboutani{
   min-height: 100vh;
   margin-top: 8%;

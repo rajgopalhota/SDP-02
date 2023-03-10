@@ -36,7 +36,6 @@ body {
   box-sizing: border-box;
   min-height: 100%;
   min-width: 100%;
-  /* background: url(./autobot.jpg) no-repeat center center fixed; */
   color: aliceblue;
   transition: all ease-in-out 1s;
   background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
@@ -57,8 +56,7 @@ body {
   box-sizing: border-box;
   min-height: 100%;
   min-width: 100%;
-  /* background: url(./lit2.png) no-repeat center center fixed; */
-  background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
   color: rgb(0, 0, 0);
   transition: all ease-in-out 1s;
 
