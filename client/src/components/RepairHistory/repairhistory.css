@@ -1,0 +1,22 @@
+.table th {
+  font-weight: 700;
+  font-size: 22px;
+}
+.main-body-dark .table tr {
+  color: aliceblue;
+}
+.main-body-dark .table-hover > tbody > tr:hover > * {
+  color: rgb(163, 224, 247);
+}
+.modal-header {
+  text-transform: capitalize;
+}
+@media only screen and (max-width: 600px) {
+  .table th {
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .table tr {
+    font-size: 10px;
+  }
+}

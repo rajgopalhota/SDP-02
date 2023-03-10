@@ -3,10 +3,11 @@ import Mapslider from "../Mapslider/Mapslider";
 import Rating from "../Rating/Rating";
 import "./Styles/repair.css";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../Middleware/auth";
-import {AutobotBackend} from './../../Middleware/Helper'
+import { AutobotBackend } from './../../Middleware/Helper'
 import { toast } from "react-toastify";
+import HistoryRepair from "../RepairHistory/HistoryRepair";
 
 export default function Repair(props) {
   const auth = useAuth();
@@ -57,7 +58,7 @@ export default function Repair(props) {
 
   return (
     <div className="wholerepaircont">
-      
+      <HistoryRepair />
       <Mapslider />
       <div className="repair-container ">
         <h1>Welocme to Autobots Repair Services</h1>
@@ -121,6 +122,9 @@ export default function Repair(props) {
           </table>
           <button className="login-btn">Book</button>
         </form>
+      </div>
+      <div class="historybtns">
+          <div class="history-btn"><Link data-bs-toggle="modal" data-bs-target="#repairhistory">History</Link></div>
       </div>
       <Rating />
     </div>

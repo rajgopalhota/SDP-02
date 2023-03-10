@@ -24,11 +24,12 @@ export default function About() {
             <img src={gopalpic} alt=""></img>
           </a>
           <p>
-            <li>Animation effects</li>
-            <li>User Interface</li>
+            <li>Animation effects & User Interface</li>
+            <li>Modals and Side forms</li>
+            <li>Payment Interface</li>
+            <li>Products Page</li>
             Dolore ullam provident iste quibusdam blanditiis explicabo, sed
             laborum molestiae debitis aliquam, accusamus necessitatibus, placeat
-            in ex eligendi nemo soluta. Accusantium, illo.
           </p>
         </div>
       </div>
@@ -53,9 +54,10 @@ export default function About() {
           <p>
             <li>Services dept</li>
             <li>Form management</li>
+            <li>Server structure</li>
+            <li>Data Fetching</li>
             Dolore ullam provident iste quibusdam blanditiis explicabo, sed
             laborum molestiae debitis aliquam, accusamus necessitatibus, placeat
-            in ex eligendi nemo soluta. Accusantium, illo.
           </p>
         </div>
       </div>
@@ -79,9 +81,10 @@ export default function About() {
           <p>
             <li>Cart page</li>
             <li>Data models</li>
+            <li>Form validation</li>
+            <li>Admin dashboard</li>
             Dolore ullam provident iste quibusdam blanditiis explicabo, sed
             laborum molestiae debitis aliquam, accusamus necessitatibus, placeat
-            in ex eligendi nemo soluta. Accusantium, illo.
           </p>
         </div>
       </div>
