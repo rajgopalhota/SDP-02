@@ -62,6 +62,13 @@ router.get("/repairhistory/:user", async (req, res) => {
   }
 });
 
+// Deleting cart
+router.delete('/deletehistory/:id', async (req, res) => {
+  const pid = req.params.id;
+  const result = await repairmodel.deleteOne({ _id: pid });
+  res.send(result);
+})
+
 // contact
 router.post("/contact", async (req, res) => {
   const name = req.body.username;

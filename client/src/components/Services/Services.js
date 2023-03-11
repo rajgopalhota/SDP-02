@@ -123,8 +123,8 @@ export default function Repair(props) {
           <button className="login-btn">Book</button>
         </form>
       </div>
-      <div class="historybtns">
-          <div class="history-btn"><Link data-bs-toggle="modal" data-bs-target="#repairhistory">History</Link></div>
+      <div className="historybtns">
+          <div className="history-btn"><Link data-bs-toggle="modal" data-bs-target="#repairhistory">History</Link></div>
       </div>
       <Rating />
     </div>
