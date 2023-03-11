@@ -2,7 +2,7 @@ import { Outlet, Navigate } from 'react-router-dom'
 import { useAuth } from './auth'
 import { toast } from "react-toastify";
 
-const RequiredAuth = () => {
+export const RequiredAuth = () => {
   const auth = useAuth();
   if (!auth.user) {
     toast.success('Please login', {
@@ -12,7 +12,16 @@ const RequiredAuth = () => {
   }
   return <Outlet />
 }
+export const AdminAuth = () => {
+  const auth = useAuth();
+  if (!auth.user || localStorage.getItem('role')!=='Admin') {
+    toast.success('Do not try to intrude Admin!', {
+      toastId: 's1',
+    })
+    return <Navigate to="/autobots/home" />
+  }
+  return <Outlet />
+}
 
 
-export default RequiredAuth
 

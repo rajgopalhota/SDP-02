@@ -1,16 +1,10 @@
 import "./Admin.css";
 import React from "react";
 import { useAuth } from "../Middleware/auth";
-import { Link, useNavigate  } from "react-router-dom";
+import { Link  } from "react-router-dom";
 
 export default function Toolbar() {
   const auth = useAuth();
-  const navigate = useNavigate();
-  const handleLogout = () => {
-    auth.logout();
-    localStorage.clear();
-    navigate("../",{ replace: true });
-  };
   return (
     <div>
       <div
@@ -80,9 +74,9 @@ export default function Toolbar() {
                 <i className="fa-solid fa-user-minus"></i>&nbsp;&nbsp;Users
               </button>
             </Link>
-            <Link onClick={handleLogout}>
+            <Link to='/autobots/home'>
               <button className="tooltip-btn-hover color-11">
-                <i className="fa-solid fa-key"></i>&nbsp;&nbsp;Logout
+                <i className="fa-solid fa-key"></i>&nbsp;&nbsp;Visit site
               </button>
             </Link>
           </div>

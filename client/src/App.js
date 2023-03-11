@@ -14,7 +14,7 @@ import Home from "./components/Home/Home";
 import Cart from "./components/Cart/Cart";
 import { AuthProvider } from "./Middleware/auth";
 import { useState } from "react";
-import RequiredAuth from "./Middleware/RequiredAuth";
+import {RequiredAuth, AdminAuth} from "./Middleware/RequiredAuth";
 import Community from "./components/Community/Community";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -87,7 +87,7 @@ function App() {
             <Route path="community" element={<Community />}></Route>
             <Route path="login" element={<Login />}></Route>
             <Route path="/paymentsuccess" element={<PaymentSuccess />} />
-            <Route element={<RequiredAuth/>}>
+            <Route element={<AdminAuth/>}>
               <Route path="admin" element={<Admin />}>
                 <Route path="" element={<Welcome />} />
                 <Route path="overview" element={<Overview />} />
