@@ -151,7 +151,9 @@
   box-shadow: 0 5px 15px rgba(242, 97, 103, 0.4);
 }
 
-
+.offcanvas-body::-webkit-scrollbar{
+  display: none;
+}
 
 @media only screen and (max-width: 600px) {
   .adminwelcome h1{

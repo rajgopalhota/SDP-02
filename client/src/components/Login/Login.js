@@ -82,6 +82,7 @@ export default function Index() {
               // const authtoken = response.data.token;
               console.log(response.data)
               localStorage.setItem('user', response.data.username);
+              localStorage.setItem('role', response.data.role);
               // console.log(localStorage.getItem('user'));
               auth.login(username);
               navigate("/autobots/home");
@@ -90,7 +91,20 @@ export default function Index() {
                 theme: "dark",
               });
             }
+            else if(response.data.role === "Admin"){
+              const username = response.data.username;
+              console.log(response.data)
+              localStorage.setItem('user', response.data.username);
+              localStorage.setItem('role', response.data.role);
+              auth.login(username);
+              navigate("/admin");
+              toast.success("Login Successfull", {
+                position: "bottom-right",
+                theme: "dark",
+              });
+            }
           }
+          
           else if (response.data === "invalid") {
             if (response.data.message === "unsuccess") {
               toast.error("Login error", {

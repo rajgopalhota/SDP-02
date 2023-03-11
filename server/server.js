@@ -5,6 +5,7 @@ const dotenv = require("dotenv");
 const authurls = require("./routes/auth");
 const routesurls = require("./routes/routes");
 const carturls = require("./routes/cartroutes");
+const adminurls = require("./routes/admin");
 const paymentRoute = require("./routes/paymentRoutes");
 const cors = require("cors");
 
@@ -19,6 +20,7 @@ app.use(cors());
 app.use("/api", routesurls);
 app.use("/items", carturls);
 app.use("/auth", authurls);
+app.use("/admin", adminurls);
 app.use("/payment", paymentRoute);
 app.get("/payment/getkey", (req, res) =>
   res.status(200).json({ key: process.env.RAZORPAY_API_KEY })
