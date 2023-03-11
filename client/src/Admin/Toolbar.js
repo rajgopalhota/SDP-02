@@ -1,6 +1,7 @@
 import './Admin.css'
 import React from 'react'
 import { useAuth } from '../Middleware/auth'
+import { Link } from 'react-router-dom';
 
 export default function Toolbar() {
   const auth = useAuth();
@@ -13,13 +14,13 @@ export default function Toolbar() {
         </div>
         <div className="offcanvas-body-md" >
           <div class="tooltip-buttons">
-            <button class="tooltip-btn-hover color-1"><i class="fa-solid fa-download"></i>&nbsp;&nbsp;Autobots</button>
-            <button class="tooltip-btn-hover color-2"><i class="fa-solid fa-address-book"></i>&nbsp;&nbsp;Contact</button>
-            <button class="tooltip-btn-hover color-4"><i class="fa-solid fa-handshake"></i>&nbsp;&nbsp;Registry</button>
-            <button class="tooltip-btn-hover color-7"><i class="fa-solid fa-truck-fast"></i>&nbsp;&nbsp;Catalog</button>
-            <button class="tooltip-btn-hover color-9"><i class="fa-solid fa-comments"></i>&nbsp;&nbsp;Community</button>
-            <button class="tooltip-btn-hover color-10"><i class="fa-solid fa-user-minus"></i>&nbsp;&nbsp;Users</button>
-            <button class="tooltip-btn-hover color-11"><i class="fa-solid fa-key"></i>&nbsp;&nbsp;Logout</button>
+            <Link to='/admin/overview'><button class="tooltip-btn-hover color-1"><i class="fa-solid fa-download"></i>&nbsp;&nbsp;Autobots</button></Link>
+            <Link><button class="tooltip-btn-hover color-2"><i class="fa-solid fa-address-book"></i>&nbsp;&nbsp;Contact</button></Link>
+            <Link><button class="tooltip-btn-hover color-4"><i class="fa-solid fa-handshake"></i>&nbsp;&nbsp;Registry</button></Link>
+            <Link><button class="tooltip-btn-hover color-7"><i class="fa-solid fa-truck-fast"></i>&nbsp;&nbsp;Catalog</button></Link>
+            <Link><button class="tooltip-btn-hover color-9"><i class="fa-solid fa-comments"></i>&nbsp;&nbsp;Community</button></Link>
+            <Link><button class="tooltip-btn-hover color-10"><i class="fa-solid fa-user-minus"></i>&nbsp;&nbsp;Users</button></Link>
+            <Link><button class="tooltip-btn-hover color-11"><i class="fa-solid fa-key"></i>&nbsp;&nbsp;Logout</button></Link>
           </div>
         </div>
       </div>

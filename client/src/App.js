@@ -20,6 +20,8 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import RepairHistory from "./components/RepairHistory/HistoryRepair";
 import Admin from "./Admin/Admin";
+import Welcome from "./Admin/Welcome";
+import Overview from "./Admin/Overview/Overview";
 
 function App() {
   const [alert, setAlert] = useState(null);
@@ -80,7 +82,10 @@ function App() {
             <Route path="community" element={<Community />}></Route>
             <Route path="login" element={<Login />}></Route>
             <Route path="/paymentsuccess" element={<PaymentSuccess />} />
-            <Route path="admin" element={<Admin />} />
+            <Route path="admin" element={<Admin />}>
+              <Route path="" element={<Welcome />} />
+              <Route path="overview" element={<Overview />} />
+            </Route>
             <Route path="*" element={<PageNotFound />}></Route>
           </Routes>
         </AuthProvider>

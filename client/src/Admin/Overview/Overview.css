@@ -1,0 +1,37 @@
+.Overview {
+  position: relative;
+  width: 80%;
+  margin: auto;
+}
+.Overview .container{
+    margin-top: 9%;
+}
+.overview-card {
+  margin: auto;
+  margin-bottom: 3%;
+  max-width: 300px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 500px;
+  height: 300px;
+  padding: 35px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.24);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(15px);
+}
+.overview-card i{
+    margin: auto;
+    font-size: 100px;
+    color: rgb(216, 241, 201);
+}
+
+
+@media only screen and (max-width: 600px) {
+    .Overview .container{
+        margin-top: 25%;
+    }
+}
