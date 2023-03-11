@@ -179,12 +179,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 	box-shadow: 0 0 5px #1eff45, 0 0 15px #1eff45, 0 0 30px #1eff45,
 		0 0 60px #1eff45;
 }
-.historybtns .history-btn:nth-child(2)::before, /*chnage 1*/
-.historybtns .history-btn:nth-child(2)::after {
-	background: #ff1f71;
-	box-shadow: 0 0 5px #ff1f71, 0 0 15px #ff1f71, 0 0 30px #ff1f71,
-		0 0 60px #ff1f71;
-}
+
 
 
 @media only screen and (max-width: 600px) {

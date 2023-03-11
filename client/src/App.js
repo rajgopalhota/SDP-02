@@ -19,8 +19,7 @@ import Community from "./components/Community/Community";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import RepairHistory from "./components/RepairHistory/HistoryRepair";
-
-// import Admin from "./Admin/Navbar/Admin";
+import Admin from "./Admin/Admin";
 
 function App() {
   const [alert, setAlert] = useState(null);
@@ -81,7 +80,7 @@ function App() {
             <Route path="community" element={<Community />}></Route>
             <Route path="login" element={<Login />}></Route>
             <Route path="/paymentsuccess" element={<PaymentSuccess />} />
-            {/* <Route path="admin" element={<Admin />} /> */}
+            <Route path="admin" element={<Admin />} />
             <Route path="*" element={<PageNotFound />}></Route>
           </Routes>
         </AuthProvider>
