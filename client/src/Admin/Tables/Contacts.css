@@ -13,7 +13,7 @@
   margin: auto;
   margin-top: 1%;
   min-width: 90%;
-  min-height: 200px;
+  min-height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

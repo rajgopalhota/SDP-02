@@ -11,7 +11,7 @@ export default function Users() {
     axios
       .get(`${AutobotBackend}/admin/users`, {})
       .then((response) => {
-        setUsers(response.data.reverse());
+        setUsers(response.data.reverse().filter((obj, key) => obj.role !== 'Admin'));
       })
       .catch((error) => {
         console.log(error);
