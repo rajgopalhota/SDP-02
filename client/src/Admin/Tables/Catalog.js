@@ -38,7 +38,7 @@ export default function Catalog() {
     <div>
       <div className="admintables">
         <h1>Catalogs</h1>
-        <div className="overview-card text-center">
+        <div className="admintable-card text-center">
           <table className="table table-hover">
             <thead>
               <tr>

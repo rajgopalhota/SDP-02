@@ -39,7 +39,7 @@ export default function Contacts() {
     <div>
       <div className="admintables">
         <h1>Contacts by users</h1>
-        <div className="overview-card text-center">
+        <div className="admintable-card text-center">
           <table className="table table-hover">
             <thead>
               <tr>

@@ -39,7 +39,7 @@ export default function Registry() {
       <div className="admintables">
         <h1>Test Ride Requests</h1>
         <div className="table-responsive">
-        <div className="overview-card text-center">
+        <div className="admintable-card text-center">
           <table className="table table-hover">
             <thead>
               <tr>

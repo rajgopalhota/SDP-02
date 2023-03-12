@@ -39,7 +39,7 @@ export default function Users() {
       <div className="admintables">
         <h1>Autobot users</h1>
         <div className="table-responsive">
-          <div className="overview-card text-center">
+          <div className="admintable-card text-center">
             <table className="table table-hover">
               <thead>
                 <tr>
@@ -49,7 +49,7 @@ export default function Users() {
                   <th scope="col">Gender</th>
                   <th scope="col">Date</th>
                   <th scope="col">Role</th>
-                  <th scope="col">Delete</th>
+                  <th scope="col"></th>
                 </tr>
               </thead>
               <tbody>

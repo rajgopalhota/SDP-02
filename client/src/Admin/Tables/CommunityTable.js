@@ -38,14 +38,14 @@ export default function CommunityTable() {
     <div>
       <div className="admintables">
         <h1> Community</h1>
-        <div className="overview-card">
+        <div className="admintable-card">
           <table className="table table-hover">
             <thead>
               <tr>
                 <th scope="col">Username</th>
                 <th scope="col">Message</th>
                 <th scope="col">Posted at</th>
-                <th scope="col">Delete</th>
+                <th scope="col"></th>
               </tr>
             </thead>
             <tbody>
