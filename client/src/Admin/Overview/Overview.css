@@ -4,7 +4,7 @@
   margin: auto;
 }
 .Overview .container{
-    margin-top: 9%;
+    margin-top: 3%;
 }
 .Overview .overview-card {
   margin: auto;
@@ -44,10 +44,4 @@
   font-weight: 600;
   text-shadow: 0 0 12px black;
   letter-spacing: 2px;
-}
-
-@media only screen and (max-width: 600px) {
-    .Overview .container{
-        margin-top: 25%;
-    }
 }

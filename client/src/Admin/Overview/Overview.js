@@ -28,6 +28,10 @@ export default function Overview() {
 
   return (
     <div>
+      <div className="adminwelcome">
+        <h2>Experience the power of Autobots</h2>
+        <h1>"Admin magic at your service."</h1>
+      </div>
       <div className="Overview">
         <div className="container text-center">
           <div className="row">
@@ -35,7 +39,8 @@ export default function Overview() {
               <div className="overview-card">
                 <i className="fa-solid fa-users"></i>
                 <p>
-                  Total Associated users<br/> <strong>{users}</strong>{" "}
+                  Total Associated users
+                  <br /> <strong>{users}</strong>{" "}
                 </p>
                 <p className="overview-card-footer">USERS</p>
               </div>
@@ -44,7 +49,8 @@ export default function Overview() {
               <div className="overview-card">
                 <i className="fa-solid fa-cart-shopping"></i>
                 <p>
-                  Total Purchase<br/> <strong>{purchase}</strong>
+                  Total Purchase
+                  <br /> <strong>{purchase}</strong>
                 </p>
                 <p className="overview-card-footer">PURCHASES</p>
               </div>
@@ -53,7 +59,8 @@ export default function Overview() {
               <div className="overview-card">
                 <i className="fa-solid fa-paper-plane"></i>
                 <p>
-                  Community comments<br/> <strong>{comment}</strong>
+                  Community comments
+                  <br /> <strong>{comment}</strong>
                 </p>
                 <p className="overview-card-footer">COMMENTS</p>
               </div>
@@ -64,7 +71,8 @@ export default function Overview() {
               <div className="overview-card">
                 <i className="fa-solid fa-car-side"></i>
                 <p>
-                  Users Interested<br/> <strong>{testride}</strong>
+                  Users Interested
+                  <br /> <strong>{testride}</strong>
                 </p>
                 <p className="overview-card-footer">Test Rides</p>
               </div>
@@ -73,7 +81,8 @@ export default function Overview() {
               <div className="overview-card">
                 <i className="fa-solid fa-truck-fast"></i>
                 <p>
-                  Total Repair<br/> <strong>{repair}</strong>{" "}
+                  Total Repair
+                  <br /> <strong>{repair}</strong>{" "}
                 </p>
                 <p className="overview-card-footer">Repairs</p>
               </div>
@@ -82,7 +91,8 @@ export default function Overview() {
               <div className="overview-card">
                 <i className="fa-solid fa-wand-magic-sparkles"></i>
                 <p>
-                  Daily mails we recieve<br/> <strong>{mail}</strong>{" "}
+                  Daily mails we recieve
+                  <br /> <strong>{mail}</strong>{" "}
                 </p>
                 <p className="overview-card-footer">Mail services</p>
               </div>

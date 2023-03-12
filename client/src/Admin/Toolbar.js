@@ -26,12 +26,12 @@ export default function Toolbar() {
         </div>
         <div className="offcanvas-body">
           <div className="tooltip-buttons">
-            <Link to="/admin/overview">
+            <Link to="/admin/repairs">
               <button
                 className="tooltip-btn-hover color-1"
                 data-bs-dismiss="offcanvas"
               >
-                <i className="fa-solid fa-download"></i>&nbsp;&nbsp;Autobots
+                <i className="fa-solid fa-download"></i>&nbsp;&nbsp;Repairs
               </button>
             </Link>
             <Link to="/admin/contacts">
@@ -47,7 +47,7 @@ export default function Toolbar() {
                 className="tooltip-btn-hover color-4"
                 data-bs-dismiss="offcanvas"
               >
-                <i className="fa-solid fa-handshake"></i>&nbsp;&nbsp;Registry
+                <i className="fa-solid fa-handshake"></i>&nbsp;&nbsp;Testrides
               </button>
             </Link>
             <Link to="/admin/catalog">

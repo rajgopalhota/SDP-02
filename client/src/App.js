@@ -20,13 +20,13 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import RepairHistory from "./components/RepairHistory/HistoryRepair";
 import Admin from "./Admin/Admin";
-import Welcome from "./Admin/Welcome";
 import Overview from "./Admin/Overview/Overview";
 import Contacts from "./Admin/Tables/Contacts";
 import Registry from "./Admin/Tables/Registry";
 import Catalog from "./Admin/Tables/Catalog";
 import Users from "./Admin/Tables/Users";
 import CommunityTable from "./Admin/Tables/CommunityTable";
+import Repair from "./Admin/Tables/Repair";
 
 function App() {
   const [alert, setAlert] = useState(null);
@@ -89,10 +89,10 @@ function App() {
             <Route path="/paymentsuccess" element={<PaymentSuccess />} />
             <Route element={<AdminAuth/>}>
               <Route path="admin" element={<Admin />}>
-                <Route path="" element={<Welcome />} />
-                <Route path="overview" element={<Overview />} />
+                <Route path="" element={<Overview />} />
                 <Route path="contacts" element={<Contacts />} />
                 <Route path="registry" element={<Registry />} />
+                <Route path="repairs" element={<Repair />} />
                 <Route path="catalog" element={<Catalog />} />
                 <Route path="community" element={<CommunityTable />} />
                 <Route path="users" element={<Users />} />

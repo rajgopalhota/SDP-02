@@ -43,4 +43,58 @@ router.get("/catalog", async (req, res) => {
   }
 });
 
+//user table data
+router.get("/users", async (req, res) => {
+  try {
+    const items = await signuptemp.find();
+    res.json(items);
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).send("Internal Server Error");
+  }
+});
+
+//mail table data
+router.get("/contact", async (req, res) => {
+  try {
+    const items = await contactmodel.find();
+    res.json(items);
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).send("Internal Server Error");
+  }
+});
+//community table data
+router.get("/community", async (req, res) => {
+  try {
+    const items = await communitymodel.find();
+    res.json(items);
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).send("Internal Server Error");
+  }
+});
+//registry table data
+router.get("/testride", async (req, res) => {
+  try {
+    const items = await testridemodel.find();
+    res.json(items);
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).send("Internal Server Error");
+  }
+});
+
+
+//repair table data
+router.get("/repairs", async (req, res) => {
+  try {
+    const items = await repairmodel.find();
+    res.json(items);
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).send("Internal Server Error");
+  }
+});
+
 module.exports = router;

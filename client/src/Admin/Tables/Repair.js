@@ -1,22 +1,22 @@
 import React from "react";
+import "./Contacts.css";
 import axios from "axios";
 import { toast } from "react-toastify";
 import Loader from "./../../components/Loader/Loader";
 import { useState, useEffect } from "react";
 import { AutobotBackend } from "../../Middleware/Helper";
-export default function Users() {
-  const [users, setUsers] = useState(null);
+export default function Repair() {
+  const [repair, setRepair] = useState(null);
   useEffect(() => {
-    //catalog is purchases or carts
     axios
-      .get(`${AutobotBackend}/admin/users`, {})
+      .get(`${AutobotBackend}/admin/repairs`, {})
       .then((response) => {
-        setUsers(response.data);
+        setRepair(response.data.reverse());
       })
       .catch((error) => {
         console.log(error);
       });
-  }, [users]);
+  }, [repair]);
 
   function deleteProduct(id) {
     axios
@@ -37,30 +37,32 @@ export default function Users() {
   return (
     <div>
       <div className="admintables">
-        <h1>Autobot users</h1>
+        <h1>Repair Requests by users</h1>
         <div className="overview-card text-center">
           <table className="table table-hover">
             <thead>
               <tr>
-                <th scope="col">UserName</th>
-                <th scope="col">Email</th>
+                <th scope="col">Username</th>
+                <th scope="col">Name</th>
                 <th scope="col">Phone</th>
-                <th scope="col">Gender</th>
+                <th scope="col">Carname</th>
                 <th scope="col">Date</th>
-                <th scope="col">Role</th>
+                <th scope="col">Time</th>
+                <th scope="col">City</th>
                 <th scope="col">Delete</th>
               </tr>
             </thead>
             <tbody>
-              {users ? (
-                users.map((obj, key) => (
+              {repair ? (
+                repair.map((obj, key) => (
                   <tr key={key}>
                     <td>{obj.username}</td>
-                    <td>{obj.email}</td>
+                    <td>{obj.name}</td>
                     <td>{obj.phone}</td>
-                    <td>{obj.gender}</td>
+                    <td>{obj.carname}</td>
                     <td>{obj.date}</td>
-                    <td>{obj.role}</td>
+                    <td>{obj.time}</td>
+                    <td>{obj.city}</td>
                     <td className="service-delete">
                       <i
                         className="fa fa-trash-o fa-lg"

@@ -11,7 +11,7 @@ export default function Catalog() {
     axios
       .get(`${AutobotBackend}/admin/catalog`, {})
       .then((response) => {
-        setPurchase(response.data);
+        setPurchase(response.data.reverse());
       })
       .catch((error) => {
         console.log(error);
