@@ -21,7 +21,7 @@ export default function Contacts() {
 
   function deleteProduct(id) {
     axios
-      .delete(`${AutobotBackend}/api/deletehistory/${id}`, {
+      .delete(`${AutobotBackend}/admin/deletecontacthistory/${id}`, {
         params: {},
       })
       .then((response) => {

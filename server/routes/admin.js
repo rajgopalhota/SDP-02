@@ -97,4 +97,50 @@ router.get("/repairs", async (req, res) => {
   }
 });
 
+// Deleting cart
+router.delete('/deletecarthistory/:id', async (req, res) => {
+  const pid = req.params.id;
+  const result = await cartmodel.deleteOne({ _id: pid });
+  res.send(result);
+})
+// Deleting community
+router.delete('/deletecommunityhistory/:id', async (req, res) => {
+  const pid = req.params.id;
+  const result = await communitymodel.deleteOne({ _id: pid });
+  res.send(result);
+})
+
+// Deleting contact
+router.delete('/deletecontacthistory/:id', async (req, res) => {
+  const pid = req.params.id;
+  const result = await contactmodel.deleteOne({ _id: pid });
+  res.send(result);
+})
+
+// Deleting repair
+router.delete('/deleterepairhistory/:id', async (req, res) => {
+  const pid = req.params.id;
+  const result = await repairmodel.deleteOne({ _id: pid });
+  res.send(result);
+})
+
+// Deleting testride
+router.delete('/deletetestridehistory/:id', async (req, res) => {
+  const pid = req.params.id;
+  const result = await testridemodel.deleteOne({ _id: pid });
+  res.send(result);
+})
+
+// Deleting users
+router.delete('/deleteusershistory/:id', async (req, res) => {
+  const pid = req.params.id;
+  const result = await signuptemp.deleteOne({ _id: pid });
+  res.send(result);
+})
+
+
+
+
+
+
 module.exports = router;

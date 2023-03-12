@@ -20,7 +20,7 @@ export default function Repair() {
 
   function deleteProduct(id) {
     axios
-      .delete(`${AutobotBackend}/api/deletehistory/${id}`, {
+      .delete(`${AutobotBackend}/admin/deleterepairhistory/${id}`, {
         params: {},
       })
       .then((response) => {

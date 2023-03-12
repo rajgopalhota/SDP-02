@@ -20,7 +20,7 @@ export default function CommunityTable() {
 
   function deleteProduct(id) {
     axios
-      .delete(`${AutobotBackend}/api/deletehistory/${id}`, {
+      .delete(`${AutobotBackend}/admin/deletecommunityhistory/${id}`, {
         params: {},
       })
       .then((response) => {

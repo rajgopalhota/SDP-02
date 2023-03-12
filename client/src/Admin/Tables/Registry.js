@@ -20,7 +20,7 @@ export default function Registry() {
 
   function deleteProduct(id) {
     axios
-      .delete(`${AutobotBackend}/api/deletehistory/${id}`, {
+      .delete(`${AutobotBackend}/admin/deletetestridehistory/${id}`, {
         params: {},
       })
       .then((response) => {

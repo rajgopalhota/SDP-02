@@ -20,7 +20,7 @@ export default function Catalog() {
 
   function deleteProduct(id) {
     axios
-      .delete(`${AutobotBackend}/api/deletehistory/${id}`, {
+      .delete(`${AutobotBackend}/admin/deletecarthistory/${id}`, {
         params: {},
       })
       .then((response) => {

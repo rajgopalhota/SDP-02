@@ -11,7 +11,7 @@ export default function Users() {
     axios
       .get(`${AutobotBackend}/admin/users`, {})
       .then((response) => {
-        setUsers(response.data);
+        setUsers(response.data.reverse());
       })
       .catch((error) => {
         console.log(error);
@@ -20,7 +20,7 @@ export default function Users() {
 
   function deleteProduct(id) {
     axios
-      .delete(`${AutobotBackend}/api/deletehistory/${id}`, {
+      .delete(`${AutobotBackend}/admin/deleteusershistory/${id}`, {
         params: {},
       })
       .then((response) => {
