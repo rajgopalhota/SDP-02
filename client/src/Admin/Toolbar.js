@@ -1,7 +1,7 @@
 import "./Admin.css";
 import React from "react";
 import { useAuth } from "../Middleware/auth";
-import { Link  } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Toolbar() {
   const auth = useAuth();
@@ -74,7 +74,7 @@ export default function Toolbar() {
                 <i className="fa-solid fa-user-minus"></i>&nbsp;&nbsp;Users
               </button>
             </Link>
-            <Link to='/autobots/home'>
+            <Link to="/autobots/home">
               <button className="tooltip-btn-hover color-11">
                 <i className="fa-solid fa-key"></i>&nbsp;&nbsp;Visit site
               </button>

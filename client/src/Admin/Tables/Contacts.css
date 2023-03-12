@@ -3,51 +3,51 @@
   width: 100%;
   margin: auto;
 }
-.admintables h1{
-    margin-top: 3%;
-    mix-blend-mode: overlay;
-    font-size: 43px;
-    text-shadow: 0 0 12px black;
+.admintables h1 {
+  margin-top: 3%;
+  mix-blend-mode: overlay;
+  font-size: 43px;
+  text-shadow: 0 0 12px black;
 }
 .admintables .overview-card {
-    margin: auto;
-    margin-top: 1%;
-    min-width: 90%;
-    min-height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    max-width: 500px;
-    height: 300px;
-    padding: 35px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.13);
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(15px);
-  }
+  margin: auto;
+  margin-top: 1%;
+  min-width: 90%;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 500px;
+  height: 300px;
+  padding: 35px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.13);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(15px);
+}
 
-  .admintables .table tr {
-    color: aliceblue;
-  }
-  .admintables .table-hover > tbody > tr:hover > * {
-    color: rgb(163, 224, 247);
-  }
+.admintables .table tr {
+  color: aliceblue;
+}
+.admintables .table-hover > tbody > tr:hover > * {
+  color: rgb(163, 224, 247);
+}
 
-  @media only screen and (max-width: 600px) {
-    .admintables h1{
-        margin-top: 20%;
-        mix-blend-mode: overlay;
-        font-size: 23px;
-        text-shadow: 0 0 12px black;
-    }
-    .admintables .overview-card{
-        margin-top: 2%;
-        max-width: 98%;
-        padding: 0;
-        border-radius: 12px;
-    }
-    .table{
-        padding: 0;
-    }
+@media only screen and (max-width: 600px) {
+  .admintables h1 {
+    margin-top: 20%;
+    mix-blend-mode: overlay;
+    font-size: 23px;
+    text-shadow: 0 0 12px black;
+  }
+  .admintables .overview-card {
+    margin-top: 2%;
+    max-width: 98%;
+    padding: 0;
+    border-radius: 12px;
+  }
+  .table {
+    padding: 0;
+  }
 }

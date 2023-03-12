@@ -62,7 +62,7 @@
   background-size: 300% 100%;
 
   border-radius: 50px;
-  moz-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
@@ -70,7 +70,7 @@
 
 .tooltip-btn-hover:hover {
   background-position: 100% 0;
-  moz-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
@@ -151,19 +151,19 @@
   box-shadow: 0 5px 15px rgba(242, 97, 103, 0.4);
 }
 
-.offcanvas-body::-webkit-scrollbar{
+.offcanvas-body::-webkit-scrollbar {
   display: none;
 }
 
 @media only screen and (max-width: 600px) {
-  .adminwelcome{
+  .adminwelcome {
     margin-top: 25%;
   }
-  .adminwelcome h1{
+  .adminwelcome h1 {
     font-size: 32px;
     display: flex;
   }
-  .adminwelcome h2{
+  .adminwelcome h2 {
     font-size: 22px;
     display: flex;
   }
