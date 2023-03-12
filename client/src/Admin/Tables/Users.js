@@ -38,42 +38,44 @@ export default function Users() {
     <div>
       <div className="admintables">
         <h1>Autobot users</h1>
-        <div className="overview-card text-center">
-          <table className="table table-hover">
-            <thead>
-              <tr>
-                <th scope="col">UserName</th>
-                <th scope="col">Email</th>
-                <th scope="col">Phone</th>
-                <th scope="col">Gender</th>
-                <th scope="col">Date</th>
-                <th scope="col">Role</th>
-                <th scope="col">Delete</th>
-              </tr>
-            </thead>
-            <tbody>
-              {users ? (
-                users.map((obj, key) => (
-                  <tr key={key}>
-                    <td>{obj.username}</td>
-                    <td>{obj.email}</td>
-                    <td>{obj.phone}</td>
-                    <td>{obj.gender}</td>
-                    <td>{obj.date}</td>
-                    <td>{obj.role}</td>
-                    <td className="service-delete">
-                      <i
-                        className="fa fa-trash-o fa-lg"
-                        onClick={() => deleteProduct(obj._id)}
-                      ></i>
-                    </td>
-                  </tr>
-                ))
-              ) : (
-                <Loader />
-              )}
-            </tbody>
-          </table>
+        <div className="table-responsive">
+          <div className="overview-card text-center">
+            <table className="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">UserName</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Phone</th>
+                  <th scope="col">Gender</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Role</th>
+                  <th scope="col">Delete</th>
+                </tr>
+              </thead>
+              <tbody>
+                {users ? (
+                  users.map((obj, key) => (
+                    <tr key={key}>
+                      <td>{obj.username}</td>
+                      <td>{obj.email}</td>
+                      <td>{obj.phone}</td>
+                      <td>{obj.gender}</td>
+                      <td>{obj.date}</td>
+                      <td>{obj.role}</td>
+                      <td className="service-delete">
+                        <i
+                          className="fa fa-trash-o fa-lg"
+                          onClick={() => deleteProduct(obj._id)}
+                        ></i>
+                      </td>
+                    </tr>
+                  ))
+                ) : (
+                  <Loader />
+                )}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>

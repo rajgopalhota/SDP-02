@@ -38,44 +38,46 @@ export default function Repair() {
     <div>
       <div className="admintables">
         <h1>Repair Requests by users</h1>
-        <div className="overview-card text-center">
-          <table className="table table-hover">
-            <thead>
-              <tr>
-                <th scope="col">Username</th>
-                <th scope="col">Name</th>
-                <th scope="col">Phone</th>
-                <th scope="col">Carname</th>
-                <th scope="col">Date</th>
-                <th scope="col">Time</th>
-                <th scope="col">City</th>
-                <th scope="col">Delete</th>
-              </tr>
-            </thead>
-            <tbody>
-              {repair ? (
-                repair.map((obj, key) => (
-                  <tr key={key}>
-                    <td>{obj.username}</td>
-                    <td>{obj.name}</td>
-                    <td>{obj.phone}</td>
-                    <td>{obj.carname}</td>
-                    <td>{obj.date}</td>
-                    <td>{obj.time}</td>
-                    <td>{obj.city}</td>
-                    <td className="service-delete">
-                      <i
-                        className="fa fa-trash-o fa-lg"
-                        onClick={() => deleteProduct(obj._id)}
-                      ></i>
-                    </td>
-                  </tr>
-                ))
-              ) : (
-                <Loader />
-              )}
-            </tbody>
-          </table>
+        <div className="table-responsive">
+          <div className="overview-card text-center">
+            <table className="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">Username</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Phone</th>
+                  <th scope="col">Carname</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Time</th>
+                  <th scope="col">City</th>
+                  <th scope="col">Delete</th>
+                </tr>
+              </thead>
+              <tbody>
+                {repair ? (
+                  repair.map((obj, key) => (
+                    <tr key={key}>
+                      <td>{obj.username}</td>
+                      <td>{obj.name}</td>
+                      <td>{obj.phone}</td>
+                      <td>{obj.carname}</td>
+                      <td>{obj.date}</td>
+                      <td>{obj.time}</td>
+                      <td>{obj.city}</td>
+                      <td className="service-delete">
+                        <i
+                          className="fa fa-trash-o fa-lg"
+                          onClick={() => deleteProduct(obj._id)}
+                        ></i>
+                      </td>
+                    </tr>
+                  ))
+                ) : (
+                  <Loader />
+                )}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>

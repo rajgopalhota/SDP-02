@@ -14,7 +14,7 @@ html{
 }
 body {
   max-width: 100dvw;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   z-index: -999;
   margin: 0;
   font-family: "Poppins", sans-serif;
