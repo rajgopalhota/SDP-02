@@ -38,7 +38,7 @@ export default function CommunityTable() {
     <div>
       <div className="admintables">
         <h1> Community</h1>
-        <div className="overview-card text-center">
+        <div className="overview-card">
           <table className="table table-hover">
             <thead>
               <tr>
