@@ -71,7 +71,11 @@ export default function CommunityTable() {
                   </tr>
                 ))
               ) : (
-                <Loader />
+                <tr>
+                    <td>
+                    <Loader/>
+                    </td>
+                  </tr>
               )}
             </tbody>
           </table>

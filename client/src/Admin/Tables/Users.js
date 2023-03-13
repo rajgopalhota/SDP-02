@@ -81,7 +81,11 @@ export default function Users() {
                     </tr>
                   ))
                 ) : (
-                  <Loader />
+                  <tr>
+                    <td>
+                    <Loader/>
+                    </td>
+                  </tr>
                 )}
               </tbody>
             </table>

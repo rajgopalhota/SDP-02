@@ -71,7 +71,11 @@ export default function Catalog() {
                   </tr>
                 ))
               ) : (
-                <Loader />
+                <tr>
+                    <td>
+                    <Loader/>
+                    </td>
+                  </tr>
               )}
             </tbody>
           </table>

@@ -75,7 +75,11 @@ export default function Contacts() {
                   </tr>
                 ))
               ) : (
-                <Loader />
+                <tr>
+                    <td>
+                    <Loader/>
+                    </td>
+                  </tr>
               )}
             </tbody>
           </table>

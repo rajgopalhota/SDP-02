@@ -80,7 +80,11 @@ export default function Registry() {
                     </tr>
                   ))
                 ) : (
-                  <Loader />
+                  <tr>
+                    <td>
+                    <Loader/>
+                    </td>
+                  </tr>
                 )}
               </tbody>
             </table>
