@@ -17,7 +17,7 @@ export default function Index() {
     const data = new FormData(e.currentTarget);
     axios
       .post(`${AutobotBackend}/auth/register`, {
-        username: data.get("reguser"),
+        username: data.get("reguser").split(" ").join("").toLowerCase(),
         email: data.get("regemail"),
         phone: data.get("regphone"),
         password: data.get("regpassword"),
@@ -60,7 +60,7 @@ export default function Index() {
     const data = new FormData(e.currentTarget);
     axios
       .post(`${AutobotBackend}/auth/login`, {
-        username: data.get("loginuser"),
+        username: data.get("loginuser").split(" ").join("").toLowerCase(),
         password: data.get("loginpassword"),
       })
       .then((response) => {
