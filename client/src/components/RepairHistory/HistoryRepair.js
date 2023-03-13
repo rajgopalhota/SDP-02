@@ -6,9 +6,15 @@ import { toast } from "react-toastify";
 import axios from "axios";
 import Loader from "./../Loader/Loader";
 import "./repairhistory.css";
+import ConfirmDelete from "../../Admin/ConfirmDelete";
 export default function HistoryRepair() {
   const auth = useAuth();
   const [result, setResult] = useState(null);
+  const [id, setId] = useState(null);
+  const handleConfirmation = (e, id) => {
+    e.preventDefault();
+    setId(id);
+  }
   function deleteProduct(id) {
     axios.delete(`${AutobotBackend}/api/deletehistory/${id}`,
       {
@@ -35,6 +41,7 @@ export default function HistoryRepair() {
 
   return (
     <>
+      <ConfirmDelete id={id} delete={deleteProduct} />
       <div className="modal fade modal-lg" id="repairhistory" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="modal-dialog">
           <div className="modal-content ">
@@ -68,7 +75,7 @@ export default function HistoryRepair() {
                       <td>{obj.carname}</td>
                       <td>{obj.date}</td>
                       <td>{obj.city}</td>
-                      <td className="service-delete"><i className="fa fa-trash-o fa-lg" onClick={() => deleteProduct(obj._id)}></i></td>
+                      <td className="service-delete"><i className="fa fa-trash-o fa-lg" data-bs-toggle="modal" data-bs-target="#deleteconirmationmodal" onClick={(e) => handleConfirmation(e, obj._id)}></i></td>
                     </tr>
                   ))
                 ) : (
