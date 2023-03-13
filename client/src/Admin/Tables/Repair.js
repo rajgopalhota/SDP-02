@@ -3,10 +3,18 @@ import "./Contacts.css";
 import axios from "axios";
 import { toast } from "react-toastify";
 import Loader from "./../../components/Loader/Loader";
+import ConfirmDelete from "../ConfirmDelete";
+
 import { useState, useEffect } from "react";
 import { AutobotBackend } from "../../Middleware/Helper";
 export default function Repair() {
   const [repair, setRepair] = useState(null);
+
+  const [id, setId] = useState(null);
+  const handleConfirmation = (e, id) => {
+    e.preventDefault();
+    setId(id);
+  }
   useEffect(() => {
     axios
       .get(`${AutobotBackend}/admin/repairs`, {})
@@ -37,6 +45,8 @@ export default function Repair() {
   return (
     <div>
       <div className="admintables">
+        <ConfirmDelete id={id} delete={deleteProduct} />
+
         <h1>Repair Requests by users</h1>
         <div className="table-responsive">
           <div className="admintable-card text-center">
@@ -66,8 +76,8 @@ export default function Repair() {
                       <td>{obj.city}</td>
                       <td className="service-delete">
                         <i
-                          className="fa fa-trash-o fa-lg"
-                          onClick={() => deleteProduct(obj._id)}
+                          className="fa fa-trash-o fa-lg" data-bs-toggle="modal" data-bs-target="#deleteconirmationmodal"
+                          onClick={(e) => handleConfirmation(e, obj._id)}
                         ></i>
                       </td>
                     </tr>

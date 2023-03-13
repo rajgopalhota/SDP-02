@@ -8,10 +8,8 @@ import ConfirmDelete from "../ConfirmDelete";
 export default function Catalog() {
   const [purchase, setPurchase] = useState(null);
   const [id, setId] = useState(null);
-  const [name, setName] = useState(null);
-  const handleConfirmation = (e, id, name) => {
+  const handleConfirmation = (e, id) => {
     e.preventDefault();
-    setName(name);
     setId(id);
   }
   useEffect(() => {
@@ -25,7 +23,7 @@ export default function Catalog() {
         console.log(error);
       });
   }, [purchase]);
-  
+
   function deleteProduct(id) {
     axios
       .delete(`${AutobotBackend}/admin/deletecarthistory/${id}`, {
@@ -45,7 +43,7 @@ export default function Catalog() {
   return (
     <div>
       <div className="admintables">
-        <ConfirmDelete id={id} name={name} delete = {deleteProduct}  />
+        <ConfirmDelete id={id} delete={deleteProduct} />
         <h1>Catalogs</h1>
         <div className="admintable-card text-center">
           <table className="table table-hover">
@@ -67,7 +65,7 @@ export default function Catalog() {
                     <td className="service-delete">
                       <i
                         className="fa fa-trash-o fa-lg" data-bs-toggle="modal" data-bs-target="#deleteconirmationmodal"
-                       onClick={(e) => handleConfirmation(e, obj._id, obj.name)}
+                        onClick={(e) => handleConfirmation(e, obj._id)}
                       ></i>
                     </td>
                   </tr>

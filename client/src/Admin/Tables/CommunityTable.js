@@ -2,11 +2,17 @@ import React from "react";
 import "./Contacts.css";
 import axios from "axios";
 import { toast } from "react-toastify";
+import ConfirmDelete from "../ConfirmDelete";
 import Loader from "./../../components/Loader/Loader";
 import { useState, useEffect } from "react";
 import { AutobotBackend } from "../../Middleware/Helper";
 export default function CommunityTable() {
   const [comment, setComment] = useState(null);
+  const [id, setId] = useState(null);
+  const handleConfirmation = (e, id) => {
+    e.preventDefault();
+    setId(id);
+  }
   useEffect(() => {
     axios
       .get(`${AutobotBackend}/admin/community`, {})
@@ -37,6 +43,7 @@ export default function CommunityTable() {
   return (
     <div>
       <div className="admintables">
+        <ConfirmDelete id={id} delete={deleteProduct} />
         <h1> Community</h1>
         <div className="admintable-card">
           <table className="table table-hover">
@@ -57,8 +64,8 @@ export default function CommunityTable() {
                     <td>{obj.date}</td>
                     <td className="service-delete">
                       <i
-                        className="fa fa-trash-o fa-lg"
-                        onClick={() => deleteProduct(obj._id)}
+                        className="fa fa-trash-o fa-lg" data-bs-toggle="modal" data-bs-target="#deleteconirmationmodal"
+                        onClick={(e) => handleConfirmation(e, obj._id)}
                       ></i>
                     </td>
                   </tr>

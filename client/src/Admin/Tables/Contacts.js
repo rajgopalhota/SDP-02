@@ -2,11 +2,17 @@ import React from "react";
 import "./Contacts.css";
 import axios from "axios";
 import { toast } from "react-toastify";
+import ConfirmDelete from "../ConfirmDelete";
 import Loader from "./../../components/Loader/Loader";
 import { useState, useEffect } from "react";
 import { AutobotBackend } from "../../Middleware/Helper";
 export default function Contacts() {
   const [mail, setMail] = useState(null);
+  const [id, setId] = useState(null);
+  const handleConfirmation = (e, id) => {
+    e.preventDefault();
+    setId(id);
+  }
   useEffect(() => {
     //catalog is purchases or carts
     axios
@@ -38,6 +44,8 @@ export default function Contacts() {
   return (
     <div>
       <div className="admintables">
+        <ConfirmDelete id={id} delete={deleteProduct} />
+
         <h1>Contacts by users</h1>
         <div className="admintable-card text-center">
           <table className="table table-hover">
@@ -60,8 +68,8 @@ export default function Contacts() {
                     <td>{obj.message}</td>
                     <td className="service-delete">
                       <i
-                        className="fa fa-trash-o fa-lg"
-                        onClick={() => deleteProduct(obj._id)}
+                        className="fa fa-trash-o fa-lg" data-bs-toggle="modal" data-bs-target="#deleteconirmationmodal"
+                        onClick={(e) => handleConfirmation(e, obj._id)}
                       ></i>
                     </td>
                   </tr>

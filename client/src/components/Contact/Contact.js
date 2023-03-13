@@ -28,7 +28,7 @@ export default function Contact() {
     const data = new FormData(e.currentTarget);
     axios
       .post(`${AutobotBackend}/api/contact`, {
-        username: data.get("name"),
+        username: data.get("name").split(" ").join("").toLowerCase(),
         email: data.get("email"),
         phone: data.get("phone"),
         message: data.get("message"),
