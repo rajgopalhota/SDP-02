@@ -38,8 +38,8 @@ export default function Users() {
     <div>
       <div className="admintables">
         <h1>Autobot users</h1>
-        <div className="table-responsive">
           <div className="admintable-card text-center">
+        <div className="table-responsive">
             <table className="table table-hover">
               <thead>
                 <tr>
@@ -75,8 +75,8 @@ export default function Users() {
                 )}
               </tbody>
             </table>
-          </div>
         </div>
+          </div>
       </div>
     </div>
   );

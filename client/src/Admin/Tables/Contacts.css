@@ -1,8 +1,9 @@
 .admintables {
-  position: relative;
-  width: 100%;
+  position: absolute;
   margin: auto;
-  overflow: visible;
+  overflow-x: scroll;
+  height: 100%;
+  width: 100%;
 }
 .admintables h1 {
   margin-top: 3%;
@@ -11,15 +12,13 @@
   text-shadow: 0 0 12px black;
 }
 .admintables .admintable-card {
-  position: absolute;
   margin: auto;
-  margin-top: 1%;
   min-width: 100%;
-  min-height: 100%;
+  margin-top: 1%;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 500px;
   height: fit-content;
+  width: fit-content;
   padding: 35px;
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 20px;
@@ -27,12 +26,22 @@
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(15px);
 }
-
+table{
+  cursor: grabbing;
+}
 .admintables .table tr {
   color: aliceblue;
 }
+.admintables .table th {
+  color: rgb(184, 210, 232);
+  font-size: 28px;
+  text-shadow: 0 0 12px black;
+}
 .admintables .table-hover > tbody > tr:hover > * {
+  cursor: pointer;
+  transition: all ease in 3s;
   color: rgb(163, 224, 247);
+  background-color: rgba(0, 0, 0, 0.637);
 }
 
 @media only screen and (max-width: 600px) {
@@ -47,14 +56,7 @@
     padding: 0;
     border-radius: 12px;
   }
-  table {
-    font-size: 4px;
-    width: 10%;
-    padding: 0;
-  }
-  .table th, td {
-    word-wrap:normal;
-    padding: 1px;
-    letter-spacing: 0;
+  .admintables .table th {
+    font-size: 18px;
   }
 }
