@@ -1,4 +1,5 @@
 .admintables {
+  animation: abtfloaterxr 1s;
   position: absolute;
   margin: auto;
   overflow-x: scroll;
