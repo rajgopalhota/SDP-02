@@ -193,10 +193,6 @@ export default function Contact() {
                       value: 15,
                       message: "message must be atleast 15 characters long...",
                     },
-                    maxLength: {
-                      value: 40,
-                      message: "message must be atmost 30 characters long...",
-                    },
                   })}
                 ></textarea>
                 <p id="kliu">{errors.message?.message}</p>
