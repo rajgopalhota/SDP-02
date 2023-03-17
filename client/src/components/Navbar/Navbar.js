@@ -75,34 +75,34 @@ export default function Navbar(props) {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 nav-titles">
               <li className="nav-item">
-                <NavLink className="nav-link" aria-current="page" to="home">
+                <NavLink className="nav-link hover-underline-animation" aria-current="page" to="home">
                   Home
                 </NavLink>
               </li>
               {!!auth.user && localStorage.getItem('role')==='Admin' && (
               <li className="nav-item">
-                <NavLink className="nav-link" aria-current="page" to="/admin">
+                <NavLink className="nav-link hover-underline-animation" aria-current="page" to="/admin">
                   Admin
                 </NavLink>
               </li>
               )}
               <li className="nav-item">
-                <NavLink className="nav-link" aria-current="page" to="products">
+                <NavLink className="nav-link hover-underline-animation" aria-current="page" to="products">
                   Products
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" aria-current="page" to="services">
+                <NavLink className="nav-link hover-underline-animation" aria-current="page" to="services">
                   Services
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" aria-current="page" to="spare">
+                <NavLink className="nav-link hover-underline-animation" aria-current="page" to="spare">
                   Spare
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="aboutus">
+                <NavLink className="nav-link hover-underline-animation" to="aboutus">
                   Team
                 </NavLink>
               </li>

@@ -10,7 +10,29 @@ nav {
   box-shadow: 0 0 8px rgb(129, 129, 129);
   background-color: transparent;
 }
-
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.main-body-light .hover-underline-animation:after{
+  background-color: #000000;
+}
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 nav h3{
   width: auto;
   display: inline-block;
@@ -68,19 +90,20 @@ nav h3{
   background-color: rgba(177, 175, 165, 0.21);
 }
 .active {
-  transition: all ease-in-out 0.5s;
-  backdrop-filter: blur(12px);
-  background-color: rgba(136, 136, 136, 0.365);
-  border-radius: 70px;
+  transition: all ease-in 0.5s;
+  backdrop-filter: blur(32px);
+  background-color: rgba(136, 136, 136, 0.281);
+  border-radius: 100px;
+  transition: all ease-out 0.5s;
 }
+
 .nav-titles li:hover {
   /* text-decoration: underline; */
   border-bottom: 12px soid white;
 }
 .nav-titles {
-  font-size: 25px;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: 0;
 }
 
 .nav-titles li {
