@@ -5,8 +5,8 @@ import pic2 from './Collection/pic2.jpg'
 import pic3 from './Collection/pic3.jpg'
 import pic4 from './Collection/pic4.jpg'
 import pic5 from './Collection/pic5.jpg'
+
 import './Landing.css'
-// import { Link } from 'react-router-dom'
 export default function Landing() {
     return (
         <div className='bodyland'>

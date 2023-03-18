@@ -1,8 +1,3 @@
-.bodyland{
-  min-height: 100vh;
-  min-width: 100vw;
-  background: linear-gradient(to top, #09203f 0%, #537895 100%) no-repeat center center fixed;
-}
 .landing-slider {
   margin: auto;
   position: fixed;
@@ -20,7 +15,6 @@
   left: 0;
   animation: 14s landing-slider infinite;
 }
-
 .landing-slider figure img {
   width: 20%;
   float: left;
@@ -55,31 +49,30 @@
     left: -400%;
   }
 }
-.welcomenoteland{
+.welcomenoteland {
   position: absolute;
   left: 5%;
   top: 30%;
-  width: 40%;
+  max-width: 40%;
   /* backdrop-filter: blur(2px); */
 }
-.welcomenoteland h1{
-color: antiquewhite;
+.welcomenoteland h1 {
+  color: antiquewhite;
   font-size: 92px;
   font-weight: 900;
   letter-spacing: 2px;
   /* mix-blend-mode: overlay; */
   text-shadow: 0 0 8px rgb(0, 0, 0);
 }
-.welcomenoteland p{
-	letter-spacing: 2px;
-	font-size: 22px;
-	text-align: justify;
+.welcomenoteland p {
+  letter-spacing: 2px;
+  font-size: 22px;
 }
 .landbtn-container {
   margin-left: auto;
   margin-right: 0;
-	width: 1000px;
-	display: flex;
+  width: 1000px;
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -87,139 +80,136 @@ color: antiquewhite;
 }
 .landbtn-container .landbtn-btn {
   margin: 15px;
-	position: relative;
-	top: 0;
-	left: 0;
-	width: 250px;
-	height: 60px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 60px;
+  display: flex;
 }
 .landbtn-container .landbtn-btn a {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background: rgba(255, 255, 255, 0.05);
-	box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
-	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-	border-top: 1px solid rgba(255, 255, 255, 0.1);
-	border-radius: 30px;
-	padding: 10px;
-	letter-spacing: 1px;
-	text-decoration: none;
-	overflow: hidden;
-	color: #fff;
-	font-weight: 400px;
-	z-index: 1;
-	transition: 0.5s;
-	backdrop-filter: blur(15px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  padding: 10px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  overflow: hidden;
+  color: #fff;
+  font-weight: 400px;
+  z-index: 1;
+  transition: 0.5s;
+  backdrop-filter: blur(15px);
 }
 .landbtn-container .landbtn-btn:hover a {
-	letter-spacing: 3px;
+  letter-spacing: 3px;
 }
 .landbtn-container .landbtn-btn a::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 50%;
-	height: 100%;
-	background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
-	transform: skewX(45deg) translate(0);
-	transition: 0.5s;
-	filter: blur(0px);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+  transform: skewX(45deg) translate(0);
+  transition: 0.5s;
+  filter: blur(0px);
 }
 .landbtn-container .landbtn-btn:hover a::before {
-	transform: skewX(45deg) translate(200px);
+  transform: skewX(45deg) translate(200px);
 }
 .landbtn-container .landbtn-btn::before {
-	content: "";
-	position: absolute;
-	left: 50%;
-	transform: translatex(-50%);
-	bottom: -5px;
-	width: 30px;
-	height: 10px;
-	background: #f00;
-	border-radius: 10px;
-	transition: 0.5s;
-	transition-delay: 0.5;
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+  bottom: -5px;
+  width: 30px;
+  height: 10px;
+  background: #f00;
+  border-radius: 10px;
+  transition: 0.5s;
+  transition-delay: 0.5;
 }
 .landbtn-container .landbtn-btn:hover::before /*lightup button*/ {
-	bottom: 0;
-	height: 50%;
-	width: 80%;
-	border-radius: 30px;
+  bottom: 0;
+  height: 50%;
+  width: 80%;
+  border-radius: 30px;
 }
 
 .landbtn-container .landbtn-btn::after {
-	content: "";
-	position: absolute;
-	left: 50%;
-	transform: translatex(-50%);
-	top: -5px;
-	width: 30px;
-	height: 10px;
-	background: #f00;
-	border-radius: 10px;
-	transition: 0.5s;
-	transition-delay: 0.5;
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+  top: -5px;
+  width: 30px;
+  height: 10px;
+  background: #f00;
+  border-radius: 10px;
+  transition: 0.5s;
+  transition-delay: 0.5;
 }
 .landbtn-container .landbtn-btn:hover::after /*lightup button*/ {
-	top: 0;
-	height: 50%;
-	width: 80%;
-	border-radius: 30px;
+  top: 0;
+  height: 50%;
+  width: 80%;
+  border-radius: 30px;
 }
 .landbtn-container .landbtn-btn:nth-child(1)::before, /*chnage 1*/
 .landbtn-container .landbtn-btn:nth-child(1)::after {
-	background: #ff1f71;
-	box-shadow: 0 0 5px #ff1f71, 0 0 15px #ff1f71, 0 0 30px #ff1f71,
-		0 0 60px #ff1f71;
+  background: #ff1f71;
+  box-shadow: 0 0 5px #ff1f71, 0 0 15px #ff1f71, 0 0 30px #ff1f71,
+    0 0 60px #ff1f71;
 }
 .landbtn-container .landbtn-btn:nth-child(2)::before, /* 2*/
 .landbtn-container .landbtn-btn:nth-child(2)::after {
-	background: #2db2ff;
-	box-shadow: 0 0 5px #2db2ff, 0 0 15px #2db2ff, 0 0 30px #2db2ff,
-		0 0 60px #2db2ff;
+  background: #2db2ff;
+  box-shadow: 0 0 5px #2db2ff, 0 0 15px #2db2ff, 0 0 30px #2db2ff,
+    0 0 60px #2db2ff;
 }
 .landbtn-container .landbtn-btn:nth-child(3)::before, /* 3*/
 .landbtn-container .landbtn-btn:nth-child(3)::after {
-	background: #1eff45;
-	box-shadow: 0 0 5px #1eff45, 0 0 15px #1eff45, 0 0 30px #1eff45,
-		0 0 60px #1eff45;
+  background: #1eff45;
+  box-shadow: 0 0 5px #1eff45, 0 0 15px #1eff45, 0 0 30px #1eff45,
+    0 0 60px #1eff45;
 }
 @media only screen and (max-width: 600px) {
-  .landbtn-container{
-	padding: 0;
-	position: absolute;
-	top: 60%;
-	left: 10%;
-	margin-bottom: 0;
+  .landbtn-container {
+    padding: 0;
+    position: static;
+    margin-bottom: 0;
+	transform: translateX(5%);
     flex-direction: column;
-  }
-  .landing-slider{
+}
+.landing-slider {
+	position: static;
 	box-shadow: 0 0 12px black;
-	padding: 3px;
-	top: 30%;
+    padding: 4px;
+}
+.welcomenoteland {
+	position: static;
+    margin-top: auto;
+	/* transform: translateX(-1%); */
+	width: auto;
+    padding: 20px;
   }
-  .welcomenoteland{
-	top: 1%;
-	left: 0;
-	width: 100%;
-	padding: 10px;
+  .welcomenoteland h1 {
+    font-size: 32px;
   }
-  .welcomenoteland h1{
-	font-size: 32px;
-  }
-  .welcomenoteland p{
-	text-align: center;
-	font-size: 12px;
+  .welcomenoteland p {
+    font-size: 12px;
   }
 }
