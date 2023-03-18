@@ -95,8 +95,8 @@ form.sign-in-form {
   position: relative;
 }
 
-.input-field:hover {
-  box-shadow: 0 0 12px #4481eb;
+.input-field:focus-within {
+  box-shadow: 0 0 22px #2d90f2;
 }
 
 .input-field i {
