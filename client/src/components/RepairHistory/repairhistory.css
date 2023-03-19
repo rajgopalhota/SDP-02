@@ -11,6 +11,27 @@
 .modal-header {
   text-transform: capitalize;
 }
+
+.modal td {
+  box-shadow: 0 0 12px #126091cf;
+  text-align: center;
+  border-radius: 12px;
+  padding: 8px;
+}
+.modal th {
+  box-shadow: 0 0 22px #126091cf;
+  text-decoration: underline;
+  padding: 8px;
+}
+.modal th:hover {
+  color: #072358;
+  cursor: pointer;
+}
+
+.modal tr:nth-child(odd) {
+  background-color: #3aceff5b;
+  box-shadow: 0 0 12px #3aceff5b;
+}
 @media only screen and (max-width: 600px) {
   .table th {
     font-weight: 700;

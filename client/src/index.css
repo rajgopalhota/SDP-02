@@ -74,6 +74,28 @@ code {
     monospace;
 }
 
+
+.admintables td {
+  box-shadow: 0 0 12px #126091cf;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px;
+}
+.admintables th {
+  box-shadow: 0 0 22px #126091cf;
+  text-decoration: underline;
+  padding: 8px;
+}
+.admintables th:hover {
+  color: #072358;
+  cursor: pointer;
+}
+
+.admintables tr:nth-child(odd) {
+  background-color: #3aceff5b;
+  box-shadow: 0 0 12px #3aceff5b;
+}
+
 .home-container {
   animation: floatery 1s;
   backdrop-filter: blur(7px);
