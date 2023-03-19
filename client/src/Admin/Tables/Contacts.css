@@ -8,9 +8,14 @@
 }
 .admintables h1 {
   margin-top: 3%;
+  color: aliceblue;
   mix-blend-mode: overlay;
   font-size: 43px;
   text-shadow: 0 0 12px black;
+}
+.main-body-light .admintables .admintable-card{
+  background-color: rgba(23, 23, 23, 0.13);
+  border: none;
 }
 .admintables .admintable-card {
   margin: auto;
