@@ -173,14 +173,6 @@
   border-radius: 30px;
 }
 @media only screen and (max-width: 600px) {
-  .bodyland{
-    background-image: linear-gradient(to right, #434343 0%, black 100%);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
   .landbtn-container {
     padding: 0;
     position: static;
