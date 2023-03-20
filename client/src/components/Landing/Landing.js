@@ -10,6 +10,11 @@ import './Landing.css'
 export default function Landing() {
     return (
         <div className='bodyland'>
+            <div class="landbtn-container">
+                <div class="landbtn-btn"><Link to="/autobots/home">AUTOBOTS</Link></div>
+                <div class="landbtn-btn"><Link to="/community" >COMMUNITY</Link></div>
+                <div class="landbtn-btn"><Link to="/login" >LOGIN</Link></div>
+            </div>
             <div className="landing-slider">
                 <figure>
                     <img src={pic5} alt="" />
@@ -24,11 +29,6 @@ export default function Landing() {
                 <p>
                     We are pleased to invite you to register with Autobots, the leading automobile company in the industry.
                 </p>
-            </div>
-            <div class="landbtn-container">
-                <div class="landbtn-btn"><Link to="/autobots/home">AUTOBOTS</Link></div>
-                <div class="landbtn-btn"><Link to="/community" >COMMUNITY</Link></div>
-                <div class="landbtn-btn"><Link to="/login" >LOGIN</Link></div>
             </div>
         </div>
     )

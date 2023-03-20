@@ -89,11 +89,13 @@
 }
 .landbtn-container .landbtn-btn a {
   position: absolute;
+  margin: auto;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   display: flex;
+  font-weight: 900;
   justify-content: center;
   align-items: center;
   background: rgba(255, 255, 255, 0.05);
@@ -106,12 +108,15 @@
   text-decoration: none;
   overflow: hidden;
   color: #fff;
+  text-shadow: 0 0 12px black;
   font-weight: 400px;
   z-index: 1;
   transition: 0.5s;
   backdrop-filter: blur(15px);
 }
 .landbtn-container .landbtn-btn:hover a {
+  font-weight: 900;
+  font-size: 18px;
   letter-spacing: 3px;
 }
 .landbtn-container .landbtn-btn a::before {
@@ -137,7 +142,7 @@
   bottom: -5px;
   width: 30px;
   height: 10px;
-  background: #f00;
+  background: rgb(204, 68, 5);
   border-radius: 10px;
   transition: 0.5s;
   transition-delay: 0.5;
@@ -157,7 +162,6 @@
   top: -5px;
   width: 30px;
   height: 10px;
-  background: #f00;
   border-radius: 10px;
   transition: 0.5s;
   transition-delay: 0.5;
@@ -168,42 +172,34 @@
   width: 80%;
   border-radius: 30px;
 }
-.landbtn-container .landbtn-btn:nth-child(1)::before, /*chnage 1*/
-.landbtn-container .landbtn-btn:nth-child(1)::after {
-  background: #ff1f71;
-  box-shadow: 0 0 5px #ff1f71, 0 0 15px #ff1f71, 0 0 30px #ff1f71,
-    0 0 60px #ff1f71;
-}
-.landbtn-container .landbtn-btn:nth-child(2)::before, /* 2*/
-.landbtn-container .landbtn-btn:nth-child(2)::after {
-  background: #2db2ff;
-  box-shadow: 0 0 5px #2db2ff, 0 0 15px #2db2ff, 0 0 30px #2db2ff,
-    0 0 60px #2db2ff;
-}
-.landbtn-container .landbtn-btn:nth-child(3)::before, /* 3*/
-.landbtn-container .landbtn-btn:nth-child(3)::after {
-  background: #1eff45;
-  box-shadow: 0 0 5px #1eff45, 0 0 15px #1eff45, 0 0 30px #1eff45,
-    0 0 60px #1eff45;
-}
 @media only screen and (max-width: 600px) {
+  .bodyland{
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
   .landbtn-container {
     padding: 0;
     position: static;
-    margin-bottom: 0;
-	transform: translateX(5%);
+    margin-top: 25%;
     flex-direction: column;
-}
-.landing-slider {
-	position: static;
-	box-shadow: 0 0 12px black;
+    max-width: 100%;
+  }
+  .landbtn-container .landbtn-btn {
+    max-width: 100vw;
+    margin: 12px 0;
+    width: 100%;
+    height: 50px;
+  }
+  .landing-slider {
+    box-shadow: 0 0 12px black;
     padding: 4px;
-}
-.welcomenoteland {
-	position: static;
+  }
+  .welcomenoteland {
+    position: static;
     margin-top: auto;
-	/* transform: translateX(-1%); */
-	width: auto;
+    width: auto;
     padding: 20px;
   }
   .welcomenoteland h1 {
