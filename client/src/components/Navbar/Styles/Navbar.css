@@ -138,8 +138,8 @@ nav button a {
   font-size: 17px;
   position: fixed;
   display: inline-block;
-  width: 3.5em;
-  height: 2em;
+  width: 2.9em;
+  height: 1.8em;
 }
 
 /* Hide default HTML checkbox */
@@ -168,8 +168,8 @@ nav button a {
 .darkmode .slider:before {
   position: absolute;
   content: "";
-  height: 1.4em;
-  width: 1.4em;
+  height: 1.2em;
+  width: 1.2em;
   border-radius: 50%;
   left: 10%;
   bottom: 15%;
