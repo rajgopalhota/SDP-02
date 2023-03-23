@@ -53,8 +53,8 @@ export default function About() {
 
           <p>
             <li>Services dept</li>
-            <li>Form management</li>
-            <li>Messaging Framework</li>
+            <li>Form management & Messaging</li>
+            <li>OTP verification </li>
             <li>Data Fetching</li>
             <li>Connectivity with backend</li>
             Responsible for building and maintaining the server-side of web applications, including the server, database, and APIs.
