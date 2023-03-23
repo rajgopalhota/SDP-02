@@ -123,11 +123,11 @@ export default function ForgotPass() {
         <div className="forgot-shape"></div>
         <div className="forgot-shape"></div>
       </div>
-      <form className="box">
+      <form>
         <h3>RESET PORTAL</h3>
-        <p>Enter your associated email.</p>
         {!otp && !pass && (
           <>
+            <p>Enter your associated email.</p>
             <input
               type="email"
               placeholder="Enter your Email"
@@ -141,6 +141,7 @@ export default function ForgotPass() {
         )}
         {otp && !pass && (
           <>
+          <p>Enter OTP you recieved.</p>
             <input
               type="number"
               placeholder="Enter OTP"
@@ -154,6 +155,7 @@ export default function ForgotPass() {
         )}
         {pass && (
           <>
+          <p>Enter a brand new password.</p>
             <input
               type="password"
               placeholder="Password"
