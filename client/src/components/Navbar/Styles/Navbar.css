@@ -6,7 +6,7 @@ nav {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   border-bottom: 2px solid rgba(255, 255, 255, 0.183);
-  font-size: 24px;
+  font-size: 22px;
   box-shadow: 0 0 8px rgb(129, 129, 129);
   background-color: transparent;
 }
@@ -107,7 +107,7 @@ nav h3{
 }
 
 .nav-titles li {
-  padding: 0 18px;
+  padding: 0 12px;
 }
 
 @keyframes animate {
@@ -132,7 +132,7 @@ nav button a {
 .darkmode .switch {
   z-index: 999;
   /* margin-top: auto; */
-  bottom: 1em;
+  bottom: 0.8em;
   right: 0.1em;
   margin-right: 1.5em;
   font-size: 17px;

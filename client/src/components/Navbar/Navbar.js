@@ -102,6 +102,11 @@ export default function Navbar(props) {
                 </NavLink>
               </li>
               <li className="nav-item">
+                <NavLink className="nav-link hover-underline-animation" aria-current="page" to="orders">
+                  Purchases
+                </NavLink>
+              </li>
+              <li className="nav-item">
                 <NavLink className="nav-link hover-underline-animation" to="aboutus">
                   Team
                 </NavLink>

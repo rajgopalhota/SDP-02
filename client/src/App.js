@@ -27,6 +27,7 @@ import Catalog from "./Admin/Tables/Catalog";
 import Users from "./Admin/Tables/Users";
 import CommunityTable from "./Admin/Tables/CommunityTable";
 import Repair from "./Admin/Tables/Repair";
+import OrderHistory from "./components/OrderHistory/OrderHistory";
 
 function App() {
   const [alert, setAlert] = useState(null);
@@ -77,6 +78,10 @@ function App() {
                 <Route
                   path="services"
                   element={<Services showAlert={showAlert} alert={alert} />}
+                />
+                <Route
+                  path="orders"
+                  element={<OrderHistory />}
                 />
               </Route>
               <Route path="spare" element={<Spare />} />

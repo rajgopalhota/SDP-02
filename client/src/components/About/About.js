@@ -25,11 +25,11 @@ export default function About() {
           </a>
           <p>
             <li>Animation effects & User Interface</li>
+            <li>Admin Dashboard UI</li>
             <li>Modals and Side forms</li>
-            <li>Payment Interface</li>
+            <li>Payment Interface & Server management</li>
             <li>Products Page</li>
-            Dolore ullam provident iste quibusdam blanditiis explicabo, sed
-            laborum molestiae debitis aliquam, accusamus necessitatibus, placeat
+            Responsible for leading a team and ensuring that the web application is developed according to the requirements and specifications
           </p>
         </div>
       </div>
@@ -54,10 +54,10 @@ export default function About() {
           <p>
             <li>Services dept</li>
             <li>Form management</li>
-            <li>Server structure</li>
+            <li>Messaging Framework</li>
             <li>Data Fetching</li>
-            Dolore ullam provident iste quibusdam blanditiis explicabo, sed
-            laborum molestiae debitis aliquam, accusamus necessitatibus, placeat
+            <li>Connectivity with backend</li>
+            Responsible for building and maintaining the server-side of web applications, including the server, database, and APIs.
           </p>
         </div>
       </div>
@@ -82,9 +82,9 @@ export default function About() {
             <li>Cart page</li>
             <li>Data models</li>
             <li>Form validation</li>
-            <li>Admin dashboard</li>
-            Dolore ullam provident iste quibusdam blanditiis explicabo, sed
-            laborum molestiae debitis aliquam, accusamus necessitatibus, placeat
+            <li>Admin Tables</li>
+            <li>Email management</li>
+            Responsible for managing online forms, ensuring their proper functioning, including sending and receiving emails. 
           </p>
         </div>
       </div>
