@@ -1,8 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState  } from 'react'
+import emailjs from "@emailjs/browser";
 import './Forgot.css'
 export default function ForgotPass() {
-    const [otp, setOtp] = useState(true);
-    const [pass, setPass] = useState(true);
+    const sendMail = (rec_otp) =>{
+        emailjs
+        .sendForm(
+          "service_oimlnyo",
+          "template_kn99fmn",
+          rec_otp,
+          "CfBnzw04m68b8ddk0"
+        )
+    }
+    const [otp, setOtp] = useState(null);
+    const [pass, setPass] = useState(null);
     return (
         <div className='forotcontainer'>
             <div class="forgot-background">
