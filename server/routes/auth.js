@@ -2,6 +2,7 @@ const { response } = require("express");
 const express = require("express");
 const router = express.Router();
 const signuptemp = require("../models/signupmodel");
+const otpmodel = require("../models/otp");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
@@ -104,5 +105,47 @@ router.post("/login", async (req, res) => {
   }
 });
 
+//email checking
+router.post("/email", async (req, res) => {
+  const email = req.body.email;
+  const emailcheck = await signuptemp.findOne({ email: email });
+  if (emailcheck) {
+    const username = emailcheck.username;
+    res.send({
+      emailfound: "emailfound",
+      username: username,
+    });
+  } else {
+    res.send("emailnotfound");
+  }
+});
+//opt saving
+router.post("/otp", async (req, res) => {
+  const otp1 = req.body.otp;
+  const username1 = req.body.username;
+  const optoldcheck = await otpmodel.find({ username: username1 }).deleteOne();
+  console.log(req.body.otp);
+  let otp = new otpmodel({
+    username: username1,
+    otp: otp1,
+  });
+  try {
+    await otp.save();
+    res.send("success");
+  } catch (err) {
+    console.log(err);
+    res.send("fail");
+  }
+});
+//sending otp
+router.get("/otpget", async (req, res) => {
+  try {
+    const items = await otpmodel.find();
+    res.json(items);
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).send("Internal Server Error");
+  }
+});
 
 module.exports = router;
