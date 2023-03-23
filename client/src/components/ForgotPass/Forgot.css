@@ -82,6 +82,11 @@
     padding: 15px 0;
     font-size: 18px;
     font-weight: 600;
-    border-radius: 5px;
+    border-radius: 35px;
     cursor: pointer;
+}
+.forotcontainer button:hover{
+    transition: all ease-in-out 0.4s;
+    color: white;
+    background-color: black;
 }
