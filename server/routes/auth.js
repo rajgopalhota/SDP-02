@@ -147,5 +147,22 @@ router.get("/otpget", async (req, res) => {
     res.status(500).send("Internal Server Error");
   }
 });
+//changing password
+router.post("/changepass", async (req, res) => {
+  const password = req.body.passwordnew;
+  const username = req.body.username;
+  const saltpwd = await bcrypt.genSalt(10);
+  const securepassword = await bcrypt.hash(password, saltpwd);
+  signuptemp
+    .findOneAndUpdate({ username: username }, { password: securepassword })
+    .then((result) => {
+      // console.log(result);
+      // console.log("qwerty");
+      res.send("changed");
+    })
+    .catch((e) => {
+      res.json(e);
+    });
+});
 
 module.exports = router;

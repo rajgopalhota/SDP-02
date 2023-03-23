@@ -1,48 +1,56 @@
 import React, { useState } from "react";
 // import emailjs from "@emailjs/browser";
 import "./Forgot.css";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { AutobotBackend } from "./../../Middleware/Helper";
 import { toast } from "react-toastify";
 export default function ForgotPass() {
+  const navigate = useNavigate();
+
   const [otp, setOtp] = useState(null);
-  const [otp1, setOtp1] = useState(null);
+  const [otp1, setOtp1] = useState();
   const [pass, setPass] = useState(null);
-  const [email1, setEmail] = useState(null);
+  const [pass1, setPass1] = useState();
+  const [email, setEmail] = useState();
+  const [userreq, setUserreq] = useState();
   const handleonchange = (event) => {
-    console.log("onchange called");
     setEmail(event.target.value);
   };
   const handleonchange1 = (event) => {
-    console.log("onchange called");
+    // console.log("onchange called");
     setOtp1(event.target.value);
+  };
+  const handleonchange2 = (event) => {
+    setPass1(event.target.value);
   };
   // const sendMail = (rec_otp) => {
   //   emailjs.sendForm(
   //     "service_oimlnyo",
   //     "template_kn99fmn",
-  //     rec_otp,
+  //     <form>{rec_otp}</form>,
   //     "CfBnzw04m68b8ddk0"
   //   );
   // };
+
+  //random otp generator
   function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
   }
-
+  //saving otp in database
   function otpsaving(rec_otp, username) {
     axios
       .post(`${AutobotBackend}/auth/otp`, {
         otp: rec_otp,
         username: username,
       })
-      .then((response) => {
-        console.log("xcvb");
-      })
+      .then((response) => {})
       .catch((err) => {
         console.log(err);
         toast.error("Server error");
       });
   }
+  //getting otp from database
   const handleotp = (e) => {
     e.preventDefault();
     axios
@@ -50,13 +58,11 @@ export default function ForgotPass() {
         params: {},
       })
       .then((response) => {
-        setOtp(response.data.otp)
-        console.log(otp)
-        if(Number(otp)===Number(otp1)){
+        setOtp(response.data.otp);
+        if (Number(otp) === Number(otp1)) {
           toast.success("OTP verified");
-           setPass("XYZ");
-           console.log(pass);
-        }else{
+          setPass("XYZ");
+        } else {
           toast.success("OTP not verified");
         }
       })
@@ -65,19 +71,41 @@ export default function ForgotPass() {
       });
   };
 
+  //handling password change
+  const handlePassReset = (e) => {
+    e.preventDefault();
+    axios
+      .post(`${AutobotBackend}/auth/changepass`, {
+        params: {},
+        username: userreq,
+        passwordnew: pass1,
+      })
+      .then((response) => {
+        if (response.data === "changed") {
+          toast.success("Password Changed ");
+          navigate("/login");
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  //checking email is present or not
   const handleemail = (e) => {
     e.preventDefault();
     axios
       .post(`${AutobotBackend}/auth/email`, {
-        email: email1,
+        email: email,
       })
       .then((response) => {
         if (response.data.emailfound === "emailfound") {
           const username = response.data.username;
           const rec_otp = getRndInteger(1000, 9999);
+          setUserreq(username);
           otpsaving(rec_otp, username);
-          //sendMail(rec_otp);
-          console.log(rec_otp);
+          // sendMail(rec_otp);
+          console.log("your otp is:", rec_otp);
           setOtp(rec_otp);
         } else {
           toast.error("Email not found");
@@ -91,9 +119,9 @@ export default function ForgotPass() {
 
   return (
     <div className="forotcontainer">
-      <div class="forgot-background">
-        <div class="forgot-shape"></div>
-        <div class="forgot-shape"></div>
+      <div className="forgot-background">
+        <div className="forgot-shape"></div>
+        <div className="forgot-shape"></div>
       </div>
       <form className="box">
         <h3>RESET PORTAL</h3>
@@ -130,9 +158,11 @@ export default function ForgotPass() {
               type="password"
               placeholder="Password"
               name="usrpass"
-              id="password"
+              onChange={handleonchange2}
             />
-            <button type="submit">Change Password</button>
+            <button type="submit" onClick={handlePassReset}>
+              Change Password
+            </button>
           </>
         )}
       </form>
