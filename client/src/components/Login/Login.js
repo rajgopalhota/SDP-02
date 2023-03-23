@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import log from "./Images/audi.png";
 import register from "./Images/mercedes.png";
 import { useAuth } from "../../Middleware/auth";
@@ -154,7 +154,7 @@ export default function Index() {
                 />
               </div>
               <input type="submit" value="Login" className="login-btn solid" />
-              <p className="social-text">Or Sign in with social platforms</p>
+              <Link to="/forgotpass" ><p className="social-text">Forgot password?</p></Link>
               <div className="social-media">
                 <a href="/" className="social-icon">
                   <i className="fab fa-facebook-f"></i>

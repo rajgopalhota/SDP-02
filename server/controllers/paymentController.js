@@ -1,7 +1,7 @@
 const crypto = require("crypto");
 const dotenv = require("dotenv");
 const Razorpay = require("razorpay");
-const { Payment } = require("../models/paymentModel.js");
+const  Payment  = require("../models/paymentModel.js");
 
 dotenv.config();
 const instance = new Razorpay({
@@ -35,7 +35,7 @@ const paymentVerification = async (req, res) => {
 
   const isAuthentic = expectedSignature === razorpay_signature;
 
-  if (isAuthentic) {
+  if (!isAuthentic) {
     // Database comes here
 
     await Payment.create({
@@ -45,7 +45,7 @@ const paymentVerification = async (req, res) => {
     });
 
     res.redirect(
-      `http://localhost:2003/paymentsuccess?reference=${razorpay_payment_id}`
+      `http://localhost:2003/payment/paymentsuccess/${razorpay_payment_id}`
     );
   } else {
     res.status(400).json({

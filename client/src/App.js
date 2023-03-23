@@ -28,6 +28,7 @@ import Users from "./Admin/Tables/Users";
 import CommunityTable from "./Admin/Tables/CommunityTable";
 import Repair from "./Admin/Tables/Repair";
 import OrderHistory from "./components/OrderHistory/OrderHistory";
+import ForgotPass from "./components/ForgotPass/ForgotPass";
 
 function App() {
   const [alert, setAlert] = useState(null);
@@ -67,6 +68,7 @@ function App() {
 
           <Routes>
             <Route path="" element={<Landing />}></Route>
+            <Route path="forgotpass" element={<ForgotPass />}></Route>
             <Route
               path="autobots/*"
               element={<Autobot showAlert={showAlert} alert={alert} />}

@@ -81,7 +81,9 @@ form.sign-in-form {
   color: rgb(255, 255, 255);
   margin-bottom: 10px;
 }
-
+.LoginMech a{
+  text-decoration: none;
+}
 .input-field {
   max-width: 380px;
   width: 100%;
