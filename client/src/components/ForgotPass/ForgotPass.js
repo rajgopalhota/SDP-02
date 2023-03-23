@@ -4,10 +4,10 @@ export default function ForgotPass() {
     const [otp, setOtp] = useState(true);
     const [pass, setPass] = useState(true);
     return (
-        <div>
-            <div class="background">
-                <div class="shape"></div>
-                <div class="shape"></div>
+        <div className='forotcontainer'>
+            <div class="forgot-background">
+                <div class="forgot-shape"></div>
+                <div class="forgot-shape"></div>
             </div>
             <form className='box'>
                 <h3>RESET PORTAL</h3>

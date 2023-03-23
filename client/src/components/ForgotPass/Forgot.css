@@ -1,5 +1,5 @@
 
-.background{
+.forgot-background{
     width: 430px;
     height: 520px;
     position: absolute;
@@ -7,13 +7,13 @@
     left: 50%;
     top: 50%;
 }
-.background .shape{
+.forgot-background .forgot-shape{
     height: 200px;
     width: 200px;
     position: absolute;
     border-radius: 50%;
 }
-.shape:first-child{
+.forgot-shape:first-child{
     background: linear-gradient(
         #1845ad,
         #23a2f6
@@ -21,7 +21,7 @@
     left: -80px;
     top: -80px;
 }
-.shape:last-child{
+.forgot-shape:last-child{
     background: linear-gradient(
         to right,
         #ff512f,
@@ -30,7 +30,7 @@
     right: -30px;
     bottom: -80px;
 }
-form{
+.forotcontainer form{
     height: 520px;
     width: 400px;
     background-color: rgba(255,255,255,0.13);
@@ -44,14 +44,14 @@ form{
     box-shadow: 0 0 40px rgba(8,7,16,0.6);
     padding: 50px 35px;
 }
-form *{
+.forotcontainer form *{
     font-family: 'Poppins',sans-serif;
     color: #ffffff;
     letter-spacing: 0.5px;
     outline: none;
     border: none;
 }
-form h3{
+.forotcontainer form h3{
     font-size: 32px;
     font-weight: 700;
     line-height: 42px;
@@ -59,7 +59,7 @@ form h3{
     text-shadow: 0 0 4px black;
 }
 
-input{
+.forotcontainer input{
     text-align: center;
     display: block;
     height: 50px;
@@ -71,10 +71,10 @@ input{
     font-size: 14px;
     font-weight: 300;
 }
-::placeholder{
+.forotcontainer ::placeholder{
     color: #e5e5e5;
 }
-button{
+.forotcontainer button{
     margin-top: 50px;
     width: 100%;
     background-color: #ffffff;
