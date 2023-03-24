@@ -5,6 +5,8 @@ const signuptemp = require("../models/signupmodel");
 const otpmodel = require("../models/otp");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+const sendEmail = require("../utils/SendEmail");
+
 
 //register
 router.post("/register", async (req, res) => {
@@ -123,6 +125,7 @@ router.post("/email", async (req, res) => {
 router.post("/otp", async (req, res) => {
   const otp1 = req.body.otp;
   const username1 = req.body.username;
+  const emailReq = await signuptemp.findOne({ username: username1 });
   const optoldcheck = await otpmodel.find({ username: username1 }).deleteOne();
   // console.log(req.body.otp);
   let otp = new otpmodel({
@@ -131,6 +134,18 @@ router.post("/otp", async (req, res) => {
   });
   try {
     await otp.save();
+    const send_to = emailReq.email;
+    const sent_from = process.env.EMAIL_USER;
+    const reply_to = emailReq.email;
+    const subject = "OTP for changing password of"+" "+username1[0].toUpperCase() + username1.slice(1);
+    const message = `
+    <h3>Hello ${username1}</h3>
+    <p>Thank for choosing Autobots.
+    We've recieved password change request for this account If you are trying to reset enter below OTP or Ignore it.<br/>
+    <strong><li>OTP: ${otp1} </li></strong></p>
+    <p>Regards...</p>
+    `;
+    await sendEmail(subject, message, send_to, sent_from, reply_to);
     res.send("success");
   } catch (err) {
     console.log(err);

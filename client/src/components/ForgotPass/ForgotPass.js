@@ -64,7 +64,7 @@ export default function ForgotPass() {
           toast.success("OTP verified");
           setPass("XYZ");
         } else {
-          toast.success("OTP not verified");
+          toast.error("Invalid OTP");
         }
       })
       .catch((error) => {
