@@ -13,7 +13,7 @@ export default function ForgotPass() {
   const [pass, setPass] = useState(null);
   const [pass1, setPass1] = useState();
   const [email, setEmail] = useState();
-  const [userreq, setUserreq] = useState();
+  const [resetUser, setResetUser] = useState();
   const handleonchange = (event) => {
     setEmail(event.target.value);
   };
@@ -54,8 +54,9 @@ export default function ForgotPass() {
   const handleotp = (e) => {
     e.preventDefault();
     axios
-      .get(`${AutobotBackend}/auth/otpget`, {
+      .post(`${AutobotBackend}/auth/otpget`, {
         params: {},
+        username: resetUser,
       })
       .then((response) => {
         setOtp(response.data.otp);
@@ -77,7 +78,7 @@ export default function ForgotPass() {
     axios
       .post(`${AutobotBackend}/auth/changepass`, {
         params: {},
-        username: userreq,
+        username: resetUser,
         passwordnew: pass1,
       })
       .then((response) => {
@@ -102,7 +103,7 @@ export default function ForgotPass() {
         if (response.data.emailfound === "emailfound") {
           const username = response.data.username;
           const rec_otp = getRndInteger(1000, 9999);
-          setUserreq(username);
+          setResetUser(username);
           otpsaving(rec_otp, username);
           // sendMail(rec_otp);
           console.log("your otp is:", rec_otp);

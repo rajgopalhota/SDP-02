@@ -122,10 +122,15 @@ router.post("/testride", async (req, res) => {
     const send_to = email;
     const sent_from = process.env.EMAIL_USER;
     const reply_to = email;
-    const subject = "Thank You Message From NodeCourse";
+    const subject = "Regarding Test Ride Request From"+" "+name[0].toUpperCase() + name.slice(1);
     const message = `
-    <h3>Hello Zino</h3>
-    <p>Thank for your YouTube Tutorials</p>
+    <h3>Hello ${name}</h3>
+    <p>Thank for choosing Autobots.
+    We've noted your requirements we will notify you soon when it's ready<br/>
+    <li>Your phone number: ${phone} </li>
+    <li>Date of test ride: ${date} </li>
+    <li>Meeting time: ${time} </li>
+    <li>Car you have selected: ${cartype} </li></p>
     <p>Regards...</p>
     `;
     await testride.save();
