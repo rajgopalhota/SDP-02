@@ -6,6 +6,7 @@ const repairmodel = require("../models/repair");
 const contactmodel = require("../models/contact");
 const communitymodel = require("../models/community");
 const testridemodel = require("../models/testride");
+const sendEmail = require("../utils/SendEmail");
 
 //repair backend module
 router.post("/repair", async (req, res) => {
@@ -118,8 +119,18 @@ router.post("/testride", async (req, res) => {
     cartype: cartype,
   });
   try {
+    const send_to = email;
+    const sent_from = process.env.EMAIL_USER;
+    const reply_to = email;
+    const subject = "Thank You Message From NodeCourse";
+    const message = `
+    <h3>Hello Zino</h3>
+    <p>Thank for your YouTube Tutorials</p>
+    <p>Regards...</p>
+    `;
     await testride.save();
     res.send("message sent");
+    await sendEmail(subject, message, send_to, sent_from, reply_to);
   } catch (err) {
     console.log(err);
     res.send("Not saved");

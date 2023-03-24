@@ -8,6 +8,7 @@ const carturls = require("./routes/cartroutes");
 const adminurls = require("./routes/admin");
 const paymentRoute = require("./routes/paymentRoutes");
 const cors = require("cors");
+const bodyparser = require("body-parser")
 
 dotenv.config();
 
@@ -15,6 +16,7 @@ mongoose.connect(process.env.DATABASE_ACCESS, () => {
   console.log("Database Connected!!");
 });
 
+app.use(bodyparser.json())
 app.use(express.json());
 app.use(cors());
 app.use("/api", routesurls);
