@@ -1,4 +1,4 @@
-import React, { useState,useRef} from "react";
+import React, { useState } from "react";
 import "./Styles/Contact.css";
 import location from "./Assets/location.png";
 import email from "./Assets/email.png";
@@ -7,10 +7,8 @@ import { toast } from "react-toastify";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import {AutobotBackend} from './../../Middleware/Helper'
-import emailjs from "@emailjs/browser";
 
 export default function Contact() {
-  const form = useRef();
   const {
     register,
     formState: { errors },
@@ -26,25 +24,6 @@ export default function Contact() {
 
   const handlecontact = (e) => {
     e.preventDefault();
-
-    emailjs
-    .sendForm(
-      "service_oimlnyo",
-      "template_t9e1dfq",
-      form.current,
-      "CfBnzw04m68b8ddk0"
-    )
-    .then(
-      (result) => {
-        console.log(result.text);
-        console.log("message sent");
-      },
-      (error) => {
-        console.log(error.text);
-      }
-    );
-
-
     const data = new FormData(e.currentTarget);
     axios
       .post(`${AutobotBackend}/api/contact`, {
@@ -137,7 +116,6 @@ export default function Contact() {
             <span className="circle two"></span>
 
             <form
-            ref={form}
               onSubmit={handlecontact}
               autoComplete="off"
               className="contactcomp-formtag"
