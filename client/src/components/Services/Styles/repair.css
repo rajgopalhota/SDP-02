@@ -116,6 +116,9 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 	transition: 0.5s;
 	backdrop-filter: blur(15px);
 }
+.main-body-light .historybtns .history-btn a{
+  color: black;
+}
 .historybtns .history-btn:hover a {
 	letter-spacing: 3px;
 }
