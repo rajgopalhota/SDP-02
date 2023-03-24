@@ -21,6 +21,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+::selection{
+  color: rgb(249, 235, 223);
+  background: #36035e;
+}
 @keyframes appear {
   0% {
     clip-path: circle(30% at -25% -25%);

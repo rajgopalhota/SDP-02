@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink, Link, useNavigate } from "react-router-dom";
-import cartlogo from "./Assets/carts.png";
+import cartlogo from "./Assets/cart.gif";
+import cartforin from "./Assets/cart.png";
 import "./Styles/Navbar.css";
 import { useAuth } from "../../Middleware/auth";
 import { toast } from "react-toastify";
@@ -114,7 +115,7 @@ export default function Navbar(props) {
             </ul>
             <div className="navcart" >
               <button type="button" className="cartbtn" data-bs-toggle="modal" data-bs-target="#cartModal">
-                <img src={cartlogo} alt="" width={42}></img>
+                <img className="carticon-ani" src={cartlogo} alt="" width={47}></img>
                 <span className="start-100 translate-middle badge rounded-pill">
                   {(items !== 0) ? items : null}
                 </span>
@@ -138,7 +139,7 @@ export default function Navbar(props) {
           </div>
         </div>
       </nav>
-      <Cart cartList={cartList} item={items} logo={cartlogo} total={price} />
+      <Cart cartList={cartList} item={items} logo={cartforin} total={price} />
     </div>
   );
 }
