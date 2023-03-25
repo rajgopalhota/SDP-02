@@ -44,7 +44,7 @@ export default function ForgotPass() {
         otp: rec_otp,
         username: username,
       })
-      .then((response) => {})
+      .then((response) => { })
       .catch((err) => {
         console.log(err);
         toast.error("Server error");
@@ -120,6 +120,18 @@ export default function ForgotPass() {
 
   return (
     <div className="forotcontainer">
+      <ul class="forgotani-circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
       <div className="forgot-background">
         <div className="forgot-shape"></div>
         <div className="forgot-shape"></div>
@@ -142,7 +154,7 @@ export default function ForgotPass() {
         )}
         {otp && !pass && (
           <>
-          <p>Enter OTP you recieved.</p>
+            <p>Enter OTP you recieved.</p>
             <input
               type="number"
               placeholder="Enter OTP"
@@ -156,7 +168,7 @@ export default function ForgotPass() {
         )}
         {pass && (
           <>
-          <p>Enter a brand new password.</p>
+            <p>Enter a brand new password.</p>
             <input
               type="password"
               placeholder="Password"

@@ -68,24 +68,31 @@
   font-family: consolas;
 }
 .slider-neon-btn a {
-  border-bottom: 3px solid white;
+  border-bottom: 2px solid white;
   border-left: 1px solid white;
-  border-radius: 42px;
+  border-radius: 9px;
   box-shadow: 2px 4px 12px rgba(0, 108, 202, 0.612);
   display: inline-block;
   position: relative;
   padding: 15px 30px;
-  color: #319df5;
+  color: #bde2ff;
+  text-shadow: 0 0 4px black;
   text-transform: uppercase;
   letter-spacing: 2px;
   text-decoration: none;
   font-size: 24px;
   overflow: hidden;
   transition: 1s;
+  box-shadow: 0 0 8px black;
   backdrop-filter: blur(0.7em);
+}
+.main-body-light .slider-neon-btn a{
+  color: #024b82;
+  text-shadow: 0 0 0 transparent;
 }
 
 .slider-neon-btn a:hover {
+  text-shadow: 0 0 0px transparent;
   color: #255784;
   background: #2196f3;
   box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;

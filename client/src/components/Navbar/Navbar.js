@@ -126,13 +126,13 @@ export default function Navbar(props) {
 
             {!auth.user && (
               <NavLink to="/login">
-                <button className="login-btn btn-outline-success" type="submit">
+                <button className="nav-login-btn" type="submit">
                   Login
                 </button>
               </NavLink>
             )}
             {!!auth.user && (
-              <button className="login-btn btn-outline-success" type="submit" onClick={handleLogout}>
+              <button className="nav-logout-btn" type="submit" onClick={handleLogout}>
                 Logout
               </button>
             )}

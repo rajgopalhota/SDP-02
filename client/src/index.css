@@ -12,6 +12,7 @@ html::-webkit-scrollbar, ::-webkit-scrollbar-button{
 html{
   scroll-behavior: smooth;
 }
+
 body {
   max-width: 100dvw;
   /* overflow-x: hidden; */
