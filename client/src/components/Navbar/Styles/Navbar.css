@@ -100,38 +100,40 @@ nav button{
   font-size: 20px;
 }
 .nav-logout-btn {
+  transition: all ease-in 0.3s;
   width: 100px;
-  background-color: #ff6200;
+  background-color: #ff0000;
   border: none;
   outline: none;
   height: 44px;
-  border-radius: 49px;
+  border-radius: 22px;
   color: #fff;
   text-transform: uppercase;
   font-weight: 600;
   margin: 8px 0;
   cursor: pointer;
-  transition: 0.3s;
 }
 .nav-logout-btn:hover {
-  background-color: #4d84e2;
+  transition: all ease-in 0.3s;
+  background-color: #d42bfe;
 }
 .nav-login-btn {
   width: 100px;
+  transition: all ease-in 0.3s;
   background-color: #d42bfe;
   border: none;
   outline: none;
   height: 44px;
-  border-radius: 49px;
+  border-radius: 22px;
   color: #fff;
   text-transform: uppercase;
   font-weight: 600;
   margin: 8px 0;
   cursor: pointer;
-  transition: 0.3s;
 }
 .nav-login-btn:hover {
-  background-color: #ff6200;
+  transition: all ease-in 0.3s;
+  background-color: #ff0000;
 }
 .nav-titles li:hover {
   border-bottom: 12px soid white;

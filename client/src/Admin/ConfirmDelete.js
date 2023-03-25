@@ -12,7 +12,7 @@ export default function ConfirmDelete(props) {
                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div className="modal-body">
-                            Are you sure you want to delete permanently
+                            Are you sure you want to delete permanently, this action can't be undone.
                         </div>
                         <div className="modal-footer">
                             <button type="button" className="btn btn-warning" data-bs-dismiss="modal">Close</button>
