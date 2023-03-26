@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Mapslider from "../Mapslider/Mapslider";
 import Rating from "../Rating/Rating";
 import "./Styles/repair.css";
 import axios from "axios";
+import Loader from './../Loader/ButtonLoad'
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../Middleware/auth";
 import { AutobotBackend } from './../../Middleware/Helper'
@@ -10,6 +11,7 @@ import { toast } from "react-toastify";
 import HistoryRepair from "../RepairHistory/HistoryRepair";
 
 export default function Repair(props) {
+  const [load, setLoad] = useState(true);
   const auth = useAuth();
   const navigate = useNavigate();
 
@@ -23,6 +25,7 @@ export default function Repair(props) {
   //service handler
   const handleRepair = (e) => {
     e.preventDefault();
+    setLoad(null);
     const data = new FormData(e.currentTarget);
     axios
       .post(`${AutobotBackend}/api/repair`, {
@@ -36,6 +39,7 @@ export default function Repair(props) {
       })
       .then((response) => {
         console.log(response);
+        setLoad(true);
         if (response.data === "success") {
           props.showAlert("Form Submitted", "success");
           navigate("/autobots/home");
@@ -120,11 +124,16 @@ export default function Repair(props) {
               </tr>
             </tbody>
           </table>
-          <button className="login-btn">Book</button>
+          {load &&
+            <button className="login-btn">Book</button>
+          }
+          {!load &&
+            <Loader />
+          }
         </form>
       </div>
       <div className="historybtns">
-          <div className="history-btn"><Link data-bs-toggle="modal" data-bs-target="#repairhistory">History</Link></div>
+        <div className="history-btn"><Link data-bs-toggle="modal" data-bs-target="#repairhistory">History</Link></div>
       </div>
       <Rating />
     </div>

@@ -21,6 +21,18 @@ export default function Products() {
         <div className="product-container">
           {carList.map(item => (
             <div className="product-card" key={item.id}>
+              <ul class="forgotani-circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
               <div className="product-imgBx">
                 <img alt="" src={item.img}></img>
               </div>
@@ -43,7 +55,7 @@ export default function Products() {
               </div>
             </div>
           ))}
-          <Testride pic = {pic} name = {name} price = {price} />
+          <Testride pic={pic} name={name} price={price} />
         </div>
       </div>
     </div>

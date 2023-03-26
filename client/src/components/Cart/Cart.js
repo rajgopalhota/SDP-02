@@ -1,20 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Styles/Cart.css'
 import { useAuth } from '../../Middleware/auth'
 import { toast } from "react-toastify";
+import Loader from './../Loader/ButtonLoad'
 import axios from "axios";
 import { AutobotBackend } from '../../Middleware/Helper';
 import { Link } from 'react-router-dom';
 
 
 export default function Cart(props) {
+  const [load, setLoad] = useState(true);
   const auth = useAuth();
   const cartList = props.cartList;
   function deleteProduct(id) {
+    setLoad(null);
     axios.delete(`${AutobotBackend}/items/delete/${id}`,
       {
         params: {}
       }).then((response) => {
+        setLoad(true);
         toast.info("Removed successfully", {
           position: "top-left",
           theme: "dark",
@@ -25,6 +29,7 @@ export default function Cart(props) {
   }
 
   const checkoutHandler = async (amount) => {
+    setLoad(null);
     const { data: { key } } = await axios.get(`${AutobotBackend}/payment/getkey`)
     const { data: { order } } = await axios.post(`${AutobotBackend}/payment/checkout`, {
       amount
@@ -45,9 +50,10 @@ export default function Cart(props) {
         "address": "Razorpay Corporate Office"
       },
       theme: {
-        "color": "#fb4517"
+        "color": "#cf6cc9"
       }
     };
+    setLoad(true)
     const razor = new window.Razorpay(options);
     razor.open();
   }
@@ -92,7 +98,14 @@ export default function Cart(props) {
                         <h5 className="card-title">{obj.name}</h5>
                         <h5 className="card-info">Rs. {obj.price}</h5>
                       </div>
-                      <Link className="btn btn-sm btn-outline-danger" onClick={() => deleteProduct(obj._id)}>REMOVE</Link>
+                      {
+                        load &&
+                        <Link className="btn btn-sm btn-outline-danger" onClick={() => deleteProduct(obj._id)}>REMOVE</Link>
+                      }
+                      {
+                        !load &&
+                        <Loader />
+                      }
                     </div>
                   ))
                 ) : <h1>Your cart is empty</h1>
@@ -101,7 +114,7 @@ export default function Cart(props) {
             <div className="modal-footer">
               <h5 className="card-title">Sub Total: {props.total}&nbsp;</h5>
               <button type="button" className="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
-              {props.total !== 0 &&
+              {props.total !== 0 && load &&
                 <button type="button" className="btn btn-outline-warning" onClick={() => checkoutHandler(props.total)}>Checkout</button>
               }
             </div>

@@ -3,6 +3,7 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import log from "./Images/audi.png";
 import register from "./Images/mercedes.png";
 import { useAuth } from "../../Middleware/auth";
+import Loader from './../Loader/ButtonLoad'
 import "./Styles/Index.css";
 import axios from "axios";
 import {AutobotBackend} from './../../Middleware/Helper'
@@ -11,9 +12,11 @@ import { toast } from "react-toastify";
 export default function Index() {
   const auth = useAuth();
   const navigate = useNavigate();
+  const [load, setLoad] = useState(true);
 
   const handleRegister = (e) => {
     e.preventDefault();
+    setLoad(null);
     const data = new FormData(e.currentTarget);
     axios
       .post(`${AutobotBackend}/auth/register`, {
@@ -24,6 +27,7 @@ export default function Index() {
         gender: data.get("gender"),
       })
       .then((response) => {
+        setLoad(true);
         if (response.data === "userexist") {
           toast.info("Username taken", {
             position: "bottom-right",
@@ -57,6 +61,7 @@ export default function Index() {
   // Login Handler
   const loginAction = (e) => {
     e.preventDefault();
+    setLoad(null);
     const data = new FormData(e.currentTarget);
     axios
       .post(`${AutobotBackend}/auth/login`, {
@@ -65,6 +70,7 @@ export default function Index() {
       })
       .then((response) => {
         console.log(response);
+        setLoad(true);
         if (response.data === "newuser") {
           toast.error("Please register to Autobots", {
             position: "bottom-right",
@@ -153,7 +159,14 @@ export default function Index() {
                   required
                 />
               </div>
-              <input type="submit" value="Login" className="login-btn solid" />
+              {
+                load &&
+                <input type="submit" value="Login" className="login-btn solid" />
+              }
+              {
+                !load &&
+                <Loader />
+              }
               <Link to="/forgotpass" ><p className="social-text">Forgot password?</p></Link>
               <div className="social-media">
                 <a href="/" className="social-icon">
@@ -206,7 +219,14 @@ export default function Index() {
                 <input type="radio" id="css" name="gender" value="Female" />
                 <label htmlFor="css">Female</label>
               </div>
-              <input type="submit" className="login-btn" value="Sign up" />
+              {
+                load &&
+                <input type="submit" className="login-btn" value="Sign up" />
+              }
+              {
+                !load &&
+                <Loader />
+              }
               <p className="social-text">Or Sign up with social platforms</p>
               <div className="social-media">
                 <a href="/" className="social-icon">

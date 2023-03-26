@@ -2,12 +2,14 @@ import React, { useState } from 'react'
 import "./Styles/Spare.css"
 import spareList from './Data'
 import { Link } from 'react-router-dom';
+import Loader from './../Loader/ButtonLoad'
 import { toast } from "react-toastify";
 import axios from 'axios'
 import { useAuth } from "../../Middleware/auth";
 import { AutobotBackend } from '../../Middleware/Helper';
 
 export default function Spare() {
+  const [load, setLoad] = useState(true);
   const auth = useAuth();
   const [prod, setProd] = useState("");
   const [filterList, setFilterList] = useState(spareList);
@@ -26,6 +28,7 @@ export default function Spare() {
 
   const handleCart = (data, e) => {
     e.preventDefault();
+    setLoad(null);
     const img = data.img
     const title = data.title
     const price = data.price
@@ -38,6 +41,7 @@ export default function Spare() {
           price: price
         })
         .then((response) => {
+          setLoad(true);
           console.log(response);
           if (response.data === "success") {
             toast.success("Added to cart", {
@@ -51,7 +55,7 @@ export default function Spare() {
           toast.error("Server error");
         });
     }
-    else{
+    else {
       toast.error("Please Login", {
         position: "bottom-right",
         theme: "light",
@@ -109,7 +113,13 @@ export default function Spare() {
                       <span></span>
                       <span></span>
                     </div>
-                    <Link onClick={(e) => handleCart(item, e)}>Add to cart</Link>
+                    {load &&
+                      <Link onClick={(e) => handleCart(item, e)}>Add to cart</Link>
+                    }
+                    {
+                      !load &&
+                      <Loader />
+                    }
                   </div>
 
                 </div>

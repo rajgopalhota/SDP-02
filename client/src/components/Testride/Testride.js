@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Testride.css'
 import { useAuth } from '../../Middleware/auth';
 import { AutobotBackend } from './../../Middleware/Helper'
 import { toast } from "react-toastify";
+import Loader from './../Loader/ButtonLoad'
 import axios from 'axios';
 
 export default function Testride(props) {
+    const [load, setLoad] = useState(true);
     const auth = useAuth();
     const pic = props.pic;
     const name = props.name;
@@ -15,9 +17,10 @@ export default function Testride(props) {
         const mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
         const yyyy = today.getFullYear();
         return yyyy + "-" + mm + "-" + dd;
-      };
+    };
     const submitTestRide = (e) => {
         e.preventDefault();
+        setLoad(null);
         const data = new FormData(e.currentTarget);
         if (auth.user) {
             axios
@@ -31,6 +34,7 @@ export default function Testride(props) {
                 })
                 .then((response) => {
                     console.log(response);
+                    setLoad(true);
                     if (response.data === "message sent") {
                         toast.success("Success", {
                             position: "bottom-right",
@@ -68,13 +72,19 @@ export default function Testride(props) {
                         !auth.user &&
                         <h1>Please Login to fill form</h1>
                     }
-                    {   auth.user &&
+                    {auth.user &&
                         <form onSubmit={submitTestRide}>
                             <input type="email" placeholder="Enter Your Email " name='email' required />
                             <input type="tel" placeholder="Enter Your Mobile" name='phone' required />
-                            <input type="date" required name='date' min={disablePastDate()}/>
+                            <input type="date" required name='date' min={disablePastDate()} />
                             <input type="time" required name='time' />
-                            <button type='submit' className='canvasbtn'>BOOK A RIDE</button>
+                            {load &&
+                                <button type='submit' className='canvasbtn'>BOOK A RIDE</button>
+                            }
+                            {
+                                !load &&
+                                <Loader />
+                            }
                         </form>
                     }
                 </div>

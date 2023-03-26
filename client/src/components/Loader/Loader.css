@@ -1,4 +1,4 @@
-.LoaderBuffer {
+/* .LoaderBuffer {
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -7,13 +7,11 @@
   z-index: 999;
   backdrop-filter: blur(32px);
   background-color: rgba(0, 0, 0, 0.558);
-}
+} */
 
 .loading-loader {
   position: absolute;
   margin: auto;
-  top: 0;
-  bottom: 0;
   left: 0;
   right: 0;
   width: 6.25em;
@@ -131,5 +129,63 @@
 
   66% {
     opacity: 0;
+  }
+}
+
+
+.center {
+  transition: all ease-in-out 1s;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+.buttonload-wave {
+  transition: all ease-in-out;
+  width: 3px;
+  height: 31px;
+  background: linear-gradient(45deg, rgb(121, 5, 163), #fff);
+  margin: 10px;
+  animation: buttonload-wave 1s linear infinite;
+  border-radius: 20px;
+}
+.buttonload-wave:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.buttonload-wave:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.buttonload-wave:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.buttonload-wave:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.buttonload-wave:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.buttonload-wave:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.buttonload-wave:nth-child(8) {
+  animation-delay: 0.7s;
+}
+.buttonload-wave:nth-child(9) {
+  animation-delay: 0.8s;
+}
+.buttonload-wave:nth-child(10) {
+  animation-delay: 0.9s;
+}
+
+@keyframes buttonload-wave {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
   }
 }
