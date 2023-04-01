@@ -132,9 +132,10 @@
   }
 }
 
-
+/* Button loader */
 .center {
   transition: all ease-in-out 1s;
+  width: 100%;
   height: 70px;
   display: flex;
   justify-content: center;
@@ -143,12 +144,12 @@
 }
 .buttonload-wave {
   transition: all ease-in-out;
-  width: 3px;
+  width: 8px;
   height: 31px;
-  background: linear-gradient(45deg, rgb(121, 5, 163), #fff);
+  background-image: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%);
   margin: 10px;
-  animation: buttonload-wave 1s linear infinite;
-  border-radius: 20px;
+  animation: buttonload-wave 0.75s linear infinite;
+  border-radius: 10px;
 }
 .buttonload-wave:nth-child(2) {
   animation-delay: 0.1s;
