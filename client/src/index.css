@@ -47,7 +47,7 @@ body {
   min-width: 100%;
   color: aliceblue;
   transition: all ease-in-out 1s;
-  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  background-image: linear-gradient(to top, #067373 0%, #330867 100%);
 }
 .main-body-light .nav-link{
   color: rgb(0, 0, 0);
