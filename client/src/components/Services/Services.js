@@ -41,7 +41,6 @@ export default function Repair(props) {
         console.log(response);
         setLoad(true);
         if (response.data === "success") {
-          props.showAlert("Form Submitted", "success");
           navigate("/autobots/home");
           toast.success("Success", {
             position: "bottom-right",

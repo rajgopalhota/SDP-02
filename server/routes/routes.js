@@ -5,51 +5,10 @@ const signuptemp = require("../models/signupmodel");
 const repairmodel = require("../models/repair");
 const contactmodel = require("../models/contact");
 const communitymodel = require("../models/community");
-const testridemodel = require("../models/testride");
-const sendEmail = require("../utils/SendEmail");
-
+const {testride} = require("./EmailRoutes/Tesride")
+const {repair} = require("./EmailRoutes/Repair")
 //repair backend module
-router.post("/repair", async (req, res) => {
-  const username = req.body.username;
-  const name = req.body.name;
-  const phone = req.body.phone;
-  const carname = req.body.carname;
-  const date = req.body.date;
-  const time = req.body.time;
-  const city = req.body.city;
-  if (username == null) {
-    res.send("Please Login");
-  } else if (name == "") {
-    res.send("Enter Name");
-  } else if (phone == "") {
-    res.send("Enter Phone number");
-  } else if (carname == "") {
-    res.send("Enter CarName");
-  } else if (date == "") {
-    res.send("Select Date");
-  } else if (time == "") {
-    res.send("Select Time");
-  } else if (city == "") {
-    res.send("Enter City");
-  } else {
-    const repair = new repairmodel({
-      username: username,
-      name: name,
-      phone: phone,
-      carname: carname,
-      date: date,
-      time: time,
-      city: city,
-    });
-    try {
-      await repair.save();
-      res.send("success");
-    } catch (err) {
-      console.log(err);
-      res.send("Not saved");
-    }
-  }
-});
+router.route("/repair").post(repair);
 
 //repair history
 router.get("/repairhistory/:user", async (req, res) => {
@@ -103,44 +62,7 @@ router.post("/contact", async (req, res) => {
 });
 
 //testride
-router.post("/testride", async (req, res) => {
-  const name = req.body.username;
-  const email = req.body.email;
-  const phone = req.body.phone;
-  const date = req.body.date;
-  const time = req.body.time;
-  const cartype = req.body.cartype;
-  const testride = new testridemodel({
-    username: name,
-    email: email,
-    phone: phone,
-    date: date,
-    time: time,
-    cartype: cartype,
-  });
-  try {
-    const send_to = email;
-    const sent_from = process.env.EMAIL_USER;
-    const reply_to = email;
-    const subject = "Regarding Test Ride Request From"+" "+name[0].toUpperCase() + name.slice(1);
-    const message = `
-    <h3>Hello ${name}</h3>
-    <p>Thank for choosing Autobots.
-    We've noted your requirements we will notify you soon when it's ready<br/>
-    <li>Your phone number: ${phone} </li>
-    <li>Date of test ride: ${date} </li>
-    <li>Meeting time: ${time} </li>
-    <li>Car you have selected: ${cartype} </li></p>
-    <p>Regards...</p>
-    `;
-    await testride.save();
-    res.send("message sent");
-    await sendEmail(subject, message, send_to, sent_from, reply_to);
-  } catch (err) {
-    console.log(err);
-    res.send("Not saved");
-  }
-});
+router.route("/testride").post(testride);
 
 // community
 router.get("/community", async (req, res) => {
