@@ -131,9 +131,6 @@ export default function Index() {
   const handleonsignin = () => {
     setAni("login-container sign-up-mode");
   };
-  window.addEventListener("focus", () => {
-    document.title = "Login";
-  });
   return (
     <div className="LoginMech">
       <NavLink to="/autobots/home">
@@ -144,7 +141,7 @@ export default function Index() {
       <div className={ani}>
         <div className="forms-container">
           <div className="signin-signup">
-            <form onSubmit={loginAction} className="sign-in-form">
+            <form onSubmit={loginAction} className="sign-in-form" autoComplete="off">
               <h2 className="title">SIGN IN</h2>
               <div className="input-field">
                 <i className="fas fa-user"></i>
@@ -214,9 +211,9 @@ export default function Index() {
               </div>
               <div className="input-field-radio">
                 <span>Gender</span>
-                <input type="radio" id="html" name="gender" value="Male" />
+                <input type="radio" id="html" name="gender" value="Male" required />
                 <label htmlFor="html">Male</label>
-                <input type="radio" id="css" name="gender" value="Female" />
+                <input type="radio" id="css" name="gender" value="Female" required />
                 <label htmlFor="css">Female</label>
               </div>
               {
