@@ -14,7 +14,7 @@ import Home from "./components/Home/Home";
 import Cart from "./components/Cart/Cart";
 import { AuthProvider } from "./Middleware/auth";
 import { useState } from "react";
-import {RequiredAuth, AdminAuth} from "./Middleware/RequiredAuth";
+import { RequiredAuth, AdminAuth } from "./Middleware/RequiredAuth";
 import Community from "./components/Community/Community";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -29,6 +29,7 @@ import CommunityTable from "./Admin/Tables/CommunityTable";
 import Repair from "./Admin/Tables/Repair";
 import OrderHistory from "./components/OrderHistory/OrderHistory";
 import ForgotPass from "./components/ForgotPass/ForgotPass";
+import TestrideHistory from "./components/TestRideHistory/TestrideHistory";
 
 function App() {
   const [alert, setAlert] = useState(null);
@@ -81,10 +82,8 @@ function App() {
                   path="services"
                   element={<Services showAlert={showAlert} alert={alert} />}
                 />
-                <Route
-                  path="orders"
-                  element={<OrderHistory />}
-                />
+                <Route path="orders" element={<OrderHistory />} />
+                <Route path="testridehistory" element={<TestrideHistory />} />
               </Route>
               <Route path="spare" element={<Spare />} />
               <Route path="repairhistory" element={<RepairHistory />} />
@@ -94,7 +93,7 @@ function App() {
             <Route path="community" element={<Community />}></Route>
             <Route path="login" element={<Login />}></Route>
             <Route path="/paymentsuccess" element={<PaymentSuccess />} />
-            <Route element={<AdminAuth/>}>
+            <Route element={<AdminAuth />}>
               <Route path="admin" element={<Admin />}>
                 <Route path="" element={<Overview />} />
                 <Route path="contacts" element={<Contacts />} />

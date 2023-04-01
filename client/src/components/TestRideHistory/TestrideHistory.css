@@ -1,10 +1,10 @@
-.OrderHistory{
+.TestrideHistory{
     margin-top: 5%;
 }
 
 
 @media only screen and (max-width: 600px) {
-    .OrderHistory{
+    .TestrideHistory{
         margin-top: 20%;
     }
 }
