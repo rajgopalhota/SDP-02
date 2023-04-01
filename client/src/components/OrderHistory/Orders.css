@@ -1,10 +1,28 @@
-.OrderHistory{
-    margin-top: 5%;
+.OrderHistory {
+  margin: auto;
+  margin-top: 5%;
+  background-image: linear-gradient(
+    -225deg,
+    #2cd8d5 0%,
+    #c5c1ff 56%,
+    #ffbac3 100%
+  );
+  padding: 22px;
+  border: 2px solid black;
+  border-radius: 12px;
+  min-width: 93%;
+  width: fit-content;
+}
+.main-body-dark .OrderHistory{
+  background-image: linear-gradient(25deg , #2b5876 0%, #4e4376 100%);
+  border: 2px solid rgb(255, 255, 255);
 }
 
-
 @media only screen and (max-width: 600px) {
-    .OrderHistory{
-        margin-top: 20%;
-    }
+  .OrderHistory {
+    margin-top: 26%;
+    width: 100%;
+    padding: 2px;
+    border: 1px solid black;
+  }
 }

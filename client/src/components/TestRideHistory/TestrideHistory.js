@@ -9,7 +9,7 @@ import Loader from "./../Loader/Loader";
 
 import { toast } from "react-toastify";
 export default function TestrideHistory() {
-    
+
   const [testride, setTestride] = useState(null);
   const [id, setId] = useState(null);
   const [filterList, setFilterList] = useState(testride);
@@ -45,11 +45,12 @@ export default function TestrideHistory() {
         console.log(error);
       });
   }, [testride, auth]);
- 
+
   return (
     <>
       <ConfirmDelete id={id} delete={deleteProduct} />
       <div className="TestrideHistory">
+      <div className="table-responsive">
         <table className="table table-hover">
           <thead>
             <tr>
@@ -58,6 +59,7 @@ export default function TestrideHistory() {
               <th scope="col">date</th>
               <th scope="col">time</th>
               <th scope="col">cartype</th>
+              <th scope="col">Delete</th>
             </tr>
           </thead>
           <tbody>
@@ -88,6 +90,7 @@ export default function TestrideHistory() {
             )}
           </tbody>
         </table>
+        </div>
       </div>
     </>
   );

@@ -1,10 +1,30 @@
-.TestrideHistory{
-    margin-top: 5%;
+.TestrideHistory {
+    z-index: 1;
+  position: absolute;
+  margin-top: 5%;
+  left: 1%;
+  background-image: linear-gradient(
+    -225deg,
+    #2cd8d5 0%,
+    #c5c1ff 56%,
+    #ffbac3 100%
+  );
+  padding: 22px;
+  border: 2px solid black;
+  border-radius: 12px;
+  min-width: 98%;
+  width: fit-content;
+}
+.main-body-dark .TestrideHistory {
+  background-image: linear-gradient(25deg, #2b5876 0%, #4e4376 100%);
+  border: 2px solid rgb(255, 255, 255);
 }
 
-
 @media only screen and (max-width: 600px) {
-    .TestrideHistory{
-        margin-top: 20%;
-    }
+  .TestrideHistory {
+    margin-top: 26%;
+    width: 100%;
+    padding: 2px;
+    border: 1px solid black;
+  }
 }

@@ -2,13 +2,25 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
-  color: aliceblue;
+  color: rgb(255, 255, 255);
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   border-bottom: 2px solid rgba(255, 255, 255, 0.183);
   font-size: 22px;
   box-shadow: 0 0 8px rgb(129, 129, 129);
   background-color: transparent;
+}
+nav ul.dropdown-menu {
+  padding: 0;
+  margin: 0;
+  border: 1px solid white;
+  background-color: rgba(167, 205, 239, 0.92);
+}
+.main-body-dark nav ul.dropdown-menu {
+  background-color: #0f012df7;
+}
+.main-body-dark .navbar-nav > li > .dropdown-menu a:hover { 
+  background-color: #45024c;
 }
 .hover-underline-animation {
   display: inline-block;

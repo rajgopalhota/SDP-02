@@ -44,11 +44,12 @@ export default function OrderHistory() {
         console.log(error);
       });
   }, [purchase, auth]);
- 
+
   return (
     <>
       <ConfirmDelete id={id} delete={deleteProduct} />
       <div className="OrderHistory">
+      <div className="table-responsive">
         <table className="table table-hover">
           <thead>
             <tr>
@@ -82,6 +83,7 @@ export default function OrderHistory() {
             )}
           </tbody>
         </table>
+        </div>
       </div>
     </>
   );
