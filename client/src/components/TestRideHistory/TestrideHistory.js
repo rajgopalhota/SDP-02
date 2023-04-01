@@ -55,10 +55,10 @@ export default function TestrideHistory() {
           <thead>
             <tr>
               <th scope="col">Email</th>
-              <th scope="col">phone</th>
-              <th scope="col">date</th>
-              <th scope="col">time</th>
-              <th scope="col">cartype</th>
+              <th scope="col">Phone</th>
+              <th scope="col">Date</th>
+              <th scope="col">Time</th>
+              <th scope="col">Car type</th>
               <th scope="col">Delete</th>
             </tr>
           </thead>
