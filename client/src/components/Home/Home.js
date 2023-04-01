@@ -98,7 +98,7 @@ export default function Home() {
             <div className="tooltip">Twitter</div>
             <span><i className="fab fa-twitter"></i></span>
           </a>
-          <a href="https://www.instagram.com/raja.2k3/" className="icon instagram" target='_blank' rel="noreferrer">
+          <a href="https://www.instagram.com/rajgopal.hota/" className="icon instagram" target='_blank' rel="noreferrer">
             <div className="tooltip">Instagram</div>
             <span><i className="fab fa-instagram"></i></span>
           </a>

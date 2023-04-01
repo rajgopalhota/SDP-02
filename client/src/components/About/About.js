@@ -17,7 +17,7 @@ export default function About() {
             RAJGOPAL HOTA
           </a>
           <a
-            href="https://www.instagram.com/raja.2k3/"
+            href="https://www.instagram.com/rajgopal.hota/"
             target="_blank"
             rel="noreferrer"
           >
