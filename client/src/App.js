@@ -89,6 +89,7 @@ function App() {
               <Route path="repairhistory" element={<RepairHistory />} />
               <Route path="cart" element={<Cart />} />
               <Route path="contact" element={<Contact />}></Route>
+              <Route path="*" element={<PageNotFound />}></Route>
             </Route>
             <Route path="community" element={<Community />}></Route>
             <Route path="login" element={<Login />}></Route>

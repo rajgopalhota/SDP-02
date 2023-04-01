@@ -1,5 +1,5 @@
 .postingcomments{
-  background-color: #1a660058;
+  background-image: linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%);
   padding: 1%;
   border: 1px solid white;
   border-radius: 14px;
@@ -123,12 +123,13 @@
   font-weight: normal;
   text-align: justify;
   border-radius: 14px;
-  background-color:  #00526e5b;
+  background-image: linear-gradient(-225deg, #850670 0%, #8D0B93 50%, #321575 100%);
   color: white;
 }
 .main-body-light .comment.user-comment p{
   transition: all ease-in-out 2s;
-  background-color:  #520089;
+  background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+  background-blend-mode: multiply;
 }
 
 .comment.author-comment p{
@@ -136,13 +137,13 @@
   text-align: justify;
   border: 2px solid rgb(255, 255, 255);
   border-radius: 14px;
-  background-color:  #ffffffc1;
+  background-image: linear-gradient(45deg, #64b3f4 0%, #c2e59c 100%);
   order: 1;
 }
 .main-body-light .comment.author-comment p{
   border: 2px solid rgb(0, 0, 0);
   transition: all ease-in-out 2s;
-  background-color:  #1e003bb1;
+  background-image: linear-gradient(45deg, #874da2 0%, #c43a30 100%);
   color: rgb(255, 255, 255);
 }
 .user-comment p:after{
@@ -281,60 +282,6 @@
   }
 }
 
-
-
-/* ------- Demo footer. Please ignore and remove ------- */
-
-footer {
-  font: normal 16px Arial, Helvetica, sans-serif;
-  padding: 15px 35px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #1B1F22;
-  box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  text-align: left;
-}
-
-footer a.tz{
-  font-weight: normal;
-  font-size: 16px !important;
-  text-decoration: none !important;
-  display: block;
-  margin-right: 300px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  color: #CCC !important;
-  position: relative;
-  padding-left: 140px;
-}
-
-footer a.tz:before{
-  font-weight: bold;
-  color: #FFF;
-  content: 'tutorial';
-  position: absolute;
-  text-align: right;
-  width: 100px;
-  left: -20px;
-}
-
-footer a.tz:after{
-  content: 'zine';
-  position: absolute;
-  font-weight: bold;
-  color: #DA431C;
-  left: 80px;
-}
-
-
-@media (max-width: 1024px) {
-  footer{ display:none;}
-}
-
-
 .postingcomments textarea{
   color: #520089;
   width: 100%;
@@ -348,12 +295,12 @@ footer a.tz:after{
   border-radius: 24px;
   margin: 13px;
   margin-left: 3em;
-  background-color: #740086;
+  background-image: linear-gradient(to right, #cc208e 0%, #6713d2 100%);
   color: white;
 }
 .main-body-dark .postingcomments textarea{
   color: white;
 }
 .main-body-dark .postingcomments button{
-  background-color: #eb5200;
+  background-image: linear-gradient(to right, #ed6ea0 0%, #ec8c69 100%);
 }

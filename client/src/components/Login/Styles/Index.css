@@ -201,13 +201,16 @@ form.sign-in-form {
   top: -10%;
   right: 48%;
   transform: translateY(-50%);
-  /* background-image: linear-gradient(-45deg, #ffb74a 0%, #ff6200 100%); */
   background: url(./../Images/grad.jpg) no-repeat center center fixed;
-  opacity: 80%;
+  opacity: 90%;
   background-size: cover;
   transition: 1.8s ease-in-out;
   border-radius: 50%;
   z-index: 6;
+}
+.main-body-dark .login-container:before{
+  background: none;
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
 }
 .input-field-radio{
   accent-color: rgb(172, 49, 0);

@@ -108,7 +108,7 @@ export default function Navbar(props) {
                 </NavLink>
               </li> */}
               <li className="nav-item dropdown">
-          <Link className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <Link className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
            History
           </Link>
           <ul className="dropdown-menu">

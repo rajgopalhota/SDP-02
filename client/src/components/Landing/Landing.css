@@ -65,6 +65,7 @@
   text-shadow: 0 0 8px rgb(0, 0, 0);
 }
 .welcomenoteland p {
+  color: white;
   letter-spacing: 2px;
   font-size: 22px;
 }
@@ -113,6 +114,8 @@
   z-index: 1;
   transition: 0.5s;
   backdrop-filter: blur(15px);
+  /* border: 2px solid white; */
+  box-shadow: 2px 2px 2px rgb(104, 104, 104);
 }
 .landbtn-container .landbtn-btn:hover a {
   font-weight: 900;

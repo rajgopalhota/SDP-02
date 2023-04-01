@@ -13,18 +13,21 @@ nav {
 nav ul.dropdown-menu {
   padding: 0;
   margin: 0;
-  border: 1px solid white;
-  background-color: transparent;
+  backdrop-filter: blur(12px);
+  background-color: rgb(255, 255, 255);
+}
+.main-body-dark nav ul.dropdown-menu {
+  background-color: rgb(0, 0, 0);
 }
 ul.dropdown-menu li{
   padding: 0;
-  text-align: center;
+  text-align: centerrgb(28, 28, 28)
 }
 .main-body-light .navbar-nav > li > .dropdown-menu a:hover { 
-  background-color: rgba(221, 235, 247, 0.696);
+  background-color: rgba(221, 235, 247, 0.957);
 }
 .main-body-dark .navbar-nav > li > .dropdown-menu a:hover { 
-  background-color: #45024c50;
+  background-color: #45024ce7;
 }
 .hover-underline-animation {
   display: inline-block;
