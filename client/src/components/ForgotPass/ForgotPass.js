@@ -120,7 +120,7 @@ export default function ForgotPass() {
 
   return (
     <div className="forotcontainer">
-      <ul class="forgotani-circles">
+      <ul className="forgotani-circles">
         <li></li>
         <li></li>
         <li></li>

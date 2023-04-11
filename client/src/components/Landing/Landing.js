@@ -10,10 +10,10 @@ import './Landing.css'
 export default function Landing() {
     return (
         <div className='bodyland'>
-            <div class="landbtn-container">
-                <div class="landbtn-btn"><Link to="/autobots/home">AUTOBOTS</Link></div>
-                <div class="landbtn-btn"><Link to="/community" >COMMUNITY</Link></div>
-                <div class="landbtn-btn"><Link to="/login" >LOGIN</Link></div>
+            <div className="landbtn-container">
+                <div className="landbtn-btn"><Link to="/autobots/home">AUTOBOTS</Link></div>
+                <div className="landbtn-btn"><Link to="/community" >COMMUNITY</Link></div>
+                <div className="landbtn-btn"><Link to="/login" >LOGIN</Link></div>
             </div>
             <div className="landing-slider">
                 <figure>

@@ -85,6 +85,26 @@ export default function Community() {
                     <div className="starfourth"></div>
                     <div className="starfifth"></div>
                 </div>
+                <div className="product-glowing">
+                <span style={{"--i": "1"}}></span>
+                <span style={{"--i": "2"}}></span>
+                <span style={{"--i": "3"}}></span>
+              </div>
+              <div className="product-glowing">
+                <span style={{"--i": "1"}}></span>
+                <span style={{"--i": "2"}}></span>
+                <span style={{"--i": "3"}}></span>
+              </div>
+              <div className="product-glowing">
+                <span style={{"--i": "1"}}></span>
+                <span style={{"--i": "2"}}></span>
+                <span style={{"--i": "3"}}></span>
+              </div>
+              <div className="product-glowing">
+                <span style={{"--i": "1"}}></span>
+                <span style={{"--i": "2"}}></span>
+                <span style={{"--i": "3"}}></span>
+              </div>
                 <li className="comment user-comment">
                     <div className="info">
                         <a href="/">Admin</a>
