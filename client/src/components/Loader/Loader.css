@@ -146,7 +146,7 @@
   transition: all ease-in-out;
   width: 8px;
   height: 31px;
-  background-image: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%);
+  background-image: linear-gradient(to top, #ed4908 0%, #e17706 100%);
   margin: 10px;
   animation: buttonload-wave 0.75s linear infinite;
   border-radius: 10px;
