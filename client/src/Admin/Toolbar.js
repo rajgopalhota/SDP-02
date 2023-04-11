@@ -26,6 +26,14 @@ export default function Toolbar() {
         </div>
         <div className="offcanvas-body">
           <div className="tooltip-buttons">
+            <Link to="/admin">
+              <button
+                className="tooltip-btn-hover color-10"
+                data-bs-dismiss="offcanvas"
+              >
+                <i className="fa-solid fa-key"></i>&nbsp;&nbsp;Overview
+              </button>
+            </Link>
             <Link to="/admin/repairs">
               <button
                 className="tooltip-btn-hover color-1"

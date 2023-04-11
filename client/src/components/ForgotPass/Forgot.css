@@ -8,27 +8,24 @@
     top: 50%;
 }
 .forgot-background .forgot-shape{
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 300px;
     position: absolute;
     border-radius: 50%;
+    box-shadow: 0 0 12px black;
+}
+.main-body-dark .forgot-background .forgot-shape{
+    box-shadow: 0 0 12px rgb(93, 93, 93);
 }
 .forgot-shape:first-child{
-    background: linear-gradient(
-        #1845ad,
-        #23a2f6
-    );
-    left: -80px;
-    top: -80px;
+    background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+    left: -120px;
+    top: -100px;
 }
 .forgot-shape:last-child{
-    background: linear-gradient(
-        to right,
-        #ff512f,
-        #f09819
-    );
-    right: -30px;
-    bottom: -80px;
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    right: -100px;
+    bottom: -100px;
 }
 .forotcontainer form{
     height: 520px;

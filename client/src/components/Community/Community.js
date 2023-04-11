@@ -34,7 +34,6 @@ export default function Community() {
     const handleComment = (e) => {
         e.preventDefault();
         const data = new FormData(e.currentTarget);
-        e.target.reset();
         axios
             .post(`${AutobotBackend}/api/comment`, {
                 username: auth.user,
@@ -42,7 +41,7 @@ export default function Community() {
                 date: currentDateTime()
             })
             .then((response) => {
-                console.log(response);
+                e.target.reset();
                 if (response.data === "success") {
                     toast.success("Success", {
                         position: "bottom-right",

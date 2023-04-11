@@ -33,7 +33,7 @@ export default function Testride(props) {
                     cartype: name
                 })
                 .then((response) => {
-                    console.log(response);
+                    e.target.reset();
                     setLoad(true);
                     if (response.data === "message sent") {
                         toast.success("Success", {
