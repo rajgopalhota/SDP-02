@@ -7,7 +7,7 @@
   background-size: cover;
 }
 .main-body-light .vidbackground{
-  background-image: linear-gradient(to top, #0250c5 0%, #d43f8d 100%);
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
 }
 .main-body-light video{
   display: none;

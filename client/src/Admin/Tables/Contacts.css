@@ -39,15 +39,18 @@ table{
   color: aliceblue;
 }
 .admintables .table th {
-  color: rgb(184, 210, 232);
-  font-size: 28px;
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  text-decoration: none;
   text-shadow: 0 0 12px black;
+  background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+ background-blend-mode: multiply;
 }
 .admintables .table-hover > tbody > tr:hover > * {
   cursor: pointer;
   transition: all ease in 3s;
-  color: rgb(163, 224, 247);
-  background-color: rgba(0, 0, 0, 0.637);
+  color: rgb(21, 21, 21);
+  background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
 }
 
 @media only screen and (max-width: 600px) {

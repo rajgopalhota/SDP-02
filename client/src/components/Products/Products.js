@@ -21,26 +21,6 @@ export default function Products() {
         <div className="product-container">
           {carList.map(item => (
             <div className="product-card" key={item.id}>
-              <div className="product-glowing">
-                <span style={{"--i": "1"}}></span>
-                <span style={{"--i": "2"}}></span>
-                <span style={{"--i": "3"}}></span>
-              </div>
-              <div className="product-glowing">
-                <span style={{"--i": "1"}}></span>
-                <span style={{"--i": "2"}}></span>
-                <span style={{"--i": "3"}}></span>
-              </div>
-              <div className="product-glowing">
-                <span style={{"--i": "1"}}></span>
-                <span style={{"--i": "2"}}></span>
-                <span style={{"--i": "3"}}></span>
-              </div>
-              <div className="product-glowing">
-                <span style={{"--i": "1"}}></span>
-                <span style={{"--i": "2"}}></span>
-                <span style={{"--i": "3"}}></span>
-              </div>
               <div className="product-imgBx">
                 <img alt="" src={item.img}></img>
               </div>

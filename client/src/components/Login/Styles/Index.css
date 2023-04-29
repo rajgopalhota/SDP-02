@@ -132,9 +132,14 @@ form.sign-in-form {
 }
 
 .social-text {
+  transition: all ease-out 250ms;
   color: white;
   padding: 0.7rem 0;
   font-size: 1rem;
+}
+.social-text:hover{
+  transition: all ease-in-out 250ms;
+  letter-spacing: 2px;
 }
 
 .social-media {
