@@ -1,6 +1,6 @@
 import ChatBot from 'react-simple-chatbot';
 import { ThemeProvider } from 'styled-components';
-import rabbit from './Assets/rabbit.png';
+import chatty from './Assets/profilepic.png';
 import { useNavigate } from "react-router-dom";
 import { useEffect } from 'react';
 
@@ -116,7 +116,7 @@ const theme = {
 
 // Set some properties of the bot
 const config = {
-    botAvatar: rabbit,
+    botAvatar: chatty,
     floating: true,
     hideSubmitButton: true,
 };
