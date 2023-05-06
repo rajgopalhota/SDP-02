@@ -191,8 +191,8 @@ nav button a {
 .darkmode .switch {
   z-index: 999;
   /* margin-top: auto; */
-  bottom: 0.8em;
-  right: 0.1em;
+  bottom: 0.6em;
+  left: 0.8em;
   margin-right: 1.5em;
   font-size: 17px;
   position: fixed;
