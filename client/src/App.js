@@ -30,7 +30,7 @@ import Repair from "./Admin/Tables/Repair";
 import OrderHistory from "./components/OrderHistory/OrderHistory";
 import ForgotPass from "./components/ForgotPass/ForgotPass";
 import TestrideHistory from "./components/TestRideHistory/TestrideHistory";
-
+import Chatbot from "./components/Chatbot/Chatbot";
 function App() {
   const [alert, setAlert] = useState(null);
   const showAlert = (message, type) => {
@@ -58,6 +58,10 @@ function App() {
         <div className="starfifth"></div>
       </div>
       <div className="App">
+        <div className="chatbot">
+
+        <Chatbot/>
+        </div>
         <div className="darkmode">
           <label className="switch">
             <input type="checkbox" onClick={toggleDarkMode} />
@@ -112,5 +116,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
