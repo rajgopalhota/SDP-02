@@ -124,7 +124,7 @@ export default function Repair(props) {
             </tbody>
           </table>
           {load &&
-            <button className="login-btn">Book</button>
+            <button className="tooltip-btn-hover color-2">Book</button>
           }
           {!load &&
             <Loader />
