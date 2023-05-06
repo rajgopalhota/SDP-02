@@ -5,6 +5,35 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.tc{
+  transition: all ease-in-out 0.3s;
+  margin-top: 4px;
+  color: #ffffff;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+.tc:hover{
+  transition: all ease-in-out 0.3s;
+  letter-spacing: 2px;
+}
+.tcpoints{
+  margin: auto;
+  text-align: left;
+}
+.tcpoints li{
+  padding: 4px;
+}
+.tcpoints span{
+  font-weight: bold;
+  color: #57fcff;
+}
+.offcanvas-title{
+  color: #57fcff;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border-bottom: 2px solid white;
+}
 body,
 input {
   font-family: "Poppins", sans-serif;

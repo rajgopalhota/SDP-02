@@ -20,7 +20,7 @@ export default function Products() {
       <div className='ProductsPage'>
         <div className="product-container">
           {carList.map(item => (
-            <div className="product-card" key={item.id}>
+            <div className="product-card tooltip-btn-hover color-7" key={item.id}>
               <div className="product-imgBx">
                 <img alt="" src={item.img}></img>
               </div>

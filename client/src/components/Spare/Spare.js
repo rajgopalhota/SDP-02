@@ -82,7 +82,7 @@ export default function Spare() {
                   </select>
                 </td>
                 <td>
-                  <button className="login-btn" onClick={handlePro}>GO</button>
+                  <button className="tooltip-btn-hover color-4" onClick={handlePro}>GO</button>
                 </td>
               </tr>
             </tbody>
@@ -94,7 +94,7 @@ export default function Spare() {
           <div className="product-container">
             {
               filterList.map(item => (
-                <div className="product-card" key={item.id} >
+                <div className="product-card tooltip-btn-hover color-7" key={item.id} >
                   <div className="product-imgBx">
                     <img alt="" src={item.img}></img>
                   </div>
