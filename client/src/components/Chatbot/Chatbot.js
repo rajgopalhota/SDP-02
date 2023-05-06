@@ -104,21 +104,21 @@ const steps = [
 ];
 // Creating our own theme
 const theme = {
-    background: '#C9FF8F',
-    headerBgColor: '#197B22',
+    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+    headerBgColor: 'linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%)',
     headerFontSize: '20px',
-    botBubbleColor: '#0F3789',
+    botBubbleColor: 'linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%)',
     headerFontColor: 'white',
     botFontColor: 'white',
-    userBubbleColor: '#FF5733',
-    userFontColor: 'white',
+    userBubbleColor: 'linear-gradient(to right, #fa709a 0%, #fee140 100%)',
+    userFontColor: 'black',
 };
 
 // Set some properties of the bot
 const config = {
     botAvatar: rabbit,
     floating: true,
-
+    hideSubmitButton: true,
 };
 
 function Chatbot() {
@@ -126,7 +126,7 @@ function Chatbot() {
         <div className="App">
             <ThemeProvider theme={theme}>
                 <ChatBot
-                    headerTitle="AutoBot"
+                    headerTitle="AutoBots Chatty!"
                     steps={steps}
                     {...config}
 
