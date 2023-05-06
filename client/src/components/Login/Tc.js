@@ -3,12 +3,12 @@ import React from 'react'
 export default function Tc() {
     return (
         <div>
-            <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasBottomLabel">Autobots Terms&Conditions</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <div className="offcanvas offcanvas-bottom" tabIndex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+                <div className="offcanvas-header">
+                    <h5 className="offcanvas-title" id="offcanvasBottomLabel">Autobots Terms&Conditions</h5>
+                    <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body large tcpoints">
+                <div className="offcanvas-body large tcpoints">
                     <ol>
                         <li><span>Eligibility:</span> The company may specify the eligibility criteria for using their services, such as age and driving record requirements.
                         </li>
