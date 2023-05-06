@@ -8,6 +8,7 @@ import "./Styles/Index.css";
 import axios from "axios";
 import {AutobotBackend} from './../../Middleware/Helper'
 import { toast } from "react-toastify";
+import Tc from "./Tc";
 
 export default function Index() {
   const auth = useAuth();
@@ -132,6 +133,7 @@ export default function Index() {
     setAni("login-container sign-up-mode");
   };
   return (
+    <>
     <div className="LoginMech">
       <NavLink to="/autobots/home">
         <div className="navigatetohome">
@@ -216,6 +218,7 @@ export default function Index() {
                 <input type="radio" id="css" name="gender" value="Female" required />
                 <label htmlFor="css">Female</label>
               </div>
+              <label className="tc"><input type="checkbox" name="html" value="html" required /> <span data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Terms & conditions</span></label>
               {
                 load &&
                 <input type="submit" className="login-btn" value="Sign up" />
@@ -224,7 +227,6 @@ export default function Index() {
                 !load &&
                 <Loader />
               }
-              <p className="social-text">Or Sign up with social platforms</p>
               <div className="social-media">
                 <a href="/" className="social-icon">
                   <i className="fab fa-facebook-f"></i>
@@ -242,7 +244,6 @@ export default function Index() {
             </form>
           </div>
         </div>
-
         <div className="panels-container">
           <div className="panel left-panel">
             <div className="content">
@@ -280,5 +281,7 @@ export default function Index() {
         </div>
       </div>
     </div>
+    <Tc />
+    </>
   );
 }
