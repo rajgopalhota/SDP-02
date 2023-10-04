@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "autobots": "node server.js"
   },
   "author": "",
   "license": "ISC",
