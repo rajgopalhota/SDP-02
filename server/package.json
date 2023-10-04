@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "autobots": "node server.js"
+    "autobots": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",

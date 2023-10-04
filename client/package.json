@@ -13,13 +13,12 @@
     "react-hook-form": "^7.43.2",
     "react-router-dom": "^6.7.0",
     "react-scripts": "5.0.1",
-    "react-simple-chatbot": "^0.6.1",
     "react-toastify": "^9.1.1",
     "styled-components": "^5.3.10",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "autotbots": "react-scripts start",
+    "autobots": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

@@ -1,36 +1,36 @@
-import "./App.css";
-import Landing from "./components/Landing/Landing";
-import Contact from "./components/Contact/Contact";
-import Login from "./components/Login/Login";
-import { Route, Routes } from "react-router-dom";
-import PageNotFound from "./components/PageNotFound/PageNotFound";
-import Autobot from "./components/Autobots/Autobot";
-import Products from "./components/Products/Products";
-import Services from "./components/Services/Services";
-import About from "./components/About/About";
-import Spare from "./components/Spare/Spare";
-import PaymentSuccess from "./Payments/PaymentSuccess";
-import Home from "./components/Home/Home";
-import Cart from "./components/Cart/Cart";
-import { AuthProvider } from "./Middleware/auth";
 import { useState } from "react";
-import { RequiredAuth, AdminAuth } from "./Middleware/RequiredAuth";
-import Community from "./components/Community/Community";
+import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import RepairHistory from "./components/RepairHistory/HistoryRepair";
 import Admin from "./Admin/Admin";
 import Overview from "./Admin/Overview/Overview";
+import Catalog from "./Admin/Tables/Catalog";
+import CommunityTable from "./Admin/Tables/CommunityTable";
 import Contacts from "./Admin/Tables/Contacts";
 import Registry from "./Admin/Tables/Registry";
-import Catalog from "./Admin/Tables/Catalog";
-import Users from "./Admin/Tables/Users";
-import CommunityTable from "./Admin/Tables/CommunityTable";
 import Repair from "./Admin/Tables/Repair";
-import OrderHistory from "./components/OrderHistory/OrderHistory";
+import Users from "./Admin/Tables/Users";
+import "./App.css";
+import { AdminAuth, RequiredAuth } from "./Middleware/RequiredAuth";
+import { AuthProvider } from "./Middleware/auth";
+import PaymentSuccess from "./Payments/PaymentSuccess";
+import About from "./components/About/About";
+import Autobot from "./components/Autobots/Autobot";
+import Cart from "./components/Cart/Cart";
+// import Chatbot from "./components/Chatbot/Chatbot";
+import Community from "./components/Community/Community";
+import Contact from "./components/Contact/Contact";
 import ForgotPass from "./components/ForgotPass/ForgotPass";
+import Home from "./components/Home/Home";
+import Landing from "./components/Landing/Landing";
+import Login from "./components/Login/Login";
+import OrderHistory from "./components/OrderHistory/OrderHistory";
+import PageNotFound from "./components/PageNotFound/PageNotFound";
+import Products from "./components/Products/Products";
+import RepairHistory from "./components/RepairHistory/HistoryRepair";
+import Services from "./components/Services/Services";
+import Spare from "./components/Spare/Spare";
 import TestrideHistory from "./components/TestRideHistory/TestrideHistory";
-import Chatbot from "./components/Chatbot/Chatbot";
 function App() {
   const [alert, setAlert] = useState(null);
   const showAlert = (message, type) => {
@@ -58,10 +58,7 @@ function App() {
         <div className="starfifth"></div>
       </div>
       <div className="App">
-        <div className="chatbot">
-
-        <Chatbot/>
-        </div>
+        <div className="chatbot">{/* <Chatbot/> */}</div>
         <div className="darkmode">
           <label className="switch">
             <input type="checkbox" onClick={toggleDarkMode} />
@@ -116,6 +113,5 @@ function App() {
     </div>
   );
 }
-
 
 export default App;
