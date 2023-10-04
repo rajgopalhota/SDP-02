@@ -36,3 +36,6 @@
     transform: rotate(360deg);
   }
 }
+.chatbot{
+  z-index: -1;
+}

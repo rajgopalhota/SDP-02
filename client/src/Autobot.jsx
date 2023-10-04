@@ -17,7 +17,7 @@ import PaymentSuccess from "./Payments/PaymentSuccess";
 import About from "./components/About/About";
 import Autobot from "./components/Autobots/Autobot";
 import Cart from "./components/Cart/Cart";
-// import Chatbot from "./components/Chatbot/Chatbot";
+import Chatbot from "./components/Chatbot/Chatbot";
 import Community from "./components/Community/Community";
 import Contact from "./components/Contact/Contact";
 import ForgotPass from "./components/ForgotPass/ForgotPass";
@@ -58,7 +58,7 @@ function App() {
         <div className="starfifth"></div>
       </div>
       <div className="App">
-        <div className="chatbot">{/* <Chatbot/> */}</div>
+        <div className="chatbot"><Chatbot/></div>
         <div className="darkmode">
           <label className="switch">
             <input type="checkbox" onClick={toggleDarkMode} />
