@@ -73,19 +73,23 @@ router.post("/login", async (req, res) => {
               const token = jwt.sign(
                 {
                   userId: user._id,
-                  userEmail: user.email,
-                  userRole: user.role,
+                  
                 },
                 "RANDOM-TOKEN",
-                { expiresIn: "2h" }
+                { expiresIn: "90d" }
               );
+              // res.cookie("authToken", token, {
+              //   expires: new Date(Date.now() + 90 * 24 * 60 * 60 * 1000),
+              // });
 
               //   return success response
+              console.log(user.role+"----- "+user.username+ token)
               res.status(200).send({
                 message: "Login Successful",
                 username: user.username,
                 role: user.role,
-                token,
+                token:token,
+             
               });
             })
             // catch error if password does not match
@@ -106,6 +110,55 @@ router.post("/login", async (req, res) => {
     }
   }
 });
+
+
+//token decrpyting
+router.get("/fetch-user", async(req,res)=>{
+  try {
+    // Get the token from the request headers
+    const token = req.headers.authorization;
+    if (!token) {
+      return res.status(401).json({
+        message: "Please provide a valid token in the Authorization header.",
+      });
+    }
+
+    // Verify the token
+    const decoded = jwt.verify(token, "RANDOM-TOKEN");
+
+    // Find the user by the decoded ID
+    const user = await signuptemp.findOne({ _id: decoded.userId } );
+
+    if (!user) {
+      return res.status(401).json({
+        message: "User not found!",
+      });
+    }else{
+      try{
+      res.status(200).json({
+        success:"true",
+        user:{
+          id:user.id,
+          username:user.username,
+          email:user.email,
+          phone:user.phone,
+          gender:user.gender,
+          role:user.role
+        },
+      });
+    } catch(err){
+      return res.status(500).json({
+        message: "Error fetching user",
+      });
+    }
+  }
+  }
+
+    catch (error) {
+      res.status(401).json({ error: error.message });
+    }
+
+})
 
 //email checking
 router.post("/email", async (req, res) => {

@@ -14,7 +14,7 @@ export const RequiredAuth = () => {
 }
 export const AdminAuth = () => {
   const auth = useAuth();
-  if (!auth.user || localStorage.getItem('role')!=='Admin') {
+  if (!auth.user || auth.user.role!=='Admin') {
     toast.success('Do not try to intrude Admin!', {
       toastId: 's1',
     })

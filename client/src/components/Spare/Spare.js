@@ -35,7 +35,7 @@ export default function Spare() {
     if (auth.user) {
       axios
         .post(`${AutobotBackend}/items/cartpost`, {
-          username: auth.user,
+          username: auth.user.username,
           image: img,
           name: title,
           price: price

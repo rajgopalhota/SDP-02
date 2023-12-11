@@ -38,7 +38,7 @@ export default function OrderHistory() {
       .get(`${AutobotBackend}/admin/catalog`, {})
       .then((response) => {
         setPurchase(response.data.reverse());
-        setFilterList(purchase.filter((item) => item.username === auth.user));
+        setFilterList(purchase.filter((item) => item.username === auth.user.username));
       })
       .catch((error) => {
         console.log(error);

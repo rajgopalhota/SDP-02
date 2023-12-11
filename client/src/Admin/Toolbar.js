@@ -15,7 +15,7 @@ export default function Toolbar() {
       >
         <div className="offcanvas-header">
           <h1 className="offcanvas-title" id="offcanvasWithBothOptionsLabel">
-            Admin {auth.user}
+            Admin {auth.user.username}
           </h1>
           <button
             type="button"

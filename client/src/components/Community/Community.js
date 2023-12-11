@@ -36,7 +36,7 @@ export default function Community() {
         const data = new FormData(e.currentTarget);
         axios
             .post(`${AutobotBackend}/api/comment`, {
-                username: auth.user,
+                username: auth.user.username,
                 message: data.get("comment"),
                 date: currentDateTime()
             })
@@ -126,7 +126,7 @@ export default function Community() {
                             <form onSubmit={handleComment}>
                                 <textarea placeholder="Write your comment here" name="comment" required></textarea>
                                 <div>
-                                    <img src={rabbit} width="35" alt="Profile" title={auth.user} />
+                                    <img src={rabbit} width="35" alt="Profile" title={auth.user.username} />
                                     <button type="submit">Submit</button>
                                 </div>
                             </form>

@@ -30,7 +30,7 @@ export default function HistoryRepair() {
   }
   useEffect(() => {
     axios
-      .get(`${AutobotBackend}/api/repairhistory/${auth.user}`, {})
+      .get(`${AutobotBackend}/api/repairhistory/${auth.user.username}`, {})
       .then((response) => {
         setResult(response.data);
       })
@@ -48,7 +48,7 @@ export default function HistoryRepair() {
             <div className="modal-header">
               {
                 auth.user &&
-                <h1 className="modal-title fs-5" id="exampleModalLabel">{auth.user}'s repair requests</h1>
+                <h1 className="modal-title fs-5" id="exampleModalLabel">{auth.user.username}'s repair requests</h1>
               }
               {
                 !auth.user &&

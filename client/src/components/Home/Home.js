@@ -15,7 +15,7 @@ export default function Home() {
         {
           !(!auth.user) &&
             <div className="sign">
-              <h1><span className="fast-flicker">W</span>el<span className="flicker">come</span>&nbsp;{auth.user}</h1>
+              <h1><span className="fast-flicker">W</span>el<span className="flicker">come</span>&nbsp;{auth.user.username}</h1>
             </div>
         }
         <p>

@@ -6,7 +6,7 @@ import { useAuth } from "../../Middleware/auth";
 import Loader from './../Loader/ButtonLoad'
 import "./Styles/Index.css";
 import axios from "axios";
-import {AutobotBackend} from './../../Middleware/Helper'
+import { AutobotBackend } from './../../Middleware/Helper'
 import { toast } from "react-toastify";
 import Tc from "./Tc";
 
@@ -85,33 +85,35 @@ export default function Index() {
         else {
           if (response.status === 200) {
             if (response.data.role === "Customer") {
-              const username = response.data.username;
-              // const authtoken = response.data.token;
-              console.log(response.data)
-              localStorage.setItem('user', response.data.username);
-              localStorage.setItem('role', response.data.role);
+              const authtoken = response.data.token;
+              console.log(response.data.role)
+              // localStorage.setItem('user', response.data.username);
+              // localStorage.setItem('role', response.data.role);
               // console.log(localStorage.getItem('user'));
-              auth.login(username);
+              auth.login(authtoken);
               navigate("/autobots/home");
               toast.success("Login Successfull", {
                 position: "bottom-right",
                 theme: "dark",
               });
             }
-            else if(response.data.role === "Admin"){
-              const username = response.data.username;
-              console.log(response.data)
-              localStorage.setItem('user', response.data.username);
-              localStorage.setItem('role', response.data.role);
-              auth.login(username);
+            else if (response.data.role === "Admin") {
+              const authtoken = response.data.token;
+              console.log(response.data.role + "-----")
+              // localStorage.setItem('user', response.data.username);
+              // localStorage.setItem('role', response.data.role);
+              // console.log()
+              auth.login(response.data);
+              console.log("after login")
               navigate("/admin");
+              console.log("after login2")
               toast.success("Login Successfull", {
                 position: "bottom-right",
                 theme: "dark",
               });
             }
           }
-          
+
           else if (response.data === "invalid") {
             if (response.data.message === "unsuccess") {
               toast.error("Login error", {
@@ -134,154 +136,154 @@ export default function Index() {
   };
   return (
     <>
-    <div className="LoginMech">
-      <NavLink to="/autobots/home">
-        <div className="navigatetohome">
-          <i className="fa fa-home" aria-hidden="true"></i>
-        </div>
-      </NavLink>
-      <div className={ani}>
-        <div className="forms-container">
-          <div className="signin-signup">
-            <form onSubmit={loginAction} className="sign-in-form" autoComplete="off">
-              <h2 className="title">SIGN IN</h2>
-              <div className="input-field">
-                <i className="fas fa-user"></i>
-                <input type="text" placeholder="Username" name="loginuser" required />
-              </div>
-              <div className="input-field">
-                <i className="fas fa-lock"></i>
-                <input
-                  type="password"
-                  placeholder="Password"
-                  name="loginpassword"
-                  required
-                />
-              </div>
-              {
-                load &&
-                <input type="submit" value="Login" className="login-btn solid" />
-              }
-              {
-                !load &&
-                <Loader />
-              }
-              <Link to="/forgotpass" ><p className="social-text">Forgot password?</p></Link>
-              <div className="social-media">
-                <a href="/" className="social-icon">
-                  <i className="fab fa-facebook-f"></i>
-                </a>
-                <a href="/" className="social-icon">
-                  <i className="fab fa-twitter"></i>
-                </a>
-                <a href="/" className="social-icon">
-                  <i className="fab fa-google"></i>
-                </a>
-                <a href="/" className="social-icon">
-                  <i className="fab fa-linkedin-in"></i>
-                </a>
-              </div>
-            </form>
-            {/* Signup form........... */}
-            <form onSubmit={handleRegister} className="sign-up-form">
-              <h2 className="title">SIGN UP</h2>
-              <div className="input-field">
-                <i className="fas fa-user"></i>
-                <input type="text" placeholder="Username" name="reguser" required />
-              </div>
-              <div className="input-field">
-                <i className="fas fa-envelope"></i>
-                <input type="email" placeholder="Email" name="regemail" required />
-              </div>
-              <div className="input-field">
-                <i className="fas fa-phone"></i>
-                <input
-                  type="number"
-                  placeholder=" Phone number"
-                  name="regphone"
-                  required
-                />
-              </div>
-              <div className="input-field">
-                <i className="fas fa-lock"></i>
-                <input
-                  type="password"
-                  placeholder="Password"
-                  name="regpassword"
-                  required
-                />
-              </div>
-              <div className="input-field-radio">
-                <span>Gender</span>
-                <input type="radio" id="html" name="gender" value="Male" required />
-                <label htmlFor="html">Male</label>
-                <input type="radio" id="css" name="gender" value="Female" required />
-                <label htmlFor="css">Female</label>
-              </div>
-              <label className="tc"><input type="checkbox" name="html" value="html" required /> <span data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Terms & conditions</span></label>
-              {
-                load &&
-                <input type="submit" className="login-btn" value="Sign up" />
-              }
-              {
-                !load &&
-                <Loader />
-              }
-              <div className="social-media">
-                <a href="/" className="social-icon">
-                  <i className="fab fa-facebook-f"></i>
-                </a>
-                <a href="/" className="social-icon">
-                  <i className="fab fa-twitter"></i>
-                </a>
-                <a href="/" className="social-icon">
-                  <i className="fab fa-google"></i>
-                </a>
-                <a href="/" className="social-icon">
-                  <i className="fab fa-linkedin-in"></i>
-                </a>
-              </div>
-            </form>
+      <div className="LoginMech">
+        <NavLink to="/autobots/home">
+          <div className="navigatetohome">
+            <i className="fa fa-home" aria-hidden="true"></i>
           </div>
-        </div>
-        <div className="panels-container">
-          <div className="panel left-panel">
-            <div className="content">
-              <h3>New here ?</h3>
-              <p>
-                Thank you for choosing Autobot as your go-to destination for all your automobile and spare parts needs.
+        </NavLink>
+        <div className={ani}>
+          <div className="forms-container">
+            <div className="signin-signup">
+              <form onSubmit={loginAction} className="sign-in-form" autoComplete="off">
+                <h2 className="title">SIGN IN</h2>
+                <div className="input-field">
+                  <i className="fas fa-user"></i>
+                  <input type="text" placeholder="Username" name="loginuser" required />
+                </div>
+                <div className="input-field">
+                  <i className="fas fa-lock"></i>
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    name="loginpassword"
+                    required
+                  />
+                </div>
+                {
+                  load &&
+                  <input type="submit" value="Login" className="login-btn solid" />
+                }
+                {
+                  !load &&
+                  <Loader />
+                }
+                <Link to="/forgotpass" ><p className="social-text">Forgot password?</p></Link>
+                <div className="social-media">
+                  <a href="/" className="social-icon">
+                    <i className="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="/" className="social-icon">
+                    <i className="fab fa-twitter"></i>
+                  </a>
+                  <a href="/" className="social-icon">
+                    <i className="fab fa-google"></i>
+                  </a>
+                  <a href="/" className="social-icon">
+                    <i className="fab fa-linkedin-in"></i>
+                  </a>
+                </div>
+              </form>
+              {/* Signup form........... */}
+              <form onSubmit={handleRegister} className="sign-up-form">
+                <h2 className="title">SIGN UP</h2>
+                <div className="input-field">
+                  <i className="fas fa-user"></i>
+                  <input type="text" placeholder="Username" name="reguser" required />
+                </div>
+                <div className="input-field">
+                  <i className="fas fa-envelope"></i>
+                  <input type="email" placeholder="Email" name="regemail" required />
+                </div>
+                <div className="input-field">
+                  <i className="fas fa-phone"></i>
+                  <input
+                    type="number"
+                    placeholder=" Phone number"
+                    name="regphone"
+                    required
+                  />
+                </div>
+                <div className="input-field">
+                  <i className="fas fa-lock"></i>
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    name="regpassword"
+                    required
+                  />
+                </div>
+                <div className="input-field-radio">
+                  <span>Gender</span>
+                  <input type="radio" id="html" name="gender" value="Male" required />
+                  <label htmlFor="html">Male</label>
+                  <input type="radio" id="css" name="gender" value="Female" required />
+                  <label htmlFor="css">Female</label>
+                </div>
+                <label className="tc"><input type="checkbox" name="html" value="html" required /> <span data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Terms & conditions</span></label>
+                {
+                  load &&
+                  <input type="submit" className="login-btn" value="Sign up" />
+                }
+                {
+                  !load &&
+                  <Loader />
+                }
+                <div className="social-media">
+                  <a href="/" className="social-icon">
+                    <i className="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="/" className="social-icon">
+                    <i className="fab fa-twitter"></i>
+                  </a>
+                  <a href="/" className="social-icon">
+                    <i className="fab fa-google"></i>
+                  </a>
+                  <a href="/" className="social-icon">
+                    <i className="fab fa-linkedin-in"></i>
+                  </a>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div className="panels-container">
+            <div className="panel left-panel">
+              <div className="content">
+                <h3>New here ?</h3>
+                <p>
+                  Thank you for choosing Autobot as your go-to destination for all your automobile and spare parts needs.
 
-              </p>
-              <button
-                className="login-btn transparent"
-                id="sign-up-login-btn"
-                onClick={handleonsignin}
-              >
-                Sign up
-              </button>
+                </p>
+                <button
+                  className="login-btn transparent"
+                  id="sign-up-login-btn"
+                  onClick={handleonsignin}
+                >
+                  Sign up
+                </button>
+              </div>
+              <img src={log} className="image logimg" alt="" />
             </div>
-            <img src={log} className="image logimg" alt="" />
-          </div>
-          <div className="panel right-panel">
-            <div className="content">
-              <h3>One of us ?</h3>
-              <p>
-                We are pleased to invite you to register with Autobots, the leading automobile company in the industry.
-              </p>
-              <button
-                className="login-btn transparent"
-                id="sign-in-login-btn"
-                onClick={handleonsignup}
-              >
-                Sign in
-              </button>
+            <div className="panel right-panel">
+              <div className="content">
+                <h3>One of us ?</h3>
+                <p>
+                  We are pleased to invite you to register with Autobots, the leading automobile company in the industry.
+                </p>
+                <button
+                  className="login-btn transparent"
+                  id="sign-in-login-btn"
+                  onClick={handleonsignup}
+                >
+                  Sign in
+                </button>
+              </div>
+              <img src={register} className="image" alt="" />
             </div>
-            <img src={register} className="image" alt="" />
           </div>
         </div>
       </div>
-    </div>
-    <Tc />
+      <Tc />
     </>
   );
 }

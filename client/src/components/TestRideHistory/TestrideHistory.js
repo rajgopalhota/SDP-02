@@ -39,7 +39,7 @@ export default function TestrideHistory() {
       .get(`${AutobotBackend}/admin/testride`, {})
       .then((response) => {
         setTestride(response.data.reverse());
-        setFilterList(testride.filter((item) => item.username === auth.user));
+        setFilterList(testride.filter((item) => item.username === auth.user.username));
       })
       .catch((error) => {
         console.log(error);

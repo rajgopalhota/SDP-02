@@ -25,7 +25,7 @@ export default function Testride(props) {
         if (auth.user) {
             axios
                 .post(`${AutobotBackend}/api/testride`, {
-                    username: auth.user,
+                    username: auth.user.username,
                     phone: data.get("phone"),
                     date: data.get("date"),
                     time: data.get("time"),

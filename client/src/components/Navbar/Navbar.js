@@ -12,11 +12,11 @@ import { AutobotBackend } from '../../Middleware/Helper';
 
 export default function Navbar(props) {
   const auth = useAuth();
+
   const [price, setPrice] = useState();
   const navigate = useNavigate();
   const handleLogout = () => {
     auth.logout();
-    localStorage.clear();
     navigate('/autobots/home')
     toast.info("Logged out successfully", {
       position: "bottom-right",
@@ -28,11 +28,16 @@ export default function Navbar(props) {
   const [cartList, setCartList] = useState([]);
   const [items, setItems] = useState();
   const user = auth.user
+  // console.log(user.role)
   useEffect(() => {
+    if(!auth.user){
+      setCartList([]);
+      setPrice(null);
+      setItems(null)
+    }
     axios.get(`${AutobotBackend}/items/cart`, {
-
     }).then((response) => {
-      setCartList(response.data.reverse().filter((obj, key) => obj.username === user));
+      setCartList(response.data.reverse().filter((obj, key) => obj.username === auth.user.username));
       let size = 0, key;
       for (key in cartList) {
         if (cartList.hasOwnProperty(key)) {
@@ -80,7 +85,7 @@ export default function Navbar(props) {
                   Home
                 </NavLink>
               </li>
-              {!!auth.user && localStorage.getItem('role')==='Admin' && (
+              {!!auth.user && auth.user.role === "Admin" && (
               <li className="nav-item">
                 <NavLink className="nav-link hover-underline-animation" aria-current="page" to="/admin">
                   Admin
@@ -126,7 +131,7 @@ export default function Navbar(props) {
               <button type="button" className="cartbtn" data-bs-toggle="modal" data-bs-target="#cartModal">
                 <img className="carticon-ani" src={cartlogo} alt="" width={47}></img>
                 <span className="start-100 translate-middle badge rounded-pill">
-                  {(items !== 0) ? items : null}
+                  { (items !== 0 && auth.user ) ? items : null}
                 </span>
                 <span className="visually-hidden">unread messages</span>
               </button>

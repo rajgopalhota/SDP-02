@@ -44,7 +44,7 @@ export default function Cart(props) {
       order_id: order.id,
       callback_url: `${AutobotBackend}/payment/paymentverification`,
       prefill: {
-        name: auth.user,
+        name: auth.user.username,
       },
       notes: {
         "address": "Razorpay Corporate Office"
@@ -66,7 +66,7 @@ export default function Cart(props) {
             <div className="modal-header">
               {
                 auth.user &&
-                <h4 className="modal-title fs-5" id="exampleModalLabel">{auth.user}'s Cart</h4>
+                <h4 className="modal-title fs-5" id="exampleModalLabel">{auth.user.username}'s Cart</h4>
               }
               {
                 !auth.user &&
@@ -90,7 +90,7 @@ export default function Cart(props) {
                 </>
               }
               {
-                cartList ? (
+                 cartList ? (
                   cartList.map((obj, key) => (
                     <div className="card col-sm-4" key={key}>
                       <img src={obj.image} className="card-img-top" alt="..." />

@@ -29,7 +29,7 @@ export default function Repair(props) {
     const data = new FormData(e.currentTarget);
     axios
       .post(`${AutobotBackend}/api/repair`, {
-        username: auth.user,
+        username: auth.user.username,
         name: data.get("name"),
         phone: data.get("phone"),
         carname: data.get("carname"),
